@@ -1,0 +1,25 @@
+/* Error: Can't find stylesheet to import.
+ *    ,
+ * 9  | / @use "bulma/sass" with (
+ * 10 | |   $family-primary: '"Nunito", sans-serif',
+ * 11 | |   $grey-dark: $brown,
+ * 12 | |   $grey-light: $beige-light,
+ * 13 | |   $primary: $purple,
+ * 14 | |   $link: $pink,
+ * 15 | |   $control-border-width: 2px,
+ * 16 | |   $input-shadow: none
+ * 17 | | );
+ *    | '-^
+ *    '
+ *   my-bulma-project.scss 9:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 9  \2502  \250c  @use \"bulma/sass\" with (\a 10 \2502  \2502    $family-primary: '\"Nunito\", sans-serif',\a 11 \2502  \2502    $grey-dark: $brown,\a 12 \2502  \2502    $grey-light: $beige-light,\a 13 \2502  \2502    $primary: $purple,\a 14 \2502  \2502    $link: $pink,\a 15 \2502  \2502    $control-border-width: 2px,\a 16 \2502  \2502    $input-shadow: none\a 17 \2502  \2502  );\a    \2502  \2514 \2500 ^\a    \2575 \a   my-bulma-project.scss 9:1  root stylesheet";
+}

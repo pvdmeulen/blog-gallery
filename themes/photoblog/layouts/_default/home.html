@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+  {{ .Content }}
+  
+  <!-- Featured image -->  
+  <section class="hero is-link is-fullheight-with-navbar header-image">
+    <div class="hero-body">
+    </div>
+    <div class="hero-foot">
+      <p class="title"><i class="fa-solid fa-location-dot"></i> North Berwick</p>
+      <p class="subtitle"><i class="fa-solid fa-calendar-days"></i> Feb 8, 2025</p>
+    </div>
+  </section>
+  
+  <!-- Recent posts showcase -->
+  
+  <div id="post-showcase" class="mt-2">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="mt-5">Recent posts</h2>
+        </div>
+      <div class="columns">
+        {{ $showcase := site.RegularPages | first 3}}
+        {{ range $showcase }}
+          <div class="column is-one-third">
+            {{ partial "widgets/showcase.html" . }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="content">
+    <a href="/Posts"><h4>See all posts <i class="fa-solid fa-arrow-right"></i></h2></a>
+  </div>
+  
+{{ end }}

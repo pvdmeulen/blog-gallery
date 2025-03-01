@@ -1,0 +1,24 @@
+<h1 class="title mt-2">{{ .Title }}</h1>
+<p class="subtitle mt-1 contactform">Please contact me using the form below</p>
+
+<form
+  action="https://formspree.io/f/xanqklbq"
+  class="fs-form"
+  target="_top"
+  method="POST"
+>
+
+<link rel="stylesheet" type="text/css" href="/css/contactform.css">
+
+  <div class="fs-field">
+    <label class="fs-label" for="email">Email</label>
+    <input class="fs-input" id="email" name="email" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="message">Message</label>
+    <textarea class="fs-textarea" id="message" name="message"></textarea>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Submit</button>
+  </div>
+</form>

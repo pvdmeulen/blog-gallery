@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body>
+<div class="container is-fullhd">
+  <div class="columns">
+    <div class="column is-narrow is-one-fifth">
+      <header class="menu">
+        {{ partial "sidebar.html" . }}
+        <footer>
+          {{ partial "sidebar_footer.html" . }}
+        </footer>
+      </header>
+    </div>
+    <div class="column is-four-fifths content">
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

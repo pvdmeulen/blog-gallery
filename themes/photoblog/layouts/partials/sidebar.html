@@ -1,0 +1,27 @@
+<aside class="menu" role="navigation" aria-label="main navigation">
+  <a class="menu-list" href="{{ `` | absURL }}">
+    <h1 class="title has-text-weight-semibold is-size-1 pt-1 pb-1 mt-2 mb-4">{{ site.Title }}</h2>
+  </a>
+  </a>
+  <ul>
+  {{ range .Site.Menus.main }}
+   <li>
+    <a href="{{ .URL }}">
+      <h2 class="title has-text-weight-semibold is-size-4 mb-3 mt-3">{{ .Name }}</h2>
+    </a>
+   </li>
+  {{ end }}
+ </ul>
+  <!-- <a class="menu-list">
+    {{ range .Site.Menus.contact }}
+      <a href="{{ .URL }}" class="button is-light is-rounded is-responsive mb-3 mt-3">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <span>{{ .Name }}</span>
+        </span>
+      </a>
+      {{ end }}
+    </a>    -->
+</aside>

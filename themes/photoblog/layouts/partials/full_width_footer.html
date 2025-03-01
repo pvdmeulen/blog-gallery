@@ -1,0 +1,29 @@
+<footer class="menu">
+  <div class="container is-widescreen">
+	<nav class="level">
+		<div class="level-item has-text-left">
+			<div>
+				<p class="heading">Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen</p>
+			</div>
+		</div>
+		<div class="level-item has-text-centered pb-05">
+			{{ range .Site.Menus.foot }}
+            <a href="{{ .URL }}" title="{{ .Name }}">
+                {{ .Name }}
+            </a>
+            {{ end }}
+            |
+            {{ range .Site.Menus.taxonomy }}
+            <a href="{{ .URL }}" title="{{ .Name }}">
+                {{ .Name }}
+            </a>
+            {{ end }}
+		</div>
+		<div class="level-item has-right">
+			<div>
+			  <p class="heading">Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span>
+			</div>
+		</div>
+	</nav>
+  </div>
+</footer>

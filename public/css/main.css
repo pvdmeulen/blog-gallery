@@ -1,0 +1,38 @@
+/* Import Bulma */
+@import url("my-bulma-project.css");
+/* @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"; */
+
+/* Further custom Bulma formatting */
+.card {
+  height: 100%;
+}
+
+/* Header (landing) image */
+.header-image {
+    background-image: url(../images/landscape/IMG_1996.JPG);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+
+/* Sidebar styling */
+.menu {
+  position: sticky;
+  display: inline-block;
+  vertical-align: top;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 200px;
+  top: 0;
+  bottom: 0;
+  padding: 30px;
+}
+
+.content {
+  display: inline-block;
+}
+
+@import url("contactform.css")
+/* @import url("lightbox.css") */

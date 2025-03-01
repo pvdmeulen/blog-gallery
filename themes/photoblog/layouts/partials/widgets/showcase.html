@@ -1,0 +1,27 @@
+{{ $featuredImageUrl := .Params.featuredImageUrl }}
+{{ $featuredAltText := .Params.featuredImageAltText }}
+{{ $permalink := .RelPermalink }}
+
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            {{ with .Params.featuredImageUrl }}
+            <a href="{{ $permalink }}"><img src="{{ $featuredImageUrl }}" alt="{{ $featuredAltText }}" loading="lazy"></a>
+            {{ end }}
+        </figure>
+    </div>
+    <div class="card-content">
+        <a class="title is-5" href="{{ $permalink }}">{{ .Title }}</a>
+        <h3 class="subtitle is-6"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
+        <p>{{ .Summary }}</p>
+        {{ with .Params.tags }}
+        <p class="is-size-7 has-text-grey-light mt-1">
+            {{ range . }}
+                <i class="fas fa-tag"></i>
+                {{ $href := print (absURL "tags/") (urlize .) }}
+                <a href="{{ $href }}">{{ . }}</a>
+            {{ end }}
+        </p>
+        {{ end }}
+    </div>
+</div>
