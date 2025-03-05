@@ -1,5 +1,6 @@
 +++
 title = 'Post 0'
+linkTitle = 'Post 0'
 date = 2025-02-08
 draft = false
 tags = ['landscape']

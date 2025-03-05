@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-<div class="container pt-3 pl-1 pr-1 pb-3">
+<div class="container pt-1 mt-3 pl-2 pr-2 pb-3">
 
   <nav class="breadcrumb" aria-label="breadcrumbs">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li class="is-active"><a href="#" aria-current="page">{{ .Title }}</a></li>
+      <li><a href="{{ `` | absURL }}">Home</a></li>
+      <li class="is-active"><a href="#" aria-current="page">{{ .LinkTitle }}</a></li>
     </ul>
   </nav>
 

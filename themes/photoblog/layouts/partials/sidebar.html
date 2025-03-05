@@ -1,27 +1,51 @@
 <aside class="menu" role="navigation" aria-label="main navigation">
-  <a class="menu-list" href="{{ `` | absURL }}">
-    <h1 class="title has-text-weight-semibold is-size-1 pt-1 pb-1 mt-2 mb-4">{{ site.Title }}</h2>
-  </a>
-  </a>
-  <ul>
-  {{ range .Site.Menus.main }}
-   <li>
-    <a href="{{ .URL }}">
-      <h2 class="title has-text-weight-semibold is-size-4 mb-3 mt-3">{{ .Name }}</h2>
+    <a class="menu-item" href="{{ `` | absURL }}">
+        <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5 has-text-centered-mobile">{{ site.Title }}</h2>
     </a>
-   </li>
-  {{ end }}
- </ul>
-  <!-- <a class="menu-list">
-    {{ range .Site.Menus.contact }}
-      <a href="{{ .URL }}" class="button is-light is-rounded is-responsive mb-3 mt-3">
-        <span class="icon-text">
-          <span class="icon">
-            <i class="fa-solid fa-envelope"></i>
-          </span>
-          <span>{{ .Name }}</span>
-        </span>
-      </a>
-      {{ end }}
-    </a>    -->
+    <ul class="has-text-centered-mobile">
+        {{ range .Site.Menus.main }}
+        <li>
+            <a href="{{ .URL }}">
+                <h2 class="title has-text-weight-semibold is-size-4 mb-4 mt-4">{{ .Name }}</h2>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    <div class="columns mt-5 mb-5">
+        <div class="column is-full">
+        <!-- Contact -->
+            <div>
+            <a class="menu-list">
+                {{ range .Site.Menus.contact }}
+                <a href="{{ .URL }}" class="button is-light is-responsive mb-3 mt-3">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    <span>{{ .Name }}</span>
+                    </span>
+                </a>
+                {{ end }}
+            </a>
+        </div>
+        <div class="column is-half">
+            <a class="is-responsive mb-3 mt-3 is-size-3" href="https://instagram.com" target="_blank">
+                <span class="icon"><i class="fa-brands fa-instagram"></i></icon>
+            </a>
+        </div>
+        <div class="column is-half">
+            <a class="is-responsive mb-3 mt-3 is-size-3" href="https://github.com" target="_blank">          
+                <span class="icon"><i class="fa-brands fa-github"></i></icon>
+            </a>
+            </div>
+        </div>
+    </div>
+    <div class="level-item has-text-left has-text-centered-mobile pt-5 mb-3 mt-5 is-size-12">
+        <div>
+            <p>
+                Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen. Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a>.
+            </p>
+        </div>
+    </div>
+
 </aside>

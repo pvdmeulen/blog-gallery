@@ -9,15 +9,14 @@
 <body>
 <div class="container is-fullhd">
   <div class="columns">
-    <div class="column is-narrow is-one-fifth">
-      <header class="menu">
+    <div class="column is-full-mobile is-one-third-tablet is-one-fifth-desktop">
+      <!-- <header class="menu"> -->
+        <!-- {{ partial "improved_sidebar.html" . }} -->
         {{ partial "sidebar.html" . }}
-        <footer>
-          {{ partial "sidebar_footer.html" . }}
-        </footer>
-      </header>
+        <!-- {{ partial "sidebar_footer.html" . }} -->
+      <!-- </header> -->
     </div>
-    <div class="column is-four-fifths content">
+    <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
       <main>
         {{ block "main" . }}{{ end }}
       </main>

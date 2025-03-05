@@ -3,4 +3,12 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+
 <script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+<script>
+	$('#basicExample2').justifiedGallery({
+    	rowHeight : 70,
+    	lastRow : 'nojustify',
+    	margins : 3
+	});
+</script>
