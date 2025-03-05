@@ -24,3 +24,7 @@ pagination.pagerSize = 5
     name = "Contact"
     pre = "fa-solid fa-envelope"
     url = "/contact/"
+
+[module]
+  [[module.imports]]
+    path = 'github.com/bep/gallerydeluxe'
