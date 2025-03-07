@@ -24,25 +24,3 @@ pagination.pagerSize = 5
     name = "Contact"
     pre = "fa-solid fa-envelope"
     url = "/contact/"
-
-[module]
-[[module.imports]]
-  path = 'github.com/bep/gallerydeluxe'
-
-[params]
-    [params.gallerydeluxe]
-        # Shuffle the images in the gallery to give the impression of a new gallery each time.
-        shuffle = false
-
-        # Reverse the order of the images in the gallery.
-        reverse = false
-
-         # Enable Exif data in the gallery.
-         # See https://gohugo.io/content-management/image-processing/#exif-data for how to filter tags.
-        enable_exif = false
-
-          # Optional watermark file for the large images.
-        [params.gallerydeluxe.watermark]
-            image = "" # relative to /assets
-            posx  = "left"                    # one of "left", "center", "right"
-            posy  = "bottom"                  # one of "top", "center", "bottom"

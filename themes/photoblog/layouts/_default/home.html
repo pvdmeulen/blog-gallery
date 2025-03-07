@@ -14,25 +14,42 @@
   
   <!-- Recent posts showcase -->
   
-  <div id="post-showcase" class="mt-2">
+  <div id="showcase" class="mt-2">
     <div class="columns is-centered">
-      <div class="column">
+      <!-- Recent posts showcase -->
+      <div class="column is-half">
         <div class="content">
           <h2 class="mt-5">Recent posts</h2>
         </div>
       <div class="columns">
-        {{ $showcase := site.RegularPages | first 3}}
-        {{ range $showcase }}
-          <div class="column is-one-third">
+        {{ $post := where .Site.RegularPages "Type" "posts" | first 2}}
+        {{ range $post }}
+          <div class="column is-half">
             {{ partial "widgets/showcase.html" . }}
           </div>
         {{ end }}
       </div>
+      <div class="container">
+        <a href="/Posts"><h4>See all posts <i class="fa-solid fa-arrow-right"></i></h2></a>
+      </div>
     </div>
-  </div>
-  
-  <div class="content">
-    <a href="/Posts"><h4>See all posts <i class="fa-solid fa-arrow-right"></i></h2></a>
+    <!-- Recent galleries showcase -->
+    <div class="column is-half">
+        <div class="content">
+          <h2 class="mt-5">Recent galleries</h2>
+        </div>
+      <div class="columns">
+        {{ $galleries := where .Site.Pages "Type" "galleries" | first 2}}
+        {{ range $galleries }}
+          <div class="column is-half">
+            {{ partial "widgets/showcase.html" . }}
+          </div>
+        {{ end }}
+      </div>
+      <div class="container">
+        <a href="/Galleries"><h4>See all galleries <i class="fa-solid fa-arrow-right"></i></h2></a>
+      </div>
+    </div>
   </div>
   
 {{ end }}

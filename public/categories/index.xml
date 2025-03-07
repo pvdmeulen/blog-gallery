@@ -6,6 +6,49 @@
     <description>Recent content in Categories on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Animals</title>
+      <link>http://localhost:1313/categories/animals/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/animals/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edinburgh</title>
+      <link>http://localhost:1313/categories/edinburgh/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/edinburgh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Landscape</title>
+      <link>http://localhost:1313/categories/landscape/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/landscape/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nature</title>
+      <link>http://localhost:1313/categories/nature/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/nature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Street</title>
+      <link>http://localhost:1313/categories/street/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/street/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Travel</title>
+      <link>http://localhost:1313/categories/travel/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/travel/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

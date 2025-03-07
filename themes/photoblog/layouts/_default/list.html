@@ -5,7 +5,7 @@
         <div class="columns is-multiline mt-2">
             {{ range .Paginator.Pages.ByPublishDate.Reverse }}
             <div class="column is-one-fourth">
-                {{ partial "widgets/showcase-all.html" . }}
+                {{ partial "widgets/showcase.html" . }}
             </div>
             {{ end }}
         </div>

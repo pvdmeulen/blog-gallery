@@ -36,3 +36,32 @@
 
 @import url("contactform.css")
 /* @import url("lightbox.css") */
+
+/* Justified gallery */
+
+.jg {
+  --min-width: 33%;
+  --row-height: 20vh;
+  --max-row-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.25rem;
+}
+
+.jg > a {
+  --ratio: calc(var(--w) / var(--h));
+  flex-grow: calc(var(--ratio) * 100);
+  flex-basis: calc(var(--ratio) * var(--row-height));
+  margin: 0.25rem;
+  min-width: var(--min-width);
+}
+
+.jg > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: var(--max-row-height);
+  object-fit: cover;
+}
