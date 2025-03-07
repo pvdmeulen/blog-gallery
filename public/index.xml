@@ -20,7 +20,7 @@
       <link>http://localhost:1313/galleries/street/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/galleries/street/</guid>
-      <description>&lt;p&gt;This is the a gallery with street photography.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is the gallery with street photography.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 4</title>
@@ -62,7 +62,7 @@
       <link>http://localhost:1313/gallery/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/gallery/</guid>
-      <description>&lt;p&gt;Here I&amp;rsquo;ll explain the gallery.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A collection of photos taken during some of my excursions around Scotland, Sweden, and elsewhere.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 1</title>

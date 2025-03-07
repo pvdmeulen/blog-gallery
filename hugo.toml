@@ -2,13 +2,13 @@ baseURL = 'https://example.org/'
 languageCode = 'en-gb'
 title = 'Peter van der Meulen'
 theme = 'photoblog'
-pagination.pagerSize = 5
+pagination.pagerSize = 4
 
 [menu]
 [[menu.main]]
     name = "Gallery"
     pre = "image"
-    url = "/gallery/"
+    url = "/galleries/"
     weight = 10
   [[menu.main]]
     name = "Posts"
