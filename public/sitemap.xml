@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/animals/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/edinburgh/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/landscape/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/landscape/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/galleries/landscape/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/nature/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/edinburgh/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/street/</loc>
@@ -32,9 +38,6 @@
     <loc>http://localhost:1313/galleries/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/landscape/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/post-4/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -42,9 +45,6 @@
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/street/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/post-3/</loc>
@@ -57,9 +57,6 @@
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
-    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/gallery/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/post-1/</loc>

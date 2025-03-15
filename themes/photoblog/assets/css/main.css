@@ -27,7 +27,6 @@
   width: auto;
   top: 0;
   bottom: 0;
-  padding: 20px;
 }
 
 .menu-foot {
@@ -44,7 +43,7 @@
 
 .content {
   display: inline-block;
-}
+  }
 
 @import url("contactform.css")
 /* @import url("lightbox.css") */

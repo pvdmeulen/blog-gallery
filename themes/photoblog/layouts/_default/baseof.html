@@ -9,14 +9,14 @@
 <body>
 <div class="container is-fullhd">
   <div class="columns">
-    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop">
+    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop px-3">
       {{ partial "desktop_sidebar.html" . }}
     </div>
     <div class="column is-full-mobile is-hidden-tablet">
       {{ partial "mobile_header.html" . }}
     </div>
     <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
-      <main>
+      <main class="px-3">
         {{ block "main" . }}{{ end }}
       </main>
     </div>

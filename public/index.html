@@ -28,9 +28,9 @@
 <body>
 <div class="container is-fullhd">
   <div class="columns">
-    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop">
-      <aside class="menu" role="navigation" aria-label="main navigation">
-    <a class="menu-item" href="http://localhost:1313/">
+    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop px-3">
+      <aside class="menu px-3" role="navigation" aria-label="main navigation">
+    <a class="menu-item py-5 my-5" href="http://localhost:1313/">
         <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">Peter van der Meulen</h2>
     </a>
     <ul>
@@ -56,7 +56,7 @@
     </ul>
     
     
-    <div class="grid is-col-min-1 mt-5 mb-5">
+    <div class="grid is-col-min-1 my-5">
         
             <div class="cell">
                 <a href="/contact/" class="is-size-5">
@@ -85,10 +85,10 @@
     </div>
 </aside>
 
-<aside class="menu-foot">
+<aside class="menu-foot px-3 mt-auto">
 
     <div class="columns">
-        <div class="column is-full">
+        <div class="column is-full py-5 my-5">
             <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
             Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
         </div>
@@ -96,72 +96,40 @@
 </aside>
     </div>
     <div class="column is-full-mobile is-hidden-tablet">
-      <aside class="menu" role="contact" aria-label="contact and copyright">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://localhost:1313/">
+      <h1 class="title has-text-weight-semibold is-size-3 pt-1">Peter van der Meulen</h2>
+    </a>
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-start">
+      
+        <a href="/galleries/" class="navbar-item ml-05 mr-05">
+          <h2 class="title has-text-weight-semibold is-size-4">Gallery</h2>
+        </a>
+      
+        <a href="/posts/" class="navbar-item ml-05 mr-05">
+          <h2 class="title has-text-weight-semibold is-size-4">Posts</h2>
+        </a>
+      
+        <a href="/about/" class="navbar-item ml-05 mr-05">
+          <h2 class="title has-text-weight-semibold is-size-4">About</h2>
+        </a>
+      
+    </div>
+  </div>
+</nav>
 
-    <div class="columns">
-        <div class="column">
-        
-            <a class="menu-list">
-                
-                <a href="/contact/" class="button is-light is-responsive mb-3 mt-3">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                    <span>Contact</span>
-                    </span>
-                </a>
-                
-                <a href="https://instagram.com/" class="button is-light is-responsive mb-3 mt-3">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                    <span>Intagram</span>
-                    </span>
-                </a>
-                
-                <a href="https://flickr.com/" class="button is-light is-responsive mb-3 mt-3">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                    <span>Flickr</span>
-                    </span>
-                </a>
-                
-                <a href="https://github.com/" class="button is-light is-responsive mb-3 mt-3">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                    <span>GitHub</span>
-                    </span>
-                </a>
-                
-            </a>
-        </div>
-        <div class="column">
-            <a class="mb-3 mt-3 is-size-5" href="https://instagram.com" target="_blank">
-                <span class="icon"><i class="fa-brands fa-instagram"></i></icon>
-            </a>
-        </div>
-        <div class="column">
-            <a class="mb-3 mt-3 is-size-5" href="https://github.com" target="_blank">          
-                <span class="icon"><i class="fa-brands fa-github"></i></icon>
-            </a>
-        </div>
-    </div>
-    <div class="level-item has-text-left pt-5 mb-3 mt-3">
-        <div>
-            <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen.
-            Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
-        </div>
-    </div>
-</aside>
     </div>
     <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
-      <main>
+      <main class="px-3">
         
 
   
@@ -181,14 +149,15 @@
   <div id="showcase" class="mt-2">
     <div class="columns is-centered">
       
-      <div class="column is-half">
+      
+      <div class="column is-half-desktop">
         <div class="content">
           <h2 class="mt-5">Recent posts</h2>
         </div>
-      <div class="columns">
-        
-        
-          <div class="column is-half">
+        <div class="grid">
+          
+          
+          <div class="cell">
             
 
 
@@ -221,8 +190,8 @@
     </div>
 </div>
           </div>
-        
-          <div class="column is-half">
+          
+          <div class="cell">
             
 
 
@@ -255,21 +224,22 @@
     </div>
 </div>
           </div>
-        
-      </div>
+          
+        </div>
       <div class="container">
         <a href="/Posts"><h4>See all posts <i class="fa-solid fa-arrow-right"></i></h2></a>
       </div>
     </div>
     
-    <div class="column is-half">
+    
+    <div class="column is-half-desktop">
         <div class="content">
           <h2 class="mt-5">Recent galleries</h2>
         </div>
-      <div class="columns">
+      <div class="grid">
         
         
-          <div class="column is-half">
+          <div class="cell">
             
 
 
@@ -278,18 +248,15 @@
     <div class="card-image">
         <figure class="image is-4by3">
             
+            <a href="/galleries/landscape/"><img src="/images/street/IMG_2080.JPG" alt="" loading="lazy"></a>
+            
         </figure>
     </div>
-    <div class="card-content">
-        <a class="title is-5" href="/galleries/landscape/">Landscape photography</a>
-        <h3 class="subtitle is-6"> Mar 1, 2025</h3>
-        <p><p>This is the gallery with landscape photography.</p></p>
-        
-    </div>
+    
 </div>
           </div>
         
-          <div class="column is-half">
+          <div class="cell">
             
 
 
@@ -300,12 +267,7 @@
             
         </figure>
     </div>
-    <div class="card-content">
-        <a class="title is-5" href="/galleries/street/">Street photography</a>
-        <h3 class="subtitle is-6"> Mar 1, 2025</h3>
-        <p><p>This is the gallery with street photography.</p></p>
-        
-    </div>
+    
 </div>
           </div>
         
@@ -314,6 +276,7 @@
         <a href="/Galleries"><h4>See all galleries <i class="fa-solid fa-arrow-right"></i></h2></a>
       </div>
     </div>
+    
   </div>
   
 

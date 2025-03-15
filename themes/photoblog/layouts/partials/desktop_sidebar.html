@@ -1,5 +1,5 @@
-<aside class="menu" role="navigation" aria-label="main navigation">
-    <a class="menu-item" href="{{ `` | absURL }}">
+<aside class="menu px-3" role="navigation" aria-label="main navigation">
+    <a class="menu-item py-5 my-5" href="{{ `` | absURL }}">
         <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">{{ site.Title }}</h2>
     </a>
     <ul>
@@ -13,7 +13,7 @@
     </ul>
     
     <!-- SOCIALS -->
-    <div class="grid is-col-min-1 mt-5 mb-5">
+    <div class="grid is-col-min-1 my-5">
         {{ range .Site.Menus.contact }}
             <div class="cell">
                 <a href="{{ .URL }}" class="is-size-5">
@@ -24,10 +24,10 @@
     </div>
 </aside>
 
-<aside class="menu-foot">
+<aside class="menu-foot px-3 mt-auto">
 <!-- COPYRIGHT -->
     <div class="columns">
-        <div class="column is-full">
+        <div class="column is-full py-5 my-5">
             <p>Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
             Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
         </div>
