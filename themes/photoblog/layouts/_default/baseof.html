@@ -9,17 +9,20 @@
 <body>
 <div class="container is-fullhd">
   <div class="columns">
-    <div class="column is-full-mobile is-one-third-tablet is-one-fifth-desktop">
-      <!-- <header class="menu"> -->
-        <!-- {{ partial "improved_sidebar.html" . }} -->
-        {{ partial "sidebar.html" . }}
-        <!-- {{ partial "sidebar_footer.html" . }} -->
-      <!-- </header> -->
+    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop">
+      {{ partial "desktop_sidebar.html" . }}
+    </div>
+    <div class="column is-full-mobile is-hidden-tablet">
+      {{ partial "mobile_header.html" . }}
     </div>
     <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
       <main>
         {{ block "main" . }}{{ end }}
       </main>
+    </div>
+    <div class="container is-full-mobile is-hidden-tablet">
+    <!-- is-one-third-tablet is-one-fifth-desktop is-centered -->
+      {{ partial "mobile_footer.html" . }}
     </div>
   </div>
 </div>

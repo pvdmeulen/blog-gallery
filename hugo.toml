@@ -24,3 +24,19 @@ pagination.pagerSize = 4
     name = "Contact"
     pre = "fa-solid fa-envelope"
     url = "/contact/"
+    weight = 10
+  [[menu.contact]]
+    name = "Intagram"
+    pre = "fa-brands fa-instagram"
+    url = "https://instagram.com/"
+    weight = 20
+  [[menu.contact]]
+    name = "Flickr"
+    pre = "fa-brands fa-flickr"
+    url = "https://flickr.com/"
+    weight = 30
+  [[menu.contact]]
+    name = "GitHub"
+    pre = "fa-brands fa-github"
+    url = "https://github.com/"
+    weight = 40

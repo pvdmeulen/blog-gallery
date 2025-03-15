@@ -27,14 +27,12 @@
 <body>
 <div class="container is-fullhd">
   <div class="columns">
-    <div class="column is-full-mobile is-one-third-tablet is-one-fifth-desktop">
-      
-        
-        <aside class="menu" role="navigation" aria-label="main navigation">
+    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop">
+      <aside class="menu" role="navigation" aria-label="main navigation">
     <a class="menu-item" href="http://localhost:1313/">
-        <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5 has-text-centered-mobile">Peter van der Meulen</h2>
+        <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">Peter van der Meulen</h2>
     </a>
-    <ul class="has-text-centered-mobile">
+    <ul>
         
         <li>
             <a href="/galleries/">
@@ -55,10 +53,53 @@
         </li>
         
     </ul>
-    <div class="columns mt-5 mb-5">
-        <div class="column is-full">
+    
+    
+    <div class="grid is-col-min-1 mt-5 mb-5">
         
-            <div>
+            <div class="cell">
+                <a href="/contact/" class="is-size-5">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                </a>
+            </div>
+        
+            <div class="cell">
+                <a href="https://instagram.com/" class="is-size-5">
+                    <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+            </div>
+        
+            <div class="cell">
+                <a href="https://flickr.com/" class="is-size-5">
+                    <span class="icon"><i class="fa-brands fa-flickr"></i></span>
+                </a>
+            </div>
+        
+            <div class="cell">
+                <a href="https://github.com/" class="is-size-5">
+                    <span class="icon"><i class="fa-brands fa-github"></i></span>
+                </a>
+            </div>
+        
+    </div>
+</aside>
+
+<aside class="menu-foot">
+
+    <div class="columns">
+        <div class="column is-full">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
+            Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
+        </div>
+    </div>  
+</aside>
+    </div>
+    <div class="column is-full-mobile is-hidden-tablet">
+      <aside class="menu" role="contact" aria-label="contact and copyright">
+
+    <div class="columns">
+        <div class="column">
+        
             <a class="menu-list">
                 
                 <a href="/contact/" class="button is-light is-responsive mb-3 mt-3">
@@ -70,31 +111,53 @@
                     </span>
                 </a>
                 
+                <a href="https://instagram.com/" class="button is-light is-responsive mb-3 mt-3">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    <span>Intagram</span>
+                    </span>
+                </a>
+                
+                <a href="https://flickr.com/" class="button is-light is-responsive mb-3 mt-3">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    <span>Flickr</span>
+                    </span>
+                </a>
+                
+                <a href="https://github.com/" class="button is-light is-responsive mb-3 mt-3">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    <span>GitHub</span>
+                    </span>
+                </a>
+                
             </a>
         </div>
-        <div class="column is-half">
-            <a class="is-responsive mb-3 mt-3 is-size-3" href="https://instagram.com" target="_blank">
+        <div class="column">
+            <a class="mb-3 mt-3 is-size-5" href="https://instagram.com" target="_blank">
                 <span class="icon"><i class="fa-brands fa-instagram"></i></icon>
             </a>
         </div>
-        <div class="column is-half">
-            <a class="is-responsive mb-3 mt-3 is-size-3" href="https://github.com" target="_blank">          
+        <div class="column">
+            <a class="mb-3 mt-3 is-size-5" href="https://github.com" target="_blank">          
                 <span class="icon"><i class="fa-brands fa-github"></i></icon>
             </a>
-            </div>
         </div>
     </div>
-    <div class="level-item has-text-left has-text-centered-mobile pt-5 mb-3 mt-5 is-size-12">
+    <div class="level-item has-text-left pt-5 mb-3 mt-3">
         <div>
-            <p>
-                Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen. Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a>.
-            </p>
+            <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen.
+            Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
         </div>
     </div>
-
 </aside>
-        
-      
     </div>
     <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
       <main>
@@ -154,6 +217,43 @@
     </div>
 
       </main>
+    </div>
+    <div class="container is-full-mobile is-hidden-tablet">
+    
+      <nav class="level is-mobile" role="contact" aria-label="footer with contact and copyright">
+
+    <div class="level-left has-text-left pl-5 ml-3 pt-5 mt-3 mb-3">
+        <div class="level-item">
+            <a class="is-size-5">
+                
+                    <a href="/contact/" class="is-size-5 ml-2 mr-2">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    </a>
+                
+                    <a href="https://instagram.com/" class="is-size-5 ml-2 mr-2">
+                        <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                    </a>
+                
+                    <a href="https://flickr.com/" class="is-size-5 ml-2 mr-2">
+                        <span class="icon"><i class="fa-brands fa-flickr"></i></span>
+                    </a>
+                
+                    <a href="https://github.com/" class="is-size-5 ml-2 mr-2">
+                        <span class="icon"><i class="fa-brands fa-github"></i></span>
+                    </a>
+                
+            </a>
+        </div>
+    </div>
+    
+    <div class="level-right has-text-right pr-5 mr-3 pt-5 mt-3 mb-3">
+        <div class="level-item">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
+            Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
+        </div>
+    </div>
+    
+</nav>
     </div>
   </div>
 </div>
