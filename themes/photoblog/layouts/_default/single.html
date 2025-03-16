@@ -27,8 +27,10 @@
   {{ partial "widgets/featuredimage.html" . }}
 
   {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   
-  </div>
+  <!-- Replace below with prev/next post -->
+  <!-- {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }} -->
+  
+</div>
   
 {{ end }}

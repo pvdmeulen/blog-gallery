@@ -7,20 +7,36 @@
 <meta name="viewport" content="width=device-width">
 <title>Landscape photography | Peter van der Meulen</title>
 
+
+
     <link rel="stylesheet" href="/css/main.css">
 
 
       <script src="/js/main.js"></script>
 
 
+
+
+
+
 <script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
-<script>
-	$('#basicExample2').justifiedGallery({
-    	rowHeight : 70,
-    	lastRow : 'nojustify',
-    	margins : 3
-	});
+
+
+<script type="module">
+import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#my-gallery',
+  children: 'a',
+  pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+});
+lightbox.init();
 </script>
+
+<link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
+
+
+
+
 
 </head>
 
@@ -29,8 +45,9 @@
   <div class="columns">
     <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop px-3">
       <aside class="menu px-3" role="navigation" aria-label="main navigation">
-    <a class="menu-item py-5 my-5" href="http://localhost:1313/">
-        <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">Peter van der Meulen</h2>
+    <a class="my-5" href="http://localhost:1313/">
+        <img src="/images/logo.svg" width="200px" class="py-1 my-3"></img>
+        
     </a>
     <ul>
         
@@ -55,7 +72,7 @@
     </ul>
     
     
-    <div class="grid is-col-min-1 my-5">
+    <div class="grid is-col-min-1 my-5 py-3">
         
             <div class="cell">
                 <a href="/contact/" class="is-size-5">

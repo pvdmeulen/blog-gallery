@@ -1,6 +1,7 @@
 <aside class="menu px-3" role="navigation" aria-label="main navigation">
-    <a class="menu-item py-5 my-5" href="{{ `` | absURL }}">
-        <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">{{ site.Title }}</h2>
+    <a class="my-5" href="{{ `` | absURL }}">
+        <img src="{{ `images/logo.svg` | relLangURL }}" width="200px" class="py-1 my-3"></img>
+        <!-- <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">{{ site.Title }}</h1> -->
     </a>
     <ul>
         {{ range .Site.Menus.main }}
@@ -13,7 +14,7 @@
     </ul>
     
     <!-- SOCIALS -->
-    <div class="grid is-col-min-1 my-5">
+    <div class="grid is-col-min-1 my-5 py-3">
         {{ range .Site.Menus.contact }}
             <div class="cell">
                 <a href="{{ .URL }}" class="is-size-5">

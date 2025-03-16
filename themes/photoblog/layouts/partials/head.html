@@ -1,10 +1,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<!-- Cached stylesheet, js -->
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
+<!-- <link rel="stylesheet" href="css/my-bulma-project.css"> -->
+<!-- <link rel="stylesheet" href="css/main.css"> -->
+
+<!-- FontAwesome -->
 <script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+<!-- PhotoSwipe -->
+<script type="module">
+import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#my-gallery',
+  children: 'a',
+  pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+});
+lightbox.init();
+</script>
+
+<link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
+
+<!-- Other -->
+
+<!-- 
 <script>
 	$('#basicExample2').justifiedGallery({
     	rowHeight : 70,
@@ -12,3 +35,4 @@
     	margins : 3
 	});
 </script>
+-->
