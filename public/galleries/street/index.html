@@ -30,9 +30,9 @@
 <script type="module">
 
   console.log("uihio");
-  import PhotoSwipe from "/photoswipe/photoswipe.esm.js";
-  import PhotoSwipeLightbox from "/photoswipe/photoswipe-lightbox.esm.js";
-  import PhotoSwipeDynamicCaption from "/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
   
   const lightbox = new PhotoSwipeLightbox({
 	gallery: "#my-gallery",
@@ -57,9 +57,22 @@
 </script>
 
 
-<link rel="stylesheet" href="/css/justifiedgallery/custom_justified_gallery.css" />
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
+
+<link rel="stylesheet" href='http://localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+
+<script src='http://localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+
+<script type = "module">
+$("#my-gallery").justifiedGallery({
+    	rowHeight : 200,
+    	lastRow : 'nojustify',
+    	margins : 3,
+    	selector: 'a, figure:not(.spinner)'
+	});
+</script>
 
 
 
@@ -199,6 +212,19 @@
     target="_blank"
   >
     <img src="/galleries/street/IMG_1993.JPG" alt="IMG_1993.JPG" loading="lazy"/>
+    <span class="pswp-caption-content">
+    
+      <ul>
+      <li>Date: February 08, 2025</li>
+      <li>Aperture: 4.56</li>
+      
+      <li>Exposure Time: 1/1250</li>
+      <li>F Number: 9/2</li>
+      <li>Focal Length: 35</li>
+      
+      <li>Lens Model: EF-S18-55mm f/3.5-5.6 III</li>
+    </ul>    
+    </span>
   </a>
   
   <a
@@ -208,6 +234,19 @@
     target="_blank"
   >
     <img src="/galleries/street/IMG_2080.JPG" alt="IMG_2080.JPG" loading="lazy"/>
+    <span class="pswp-caption-content">
+    
+      <ul>
+      <li>Date: February 08, 2025</li>
+      <li>Aperture: 4.97</li>
+      
+      <li>Exposure Time: 1/1250</li>
+      <li>F Number: 5</li>
+      <li>Focal Length: 44</li>
+      
+      <li>Lens Model: EF-S18-55mm f/3.5-5.6 III</li>
+    </ul>    
+    </span>
   </a>
   
 </div>
