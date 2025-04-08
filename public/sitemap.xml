@@ -26,6 +26,9 @@
     <loc>http://localhost:1313/categories/edinburgh/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/street/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/street/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -42,9 +45,6 @@
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/street/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/post-3/</loc>

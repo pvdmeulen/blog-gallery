@@ -13,17 +13,58 @@
 <script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
 
 <!-- PhotoSwipe -->
+
+<link rel="stylesheet" href='{{ "/css/photoswipe/photoswipe.css" | absLangURL }}'/>
+<link rel="stylesheet" href='{{ "/css/photoswipe/photoswipe-dynamic-caption-plugin.css" | absLangURL }}'/>
+
+<!-- Implementation of PhotoSwipe5 Hugo shortcodes adapted from -->
 <script type="module">
-import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
-const lightbox = new PhotoSwipeLightbox({
-  gallery: '#my-gallery',
-  children: 'a',
-  pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
-});
-lightbox.init();
+
+  console.log("uihio");
+  import PhotoSwipe from "/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "#my-gallery",
+	children: "a",
+	initialZoomLevel: "fit",     // initial zoomlevel
+	secondaryZoomLevel: "fit",   // don't change zoom
+	imageClickAction: "close",   // close on click
+	pswpModule: PhotoSwipe,
+	paddingFn: (viewportSize) => {
+    return {
+      top: 30, bottom: 30, left: 70, right: 70
+    }
+  },
+  });
+  
+  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    type: 'auto',
+  });
+  
+  lightbox.init();
+  
 </script>
 
-<link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
+<!-- Justified Gallery -->
+<link rel="stylesheet" href="/css/justifiedgallery/custom_justified_gallery.css" />
+
+<!-- 
+<link rel="stylesheet" href="/css/justifiedgallery/justifiedGallery.css" />
+<script src="/js/justifiedgallery/jquery.justifiedGallery.js"></script>
+
+<script type = "module">
+$("#my-gallery").justifiedGallery({
+    	rowHeight : 70,
+    	lastRow : 'nojustify',
+    	margins : 3,
+    	selector: 'a, figure:not(.spinner)'
+	});
+</script>
+
+-->
+
 
 <!-- Other -->
 

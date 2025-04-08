@@ -1,6 +1,7 @@
 {{ $featuredImageUrl := .Params.featuredImageUrl }}
 {{ $featuredAltText := .Params.featuredImageAltText }}
 {{ $permalink := .RelPermalink }}
+{{ $subtitle := .Params.subtitle }}
 
 <div class="card">
     <div class="card-image">
@@ -13,7 +14,7 @@
     <div class="card-content">
         <a class="title is-5" href="{{ $permalink }}">{{ .Title }}</a>
         <h3 class="subtitle is-6"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
-        <p>{{ .Summary }}</p>
+        <p>{{ .Params.subtitle }}</p>
         {{ with .Params.tags }}
         <p class="is-size-7 has-text-grey-light mt-1">
             {{ range . }}

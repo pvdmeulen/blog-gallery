@@ -1,7 +1,8 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ `` | absURL }}">
-      <h1 class="title has-text-weight-semibold is-size-3 pt-1">{{ site.Title }}</h2>
+      <!-- <h1 class="title has-text-weight-semibold is-size-3 pt-1">{{ site.Title }}</h2> -->
+      <img src="{{ `images/logo-new.svg` | relLangURL }}" height="200px" class="py-1 my-3"></img>
     </a>
     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -10,6 +11,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
+  
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-start">
       {{ range .Site.Menus.main }}

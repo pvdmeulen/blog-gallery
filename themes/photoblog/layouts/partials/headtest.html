@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<!-- Cached stylesheet, js -->
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+
+<!-- <link rel="stylesheet" href="css/my-bulma-project.css"> -->
+<!-- <link rel="stylesheet" href="css/main.css"> -->
+
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+<!-- PhotoSwipe -->
+
+<link rel="stylesheet" href="/css/photoswipe/photoswipe.css" />
+
+<!-- Implementation of PhotoSwipe5 Hugo shortcodes adapted from -->
+<script type="module">
+
+  import PhotoSwipeLightbox from "/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipe from "/photoswipe/photoswipe.esm.js";
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "#my-gallery",
+	children: "a",
+	initialZoomLevel: "fit",
+	secondaryZoomLevel: "fit",
+	imageClickAction: "close",
+	pswpModule: PhotoSwipe
+  });
+    
+  lightbox.init();
+  
+</script>
+
+<!-- Other -->
+
+<!-- 
+<script>
+	$('#basicExample2').justifiedGallery({
+    	rowHeight : 70,
+    	lastRow : 'nojustify',
+    	margins : 3
+	});
+</script>
+-->

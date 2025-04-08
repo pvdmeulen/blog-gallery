@@ -2,7 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en-gb'
 title = 'Peter van der Meulen'
 logo = 'logo.svg'
-theme = 'photoblog'
+theme = ['photoblog']
 pagination.pagerSize = 8
 
 [menu]

@@ -41,7 +41,7 @@
       <link>http://localhost:1313/posts/post-0/</link>
       <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/post-0/</guid>
-      <description>&lt;p&gt;This is my zeroth post. Here, I will explain what this blog is about. I might include some photo of North Berwick and talk about learning photography.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is my zeroth post. Here, I will explain what this blog is about. I might include some photo of North Berwick and talk about learning photography. This first bit of text at the start of the post can be called using &lt;code&gt;{{ Summary }}&lt;/code&gt; in Hugo, with remaining text after the &lt;code&gt;&amp;lt; explanation point here--more--&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

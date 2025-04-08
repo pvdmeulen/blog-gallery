@@ -1,0 +1,20 @@
+<!-- block begin -->
+<div id="my-gallery">
+  {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }} 
+  {{ range  $images }}
+  <a
+    href="{{ .RelPermalink }}"
+    data-pswp-width="{{ .Width }}"
+    data-pswp-height="{{ .Height }}"
+    target="_blank"
+  >
+    <img src="{{ .RelPermalink }}" alt="{{ .Name }}" loading="lazy"/>
+  </a>
+  {{ end }}
+</div>
+<!-- end of block -->
+<!-- caption code -->
+{{ with .Get "title" }}
+<h4>{{ . }}</h4>
+{{ end }}
+
