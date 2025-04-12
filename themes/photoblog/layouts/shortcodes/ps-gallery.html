@@ -2,18 +2,18 @@
 <div id="my-gallery">
   {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }} 
   {{ range  $images }}
+  {{ $link := .RelPermalink }}
   <a
-    href="{{ .RelPermalink }}"
+    href="{{ $link }}"
     data-pswp-width="{{ .Width }}"
     data-pswp-height="{{ .Height }}"
     target="_blank"
   >
-    <img src="{{ .RelPermalink }}" alt="{{ .Name }}" loading="lazy"/>
+    <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }}' alt="{{ .Name }}" loading="lazy"/>
     <span class="pswp-caption-content">
     {{ with .Exif }}
       <ul>
       {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
-      <br>
       {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
       <br>
       {{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
@@ -33,4 +33,3 @@
 {{ with .Get "title" }}
 <h4>{{ . }}</h4>
 {{ end }}
-
