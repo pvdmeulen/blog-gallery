@@ -1,4 +1,4 @@
-<aside class="menu px-3" role="navigation" aria-label="main navigation">
+<aside class="menu px-3 mb-auto" role="navigation" aria-label="main navigation">
     <a class="my-5" href="{{ `` | absURL }}">
         <img src="{{ `images/logo-new.svg` | relLangURL }}" width="200px" class="py-1 my-3"></img>
         <!-- <h1 class="title has-text-weight-semibold is-size-3 pt-1 pb-1 mt-3 mb-5">{{ site.Title }}</h1> -->
@@ -17,20 +17,15 @@
     <div class="grid is-col-min-1 my-5 py-3">
         {{ range .Site.Menus.contact }}
             <div class="cell">
-                <a href="{{ .URL }}" class="is-size-5">
+                <a href="{{ .URL }}" class="is-size-5 has-text-primary">
                     <span class="icon"><i class="{{ .Pre }}"></i></span>
                 </a>
             </div>
         {{ end }}
     </div>
-</aside>
 
-<aside class="menu-foot px-3 mt-auto">
 <!-- COPYRIGHT -->
-    <div class="columns">
-        <div class="column is-full py-5 my-5">
-            <p>Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
-            Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
-        </div>
+    <div class="container">
+      <p>Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen. Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
     </div>  
 </aside>

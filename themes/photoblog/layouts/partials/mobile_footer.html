@@ -4,7 +4,7 @@
         <div class="level-item">
             <a class="is-size-5">
                 {{ range .Site.Menus.contact }}
-                    <a href="{{ .URL }}" class="is-size-5 ml-2 mr-2">
+                    <a href="{{ .URL }}" class="is-size-5 ml-2 mr-2 has-text-primary">
                         <span class="icon"><i class="{{ .Pre }}"></i></span>
                     </a>
                 {{ end }}
@@ -15,7 +15,7 @@
     <div class="level-right has-text-right pr-5 mr-3 pt-5 mt-3 mb-3">
         <div class="level-item">
             <p>Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
-            Built with <i class="fa-solid fa-heart"></i> using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bulma.io" target="_blank">Bulma</a></span></p>
+            Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
         </div>
     </div>
     

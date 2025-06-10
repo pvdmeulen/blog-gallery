@@ -3,7 +3,7 @@
 {{ $permalink := .RelPermalink }}
 {{ $subtitle := .Params.subtitle }}
 
-<div class="card">
+<div class="card has-background-color-primary-soft">
     <div class="card-image">
         <figure class="image is-4by3">
             {{ with .Params.featuredImageUrl }}
@@ -16,13 +16,15 @@
         <h3 class="subtitle is-6"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
         <p>{{ .Params.subtitle }}</p>
         {{ with .Params.tags }}
-        <p class="is-size-7 has-text-grey-light mt-1">
+        <!-- <p class="is-size-7 has-text-grey-light mt-1"> -->
             {{ range . }}
-                <i class="fas fa-tag"></i>
+              <button class="button is-light">
+                <!-- <i class="fas fa-tag"></i> -->
                 {{ $href := print (absURL "tags/") (urlize .) }}
-                <a href="{{ $href }}">{{ . }}</a>
-            {{ end }}
-        </p>
+                <a href="{{ $href }}" class="is-size-7 has-text-grey-dark">{{ . }}</a>
+              </button>
+            {{ end }}    
+        <!-- </p> -->
         {{ end }}
     </div>
 </div>

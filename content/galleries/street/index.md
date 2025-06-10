@@ -6,7 +6,7 @@ date = 2025-03-01
 layout = 'gallery'
 tags = ['street']
 featuredImageType = "Photo"
-featuredImageUrl = '/images/street/IMG_2080.JPG'
+featuredImageUrl = '/images/streetcard.JPG'
 +++
 
 {{< ps-gallery folder="" >}}
