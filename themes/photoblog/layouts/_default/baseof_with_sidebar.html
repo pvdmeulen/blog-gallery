@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body>
+<div class="container is-fullhd">
+  <div class="columns">
+    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop px-3">
+      {{ partial "sidebar.html" . }}
+    </div>
+    <div class="column is-full-mobile is-hidden-tablet">
+      {{ partial "mobile_header.html" . }}
+    </div>
+    <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
+      <main class="px-3">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+    <div class="container is-full-mobile is-hidden-tablet">
+    <!-- is-one-third-tablet is-one-fifth-desktop is-centered -->
+      {{ partial "mobile_footer.html" . }}
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

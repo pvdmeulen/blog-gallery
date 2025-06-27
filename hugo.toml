@@ -7,17 +7,17 @@ pagination.pagerSize = 8
 
 [menu]
 [[menu.main]]
-    name = "Gallery"
+    name = "GALLERY"
     pre = "image"
     url = "/galleries/"
     weight = 10
   [[menu.main]]
-    name = "Posts"
+    name = "POSTS"
     pre = "pen-tool"
     url = "/posts/"
     weight = 20
   [[menu.main]]
-    name = "About"
+    name = "ABOUT"
     pre = "id-badge"
     url = "/about/"
     weight = 30

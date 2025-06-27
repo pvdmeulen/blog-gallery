@@ -1,16 +1,16 @@
 // Set your brand colors
-$purple: #4b4a67;
-$green-dark: #5fb49c;
-$green-light: #98dfaf;
-$mint: #deefb7;
+$hedge: #275958;
+$grass: #22D592;
+$house: #EAAA02;
+$sky: #02669A;
 
 // Path to Bulma's sass folder
 @use "bulma/sass" with (
-  $family-primary: '"Raleway", sans-serif',
+  $family-primary: '"Inter", sans-serif',
   $family-secondary: '"Cardo", serif',
   $family-code: '"Fira Code", monospace',
-  $primary: $green-dark,
-  $link: $green-light,
+  $primary: $hedge,
+  $link: $grass,
   $control-border-width: 2px,
   $input-shadow: none
   );
@@ -21,4 +21,4 @@ $mint: #deefb7;
 // Noto Serif
 // Current import:
 // Cardo (body), Raleway (headings), Fira (code)
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');

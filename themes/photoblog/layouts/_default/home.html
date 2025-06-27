@@ -1,60 +1,71 @@
 {{ define "main" }}
+    
+    {{ .Content }}
+    
+    <!-- Recent posts showcase -->
+    
+    <div class="container is-centered is-halfheight is-widescreen">
+        <div class="fixed-grid has-3-cols-desktop has-2-cols-touch pr-3 pl-3 pt-3 pb-3">
+        <!-- TITLE -->
+            <div class="content">
+                <h2 class="mt-5">Recent posts</h2>
+            </div>
+            <div class="grid">
+            <!-- Spotlight post -->
+                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 2}}
+                {{ range $post }}
+                <div class="cell is-row-span-3-desktop is-row-span-2-touch">
+                    {{ partial "widgets/showcase.html" . }}
+                </div>
+                {{ end }}
+        <!-- REST -->
+            {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 2 }}
+            {{ range $post }}
+            <div class="cell is-row-span-1">
+                {{ partial "widgets/showcase-small.html" . }}
+            </div>
+            {{ end }}
+        <!-- SEE MORE POSTS -->
+            <div class="cell is-row-span-1 is-col-span-2-touch">
+                <a href="/Posts">
+                    <div class="card has-background-primary-soft pt-5 pb-5">
+                        <div class="card-content is-centered">
+                            <p class="has-text-primary-bold title is-5">See all posts <i class="fa-solid fa-arrow-right"></i></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent galleries showcase -->
+    
+    <div class="container is-centered is-halfheight is-widescreen">
+        <div class="fixed-grid has-4-cols-desktop has-2-cols-touch pr-3 pl-3 pt-3 pb-3">
+        <!-- TITLE -->
+        <div class="content">
+            <h2 class="mt-5">Recent galleries</h2>
+        </div>
+        <div class="grid">
+        <!-- FIRST THREE GALLERIES -->
+            {{ $galleries := where .Site.Pages "Type" "galleries" | first 3}}
+            {{ range $galleries }}
+            <div class="cell">
+                {{ partial "widgets/showcase-galleries.html" . }}
+            </div>
+            {{ end }}
+            <!-- SEE MORE GALLERIES -->
+            <div class="cell is-row-span-1">
+                <a href="/Galleries">
+                    <div class="card has-background-primary-soft pt-5 pb-5">
+                        <div class="card-content is-centered">
+                            <p class="has-text-primary-bold title is-5">See all galleries <i class="fa-solid fa-arrow-right"></i></p>
+                        </div>
+                    </div>
+                </a>
 
-  {{ .Content }}
-  
-  <!-- Featured image -->  
-  <section class="hero is-link is-halfheight header-image">
-    <div class="hero-body"></div>
-    <div class="hero-foot">
-      <p class="title mx-3 my-3"><i class="fa-solid fa-location-dot"></i> North Berwick</p>
-      <p class="subtitle mx-3 my-3"><i class="fa-solid fa-calendar-days"></i> Feb 8, 2025</p>
+            </div>
+        </div>
     </div>
-  </section>
-  
-  <!-- Recent posts showcase -->
-  
-  <div id="showcase" class="mt-2">
-    <div class="columns is-centered">
-      
-      <!-- Recent posts showcase (all devices)-->
-      <div class="column is-half-desktop">
-        <div class="content">
-          <h2 class="mt-5">Recent posts</h2>
-        </div>
-        <div class="grid">
-          {{ $post := where .Site.RegularPages "Type" "posts" | first 2}}
-          {{ range $post }}
-          <div class="cell">
-            {{ partial "widgets/showcase.html" . }}
-          </div>
-          {{ end }}
-        </div>
-      <div class="container">
-        <a href="/Posts" class="has-text-primary-bold"><h4><b>See all posts <i class="fa-solid fa-arrow-right"></i></b></h4></a>
-      </div>
-    </div>
-    
-    <!-- Recent galleries showcase (desktop only) -->
-    
-    <div class="column is-half-desktop">
-        <div class="content">
-          <h2 class="mt-5">Recent galleries</h2>
-        </div>
-      <div class="fixed-grid has-2-cols-desktop has-4-cols-touch">
-        <div class="grid">
-          {{ $galleries := where .Site.Pages "Type" "galleries" | first 4}}
-          {{ range $galleries }}
-          <div class="cell">
-            {{ partial "widgets/showcase-galleries.html" . }}
-          </div>
-          {{ end }}
-        </div>
-      </div>
-      <div class="container">
-        <a href="/Galleries" class="has-text-primary-bold"><h4><b>See all galleries <i class="fa-solid fa-arrow-right"></i></b></h4></a>
-      </div>
-    </div>
-    
-  </div>
   
 {{ end }}

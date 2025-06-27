@@ -2,6 +2,7 @@
 <html lang="en-gb" dir="ltr">
 <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
+
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -13,9 +14,6 @@
 
 
       <script src="/js/main.js"></script>
-
-
-
 
 
 
@@ -76,136 +74,65 @@ $("#my-gallery").justifiedGallery({
 
 </head>
 
+<header>
+    
+<section class="hero is-link is-small header-image">
+    <div class="hero-body">
+    	<div class="container is-centered is-widescreen">
+    		<h1 class="title mx-3 my-3 has-text-primary-light">
+                <a class="my-5" href="http://localhost:1313/">
+                	<img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                </a>
+            </h1>
+        </div>
+    </div>
+</section>
+
+</header>
+
 <body>
-<div class="container is-fullhd">
-  <div class="columns">
-    <div class="column is-hidden-mobile is-one-third-tablet is-one-fifth-desktop px-3">
-      <aside class="menu px-3 mb-auto" role="navigation" aria-label="main navigation">
-    <a class="my-5" href="http://localhost:1313/">
-        <img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
-        
-    </a>
-    <ul>
-        
-        <li>
-            <a href="/galleries/">
-                <h2 class="title has-text-weight-semibold is-size-4 mb-4 mt-4">Gallery</h2>
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/">
-                <h2 class="title has-text-weight-semibold is-size-4 mb-4 mt-4">Posts</h2>
-            </a>
-        </li>
-        
-        <li>
-            <a href="/about/">
-                <h2 class="title has-text-weight-semibold is-size-4 mb-4 mt-4">About</h2>
-            </a>
-        </li>
-        
-    </ul>
+
+
+<div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
+
+
+
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li>
+                <a href="http://localhost:1313/" class="has-text-link-bold">Home</a>
+            </li>
+            <li>
+            
+                <a href="/posts/" class="has-text-link-bold">Posts</a>
+            
+            </li>
+            <li class="is-active">
+                <a href="#" aria-current="page" class="has-text-link-bold">
+                    Post 0
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+<h1 class="title mt-5 mb-0 is-size-3">Post 0</h1>
+<p class="mt-1 mb-5">
     
     
-    <div class="grid is-col-min-1 my-5 py-3">
-        
-            <div class="cell">
-                <a href="/contact/" class="is-size-5 has-text-primary">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                </a>
-            </div>
-        
-            <div class="cell">
-                <a href="https://instagram.com/" class="is-size-5 has-text-primary">
-                    <span class="icon"><i class="fa-brands fa-instagram"></i></span>
-                </a>
-            </div>
-        
-            <div class="cell">
-                <a href="https://flickr.com/" class="is-size-5 has-text-primary">
-                    <span class="icon"><i class="fa-brands fa-flickr"></i></span>
-                </a>
-            </div>
-        
-            <div class="cell">
-                <a href="https://github.com/" class="is-size-5 has-text-primary">
-                    <span class="icon"><i class="fa-brands fa-github"></i></span>
-                </a>
-            </div>
-        
-    </div>
-
-
-    <div class="container">
-      <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen. Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
-    </div>  
-</aside>
-    </div>
-    <div class="column is-full-mobile is-hidden-tablet">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="http://localhost:1313/">
-      
-      <img src="/images/logo-new.svg" height="200px" class="py-1 my-3"></img>
-    </a>
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+    <time datetime="2025-02-08T00:00:00&#43;00:00">February 8, 2025</time>
+        | 
+            
+            <i class="fas fa-tag has-text-link-bold ml-2"></i>
+                
+                    <a href="http://localhost:1313/tags/landscape" class="has-text-link-bold mr-2">landscape</a> |
+                
+            
+    Reading time: 1  minute 
+</p>
   
-  <div class="navbar-menu" id="navMenu">
-    <div class="navbar-start">
-      
-        <a href="/galleries/" class="navbar-item ml-05 mr-05">
-          <h2 class="title has-text-weight-semibold is-size-4">Gallery</h2>
-        </a>
-      
-        <a href="/posts/" class="navbar-item ml-05 mr-05">
-          <h2 class="title has-text-weight-semibold is-size-4">Posts</h2>
-        </a>
-      
-        <a href="/about/" class="navbar-item ml-05 mr-05">
-          <h2 class="title has-text-weight-semibold is-size-4">About</h2>
-        </a>
-      
-    </div>
-  </div>
-</nav>
 
-    </div>
-    <div class="column is-full-mobile is-two-thirds-tablet is-four-fifths-desktop">
-      <main class="px-3">
-        
-
-<div class="container pt-1 mt-3 pl-2 pr-2 pb-3">
-
-  <nav class="breadcrumb" aria-label="breadcrumbs">
-    <ul>
-      <li><a href="http://localhost:1313/">Home</a></li>
-      <li class="is-active"><a href="#" aria-current="page">Post 0</a></li>
-    </ul>
-  </nav>
-
-  <h1 class="title mt-5 mb-0 is-size-3">Post 0</h1>
-  <p class="mt-0 mb-5">
-  
-  
-  <time datetime="2025-02-08T00:00:00&#43;00:00">February 8, 2025</time>
-  | 
-    
-        <i class="fas fa-tag"></i>
-        
-        <a href="http://localhost:1313/tags/landscape">landscape</a> |
-    
-  
-  Reading time: 1  minute 
-  </p>
-  
-  
 
 
 
@@ -217,39 +144,40 @@ $("#my-gallery").justifiedGallery({
   </figure>
   <p class="is-size-7-mobile is-size-6-tablet mb-3">PhotoCaption here</p>
 </div>
+  
 
-  <p>This is my zeroth post. Here, I will explain what this blog is about. I might include some photo of North Berwick and talk about learning photography. This first bit of text at the start of the post can be called using <code>{{ Summary }}</code> in Hugo, with remaining text after the <code>&lt; explanation point here--more--&gt;</code> tag.</p>
+
+<p>This is my zeroth post. Here, I will explain what this blog is about. I might include some photo of North Berwick and talk about learning photography. This first bit of text at the start of the post can be called using <code>{{ Summary }}</code> in Hugo, with remaining text after the <code>&lt; explanation point here--more--&gt;</code> tag.</p>
 <p>In the actual post, I&rsquo;ll expand on things and include more images.</p>
   
-  
-  
-  
+
+
+
 </div>
   
 
-      </main>
-    </div>
-    <div class="container is-full-mobile is-hidden-tablet">
-    
-      <nav class="level is-mobile" role="contact" aria-label="footer with contact and copyright">
+</body>
 
+<footer class="footer">
+<nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+    
     <div class="level-left has-text-left pl-5 ml-3 pt-5 mt-3 mb-3">
         <div class="level-item">
             <a class="is-size-5">
                 
-                    <a href="/contact/" class="is-size-5 ml-2 mr-2 has-text-primary">
+                    <a href="/contact/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
                         <span class="icon"><i class="fa-solid fa-envelope"></i></span>
                     </a>
                 
-                    <a href="https://instagram.com/" class="is-size-5 ml-2 mr-2 has-text-primary">
+                    <a href="https://instagram.com/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
                         <span class="icon"><i class="fa-brands fa-instagram"></i></span>
                     </a>
                 
-                    <a href="https://flickr.com/" class="is-size-5 ml-2 mr-2 has-text-primary">
+                    <a href="https://flickr.com/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
                         <span class="icon"><i class="fa-brands fa-flickr"></i></span>
                     </a>
                 
-                    <a href="https://github.com/" class="is-size-5 ml-2 mr-2 has-text-primary">
+                    <a href="https://github.com/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
                         <span class="icon"><i class="fa-brands fa-github"></i></span>
                     </a>
                 
@@ -257,18 +185,13 @@ $("#my-gallery").justifiedGallery({
         </div>
     </div>
     
-    <div class="level-right has-text-right pr-5 mr-3 pt-5 mt-3 mb-3">
+    <div class="level-right has-text-right has-text-primary-bold pr-5 mr-3 pt-5 mt-3 mb-3">
         <div class="level-item">
             <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
             Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
         </div>
     </div>
-    
 </nav>
-    </div>
-  </div>
-</div>
-
-</body>
+</footer>
 
 </html>

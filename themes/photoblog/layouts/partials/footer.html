@@ -1,0 +1,21 @@
+<nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+    <!-- Socials -->
+    <div class="level-left has-text-left pl-5 ml-3 pt-5 mt-3 mb-3">
+        <div class="level-item">
+            <a class="is-size-5">
+                {{ range .Site.Menus.contact }}
+                    <a href="{{ .URL }}" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
+                        <span class="icon"><i class="{{ .Pre }}"></i></span>
+                    </a>
+                {{ end }}
+            </a>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="level-right has-text-right has-text-primary-bold pr-5 mr-3 pt-5 mt-3 mb-3">
+        <div class="level-item">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
+            Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
+        </div>
+    </div>
+</nav>
