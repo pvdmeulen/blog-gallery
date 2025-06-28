@@ -1,79 +1,173 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Green | Peter van der Meulen</title>
 
+
+
+    <link rel="stylesheet" href="/css/my-bulma-project.css">
     <link rel="stylesheet" href="/css/main.css">
 
 
       <script src="/js/main.js"></script>
 
 
+
+<script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href='http://localhost:1313/css/photoswipe/photoswipe.css'/>
+<link rel="stylesheet" href='http://localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
+
+
+<script type="module">
+
+  console.log("uihio");
+  import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "#my-gallery",
+	children: "a",
+	initialZoomLevel: "fit",     
+	secondaryZoomLevel: "fit",   
+	imageClickAction: "close",   
+	pswpModule: PhotoSwipe,
+	paddingFn: (viewportSize) => {
+    return {
+      top: 30, bottom: 30, left: 70, right: 70
+    }
+  },
+  });
+  
+  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    type: 'auto',
+  });
+  
+  lightbox.init();
+  
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+<link rel="stylesheet" href='http://localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+
+<script src='http://localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+
+<script type = "module">
+$("#my-gallery").justifiedGallery({
+    	rowHeight : 200,
+    	lastRow : 'nojustify',
+    	margins : 3,
+    	selector: 'a, figure:not(.spinner)'
+	});
+</script>
+
 </head>
-<div class="container is-widescreen">
-<body>
-  <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a href="http://localhost:1313/" class="navbar-item ml-05 mr-05"><h1 class="title">Peter van der Meulen</h1></a>
-     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  
-  <div class="navbar-menu" id="navMenu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        
-          <a href="/gallery/" class="navbar-item ml-05 mr-05">
-          Gallery
-          </a>
-        
-          <a href="/posts/" class="navbar-item ml-05 mr-05">
-          Posts
-          </a>
-        
-          <a href="/about/" class="navbar-item ml-05 mr-05">
-          About
-          </a>
-        
-      </a>
-    </div>
-    <div class="navbar-end">
-      <a class="navbar-item">
-        <a class="button is-primary">
-            <strong>Contact</strong>
-        </a>
-      </a>
-    </div>
-  </div>
-  
-</nav>
 
-  </header>
-  <main>
+<header>
     
-  <h1>Green</h1>
-  
-  
-    <h2><a href="/posts/post-3/">Post 3</a></h2>
-    <p>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.</p>
-  
-    <h2><a href="/posts/post-2/">Post 2</a></h2>
-    <p>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.</p>
-<p>Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.</p>
-  
+<section class="hero is-link is-small header-image">
+    <div class="hero-body">
+    	<div class="container is-centered is-widescreen">
+    		<h1 class="title mx-3 my-3 has-text-primary-light">
+                <a class="my-5" href="http://localhost:1313/">
+                	<img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                </a>
+            </h1>
+        </div>
+    </div>
+</section>
 
-  </main>
-  <footer>
-    <p>Copyright 2025. All rights reserved.</p>
+</header>
 
-  </footer>
+<body>
+
+
+<div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
+
+
+
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li>
+                <a href="http://localhost:1313/">Home</a>
+            </li>
+            <li class="is-active">
+                <a href="#" aria-current="page">
+                    Green
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <h1 class="title mt-5 mb-0 is-size-3">Green</h1>
+        <h2 class="subtitle"></h2>
+        
+        <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
+            <div class="grid">
+                
+            </div>
+        </div>
+        
+        <div class="columns is-centered mt-2">
+            <div class="column is-narrow">
+                
+
+            </div>
+        </div>
+    </div>
+    
+
 </body>
-</div>
+
+<footer class="footer">
+<nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+    
+    <div class="level-left has-text-left pl-5 ml-3 pt-5 mt-3 mb-3">
+        <div class="level-item">
+            <a class="is-size-5">
+                
+                    <a href="/contact/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    </a>
+                
+                    <a href="https://instagram.com/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
+                        <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                    </a>
+                
+                    <a href="https://flickr.com/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
+                        <span class="icon"><i class="fa-brands fa-flickr"></i></span>
+                    </a>
+                
+                    <a href="https://github.com/" class="is-size-4-desktop is-size-5-touch ml-1 mr-1 pr-3 has-text-primary-bold">
+                        <span class="icon"><i class="fa-brands fa-github"></i></span>
+                    </a>
+                
+            </a>
+        </div>
+    </div>
+    
+    <div class="level-right has-text-right has-text-primary-bold pr-5 mr-3 pt-5 mt-3 mb-3">
+        <div class="level-item">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
+            Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
+        </div>
+    </div>
+</nav>
+</footer>
+
 </html>

@@ -2,7 +2,7 @@
 
 <div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
 
-<!-- Breadcrumbs -->
+    <!-- Breadcrumbs -->
 
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -22,31 +22,35 @@
         </ul>
     </nav>
 
-<!-- Post title, image, and tags -->
+    <!-- Post title, image, and tags -->
 
-<h1 class="title mt-5 mb-0 is-size-3">{{ .Title }}</h1>
-<p class="mt-1 mb-5">
-    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-        | {{ with .Params.tags }}
-            {{ range . }}
-            <i class="fas fa-tag has-text-link-bold ml-2"></i>
-                {{ $href := print (absURL "tags/") (urlize .) }}
-                    <a href="{{ $href }}" class="has-text-link-bold mr-2">{{ . }}</a> |
+    <h1 class="title mt-5 mb-0 is-size-3">{{ .Title }}</h1>
+    <p class="mt-1 mb-5">
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            | {{ with .Params.tags }}
+                {{ range . }}
+                <i class="fas fa-tag has-text-link-bold ml-2"></i>
+                    {{ $href := print (absURL "tags/") (urlize .) }}
+                        <a href="{{ $href }}" class="has-text-link-bold mr-2">{{ . }}</a> |
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-    Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} mins {{ end }}
-</p>
-  
-{{ partial "widgets/featuredimage.html" . }}
-  
-<!-- Content -->
+        Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} mins {{ end }}
+    </p>
+      
+    {{ partial "widgets/featuredimage.html" . }}
+      
+    <!-- Content -->
 
-{{ .Content }}
-  
-<!-- Replace below with prev/next post -->
-<!-- {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }} -->
+    <section class="container is-max-desktop">
+
+        {{ .Content }}
+
+    </section>
+
+    <!-- Replace below with prev/next post -->
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
 </div>
   

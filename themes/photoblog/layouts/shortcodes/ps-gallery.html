@@ -1,6 +1,6 @@
 <!-- block begin -->
-<div id="my-gallery">
-  {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }} 
+<div id="my-gallery" class="container is-large mt-3 mb-3">
+  {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
   {{ range  $images }}
   {{ $link := .RelPermalink }}
   <a

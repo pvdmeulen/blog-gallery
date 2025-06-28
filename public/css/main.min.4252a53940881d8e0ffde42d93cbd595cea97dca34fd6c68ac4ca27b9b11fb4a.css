@@ -1,0 +1,7 @@
+@import "my-bulma-project.css";.card{height:100%}.header-image{background-image:url(../images/header.jpg);background-position:50%;background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#999}.menu{position:sticky;display:inline-block;vertical-align:top;max-height:100vh;overflow-y:auto;width:auto;top:0;bottom:0}.menu-foot{position:sticky;display:inline-block;vertical-align:bottom;max-height:100vh;overflow-y:auto;width:auto;top:0;bottom:0;padding:20px}.content{display:inline-block}@import url("contactform.css") .jg{--min-width: 33%;
+  --row-height: 20vh;
+  --max-row-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.25rem;
+}.jg>a{--ratio:calc(var(--w) / var(--h));flex-grow:calc(var(--ratio) * 100);flex-basis:calc(var(--ratio) * var(--row-height));margin:.25rem;min-width:var(--min-width)}.jg>a>img{display:block;width:100%;height:auto;min-width:100%;min-height:100%;max-height:var(--max-row-height);object-fit:cover}

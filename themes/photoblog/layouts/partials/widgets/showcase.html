@@ -5,7 +5,7 @@
 
 <div class="card has-background-color-primary-soft">
     <div class="card-image">
-        <figure class="image is-4by3">
+        <figure class="is-align-items-center is-justify-content-center image is-5by4">
             {{ with .Params.featuredImageUrl }}
             <a href="{{ $permalink }}"><img src="{{ $featuredImageUrl }}" alt="{{ $featuredAltText }}" loading="lazy"></a>
             {{ end }}
@@ -21,7 +21,7 @@
               <button class="button is-light is-responsive">
                 <!-- <i class="fas fa-tag"></i> -->
                 {{ $href := print (absURL "tags/") (urlize .) }}
-                <a href="{{ $href }}" class="is-size-7 has-text-grey-dark">{{ . }}</a>
+                <a href="{{ $href }}" class="is-size-7 has-text-grey-dark is-capitalized">{{ . }}</a>
               </button>
             {{ end }}
         <!-- </p> -->

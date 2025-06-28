@@ -1,9 +1,10 @@
 /* Import Bulma */
-@import url("my-bulma-project.css");
+/* @import url("/css/my-bulma-project.css"); */
 
 /* Further custom Bulma formatting */
 .card {
   height: 100%;
+  object-fit: cover;
 }
 
 /* Header (landing) image */
