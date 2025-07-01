@@ -3,7 +3,7 @@
 {{ $permalink := .RelPermalink }}
 {{ $subtitle := .Params.subtitle }}
 
-<div class="card has-background-color-primary-soft">
+<div class="card has-background-white-ter">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             {{ with .Params.featuredImageUrl }}
@@ -13,18 +13,21 @@
     </div>
     <div class="card-content">
         <a class="title is-5" href="{{ $permalink }}">{{ .Title }}</a>
-        <h3 class="subtitle is-6"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
-        <p>{{ .Params.subtitle }}</p>
+        <h3 class="subtitle is-6 my-1"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
+        <!-- need to choose either subtitle (front matter) or summary (first bit of text in post) -->
+        <div class="content mb-3 has-text-weight-normal">{{ .Params.subtitle }}{{ .Summary }}</div>
+        <div class="buttons">
         {{ with .Params.tags }}
         <!-- <p class="is-size-7 has-text-grey-light mt-1"> -->
             {{ range . }}
-              <button class="button is-light is-responsive">
+              <button class="button is-primary is-responsive my-2 mx-0">
                 <!-- <i class="fas fa-tag"></i> -->
                 {{ $href := print (absURL "tags/") (urlize .) }}
-                <a href="{{ $href }}" class="is-size-7 has-text-grey-dark is-capitalized">{{ . }}</a>
+                <a href="{{ $href }}" class="is-size-7 has-text-white-ter is-capitalized">{{ . }}</a>
               </button>
             {{ end }}
         <!-- </p> -->
         {{ end }}
+        </div>
     </div>
 </div>

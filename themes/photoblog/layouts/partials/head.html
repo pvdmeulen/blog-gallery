@@ -17,17 +17,19 @@
 <!-- Implementation of PhotoSwipe5 Hugo shortcodes adapted from -->
 <script type="module">
 
-  console.log("uihio");
+  console.log("photoswipe init");
   import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
   import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
   import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
   
+  <!-- FOR BOTH COMPLETE GALLERIES (W/ JUSTIFIED GALLERY) & INDIVIDUAL/FEATURED IMAGES -->
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#my-gallery",
+	gallery: "#psgallery--justified",
 	children: "a",
 	initialZoomLevel: "fit",     // initial zoomlevel
 	secondaryZoomLevel: "fit",   // don't change zoom
 	imageClickAction: "close",   // close on click
+	wheelToZoom: true,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -35,7 +37,7 @@
     }
   },
   });
-  
+    
   const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
     type: 'auto',
   });
@@ -48,16 +50,18 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <!-- Justified Gallery -->
-<!-- <link rel="stylesheet" href='{{ "/css/justifiedgallery/custom_justified_gallery.css" | absLangURL }}'/> -->
+<!-- For use in my-gallery divs -->
+
 <link rel="stylesheet" href='{{ "/css/justifiedgallery/justifiedGallery.min.css" | absLangURL }}'/>
 
 <script src='{{ "/js/justifiedgallery/jquery.justifiedGallery.min.js" | absLangURL }}'/></script>
 
 <script type = "module">
-$("#my-gallery").justifiedGallery({
+$("#psgallery--justified").justifiedGallery({
     	rowHeight : 400,
     	lastRow : 'nojustify',
     	margins : 3,
-    	selector: 'a, figure:not(.spinner)'
+    	selector: 'a, figure:not(.spinner)',
+    	captions: false
 	});
 </script>

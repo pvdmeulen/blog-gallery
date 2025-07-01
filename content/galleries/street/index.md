@@ -8,5 +8,5 @@ tags = ['street']
 featuredImageType = "Photo"
 featuredImageUrl = '/images/gallery-thumbnails/streetcard.JPG'
 +++
-
+<!--more-->
 {{< ps-gallery folder="" >}}

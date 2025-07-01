@@ -5,7 +5,7 @@
             <div class="level-item">
                 <a>
                     {{ range .Site.Menus.contact }}
-                        <a href="{{ .URL }}" class="is-size-3 px-5 px-2-touch mx-4 mx-2-touch has-text-primary-bold">
+                        <a href="{{ .URL }}" target="_blank" class="is-size-3 px-3 mx-4 has-text-info-30">
                             <span class="icon"><i class="{{ .Pre }}"></i></span>
                         </a>
                     {{ end }}
@@ -16,7 +16,7 @@
         <div class="level-right has-text-right has-text-centered-touch has-text-primary-bold pr-5-desktop mr-3-desktop pt-5 mt-3 mb-3">
             <div class="level-item">
                 <p>Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
-                Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-primary">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a></p>
+                Built with <i class="fa-solid fa-heart has-text-danger"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-success">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-success">Bulma</a></p>
             </div>
         </div>
     </nav>

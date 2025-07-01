@@ -3,6 +3,8 @@ $hedge: #275958;
 $grass: #22D592;
 $house: #EAAA02;
 $sky: #02669A;
+$roof: #BE2400;
+$toet: #687069;
 
 // Path to Bulma's sass folder
 @use "bulma/sass" with (
@@ -11,6 +13,10 @@ $sky: #02669A;
   $family-code: '"Fira Code", monospace',
   $primary: $hedge,
   $link: $grass,
+  $info: $sky,
+  $success: $toet,
+  $warning: $house,
+  $danger: $roof,
   $control-border-width: 2px,
   $input-shadow: none
   );

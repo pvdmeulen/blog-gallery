@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ $subtitle := .Params.subtitle }}
+
 <div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
 
     <!-- Breadcrumbs -->
@@ -28,7 +30,8 @@
     <p class="mt-1 mb-5">
         {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
         {{ $dateHuman := .Date | time.Format ":date_long" }}
-        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>  |
+        <!--
             | {{ with .Params.tags }}
                 {{ range . }}
                 <i class="fas fa-tag has-text-link-bold ml-2"></i>
@@ -36,16 +39,28 @@
                         <a href="{{ $href }}" class="has-text-link-bold mr-2">{{ . }}</a> |
                     {{ end }}
                 {{ end }}
+                -->
         Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} mins {{ end }}
     </p>
-      
-    {{ partial "widgets/featuredimage.html" . }}
+    
+    <div class="columns">
+        <div class="column is-two-thirds">
+            {{ partial "widgets/featuredimage.html" . }}
+        </div>
+        <div class="column is-one-third">
+            <div class="content has-text-weight-bold has-text-primary is-size-5">
+                {{ .Params.subtitle }}
+            </div>
+        </div>
+    </div>
       
     <!-- Content -->
 
     <section class="container is-max-desktop">
 
         {{ .Content }}
+        
+        <hr class="has-background-warning-light">
 
     </section>
 

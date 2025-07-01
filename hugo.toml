@@ -29,7 +29,7 @@ pagination.pagerSize = 8
   [[menu.contact]]
     name = "Intagram"
     pre = "fa-brands fa-instagram"
-    url = "https://instagram.com/"
+    url = "https://www.instagram.com/pvdm_photos/"
     weight = 20
   [[menu.contact]]
     name = "Flickr"
@@ -39,5 +39,5 @@ pagination.pagerSize = 8
   [[menu.contact]]
     name = "GitHub"
     pre = "fa-brands fa-github"
-    url = "https://github.com/"
+    url = "https://github.com/pvdmeulen"
     weight = 40

@@ -1,13 +1,55 @@
-{{ $featuredImageType := .Params.featuredImageType }}
 {{ $featuredImageUrl := .Params.featuredImageUrl }}
+{{ $featuredImageType := .Params.featuredImageType }}
 {{ $featuredImageAltText := .Params.featuredImageAltText }}
 {{ $featuredImageCaption := .Params.featuredImageCaption }}
 {{ $featuredImageAttribute := .Params.featuredImageAttribute }}
 {{ $featuredImageAttributeUrl := .Params.featuredImageAttributeUrl }}
 
-<div class="mb-1">
-  <figure class="image is-5by4 featured-img">
-    <img class="is-fluid" src="{{ $featuredImageUrl }}" alt="{{ $featuredImageAltText }}" loading="lazy">
-  </figure>
-  <p class="is-size-7-mobile is-size-6-tablet mb-3">{{ $featuredImageType }} - {{ $featuredImageCaption }}</p>
+
+{{ $image := resources.GetMatch $featuredImageUrl }}
+
+<div class="pswp-gallery" id="psgallery--featuredimage">
+
+    {{ with $image }}
+        
+        {{ $link := .RelPermalink }}
+        
+        <a
+            href="/images/post-thumbnails/post0.jpg"
+            data-pswp-width="250"
+            data-pswp-height="200"
+            target="_blank"
+        >
+        <img src="/images/post-thumbnails/post0.jpg" alt="{{ $featuredImageAltText }}" loading="lazy"/>
+        <span class="pswp-caption-content">
+            {{ with .Exif }}
+                <ul>
+                    {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
+                    {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                    <br>
+                    {{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
+                    {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
+                    <br>
+                    {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                    {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
+                    {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                    {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                </ul>
+            {{ end }}
+            </span>
+        </a>
+        
+        <p>{{ $link }}</p>
+        <p>{{ $featuredImageUrl }}</p>
+        
+    {{ end }}
+    
+    <p class="is-size-7-mobile is-size-6-tablet mb-3">{{ $featuredImageType }} - {{ $featuredImageCaption }} - {{ $featuredImageUrl }} </p>
+    
 </div>
+
+<!--
+<figure class="image is-5by4 featured-img">
+    <img class="is-fluid" src="{{ $featuredImageUrl }}" alt="{{ $featuredImageAltText }}" loading="lazy">
+</figure>
+-->

@@ -8,5 +8,5 @@ tags = ['landscape']
 featuredImageType = "Photo"
 featuredImageUrl = '/images/gallery-thumbnails/landscapecard.jpg'
 +++
-
+<!--more-->
 {{< ps-gallery folder="" >}}
