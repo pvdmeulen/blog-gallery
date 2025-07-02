@@ -4,7 +4,10 @@ date = 2025-02-20
 draft = false
 tags = ['landscape']
 featuredImageType = "Photo"
-featuredImageUrl = '/images/post-thumbnails/post1.JPG'
+featuredImageUrl = 'featured.jpg'
+thumbnailUrl = '/images/post-thumbnails/thumbnail1.jpg'
+thumbnailAltText = 'Alt text here'
+
 +++
 
 This is my first post. Here, I will explain what this blog is about. I might include some photo of North Berwick and talk about learning photography.

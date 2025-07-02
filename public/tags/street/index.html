@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -130,11 +130,9 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
-            
-            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.JPG" alt="" loading="lazy"></a>
             
         </figure>
     </div>
@@ -167,11 +165,11 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             
-            <a href="/posts/post-4/"><img src="/images/post-thumbnails/post4.jpg" alt="" loading="lazy"></a>
+            <a href="/posts/post-4/"><img src="/images/post-thumbnails/thumbnail4.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
@@ -179,7 +177,7 @@ $("#psgallery--justified").justifiedGallery({
         <a class="title is-5" href="/posts/post-4/">Post 4</a>
         <h3 class="subtitle is-6 my-1"> Feb 23, 2025</h3>
         
-        <div class="content mb-3 has-text-weight-normal">Test subtitle here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="content mb-3 has-text-weight-normal">Test subtitle here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
         <div class="buttons">
         
         
@@ -210,11 +208,11 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             
-            <a href="/posts/post-3/"><img src="/images/post-thumbnails/post3.jpg" alt="Alt text here" loading="lazy"></a>
+            <a href="/posts/post-3/"><img src="/images/post-thumbnails/thumbnail3.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
@@ -253,11 +251,11 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             
-            <a href="/posts/post-2/"><img src="/images/post-thumbnails/post2.JPG" alt="" loading="lazy"></a>
+            <a href="/posts/post-2/"><img src="/images/post-thumbnails/thumbnail2.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>

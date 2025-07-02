@@ -3,12 +3,12 @@
 {{ $permalink := .RelPermalink }}
 {{ $subtitle := .Params.subtitle }}
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
   <!-- No image for these small cards -->
   <div class="card-content">
     <a class="title is-5" href="{{ $permalink }}">{{ .Title }}</a>
       <h3 class="subtitle is-6 my-1"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
-        <p class="mb-3 has-text-weight-normal">{{ .Params.subtitle }}</p>
+        <!-- <p class="mb-3 has-text-weight-normal">{{ .Params.subtitle }}</p> -->
         {{ with .Params.tags }}
         <!-- <p class="is-size-7 has-text-grey-light mt-1"> -->
             {{ range . }}

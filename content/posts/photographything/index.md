@@ -5,8 +5,10 @@ linkTitle = 'This Photography Thing'
 date = 2025-02-08
 draft = false
 tags = ['landscape']
+thumbnailUrl = '/images/post-thumbnails/thumbnail0.jpg'
+thumbnailAltText = 'Alt text here'
 featuredImageType = "Photo"
-featuredImageUrl = '/images/post-thumbnails/post0.jpg'
+featuredImageUrl = 'featured.jpg'
 +++
 <!--more-->
 In the actual post, I'll expand on things and include more images.

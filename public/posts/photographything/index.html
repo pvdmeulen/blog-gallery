@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -144,12 +144,40 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-
 <div class="pswp-gallery" id="psgallery--featuredimage">
 
     
+        
+        
+        
+        <a
+            href="featured.jpg"
+            data-pswp-width="4128"
+            data-pswp-height="6192"
+            target="_blank"
+        >
+            <img src="featured.jpg" alt="" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        <li><b>March 20, 2025</b></li>
+                        <li>De Valk windmill in Leiden, Netherlands.</li>
+                        <br>
+                        <li>Sony A6700</li>
+                        <li>Sigma 18-50mm F2.8 DC DN</li>
+                        <br>
+                        <li>Focal length: 214/5mm</li>
+                        <li>F-stop: 9</li>
+                        <li>Shutter speed: 1/500</li>
+                        <li>ISO: 160</li>
+                    </ul>
+                
+            </span>
+        </a>
+        
     
-    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - /images/post-thumbnails/post0.jpg </p>
+    
+    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - featured.jpg</p>
     
 </div>
 

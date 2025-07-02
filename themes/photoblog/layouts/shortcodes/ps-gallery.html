@@ -11,20 +11,20 @@
         >
             <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }}' alt="{{ .Name }}" loading="lazy"/>
             <span class="pswp-caption-content">
-            {{ with .Exif }}
-                <ul>
-                    {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
-                    {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
-                    <br>
-                    {{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
-                    {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
-                    <br>
-                    {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
-                    {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
-                    {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
-                    {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
-                </ul>
-            {{ end }}
+                {{ with .Exif }}
+                    <ul>
+                        {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
+                        {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                        <br>
+                        {{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
+                        {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
+                        <br>
+                        {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                        {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
+                        {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                        {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                    </ul>
+                {{ end }}
             </span>
         </a>
     {{ end }}

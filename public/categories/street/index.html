@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -130,11 +130,9 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
-            
-            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.JPG" alt="" loading="lazy"></a>
             
         </figure>
     </div>

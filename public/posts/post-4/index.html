@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -144,12 +144,40 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-
 <div class="pswp-gallery" id="psgallery--featuredimage">
 
     
+        
+        
+        
+        <a
+            href="featured.jpg"
+            data-pswp-width="5160"
+            data-pswp-height="4128"
+            target="_blank"
+        >
+            <img src="featured.jpg" alt="" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        <li><b>June 20, 2025</b></li>
+                        
+                        <br>
+                        <li>ILCE-6700</li>
+                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
+                        <br>
+                        <li>Focal length: 18mm</li>
+                        <li>F-stop: 28/5</li>
+                        <li>Shutter speed: 1/320</li>
+                        <li>ISO: 160</li>
+                    </ul>
+                
+            </span>
+        </a>
+        
     
-    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo - Coasting through Copenhagen harbour - /images/post-thumbnails/post4.jpg </p>
+    
+    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo - Coasting through Copenhagen harbour - featured.jpg</p>
     
 </div>
 
@@ -157,7 +185,7 @@ $("#psgallery--justified").justifiedGallery({
         </div>
         <div class="column is-one-third">
             <div class="content has-text-weight-bold has-text-primary is-size-5">
-                Test subtitle here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Test subtitle here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </div>
         </div>
     </div>

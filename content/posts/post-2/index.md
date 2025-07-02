@@ -4,7 +4,9 @@ date = 2025-02-21
 draft = false
 tags = ['landscape', 'street']
 featuredImageType = "Photo"
-featuredImageUrl = '/images/post-thumbnails/post2.JPG'
+featuredImageUrl = 'featured.jpg'
+thumbnailUrl = '/images/post-thumbnails/thumbnail2.jpg'
+thumbnailAltText = 'Alt text here'
 +++
 
 This is my second post. I might share some photo from around Edinburgh.

@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {

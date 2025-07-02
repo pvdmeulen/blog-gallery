@@ -1,13 +1,13 @@
-{{ $featuredImageUrl := .Params.featuredImageUrl }}
-{{ $featuredAltText := .Params.featuredImageAltText }}
+{{ $thumbnailUrl := .Params.thumbnailUrl }}
+{{ $thumbnailAltText := .Params.thumbnailAltText }}
 {{ $permalink := .RelPermalink }}
 {{ $subtitle := .Params.subtitle }}
 
-<div class="card has-background-white-ter">
+<div class="card has-background-light">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
-            {{ with .Params.featuredImageUrl }}
-            <a href="{{ $permalink }}"><img src="{{ $featuredImageUrl }}" alt="{{ $featuredAltText }}" loading="lazy"></a>
+            {{ with .Params.thumbnailUrl }}
+            <a href="{{ $permalink }}"><img src="{{ $thumbnailUrl }}" alt="{{ $thumbnailAltText }}" loading="lazy"></a>
             {{ end }}
         </figure>
     </div>

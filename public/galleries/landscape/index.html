@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -144,20 +144,20 @@ $("#psgallery--justified").justifiedGallery({
         >
             <img src='/galleries/landscape/thumbnails/IMG_1996.jpg' alt="IMG_1996.jpg" loading="lazy"/>
             <span class="pswp-caption-content">
-            
-                <ul>
-                    <li><b>February 08, 2025</b></li>
-                    
-                    <br>
-                    <li>Canon EOS 1100D</li>
-                    <li>EF-S18-55mm f/3.5-5.6 III</li>
-                    <br>
-                    <li>Focal length: 39mm</li>
-                    <li>F-stop: 5</li>
-                    <li>Shutter speed: 1/1250</li>
-                    <li>ISO: 160</li>
-                </ul>
-            
+                
+                    <ul>
+                        <li><b>February 08, 2025</b></li>
+                        
+                        <br>
+                        <li>Canon EOS 1100D</li>
+                        <li>EF-S18-55mm f/3.5-5.6 III</li>
+                        <br>
+                        <li>Focal length: 39mm</li>
+                        <li>F-stop: 5</li>
+                        <li>Shutter speed: 1/1250</li>
+                        <li>ISO: 160</li>
+                    </ul>
+                
             </span>
         </a>
     
@@ -170,20 +170,20 @@ $("#psgallery--justified").justifiedGallery({
         >
             <img src='/galleries/landscape/thumbnails/IMG_2070.jpg' alt="IMG_2070.jpg" loading="lazy"/>
             <span class="pswp-caption-content">
-            
-                <ul>
-                    <li><b>February 08, 2025</b></li>
-                    
-                    <br>
-                    <li>Canon EOS 1100D</li>
-                    <li>EF-S18-55mm f/3.5-5.6 III</li>
-                    <br>
-                    <li>Focal length: 44mm</li>
-                    <li>F-stop: 5</li>
-                    <li>Shutter speed: 1/1250</li>
-                    <li>ISO: 250</li>
-                </ul>
-            
+                
+                    <ul>
+                        <li><b>February 08, 2025</b></li>
+                        
+                        <br>
+                        <li>Canon EOS 1100D</li>
+                        <li>EF-S18-55mm f/3.5-5.6 III</li>
+                        <br>
+                        <li>Focal length: 44mm</li>
+                        <li>F-stop: 5</li>
+                        <li>Shutter speed: 1/1250</li>
+                        <li>ISO: 250</li>
+                    </ul>
+                
             </span>
         </a>
     

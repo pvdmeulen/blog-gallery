@@ -35,12 +35,12 @@
   
   
   const lightbox = new PhotoSwipeLightbox({
-	gallery: "#psgallery--justified",
+	gallery: "[id^='psgallery']", 
 	children: "a",
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: true,
+	wheelToZoom: false,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -144,12 +144,40 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-
 <div class="pswp-gallery" id="psgallery--featuredimage">
 
     
+        
+        
+        
+        <a
+            href="featured.jpg"
+            data-pswp-width="4128"
+            data-pswp-height="3300"
+            target="_blank"
+        >
+            <img src="featured.jpg" alt="" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        <li><b>May 24, 2025</b></li>
+                        
+                        <br>
+                        <li>ILCE-6700</li>
+                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
+                        <br>
+                        <li>Focal length: 5714739/262144mm</li>
+                        <li>F-stop: 16</li>
+                        <li>Shutter speed: 1/30</li>
+                        <li>ISO: 100</li>
+                    </ul>
+                
+            </span>
+        </a>
+        
     
-    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - /images/post-thumbnails/post1.JPG </p>
+    
+    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - featured.jpg</p>
     
 </div>
 
