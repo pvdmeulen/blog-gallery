@@ -68,34 +68,50 @@
 <script src='http://localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
 
 <script type = "module">
-$("#psgallery--justified").justifiedGallery({
-    	rowHeight : 400,
-    	lastRow : 'nojustify',
-    	margins : 3,
-    	selector: 'a, figure:not(.spinner)',
-    	captions: false
-	});
-</script>
+	
+$(function(){
+  $(".psgallery-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 400,
+      lastRow : 'nojustify',
+      margins : 5,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
 
+</script>
 </head>
 
 <header>
-	  
+	
 <section class="hero is-link is-small header-image">
     <div class="hero-body">
     	<div class="container is-centered is-widescreen">
-    		<h1 class="title mx-3 my-3 has-text-primary-light">
-                <a class="my-5" href="http://localhost:1313/">
-                	<img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
-                </a>
-            </h1>
+    	    <div class="columns">
+    	        
+    	        <div class="column is-four-fifths">
+    		        <h1 class="title mx-3 my-3 has-text-primary-light">
+                        <a class="my-5" href="http://localhost:1313/">
+                	        <img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                        </a>
+                    </h1>
+                </div>
+                
+                <div>
+                    <button id='toggle'>
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 </header>
 
-<body>
+<body class="">
 	
 
     <div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
@@ -130,9 +146,11 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-light">
+<div class="card has-background-main">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
+            
+            <a href="/galleries/landscape/"><img src="/images/gallery-thumbnails/landscapecard.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
@@ -145,11 +163,14 @@ $("#psgallery--justified").justifiedGallery({
         
         
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/landscape" class="is-size-7 has-text-white-ter is-capitalized">landscape</a>
-              </button>
+                    <button class="button is-primary is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/landscape" class="is-size-7 is-capitalized has-text-inherit">landscape</a>
+                    </button>
+                
             
         
         
@@ -211,6 +232,22 @@ $("#psgallery--justified").justifiedGallery({
         </div>
     </nav>
 </div>
+
+
+<script>
+    const body = document.querySelector('body');
+    const toggle = document.getElementById('toggle');
+
+    toggle.addEventListener("click", () => {
+        const bodyCheck = body.classList.contains('dark');
+        if (bodyCheck) {
+            body.className = ''
+        } else {
+            body.className = "dark"
+      }
+    })
+</script>
+
 </footer>
 
 

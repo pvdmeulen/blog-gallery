@@ -68,34 +68,50 @@
 <script src='http://localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
 
 <script type = "module">
-$("#psgallery--justified").justifiedGallery({
-    	rowHeight : 400,
-    	lastRow : 'nojustify',
-    	margins : 3,
-    	selector: 'a, figure:not(.spinner)',
-    	captions: false
-	});
-</script>
+	
+$(function(){
+  $(".psgallery-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 400,
+      lastRow : 'nojustify',
+      margins : 5,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
 
+</script>
 </head>
 
 <header>
-	  
+	
 <section class="hero is-link is-small header-image">
     <div class="hero-body">
     	<div class="container is-centered is-widescreen">
-    		<h1 class="title mx-3 my-3 has-text-primary-light">
-                <a class="my-5" href="http://localhost:1313/">
-                	<img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
-                </a>
-            </h1>
+    	    <div class="columns">
+    	        
+    	        <div class="column is-four-fifths">
+    		        <h1 class="title mx-3 my-3 has-text-primary-light">
+                        <a class="my-5" href="http://localhost:1313/">
+                	        <img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                        </a>
+                    </h1>
+                </div>
+                
+                <div>
+                    <button id='toggle'>
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 </header>
 
-<body>
+<body class="">
 	
 
 
@@ -194,11 +210,37 @@ $("#psgallery--justified").justifiedGallery({
 
     <section class="container is-max-desktop">
 
-        <p>This is my third post. I might share some photographers that have inspired me.</p>
-<p>In the actual post, I&rsquo;ll expand on things and include more images. I can include PS galleries in blocks:</p>
+        <p>This is my third post. I might share some photographers that have inspired me. In the actual post, I&rsquo;ll expand on things and include more images. I can include PS galleries in blocks:</p>
 
-<div id="psgallery--justified" class="pswp-gallery">
+<div id="psgallery--justified" class="psgallery-class">
     
+    
+        
+        <a
+            href="/posts/post-3/block1/A6700070.jpg"
+            data-pswp-width="4128"
+            data-pswp-height="6192"
+            target="_blank"
+        >
+            <img src='/posts/post-3/block1/thumbnails/A6700070.jpg' alt="block1/A6700070.jpg" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        
+                        
+                        <br>
+                        
+                        
+                        <br>
+                        
+                        
+                        
+                        
+                    </ul>
+                
+            </span>
+        </a>
+        
     
 </div>
 
@@ -206,6 +248,39 @@ $("#psgallery--justified").justifiedGallery({
 
 
 <p>Sit excepteur do velit veniam mollit in nostrud laboris incididunt ea. Amet eu cillum ut reprehenderit culpa aliquip labore laborum amet sit sit duis. Laborum id proident nostrud dolore laborum reprehenderit quis mollit nulla amet veniam officia id id. Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.</p>
+<p>A second block here:</p>
+
+<div id="psgallery--justified" class="psgallery-class">
+    
+    
+        
+        <a
+            href="/posts/post-3/block2/A6700070.jpg"
+            data-pswp-width="4128"
+            data-pswp-height="6192"
+            target="_blank"
+        >
+            <img src='/posts/post-3/block2/thumbnails/A6700070.jpg' alt="block2/A6700070.jpg" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        
+                        
+                        <br>
+                        
+                        
+                        <br>
+                        
+                        
+                        
+                        
+                    </ul>
+                
+            </span>
+        </a>
+        
+    
+</div>
         
         <hr class="has-background-warning-light">
 
@@ -267,6 +342,22 @@ $("#psgallery--justified").justifiedGallery({
         </div>
     </nav>
 </div>
+
+
+<script>
+    const body = document.querySelector('body');
+    const toggle = document.getElementById('toggle');
+
+    toggle.addEventListener("click", () => {
+        const bodyCheck = body.classList.contains('dark');
+        if (bodyCheck) {
+            body.className = ''
+        } else {
+            body.className = "dark"
+      }
+    })
+</script>
+
 </footer>
 
 

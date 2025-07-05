@@ -1,12 +1,12 @@
-{{ $featuredImageUrl := .Params.featuredImageUrl }}
-{{ $featuredAltText := .Params.featuredImageAltText }}
+{{ $thumbnailUrl := .Params.thumbnailUrl }}
+{{ $thumbnailAltText := .Params.thumbnailAltText }}
 {{ $permalink := .RelPermalink }}
 
 <div class="card">
     <div class="card-image">
         <figure class="image is-4by3">
-            {{ with .Params.featuredImageUrl }}
-            <a href="{{ $permalink }}"><img src="{{ $featuredImageUrl }}" alt="{{ $featuredAltText }}" loading="lazy"></a>
+            {{ with .Params.thumbnailUrl }}
+            <a href="{{ $permalink }}"><img src="{{ $thumbnailUrl }}" alt="{{ $thumbnailAltText }}" loading="lazy"></a>
             {{ end }}
         </figure>
     </div>

@@ -3,7 +3,7 @@
 {{ $permalink := .RelPermalink }}
 {{ $subtitle := .Params.subtitle }}
 
-<div class="card has-background-light">
+<div class="card has-background-main">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             {{ with .Params.thumbnailUrl }}
@@ -20,11 +20,26 @@
         {{ with .Params.tags }}
         <!-- <p class="is-size-7 has-text-grey-light mt-1"> -->
             {{ range . }}
-              <button class="button is-primary is-responsive my-2 mx-0">
-                <!-- <i class="fas fa-tag"></i> -->
-                {{ $href := print (absURL "tags/") (urlize .) }}
-                <a href="{{ $href }}" class="is-size-7 has-text-white-ter is-capitalized">{{ . }}</a>
-              </button>
+                {{ $tag := .}}
+                {{ if eq $tag "landscape"}}
+                    <button class="button is-primary is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        {{ $href := print (absURL "tags/") (urlize .) }}
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-inherit">{{ . }}</a>
+                    </button>
+                {{ else if eq $tag "street" }}
+                    <button class="button is-info is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-archway mr-2"></i>
+                        {{ $href := print (absURL "tags/") (urlize .) }}
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-inherit">{{ . }}</a>
+                    </button>
+                {{ else }}
+                    <button class="button is-responsive is-outlined my-2 mx-0">
+                        <!-- <i class="fas fa-tag"></i> -->
+                        {{ $href := print (absURL "tags/") (urlize .) }}
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-inherit">{{ . }}</a>
+                    </button>
+                {{ end }}
             {{ end }}
         <!-- </p> -->
         {{ end }}

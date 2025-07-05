@@ -57,11 +57,17 @@
 <script src='{{ "/js/justifiedgallery/jquery.justifiedGallery.min.js" | absLangURL }}'/></script>
 
 <script type = "module">
-$("#psgallery--justified").justifiedGallery({
-    	rowHeight : 400,
-    	lastRow : 'nojustify',
-    	margins : 3,
-    	selector: 'a, figure:not(.spinner)',
-    	captions: false
-	});
+	
+$(function(){
+  $(".psgallery-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 400,
+      lastRow : 'nojustify',
+      margins : 5,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
+
 </script>

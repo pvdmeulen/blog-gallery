@@ -5,8 +5,8 @@ categories = ['landscape', 'nature', 'animals']
 date = 2025-03-12
 layout = 'gallery'
 tags = ['landscape']
-featuredImageType = "Photo"
-featuredImageUrl = '/images/gallery-thumbnails/landscapecard.jpg'
+thumbnailUrl = '/images/gallery-thumbnails/landscapecard.jpg'
+thumbnailAltText = 'Alt text here'
 +++
 <!--more-->
 {{< ps-gallery folder="" >}}

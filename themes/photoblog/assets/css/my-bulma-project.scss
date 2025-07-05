@@ -17,17 +17,13 @@ $toet: #687069;
   $success: $toet,
   $warning: $house,
   $danger: $roof,
-  $control-border-width: 2px,
-  $input-shadow: none
+  $card-radius: 0rem,
+  $shadow-color: transparent
   );
   
-  // Import Google Fonts
-
-// Tried before:
-// Instrument Serif
-// Noto Serif
+// Import Google Fonts
 
 // Current import:
-// Cardo (body), Raleway (headings), Fira (code)
+// Cardo (body?), Inter (headings), Fira (code)
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 

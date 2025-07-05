@@ -1,5 +1,5 @@
 <!-- block begin -->
-<div id="psgallery--justified" class="pswp-gallery">
+<div id="psgallery--justified" class="psgallery-class">
     {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
     {{ range  $images }}
         {{ $link := .RelPermalink }}
@@ -9,7 +9,7 @@
             data-pswp-height="{{ .Height }}"
             target="_blank"
         >
-            <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }}' alt="{{ .Name }}" loading="lazy"/>
+            <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
             <span class="pswp-caption-content">
                 {{ with .Exif }}
                     <ul>
@@ -27,6 +27,10 @@
                 {{ end }}
             </span>
         </a>
+        <!--
+        <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }} </h4>
+        <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }} </h4>
+        -->
     {{ end }}
 </div>
 <!-- end of block -->

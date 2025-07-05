@@ -5,8 +5,8 @@ categories = ['street', 'travel', 'edinburgh']
 date = 2025-03-01
 layout = 'gallery'
 tags = ['street']
-featuredImageType = "Photo"
-featuredImageUrl = '/images/gallery-thumbnails/streetcard.JPG'
+thumbnailUrl = '/images/gallery-thumbnails/streetcard.jpg'
+thumbnailAltText = 'Alt text here'
 +++
 <!--more-->
 {{< ps-gallery folder="" >}}

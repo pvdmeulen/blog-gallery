@@ -1,11 +1,13 @@
-/* Import Bulma */
-/* @import url("/css/my-bulma-project.css"); */
-
 /* Further custom Bulma formatting */
 .card {
   height: 100%;
   object-fit: cover;
+  background-color: $dark
 }
+
+.button {
+  border-radius: 0;
+  }
 
 /* Header (landing) image */
 .header-image {
@@ -44,6 +46,53 @@
 .content {
   display: inline-block;
   }
+  
+/* Dark/light mode toggle */
+
+body {
+    background-color: $light;
+    height: 100vh;
+    transition: all 0.4s ease;
+}
+
+body .subtitle,
+body .title {
+    color: $dark;
+}
+
+body.dark {
+    background-color: $dark;
+    color: $light;
+}
+
+body.dark .subtitle,
+body.dark .title {
+    color: $light;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    color: $light;
+    padding: .8rem;
+    background: $dark;
+    border-radius: 6px;
+}
+
+body.dark button {
+    background: $light;
+    color: $dark;
+}
+
+/* Contact form */
 
 @import url("contactform.css")
 

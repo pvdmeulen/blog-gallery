@@ -69,34 +69,50 @@
 <script src='http://localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
 
 <script type = "module">
-$("#psgallery--justified").justifiedGallery({
-    	rowHeight : 400,
-    	lastRow : 'nojustify',
-    	margins : 3,
-    	selector: 'a, figure:not(.spinner)',
-    	captions: false
-	});
-</script>
+	
+$(function(){
+  $(".psgallery-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 400,
+      lastRow : 'nojustify',
+      margins : 5,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
 
+</script>
 </head>
 
 <header>
-	  
+	
 <section class="hero is-link is-small header-image">
     <div class="hero-body">
     	<div class="container is-centered is-widescreen">
-    		<h1 class="title mx-3 my-3 has-text-primary-light">
-                <a class="my-5" href="http://localhost:1313/">
-                	<img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
-                </a>
-            </h1>
+    	    <div class="columns">
+    	        
+    	        <div class="column is-four-fifths">
+    		        <h1 class="title mx-3 my-3 has-text-primary-light">
+                        <a class="my-5" href="http://localhost:1313/">
+                	        <img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                        </a>
+                    </h1>
+                </div>
+                
+                <div>
+                    <button id='toggle'>
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 </header>
 
-<body>
+<body class="">
 	
     
     
@@ -119,7 +135,7 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-light">
+<div class="card has-background-main">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             
@@ -136,17 +152,23 @@ $("#psgallery--justified").justifiedGallery({
         
         
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/landscape" class="is-size-7 has-text-white-ter is-capitalized">landscape</a>
-              </button>
+                    <button class="button is-primary is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/landscape" class="is-size-7 is-capitalized has-text-inherit">landscape</a>
+                    </button>
+                
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/street" class="is-size-7 has-text-white-ter is-capitalized">street</a>
-              </button>
+                    <button class="button is-info is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-archway mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/street" class="is-size-7 is-capitalized has-text-inherit">street</a>
+                    </button>
+                
             
         
         
@@ -161,7 +183,7 @@ $("#psgallery--justified").justifiedGallery({
 
 
 
-<div class="card has-background-light">
+<div class="card has-background-main">
     <div class="card-image">
         <figure class="is-align-items-center is-justify-content-center image is-5by4">
             
@@ -173,22 +195,28 @@ $("#psgallery--justified").justifiedGallery({
         <a class="title is-5" href="/posts/post-3/">Post 3</a>
         <h3 class="subtitle is-6 my-1"> Feb 22, 2025</h3>
         
-        <div class="content mb-3 has-text-weight-normal"><p>This is my third post. I might share some photographers that have inspired me.</p></div>
+        <div class="content mb-3 has-text-weight-normal"></div>
         <div class="buttons">
         
         
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/landscape" class="is-size-7 has-text-white-ter is-capitalized">landscape</a>
-              </button>
+                    <button class="button is-primary is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/landscape" class="is-size-7 is-capitalized has-text-inherit">landscape</a>
+                    </button>
+                
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/street" class="is-size-7 has-text-white-ter is-capitalized">street</a>
-              </button>
+                    <button class="button is-info is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-archway mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/street" class="is-size-7 is-capitalized has-text-inherit">street</a>
+                    </button>
+                
             
         
         
@@ -204,9 +232,7 @@ $("#psgallery--justified").justifiedGallery({
                     
 
 
-
-
-<div class="card has-background-light">
+<div class="card has-background-main">
   
   <div class="card-content">
     <a class="title is-5" href="/posts/post-2/">Post 2</a>
@@ -215,17 +241,23 @@ $("#psgallery--justified").justifiedGallery({
         
         
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/landscape" class="is-size-7 has-text-white-ter is-capitalized">landscape</a>
-              </button>
+                    <button class="button is-primary-bold is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/landscape" class="is-size-7 is-capitalized has-text-inherit">landscape</a>
+                    </button>
+                
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/street" class="is-size-7 has-text-white-ter is-capitalized">street</a>
-              </button>
+                    <button class="button is-info-bold is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-archway mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/street" class="is-size-7 is-capitalized has-text-inherit">street</a>
+                    </button>
+                
             
         
         
@@ -237,9 +269,7 @@ $("#psgallery--justified").justifiedGallery({
                     
 
 
-
-
-<div class="card has-background-light">
+<div class="card has-background-main">
   
   <div class="card-content">
     <a class="title is-5" href="/posts/post-1/">Post 1</a>
@@ -248,11 +278,14 @@ $("#psgallery--justified").justifiedGallery({
         
         
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/landscape" class="is-size-7 has-text-white-ter is-capitalized">landscape</a>
-              </button>
+                    <button class="button is-primary-bold is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/landscape" class="is-size-7 is-capitalized has-text-inherit">landscape</a>
+                    </button>
+                
             
         
         
@@ -264,9 +297,7 @@ $("#psgallery--justified").justifiedGallery({
                     
 
 
-
-
-<div class="card has-background-light">
+<div class="card has-background-main">
   
   <div class="card-content">
     <a class="title is-5" href="/posts/photographything/">Trying my hand at this photography thing... finally</a>
@@ -275,11 +306,14 @@ $("#psgallery--justified").justifiedGallery({
         
         
             
-              <button class="button is-primary is-responsive my-2 mx-0">
                 
                 
-                <a href="http://localhost:1313/tags/landscape" class="is-size-7 has-text-white-ter is-capitalized">landscape</a>
-              </button>
+                    <button class="button is-primary-bold is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        
+                        <a href="http://localhost:1313/tags/landscape" class="is-size-7 is-capitalized has-text-inherit">landscape</a>
+                    </button>
+                
             
         
         
@@ -322,7 +356,7 @@ $("#psgallery--justified").justifiedGallery({
     <div class="card-image">
         <figure class="image is-4by3">
             
-            <a href="/galleries/landscape/"><img src="/images/gallery-thumbnails/landscapecard.jpg" alt="" loading="lazy"></a>
+            <a href="/galleries/landscape/"><img src="/images/gallery-thumbnails/landscapecard.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
@@ -339,7 +373,7 @@ $("#psgallery--justified").justifiedGallery({
     <div class="card-image">
         <figure class="image is-4by3">
             
-            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.JPG" alt="" loading="lazy"></a>
+            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
@@ -415,6 +449,22 @@ $("#psgallery--justified").justifiedGallery({
         </div>
     </nav>
 </div>
+
+
+<script>
+    const body = document.querySelector('body');
+    const toggle = document.getElementById('toggle');
+
+    toggle.addEventListener("click", () => {
+        const bodyCheck = body.classList.contains('dark');
+        if (bodyCheck) {
+            body.className = ''
+        } else {
+            body.className = "dark"
+      }
+    })
+</script>
+
 </footer>
 
 
