@@ -71,3 +71,37 @@ $(function(){
 });
 
 </script>
+
+<!-- Light/dark theme button -->
+<script type="module">
+
+    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
+        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
+    
+<!--    // Check user dark mode pref
+    const getInitialState = () => {
+      const initialValue = localStorage.getItem("darkMode");
+    
+      if(initialValue === null){
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+    
+      return initialValue == "true";
+    }
+    
+    let darkMode = getInitialState();
+    document.getElementById("darkmode").checked = darkMode;
+    
+    if(darkMode){
+      toggleDarkMode(); //I'm assuming your page starts in light mode, so a call to toggle should switch everything over!
+    }
+    
+    //new wrapper function
+    const updateDarkMode = () => {
+      darkMode = !darkMode; //invert our variable
+      localStorage.setItem("darkMode", darkMode); //save it in local storage
+      toggleDarkMode(); //now update our styles!
+    }-->
+
+</script>

@@ -11,4 +11,12 @@ featuredImageType = "Photo"
 featuredImageUrl = 'featured.jpg'
 +++
 <!--more-->
-In the actual post, I'll expand on things and include more images.
+I'll talk a little bit about the importance of photos for me. Share photos of dad.
+
+...
+
+Then go on to show some photos from Leiden:
+
+{{< ps-gallery folder="/leiden/" >}}
+
+... and Groningen and Amsterdam.

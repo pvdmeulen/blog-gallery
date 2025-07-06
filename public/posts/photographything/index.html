@@ -82,6 +82,40 @@ $(function(){
 });
 
 </script>
+
+
+<script type="module">
+
+    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
+        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
+    
+
+    const getInitialState = () => {
+      const initialValue = localStorage.getItem("darkMode");
+    
+      if(initialValue === null){
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+    
+      return initialValue == "true";
+    }
+    
+    let darkMode = getInitialState();
+    document.getElementById("darkmode").checked = darkMode;
+    
+    if(darkMode){
+      toggleDarkMode(); 
+    }
+    
+    
+    const updateDarkMode = () => {
+      darkMode = !darkMode; 
+      localStorage.setItem("darkMode", darkMode); 
+      toggleDarkMode(); 
+    }
+
+</script>
 </head>
 
 <header>
@@ -94,21 +128,26 @@ $(function(){
     	        <div class="column is-four-fifths">
     		        <h1 class="title mx-3 my-3 has-text-primary-light">
                         <a class="my-5" href="http://localhost:1313/">
-                	        <img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                            <picture width="200px" class="py-1 my-3">
+                                
+                                <source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+                                
+                                <source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+                                
+                                <img src="/images/logo-light.svg" width="200px" class="py-1 my-3"></img>
+                            </picture>
+
                         </a>
                     </h1>
                 </div>
+                <div class="column is-one-fifth">
                 
-                <div>
-                    <button id='toggle'>
-                        Toggle Theme
-                    </button>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 </header>
 
 <body class="">
@@ -179,9 +218,7 @@ $(function(){
                         <li><b>March 20, 2025</b></li>
                         <li>De Valk windmill in Leiden, Netherlands.</li>
                         <br>
-                        <li>Sony A6700</li>
-                        <li>Sigma 18-50mm F2.8 DC DN</li>
-                        <br>
+                        
                         <li>Focal length: 214/5mm</li>
                         <li>F-stop: 9</li>
                         <li>Shutter speed: 1/500</li>
@@ -210,7 +247,94 @@ $(function(){
 
     <section class="container is-max-desktop">
 
-        <p>In the actual post, I&rsquo;ll expand on things and include more images.</p>
+        <p>I&rsquo;ll talk a little bit about the importance of photos for me. Share photos of dad.</p>
+<p>&hellip;</p>
+<p>Then go on to show some photos from Leiden:</p>
+
+<div id="psgallery--justified" class="psgallery-class">
+    
+    
+        
+        <a
+            href="/posts/photographything/leiden/A6700064.jpg"
+            data-pswp-width="4845"
+            data-pswp-height="3230"
+            target="_blank"
+        >
+            <img src='/posts/photographything/leiden/thumbnails/A6700064.jpg' alt="leiden/A6700064.jpg" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        <li><b>March 20, 2025</b></li>
+                        
+                        <br>
+                        
+                        <li>Focal length: 4928307/262144mm</li>
+                        <li>F-stop: 9</li>
+                        <li>Shutter speed: 1/125</li>
+                        <li>ISO: 100</li>
+                    </ul>
+                
+            </span>
+        </a>
+        
+    
+        
+        <a
+            href="/posts/photographything/leiden/A6700071.jpg"
+            data-pswp-width="3803"
+            data-pswp-height="4753"
+            target="_blank"
+        >
+            <img src='/posts/photographything/leiden/thumbnails/A6700071.jpg' alt="leiden/A6700071.jpg" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        <li><b>March 20, 2025</b></li>
+                        
+                        <br>
+                        
+                        <li>Focal length: 18mm</li>
+                        <li>F-stop: 9</li>
+                        <li>Shutter speed: 1/500</li>
+                        <li>ISO: 200</li>
+                    </ul>
+                
+            </span>
+        </a>
+        
+    
+        
+        <a
+            href="/posts/photographything/leiden/A6700118.jpg"
+            data-pswp-width="3301"
+            data-pswp-height="4127"
+            target="_blank"
+        >
+            <img src='/posts/photographything/leiden/thumbnails/A6700118.jpg' alt="leiden/A6700118.jpg" loading="lazy"/>
+            <span class="pswp-caption-content">
+                
+                    <ul>
+                        <li><b>March 20, 2025</b></li>
+                        
+                        <br>
+                        
+                        <li>Focal length: 27mm</li>
+                        <li>F-stop: 14</li>
+                        <li>Shutter speed: 1/320</li>
+                        <li>ISO: 800</li>
+                    </ul>
+                
+            </span>
+        </a>
+        
+    
+</div>
+
+
+
+
+<p>&hellip; and Groningen and Amsterdam.</p>
         
         <hr class="has-background-warning-light">
 

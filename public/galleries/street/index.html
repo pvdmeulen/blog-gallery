@@ -82,6 +82,40 @@ $(function(){
 });
 
 </script>
+
+
+<script type="module">
+
+    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
+        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
+    
+
+    const getInitialState = () => {
+      const initialValue = localStorage.getItem("darkMode");
+    
+      if(initialValue === null){
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+    
+      return initialValue == "true";
+    }
+    
+    let darkMode = getInitialState();
+    document.getElementById("darkmode").checked = darkMode;
+    
+    if(darkMode){
+      toggleDarkMode(); 
+    }
+    
+    
+    const updateDarkMode = () => {
+      darkMode = !darkMode; 
+      localStorage.setItem("darkMode", darkMode); 
+      toggleDarkMode(); 
+    }
+
+</script>
 </head>
 
 <header>
@@ -94,21 +128,26 @@ $(function(){
     	        <div class="column is-four-fifths">
     		        <h1 class="title mx-3 my-3 has-text-primary-light">
                         <a class="my-5" href="http://localhost:1313/">
-                	        <img src="/images/logo-new.svg" width="200px" class="py-1 my-3"></img>
+                            <picture width="200px" class="py-1 my-3">
+                                
+                                <source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+                                
+                                <source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+                                
+                                <img src="/images/logo-light.svg" width="200px" class="py-1 my-3"></img>
+                            </picture>
+
                         </a>
                     </h1>
                 </div>
+                <div class="column is-one-fifth">
                 
-                <div>
-                    <button id='toggle'>
-                        Toggle Theme
-                    </button>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 </header>
 
 <body class="">
@@ -165,9 +204,7 @@ $(function(){
                         <li><b>March 20, 2025</b></li>
                         <li>De Valk windmill in Leiden, Netherlands.</li>
                         <br>
-                        <li>Sony A6700</li>
-                        <li>Sigma 18-50mm F2.8 DC DN</li>
-                        <br>
+                        
                         <li>Focal length: 214/5mm</li>
                         <li>F-stop: 9</li>
                         <li>Shutter speed: 1/500</li>
@@ -192,9 +229,7 @@ $(function(){
                         <li><b>March 20, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 8860467/262144mm</li>
                         <li>F-stop: 9</li>
                         <li>Shutter speed: 1/500</li>
@@ -219,9 +254,7 @@ $(function(){
                         <li><b>March 21, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 8860467/262144mm</li>
                         <li>F-stop: 71/10</li>
                         <li>Shutter speed: 1/320</li>
@@ -246,9 +279,7 @@ $(function(){
                         <li><b>March 21, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 2221501/65531mm</li>
                         <li>F-stop: 71/10</li>
                         <li>Shutter speed: 1/320</li>
@@ -273,9 +304,7 @@ $(function(){
                         <li><b>March 21, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 50mm</li>
                         <li>F-stop: 71/10</li>
                         <li>Shutter speed: 1/320</li>
@@ -300,9 +329,7 @@ $(function(){
                         <li><b>March 21, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 50mm</li>
                         <li>F-stop: 71/10</li>
                         <li>Shutter speed: 1/320</li>
@@ -327,9 +354,7 @@ $(function(){
                         <li><b>March 21, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 5845811/131072mm</li>
                         <li>F-stop: 14/5</li>
                         <li>Shutter speed: 31666/39582501</li>
@@ -354,9 +379,7 @@ $(function(){
                         <li><b>March 22, 2025</b></li>
                         
                         <br>
-                        <li>ILCE-6700</li>
-                        <li>18-50mm F2.8 DC DN | Contemporary 021</li>
-                        <br>
+                        
                         <li>Focal length: 2221501/65531mm</li>
                         <li>F-stop: 28/5</li>
                         <li>Shutter speed: 31666/39582501</li>
@@ -381,9 +404,7 @@ $(function(){
                         <li><b>February 08, 2025</b></li>
                         
                         <br>
-                        <li>Canon EOS 1100D</li>
-                        <li>EF-S18-55mm f/3.5-5.6 III</li>
-                        <br>
+                        
                         <li>Focal length: 35mm</li>
                         <li>F-stop: 9/2</li>
                         <li>Shutter speed: 1/1250</li>
@@ -408,9 +429,7 @@ $(function(){
                         <li><b>February 08, 2025</b></li>
                         
                         <br>
-                        <li>Canon EOS 1100D</li>
-                        <li>EF-S18-55mm f/3.5-5.6 III</li>
-                        <br>
+                        
                         <li>Focal length: 44mm</li>
                         <li>F-stop: 5</li>
                         <li>Shutter speed: 1/1250</li>

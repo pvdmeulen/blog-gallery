@@ -8,15 +8,24 @@ $toet: #687069;
 
 // Path to Bulma's sass folder
 @use "bulma/sass" with (
+  // Fonts:
   $family-primary: '"Inter", sans-serif',
   $family-secondary: '"Cardo", serif',
   $family-code: '"Fira Code", monospace',
+  // Colours:
   $primary: $hedge,
+  // $primary-dark: $hedge,
   $link: $grass,
+  // $link-dark: $grass,
   $info: $sky,
+  // $info-dark: $sky,
   $success: $toet,
+  // $success-dark: $toet,
   $warning: $house,
+  // $warning-dark: $house,
   $danger: $roof,
+  // $danger-dark: $roof,
+  // Card:
   $card-radius: 0rem,
   $shadow-color: transparent
   );

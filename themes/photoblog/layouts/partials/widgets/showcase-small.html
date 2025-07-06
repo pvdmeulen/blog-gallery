@@ -12,22 +12,22 @@
             {{ range . }}
                 {{ $tag := .}}
                 {{ if eq $tag "landscape"}}
-                    <button class="button is-primary-bold is-responsive is-outlined my-2 mx-0">
+                    <button class="button is-primary is-responsive is-outlined my-2 mx-0">
                         <i class="fa-solid fa-mountain-sun mr-2"></i>
                         {{ $href := print (absURL "tags/") (urlize .) }}
-                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-inherit">{{ . }}</a>
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-primary-bold">{{ . }}</a>
                     </button>
                 {{ else if eq $tag "street" }}
-                    <button class="button is-info-bold is-responsive is-outlined my-2 mx-0">
-                        <i class="fa-solid fa-archway mr-2"></i>
+                    <button class="button is-info is-responsive is-outlined my-2 mx-0">
+                        <i class="fa-solid fa-building-user mr-2"></i>
                         {{ $href := print (absURL "tags/") (urlize .) }}
-                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-inherit">{{ . }}</a>
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-info-bold">{{ . }}</a>
                     </button>
                 {{ else }}
                     <button class="button is-responsive is-outlined my-2 mx-0">
                         <!-- <i class="fas fa-tag"></i> -->
                         {{ $href := print (absURL "tags/") (urlize .) }}
-                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-inherit">{{ . }}</a>
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-bold">{{ . }}</a>
                     </button>
                 {{ end }}
             {{ end }}

@@ -8,10 +8,10 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/landscape/</loc>
+    <loc>http://localhost:1313/categories/landscape/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/landscape/</loc>
+    <loc>http://localhost:1313/tags/landscape/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/galleries/landscape/</loc>
@@ -26,10 +26,10 @@
     <loc>http://localhost:1313/categories/edinburgh/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/street/</loc>
+    <loc>http://localhost:1313/categories/street/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/street/</loc>
+    <loc>http://localhost:1313/tags/street/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/galleries/street/</loc>

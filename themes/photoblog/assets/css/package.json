@@ -4,7 +4,7 @@
     "sass": "^1.72.0"
   },
   "scripts": {
-    "build-bulma": "sass --load-path=node_modules my-bulma-project.scss my-bulma-project.css",
+    "build-bulma": "sass --load-path=node_modules custom-bulma-theme.scss custom-bulma-theme.css",
     "start": "npm run build-bulma -- --watch"
   }
 }

@@ -7,15 +7,28 @@
     	        <div class="column is-four-fifths">
     		        <h1 class="title mx-3 my-3 has-text-primary-light">
                         <a class="my-5" href="{{ `` | absURL }}">
-                	        <img src="{{ `images/logo-new.svg` | relLangURL }}" width="200px" class="py-1 my-3"></img>
+                            <picture width="200px" class="py-1 my-3">
+                                <!-- User prefers light mode: -->
+                                <source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
+                                <!-- User prefers dark mode: -->
+                                <source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
+                                <!-- User has no color preference: -->
+                                <img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3"></img>
+                            </picture>
+<!--                	        <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
+                	        <img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>-->
                         </a>
                     </h1>
                 </div>
+                <div class="column is-one-fifth">
                 <!-- LIGHT/DARK MODE TOGGLE -->
-                <div>
-                    <button id='toggle'>
-                        Toggle Theme
-                    </button>
+<!--                    <div class="container is-centered">
+                        <button id="btn-toggle-theme" class="button is-primary is-large" aria-label="Toggle light or dark mode">
+                            <span class="icon is-large">
+                                <i class="fa-solid fa-moon"></i>
+                            </span>
+                        </button>
+                    </div>-->
                 </div>
             </div>
         </div>
