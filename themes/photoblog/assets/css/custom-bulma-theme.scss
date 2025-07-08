@@ -1,22 +1,22 @@
 // Include all Bulma helpers/functions:
-@forward "utilities";
-@forward "themes";
-@forward "base";
-@forward "elements";
-@forward "form";
-@forward "components";
-@forward "grid";
-@forward "layout";
-@forward "base/skeleton";
-@forward "helpers";
+@forward "bulma/sass/utilities";
+@forward "bulma/sass/themes";
+@forward "bulma/sass/base";
+@forward "bulma/sass/elements";
+@forward "bulma/sass/form";
+@forward "bulma/sass/components";
+@forward "bulma/sass/grid";
+@forward "bulma/sass/layout";
+@forward "bulma/sass/base/skeleton";
+@forward "bulma/sass/helpers";
 
 // Set light mode colours:
-$primary-light: #275958; // hedge
-$link-light: #22D592;    // grass
-$warning-light: #EAAA02; // house
-$info-light: #02669A;    // sky
-$danger-light: #BE2400;  // roof
-$success-light: #687069; // toet
+$hedge: #467B75; // primary dark mode
+$grass: #68B68F; // primary light mode
+$sky: #02669A;   // secondary dark mode
+$patio: #807FA7; // secondary light mode
+$roof: #BE2400;  // tertiary dark mode
+$house: #EAAA02; // tertiary light mode
 
 // Use our custom theme:
 
@@ -30,29 +30,39 @@ $primary-dark: #00008B; // dark blue
 
 @mixin light-theme-config {
   @include light.light-theme;
-  // Colours:
-  $primary: $primary-light;
-  $link: $primary-light;
-  $info: $primary-light;
-  $success: $success-light;
-  $warning: $primary-light;
-  $danger: $primary-light;
+  
+  // Reconfigure the light colors:
+  @include cv.register-hsl("primary", $hedge);
+  @include cv.generate-color-palette("primary", $hedge);
+  @include cv.generate-on-scheme-colors("primary", $hedge, light.$scheme-main);
+  @include cv.register-hsl("link", $sky);
+  @include cv.generate-color-palette("link", $sky);
+  @include cv.generate-on-scheme-colors("link", $sky, light.$scheme-main);
+  @include cv.register-hsl("info", $house);
+  @include cv.generate-color-palette("info", $house);
+  @include cv.generate-on-scheme-colors("info", $house, light.$scheme-main);
   // Fonts:
-  $family-primary: '"Inter", sans-serif',
-  $family-secondary: '"Cardo", serif',
-  $family-code: '"Fira Code", monospace',
+  $family-primary: '"Inter", sans-serif';
+  $family-secondary: '"Cardo", serif';
+  $family-code: '"Fira Code", monospace';
   // Card:
-  $card-radius: 0rem,
-  $shadow-color: transparent
+  $card-radius: 0rem;
+  $shadow-color: transparent;
 }
 
 @mixin dark-theme-config {
   @include dark.dark-theme;
 
-  // Reconfigure the $primary color
-  @include cv.register-hsl("primary", $primary-dark);
-  @include cv.generate-color-palette("primary", $primary-dark);
-  @include cv.generate-on-scheme-colors("primary", $primary-dark, dark.$scheme-main);
+  // Reconfigure the dark colors:
+  @include cv.register-hsl("primary", $grass);
+  @include cv.generate-color-palette("primary", $grass);
+  @include cv.generate-on-scheme-colors("primary", $grass, dark.$scheme-main);
+  @include cv.register-hsl("link", $patio);
+  @include cv.generate-color-palette("link", $patio);
+  @include cv.generate-on-scheme-colors("link", $patio, dark.$scheme-main);
+  @include cv.register-hsl("info", $house);
+  @include cv.generate-color-palette("info", $house);
+  @include cv.generate-on-scheme-colors("info", $house, dark.$scheme-main);
 }
 
 // Setup the light theme as the default theme

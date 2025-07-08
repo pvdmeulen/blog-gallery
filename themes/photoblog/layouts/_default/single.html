@@ -9,15 +9,15 @@
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li>
-                <a href="{{ `` | absURL }}" class="has-text-link-bold">Home</a>
+                <a href="{{ `` | absURL }}" class="has-text-link">Home</a>
             </li>
             <li>
             {{ with .Parent }}
-                <a href="{{ .RelPermalink }}" class="has-text-link-bold">{{ .LinkTitle }}</a>
+                <a href="{{ .RelPermalink }}" class="has-text-link">{{ .LinkTitle }}</a>
             {{ end }}
             </li>
             <li class="is-active">
-                <a href="#" aria-current="page" class="has-text-link-bold">
+                <a href="#" aria-current="page" class="has-text-link">
                     {{ .LinkTitle }}
                 </a>
             </li>
@@ -26,8 +26,8 @@
 
     <!-- Post title, image, and tags -->
 
-    <h1 class="title mt-5 mb-0 is-size-3">{{ .Title }}</h1>
-    <p class="mt-1 mb-5">
+    <h1 class="title mt-5 mb-1 is-size-3">{{ .Title }}</h1>
+    <p class="mt-2 mb-3">
         {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
         {{ $dateHuman := .Date | time.Format ":date_long" }}
         <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>  |
@@ -48,7 +48,7 @@
             {{ partial "widgets/featuredimage.html" . }}
         </div>
         <div class="column is-one-third">
-            <div class="content has-text-weight-bold has-text-primary is-size-5">
+            <div class="content has-text-weight-bold has-text-primary-bold is-size-5">
                 {{ .Params.subtitle }}
             </div>
         </div>
@@ -57,10 +57,10 @@
     <!-- Content -->
 
     <section class="container is-max-desktop">
-
-        {{ .Content }}
-        
-        <hr class="has-background-warning-light">
+        <div class="content">
+            {{ .Content }}
+        </div>
+        <hr class="has-background-info">
 
     </section>
 

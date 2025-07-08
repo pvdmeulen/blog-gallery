@@ -14,35 +14,37 @@
     <div class="card-content">
         <a class="title is-5" href="{{ $permalink }}">{{ .Title }}</a>
         <h3 class="subtitle is-6 my-1"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
-        <!-- need to choose either subtitle (front matter) or summary (first bit of text in post) -->
-        <div class="content mb-3 has-text-weight-normal">{{ .Params.subtitle }}{{ .Summary }}</div>
-        <div class="buttons">
+        <!-- need to choose either subtitle (front matter) or summary (first bit of text in post) 
+        choose subtitle given it needs to be separate from other text in post -->
+        <div class="content mb-3 has-text-weight-normal">{{ .Params.subtitle }}</div>
+        <!-- <div class="content mb-3 has-text-weight-normal">{{ .Summary }}</div> -->
+        <!--<div class="buttons">-->
         {{ with .Params.tags }}
         <!-- <p class="is-size-7 has-text-grey-light mt-1"> -->
             {{ range . }}
                 {{ $tag := .}}
                 {{ if eq $tag "landscape"}}
-                    <button class="button is-primary is-light is-responsive my-2 mx-0">
+                    <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
                         <i class="fa-solid fa-mountain-sun mr-2"></i>
                         {{ $href := print (absURL "tags/") (urlize .) }}
-                        <a href="{{ $href }}" class="is-size-7 is-capitalized">{{ . }}</a>
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-primary-bold">{{ . }}</a>
                     </button>
                 {{ else if eq $tag "street" }}
-                    <button class="button is-info is-responsive is-outlined my-2 mx-0">
+                    <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
                         <i class="fa-solid fa-building-user mr-2"></i>
                         {{ $href := print (absURL "tags/") (urlize .) }}
                         <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-info-bold">{{ . }}</a>
                     </button>
                 {{ else }}
-                    <button class="button is-responsive is-outlined my-2 mx-0">
-                        <!-- <i class="fas fa-tag"></i> -->
+                    <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-tag mr-2"></i>
                         {{ $href := print (absURL "tags/") (urlize .) }}
-                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-bold">{{ . }}</a>
+                        <a href="{{ $href }}" class="is-size-7 is-capitalized has-text-link-bold">{{ . }}</a>
                     </button>
                 {{ end }}
             {{ end }}
         <!-- </p> -->
         {{ end }}
-        </div>
+        <!--</div>-->
     </div>
 </div>

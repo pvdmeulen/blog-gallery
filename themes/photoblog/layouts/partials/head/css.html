@@ -1,4 +1,4 @@
-{{- with resources.Get "css/my-bulma-project.css" }}
+{{- with resources.Get "css/custom-bulma-theme.css" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}

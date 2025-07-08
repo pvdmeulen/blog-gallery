@@ -41,3 +41,4 @@ pagination.pagerSize = 8
     pre = "fa-brands fa-github"
     url = "https://github.com/pvdmeulen"
     weight = 40
+    

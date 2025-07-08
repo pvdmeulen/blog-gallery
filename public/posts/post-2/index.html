@@ -10,7 +10,7 @@
 
 
 
-    <link rel="stylesheet" href="/css/my-bulma-project.css">
+    <link rel="stylesheet" href="/css/custom-bulma-theme.css">
     <link rel="stylesheet" href="/css/main.css">
 
 
@@ -162,15 +162,15 @@ $(function(){
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li>
-                <a href="http://localhost:1313/" class="has-text-link-bold">Home</a>
+                <a href="http://localhost:1313/" class="has-text-link">Home</a>
             </li>
             <li>
             
-                <a href="/posts/" class="has-text-link-bold">Posts</a>
+                <a href="/posts/" class="has-text-link">Posts</a>
             
             </li>
             <li class="is-active">
-                <a href="#" aria-current="page" class="has-text-link-bold">
+                <a href="#" aria-current="page" class="has-text-link">
                     Post 2
                 </a>
             </li>
@@ -179,8 +179,8 @@ $(function(){
 
     
 
-    <h1 class="title mt-5 mb-0 is-size-3">Post 2</h1>
-    <p class="mt-1 mb-5">
+    <h1 class="title mt-5 mb-1 is-size-3">Post 2</h1>
+    <p class="mt-2 mb-3">
         
         
         <time datetime="2025-02-21T00:00:00&#43;00:00">February 21, 2025</time>  |
@@ -199,45 +199,45 @@ $(function(){
 
 
 
-<div class="pswp-gallery" id="psgallery--featuredimage">
-
+<div class="container mb-3">
+    <div class="pswp-gallery" id="psgallery--featuredimage">
     
         
+            
+            
+            
+            <a
+                href="featured.jpg"
+                data-pswp-width="2218"
+                data-pswp-height="1774.5"
+                target="_blank"
+            >
+                <img src="featured.jpg" alt="" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>April 18, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 50mm</li>
+                            <li>F-stop: 9</li>
+                            <li>Shutter speed: 1/125</li>
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
         
         
-        <a
-            href="featured.jpg"
-            data-pswp-width="4436"
-            data-pswp-height="3549"
-            target="_blank"
-        >
-            <img src="featured.jpg" alt="" loading="lazy"/>
-            <span class="pswp-caption-content">
-                
-                    <ul>
-                        <li><b>April 18, 2025</b></li>
-                        
-                        <br>
-                        
-                        <li>Focal length: 50mm</li>
-                        <li>F-stop: 9</li>
-                        <li>Shutter speed: 1/125</li>
-                        <li>ISO: 100</li>
-                    </ul>
-                
-            </span>
-        </a>
+        <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - featured.jpg</p>
         
-    
-    
-    <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - featured.jpg</p>
-    
+    </div>
 </div>
-
-
         </div>
         <div class="column is-one-third">
-            <div class="content has-text-weight-bold has-text-primary is-size-5">
+            <div class="content has-text-weight-bold has-text-primary-bold is-size-5">
                 
             </div>
         </div>
@@ -246,11 +246,11 @@ $(function(){
     
 
     <section class="container is-max-desktop">
-
-        <p>This is my second post. I might share some photo from around Edinburgh.</p>
+        <div class="content">
+            <p>This is my second post. I might share some photo from around Edinburgh.</p>
 <p>In the actual post, I&rsquo;ll expand on things and include more images.</p>
-        
-        <hr class="has-background-warning-light">
+        </div>
+        <hr class="has-background-info">
 
     </section>
 
@@ -282,19 +282,19 @@ $(function(){
             <div class="level-item">
                 <a>
                     
-                        <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info-30">
+                        <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
                             <span class="icon"><i class="fa-solid fa-envelope"></i></span>
                         </a>
                     
-                        <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info-30">
+                        <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
                             <span class="icon"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     
-                        <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info-30">
+                        <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
                             <span class="icon"><i class="fa-brands fa-flickr"></i></span>
                         </a>
                     
-                        <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-info-30">
+                        <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
                             <span class="icon"><i class="fa-brands fa-github"></i></span>
                         </a>
                     
@@ -302,10 +302,10 @@ $(function(){
             </div>
         </div>
         
-        <div class="level-right has-text-right has-text-centered-touch has-text-primary-bold pr-5-desktop mr-3-desktop pt-5 mt-3 mb-3">
+        <div class="level-right has-text-right has-text-centered-touch pr-5-desktop mr-3-desktop pt-5 mt-3 mb-3">
             <div class="level-item">
                 <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
-                Built with <i class="fa-solid fa-heart has-text-danger"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-success">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-success">Bulma</a></p>
+                Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
             </div>
         </div>
     </nav>

@@ -7,45 +7,41 @@
 
 {{ $image := .Resources.Get "featured.jpg" }}
 
-<div class="pswp-gallery" id="psgallery--featuredimage">
-
-    {{ with $image }}
-        
-        {{ $link := .RelPermalink }}
-        
-        <a
-            href="{{ $featuredImageUrl }}"
-            data-pswp-width="{{ .Width }}"
-            data-pswp-height="{{ .Height }}"
-            target="_blank"
-        >
-            <img src="{{ $featuredImageUrl }}" alt="{{ $featuredImageAltText }}" loading="lazy"/>
-            <span class="pswp-caption-content">
-                {{ with .Exif }}
-                    <ul>
-                        {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
-                        {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
-                        <br>
-                        <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
-                        {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
-                        <br>-->
-                        {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
-                        {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
-                        {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
-                        {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
-                    </ul>
-                {{ end }}
-            </span>
-        </a>
-        
-    {{ end }}
+<div class="container mb-3">
+    <div class="pswp-gallery" id="psgallery--featuredimage">
     
-    <p class="is-size-7-mobile is-size-6-tablet mb-3">{{ $featuredImageType }} - {{ $featuredImageCaption }} - {{ .Params.featuredImageUrl }}</p>
-    
+        {{ with $image }}
+            
+            {{ $link := .RelPermalink }}
+            
+            <a
+                href="{{ $featuredImageUrl }}"
+                data-pswp-width="{{ mul .Width 0.5 }}"
+                data-pswp-height="{{ mul .Height 0.5 }}"
+                target="_blank"
+            >
+                <img src="{{ $featuredImageUrl }}" alt="{{ $featuredImageAltText }}" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    {{ with .Exif }}
+                        <ul>
+                            {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
+                            {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                            <br>
+                            <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
+                            {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
+                            <br>-->
+                            {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                            {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
+                            {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                            {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                        </ul>
+                    {{ end }}
+                </span>
+            </a>
+            
+        {{ end }}
+        
+        <p class="is-size-7-mobile is-size-6-tablet mb-3">{{ $featuredImageType }} - {{ $featuredImageCaption }} - {{ .Params.featuredImageUrl }}</p>
+        
+    </div>
 </div>
-
-<!--
-<figure class="image is-5by4 featured-img">
-    <img class="is-fluid" src="{{ $featuredImageUrl }}" alt="{{ $featuredImageAltText }}" loading="lazy">
-</figure>
--->
