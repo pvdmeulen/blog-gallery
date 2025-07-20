@@ -1,22 +1,26 @@
-// Include all Bulma helpers/functions:
-@forward "bulma/sass/utilities";
-@forward "bulma/sass/themes";
-@forward "bulma/sass/base";
-@forward "bulma/sass/elements";
-@forward "bulma/sass/form";
-@forward "bulma/sass/components";
-@forward "bulma/sass/grid";
-@forward "bulma/sass/layout";
-@forward "bulma/sass/base/skeleton";
-@forward "bulma/sass/helpers";
-
-// Set light mode colours:
+// Set custom colours:
 $hedge: #467B75; // primary dark mode
 $grass: #68B68F; // primary light mode
 $sky: #02669A;   // secondary dark mode
 $patio: #807FA7; // secondary light mode
 $roof: #BE2400;  // tertiary dark mode
 $house: #EAAA02; // tertiary light mode
+
+// Include all Bulma helpers/functions:
+@forward "bulma/sass/utilities";
+@forward "bulma/sass/themes";
+@forward "bulma/sass/base";
+@forward "bulma/sass/elements";
+@forward "bulma/sass/form";
+@forward "bulma/sass/grid";
+@forward "bulma/sass/layout";
+@forward "bulma/sass/base/skeleton";
+@forward "bulma/sass/helpers";
+
+@use "bulma/sass/components" with (
+    $card-radius: 0rem,
+    $card-shadow: none
+    );
 
 // Use our custom theme:
 
@@ -26,11 +30,8 @@ $house: #EAAA02; // tertiary light mode
 @use "bulma/sass/themes/light";
 @use "bulma/sass/themes/dark";
 
-$primary-dark: #00008B; // dark blue
-
 @mixin light-theme-config {
   @include light.light-theme;
-  
   // Reconfigure the light colors:
   @include cv.register-hsl("primary", $hedge);
   @include cv.generate-color-palette("primary", $hedge);
@@ -45,14 +46,10 @@ $primary-dark: #00008B; // dark blue
   $family-primary: '"Inter", sans-serif';
   $family-secondary: '"Cardo", serif';
   $family-code: '"Fira Code", monospace';
-  // Card:
-  $card-radius: 0rem;
-  $shadow-color: transparent;
-}
+  }
 
 @mixin dark-theme-config {
   @include dark.dark-theme;
-
   // Reconfigure the dark colors:
   @include cv.register-hsl("primary", $grass);
   @include cv.generate-color-palette("primary", $grass);
@@ -63,7 +60,11 @@ $primary-dark: #00008B; // dark blue
   @include cv.register-hsl("info", $house);
   @include cv.generate-color-palette("info", $house);
   @include cv.generate-on-scheme-colors("info", $house, dark.$scheme-main);
-}
+  // Fonts:
+  $family-primary: '"Inter", sans-serif';
+  $family-secondary: '"Cardo", serif';
+  $family-code: '"Fira Code", monospace';
+  }
 
 // Setup the light theme as the default theme
 :root {
@@ -93,7 +94,5 @@ $primary-dark: #00008B; // dark blue
   @include setup.setup-theme;
 }
 
-
 // Import Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-

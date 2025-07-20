@@ -1,40 +1,42 @@
 <!-- block begin -->
-<div id="psgallery--justified" class="psgallery-class">
-    {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
-    {{ range  $images }}
-        {{ $link := .RelPermalink }}
-        <a
-            href="{{ $link }}"
-            data-pswp-width="{{ .Width }}"
-            data-pswp-height="{{ .Height }}"
-            target="_blank"
-        >
-            <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
-            <span class="pswp-caption-content">
-                {{ with .Exif }}
-                    <ul>
-                        {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
-                        {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
-                        <br>
-                        <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
-                        {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
-                        <br>-->
-                        {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
-                        {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
-                        {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
-                        {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
-                    </ul>
-                {{ end }}
-            </span>
-        </a>
-        <!--
-        <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }} </h4>
-        <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }} </h4>
-        -->
+<div class="container mt-1 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
+        {{ range  $images }}
+            {{ $link := .RelPermalink }}
+            <a
+                href="{{ $link }}"
+                data-pswp-width="{{ .Width }}"
+                data-pswp-height="{{ .Height }}"
+                target="_blank"
+            >
+                <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    {{ with .Exif }}
+                        <ul>
+                            {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
+                            {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                            <br>
+                            <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
+                            {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
+                            <br>-->
+                            {{ with .Tags.FocalLength }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                            {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
+                            {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                            {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                        </ul>
+                    {{ end }}
+                </span>
+            </a>
+            <!--
+            <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }} </h4>
+            <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }} </h4>
+            -->
+        {{ end }}
+    </div>
+    <!-- end of block -->
+    <!-- caption code -->
+    {{ with .Get "title" }}
+    <h4>{{ . }}</h4>
     {{ end }}
 </div>
-<!-- end of block -->
-<!-- caption code -->
-{{ with .Get "title" }}
-<h4>{{ . }}</h4>
-{{ end }}
