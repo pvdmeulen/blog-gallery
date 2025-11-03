@@ -43,7 +43,7 @@
                                 {{ end }}
                             {{ end }}
                             -->
-                    Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} mins {{ end }}
+                    Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}
                 </p>
                 
                 <div class="columns mt-3">
@@ -51,7 +51,7 @@
                         {{ partial "widgets/featuredimage.html" . }}
                     </div>
                     <div class="column is-one-third">
-                        <div class="content has-text-weight-bold has-text-primary-bold is-size-4">
+                        <div class="content has-text-weight-semibold has-text-primary-bold is-size-5">
                             {{ .Params.subtitle }}
                         </div>
                     </div>
@@ -60,10 +60,10 @@
                 <!-- Content -->
             
                 <div class="container is-centered is-max-desktop mb-5">
-                    <div class="content is-size-5">
+                    <div class="content is-size-6">
                         {{ .Content }}
                     </div>
-                    <hr class="has-background-info">
+                    <hr>
                     <!-- Replace below with prev/next post -->
                 {{ partial "tags.html" (dict "taxonomy" "tags" "page" .) }}
                 </div>

@@ -25,18 +25,15 @@
                 <div class="container">
                     <h2 class="title is-size-4 mt-3 mb-1 has-text-weight-semibold">{{ .Title }}</h2>
                     <h3 class="subtitle mt-2">{{ .Params.subtitle }}</h3>
-                    <!-- <div class="columns is-multiline mt-2"> -->
                     <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
                         <div class="grid">
                             {{ range .Paginator.Pages.ByPublishDate.Reverse }}
                                 <div class="cell">
                                     {{ partial "widgets/showcase-desc.html" . }}
                                 </div>
-                            <!-- <div class="column"></div> -->
                             {{ end }}
                         </div>
                     </div>
-                    
                     <div class="columns is-centered mt-2 mb-5">
                         <div class="column is-narrow">
                             {{ partial "widgets/pagination.html" . }}

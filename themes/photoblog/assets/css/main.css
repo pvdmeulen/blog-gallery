@@ -51,6 +51,17 @@
 a span:hover {
   filter: brightness(200%);
 }
+
+/* Dark/light mode custom elements */
+hr.dark {
+    color: $dark
+    border-color: $dark
+}
+
+hr.light {
+    color: $light
+    border-color: $light
+}
   
 /* Dark/light mode toggle */
 
