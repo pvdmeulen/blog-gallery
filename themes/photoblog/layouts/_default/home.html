@@ -11,10 +11,10 @@
                 <div class="fixed-grid">
                     <div class="grid">
                         <div class="cell">
-                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold">Recent posts</h3>
+                            <h3 class="title is-size-6 mt-3 has-text-weight-extrabold">RECENT POSTS</h3>
                         </div>
                         <div class="cell has-text-right">
-                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                            <h3 class="title is-size-6 mt-3 has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                         </div>
                     </div>
                 </div>
@@ -35,10 +35,10 @@
                 <div class="fixed-grid">
                     <div class="grid">
                         <div class="cell">
-                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold">Recent galleries</h3>
+                            <h3 class="title is-size-6 mt-3 has-text-weight-extrabold">FEATURED GALLERIES</h3>
                         </div>
                         <div class="cell has-text-right">
-                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                            <h3 class="title is-size-6 mt-3 has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                         </div>
                     </div>
                 </div>
@@ -89,12 +89,15 @@
             <!-- OTHER SIDE - TAGS AND RECENT POSTS -->
             <div class="column is-two-fifths">
                 <!-- TAGS -->
-                <div class="content">
-                    <h3 class="is-size-6 my-3 has-text-weight-semibold">EXPLORE</h3>
+                <div class="content my-1">
+                    <h3 class="is-size-6 mt-3 mb-2 has-text-weight-extrabold">EXPLORE</h3>
                     {{ partial "widgets/site-tags.html" . }}
                 </div>
+                <hr class="has-background-light">
                 <!-- OTHER POSTS SHOWCASE SMALL -->
-                <h3 class="is-size-6 my-3 has-text-weight-semibold">RECENT POSTS</h3>
+                <div class="content">
+                    <h3 class="is-size-6 mt-2 mb-1 has-text-weight-extrabold">RECENT POSTS</h3>
+                </div>
                 <div class="fixed-grid has-1-cols-desktop has-2-cols-widescreen mx-0">
                     <div class="grid">
                         {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 1 | first 6}}
@@ -119,7 +122,9 @@
         <div class="columns mx-2">
             <div class="column is-full">
                 <hr class="has-background-light">
-                <h3 class="is-size-6 my-3 has-text-weight-semibold mb-2">GALLERIES</h3>
+                <div class="content">
+                    <h3 class="is-size-6 mt-2 mb-1 has-text-weight-extrabold">FEATURED GALLERIES</h3>
+                </div>
                 <div class="columns">
                     <div class="column is-one-fifth">
                         <p>Description here</p>
@@ -128,22 +133,12 @@
                     <div class="column is-four-fifths">
                         <div class="grid">
                             <!-- FIRST THREE GALLERIES -->
-                            {{ $galleries := where .Site.Pages "Type" "galleries" | first 2}}
+                            {{ $galleries := where .Site.Pages "Type" "galleries" | first 3}}
                             {{ range $galleries }}
                             <div class="cell">
                                 {{ partial "widgets/showcase-galleries.html" . }}
                             </div>
                             {{ end }}
-                            <!-- SEE MORE GALLERIES -->
-                            <div class="cell is-row-span-1">
-                                <a href="/Galleries">
-                                    <div class="card has-background-primary-soft pt-5 pb-5">
-                                        <div class="card-content is-centered">
-                                            <p class="has-text-primary-bold title is-5">See all galleries <i class="fa-solid fa-arrow-right"></i></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
                         </div>
                     </div>        
                 </div>

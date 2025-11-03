@@ -4,6 +4,7 @@
 {{ $subtitle := .Params.subtitle }}
 
 <div class="container">
+    <p class="is-size-7 mb-1 has-text-weight-semibold has-text-link">FEATURED POST</p>
     <h2><a class="title is-size-4 mt-3 mb-1 has-text-weight-semibold" href="{{ $permalink }}"><span>{{ .Title }}</span></a></h2>
     <p class="is-size-6 my-1 has-text-primary has-text-weight-medium">{{ .Params.date.Format "Jan 2, 2006" }}</p>
         <figure class="is-align-items-center is-justify-content-center image is-5by4 my-3">
