@@ -22,8 +22,8 @@
 
 
 
-<link rel="stylesheet" href='http://localhost:1313/css/photoswipe/photoswipe.css'/>
-<link rel="stylesheet" href='http://localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
 
 
 <script type="module">
@@ -63,9 +63,9 @@
 
 
 
-<link rel="stylesheet" href='http://localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
 
-<script src='http://localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+<script src='//localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
 
 <script type = "module">
 	
@@ -120,77 +120,254 @@ $(function(){
 
 <header>
 	
-<section class="hero is-link is-small header-image">
-    <div class="hero-body">
-    	<div class="container is-centered is-widescreen">
-    	    <div class="columns">
-    	        
-    	        <div class="column is-four-fifths">
-    		        <h1 class="title mx-3 my-3 has-text-primary-light">
-                        <a class="my-5" href="http://localhost:1313/">
-                            <picture width="200px" class="py-1 my-3">
-                                
-                                <source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
-                                
-                                <source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
-                                
-                                <img src="/images/logo-light.svg" width="200px" class="py-1 my-3"></img>
-                            </picture>
-
-                        </a>
-                    </h1>
-                </div>
-                <div class="column is-one-fifth">
+<div class="container is-hidden-tablet">
+    <div class="columns">
+        <div class="column is-full has-text-centered">
+	        
+            <h1 class="title my-2 has-text-primary-light">
+        		<a href="//localhost:1313/">
+        			<picture width="600px" class="mt-5 mb-1">
+        				
+        				<source srcset="/images/logo-light-mobile.svg" media="(prefers-color-scheme: light)">
+        				
+        				<source srcset="/images/logo-dark-mobile.svg" media="(prefers-color-scheme: dark)">
+        	        	
+        				<img src="/images/logo-light.svg" width="200px"></img>
+        			</picture>
+                    
+        		</a>
+        	</h1>
+            
+            <div class="content">
+                <h3 class="is-size-6 my-3 has-text-weight-semibold">EXPLORE</h3>
                 
-
-                </div>
+                    
+                        
+                        
+                            <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-mountain-sun mr-2"></i>
+                                <a href="//localhost:1313/tags/landscape/" class="is-size-7 is-capitalized has-text-link-bold">landscape</a>
+                            </button>
+                        
+                    
+                
+                    
+                        
+                        
+                            <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-building-user mr-2"></i>
+                                <a href="//localhost:1313/tags/street/" class="is-size-7 is-capitalized has-text-link-bold">street</a>
+                            </button>
+                        
+                    
+                
+                    
+                        
+                        
+                            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-tag mr-2"></i>
+                                <a href="//localhost:1313/tags/test1/" class="is-size-7 is-capitalized has-text-link-bold">test1</a>
+                            </button>
+                        
+                    
+                
+                    
+                        
+                        
+                            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-tag mr-2"></i>
+                                <a href="//localhost:1313/tags/test2/" class="is-size-7 is-capitalized has-text-link-bold">test2</a>
+                            </button>
+                        
+                    
+                
+                    
+                        
+                        
+                            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-tag mr-2"></i>
+                                <a href="//localhost:1313/tags/test3/" class="is-size-7 is-capitalized has-text-link-bold">test3</a>
+                            </button>
+                        
+                    
+                
+                    
+                        
+                        
+                            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-tag mr-2"></i>
+                                <a href="//localhost:1313/tags/test4/" class="is-size-7 is-capitalized has-text-link-bold">test4</a>
+                            </button>
+                        
+                    
+                
+                    
+                        
+                        
+                            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                                <i class="fa-solid fa-tag mr-2"></i>
+                                <a href="//localhost:1313/tags/travel/" class="is-size-7 is-capitalized has-text-link-bold">travel</a>
+                            </button>
+                        
+                    
+                
             </div>
         </div>
     </div>
-</section>
+</div>
+
+		
+        
+
 </header>
 
 <body class="">
+	<div class="container is-max-fullhd">
 	
 
-
-
-<div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
-
     
-
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li>
-                <a href="http://localhost:1313/" class="has-text-link">Home</a>
-            </li>
-            <li>
-            
-                <a href="/posts/" class="has-text-link">Posts</a>
-            
-            </li>
-            <li class="is-active">
-                <a href="#" aria-current="page" class="has-text-link">
-                    X July 2025
-                </a>
-            </li>
-        </ul>
-    </nav>
-
     
-
-    <h1 class="title mt-5 mb-1 is-size-3">Why I&#39;ve decided to try my hand at photography again</h1>
-    <p class="mt-2 mb-3">
+    
+    
+<div class="container is-centered is-hidden-mobile">
+        
+        <div class="columns mx-2">
+            <div class="column is-three-fifths">
+                
+                <h1 class="title mt-2 mb-5 has-text-primary-light">
+            		<a href="//localhost:1313/">
+            			<picture width="200px">
+            				
+            				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+            				
+            				<source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+            	        	
+            				<img src="/images/logo-light.svg" width="200px"></img>
+            			</picture>
+                        
+            		</a>
+        	    </h1>
+            </div>
+            
+            
+            <div class="column is-two-fifths">
+                
+                <div class="content">
+                    <h3 class="is-size-6 my-3 has-text-weight-semibold">EXPLORE</h3>
+                    
+    
         
         
-        <time datetime="2025-02-08T00:00:00&#43;00:00">February 8, 2025</time>  |
+            <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-mountain-sun mr-2"></i>
+                <a href="//localhost:1313/tags/landscape/" class="is-size-7 is-capitalized has-text-bold">landscape</a>
+            </button>
         
-        Reading time: 2  mins 
-    </p>
     
-    <div class="columns">
-        <div class="column is-two-thirds">
-            
+
+    
+        
+        
+            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-building-user mr-2"></i>
+                <a href="//localhost:1313/tags/street/" class="is-size-7 is-capitalized has-text-bold">street</a>
+            </button>
+        
+    
+
+    
+        
+        
+            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-tag mr-2"></i>
+                <a href="//localhost:1313/tags/test1/" class="is-size-7 is-capitalized has-text-bold">test1</a>
+            </button>
+        
+    
+
+    
+        
+        
+            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-tag mr-2"></i>
+                <a href="//localhost:1313/tags/test2/" class="is-size-7 is-capitalized has-text-bold">test2</a>
+            </button>
+        
+    
+
+    
+        
+        
+            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-tag mr-2"></i>
+                <a href="//localhost:1313/tags/test3/" class="is-size-7 is-capitalized has-text-bold">test3</a>
+            </button>
+        
+    
+
+    
+        
+        
+            <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-tag mr-2"></i>
+                <a href="//localhost:1313/tags/test4/" class="is-size-7 is-capitalized has-text-bold">test4</a>
+            </button>
+        
+    
+
+    
+        
+        
+            <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
+                <i class="fa-solid fa-suitcase mr-2"></i>
+                <a href="//localhost:1313/tags/travel/" class="is-size-7 is-capitalized has-text-bold">travel</a>
+            </button>
+        
+    
+
+
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    <div class="container is-centered">
+        
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="//localhost:1313/" class="has-text-link">Home</a>
+                        </li>
+                        <li>
+                        
+                            <a href="/posts/" class="has-text-link">Posts</a>
+                        
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="has-text-link">
+                                X July 2025
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                
+                <h2 class="title is-size-4 mt-3 mb-1 has-text-weight-semibold">Why I&#39;ve decided to try my hand at photography again</h2>
+                <p class="is-size-6 my-1 has-text-primary has-text-weight-medium">
+                    
+                    
+                    <time datetime="2025-02-08T00:00:00&#43;00:00">February 8, 2025</time>  |
+                    
+                    Reading time: 2  mins 
+                </p>
+                
+                <div class="columns mt-3">
+                    <div class="column is-two-thirds">
+                        
 
 
 
@@ -235,19 +412,19 @@ $(function(){
         
     </div>
 </div>
-        </div>
-        <div class="column is-one-third">
-            <div class="content has-text-weight-bold has-text-primary-bold is-size-4">
-                More than a decade after getting my first DSLR, and a few years after losing my dad, I&#39;ve picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories.
-            </div>
-        </div>
-    </div>
-      
-    
-
-    <section class="container is-max-desktop">
-        <div class="content is-size-5">
-            <h4 id="june-2021-dalby-sweden">June 2021, Dalby, Sweden</h4>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="content has-text-weight-bold has-text-primary-bold is-size-4">
+                            More than a decade after getting my first DSLR, and a few years after losing my dad, I&#39;ve picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories.
+                        </div>
+                    </div>
+                </div>
+                  
+                
+            
+                <div class="container is-centered is-max-desktop mb-5">
+                    <div class="content is-size-5">
+                        <h4 id="june-2021-dalby-sweden">June 2021, Dalby, Sweden</h4>
 <p>My mum walked into the living room, a few days after <em>that day</em>, holding stacks of old photos. You probably know the kind - paper packs filled with photos developed at a local shop. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. I’d heard some stories, of course, and we still have some family friends from my parents&rsquo; time in university, but I hadn’t seen many photos. There, on the living room table, were dozens (if not hundreds) of photos sprawled out.</p>
 
 <div class="container mt-1 mb-3">
@@ -268,6 +445,11 @@ $(function(){
                             
                             
                             <br>
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -298,6 +480,11 @@ $(function(){
                             
                             
                             
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -318,6 +505,11 @@ $(function(){
                             
                             
                             <br>
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -360,6 +552,11 @@ $(function(){
                             
                             
                             
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -385,6 +582,11 @@ $(function(){
                             
                             
                             
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -405,6 +607,11 @@ $(function(){
                             
                             
                             <br>
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -439,14 +646,19 @@ $(function(){
                 <span class="pswp-caption-content">
                     
                         <ul>
-                            <li><b>June 25, 2021</b></li>
+                            
                             
                             <br>
                             
-                            <li>Focal length: 27/5mm</li>
-                            <li>F-stop: 9/5</li>
-                            <li>Shutter speed: 1/50</li>
-                            <li>ISO: 125</li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -472,6 +684,11 @@ $(function(){
                             
                             
                             
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -489,14 +706,19 @@ $(function(){
                 <span class="pswp-caption-content">
                     
                         <ul>
-                            <li><b>June 25, 2021</b></li>
+                            
                             
                             <br>
                             
-                            <li>Focal length: 219/50mm</li>
                             
-                            <li>Shutter speed: 1/50</li>
-                            <li>ISO: 147</li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -522,6 +744,11 @@ $(function(){
                             
                             
                             
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     
                 </span>
@@ -535,13 +762,10 @@ $(function(){
 </div>
 
 <p>The photos I&rsquo;m taking won&rsquo;t be nearly as nostalgic (not for a long time, anyway), and probably not as good, but it&rsquo;s all for a good cause: being able to look back at memories with my wife, my brother, mum, and friends.</p>
-        </div>
-        <hr class="has-background-info">
-
-    </section>
-
-    
-    
+                    </div>
+                    <hr class="has-background-info">
+                    
+                
   <div class="container is-max-desktop mt-5 mb-2">
     <div class="mb-2 has-text-weight-bold">Tags:</div>
     <ul>
@@ -551,47 +775,54 @@ $(function(){
     </ul>
   </div>
 
-
-</div>
+                </div>
+            </div>
+        </div>
+    </div>
   
 
+	</div>
 </body>
 
 <footer class="footer">
-	<div class="container">
-    <nav class="level pb-3 is-widescreen pr-3 pl-3" role="contact" aria-label="footer with contact and copyright">
-        
-        <div class="level-left has-text-left has-text-centered-touch pl-5-desktop ml-3-desktop pt-5 mt-3 mb-3">
-            <div class="level-item">
-                <a>
-                    
-                        <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
-                            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+	<div class="container is-centered is-max-fullhd">
+    <div class="columns mx-2">
+        <div class="column is-full">
+            <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+                
+                <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
+                    <div class="level-item">
+                        <a>
+                            
+                                <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                </a>
+                            
+                                <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                                </a>
+                            
+                                <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-brands fa-flickr"></i></span>
+                                </a>
+                            
+                                <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-brands fa-github"></i></span>
+                                </a>
+                            
                         </a>
-                    
-                        <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
-                            <span class="icon"><i class="fa-brands fa-instagram"></i></span>
-                        </a>
-                    
-                        <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
-                            <span class="icon"><i class="fa-brands fa-flickr"></i></span>
-                        </a>
-                    
-                        <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
-                            <span class="icon"><i class="fa-brands fa-github"></i></span>
-                        </a>
-                    
-                </a>
-            </div>
+                    </div>
+                </div>
+                
+                <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
+                    <div class="level-item mr-3-desktop">
+                        <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
+                        Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+                    </div>
+                </div>
+            </nav>
         </div>
-        
-        <div class="level-right has-text-right has-text-centered-touch pr-5-desktop mr-3-desktop pt-5 mt-3 mb-3">
-            <div class="level-item">
-                <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
-                Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
-            </div>
-        </div>
-    </nav>
+    </div>
 </div>
 
 

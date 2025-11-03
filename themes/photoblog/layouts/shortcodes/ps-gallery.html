@@ -23,6 +23,11 @@
                             {{ with .Tags.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
                             {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
                             {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                            
+                            {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ math.Div 1 (cast.ToFloat .) }}</li>{{ end }}
+                            
+                            {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ math.Pow 2 (math.Sub (cast.ToFloat .) 0) }}</li>{{ end }}
+                            {{ with .Tags.ShutterSpeedValue }}<li>Shutter speed: {{ math.Pow 2 (math.Sub 0 (cast.ToFloat .)) }}</li>{{ end }}
                             {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
                         </ul>
                     {{ end }}

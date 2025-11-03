@@ -10,7 +10,7 @@
 
 /* Header (landing) image */
 .header-image {
-    background-image: url(../images/header.jpg);
+    background-image: url(../images/website_header2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -45,6 +45,12 @@
 .content {
   display: inline-block;
   }
+
+/* a hover states */
+
+a span:hover {
+  filter: brightness(200%);
+}
   
 /* Dark/light mode toggle */
 

@@ -8,11 +8,13 @@
 </head>
 
 <header>
-	{{ partial "header.html" . }}
+	{{ partial "header-mobile.html" . }}
 </header>
 
 <body class="">
+	<div class="container is-max-fullhd">
 	{{ block "main" . }}{{ end }}
+	</div>
 </body>
 
 <footer class="footer">

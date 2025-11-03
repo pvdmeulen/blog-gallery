@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 1350 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="Black" transform="matrix(1,0,0,1,5.408,5.65175)">
+<svg width="100%" height="100%" viewBox="0 0 1250 880" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Black" transform="matrix(1,0,0,1,-66.3263,-91.7627)">
         <g transform="matrix(1,0,0,1,-230.655,37.7647)">
             <g transform="matrix(116,0,0,116,552.43,919.196)">
                 <path d="M0.047,-0L0.047,-0.728L0.36,-0.728C0.414,-0.728 0.462,-0.717 0.502,-0.696C0.543,-0.674 0.574,-0.644 0.597,-0.605C0.62,-0.567 0.631,-0.521 0.631,-0.47C0.631,-0.418 0.619,-0.373 0.596,-0.335C0.573,-0.297 0.541,-0.267 0.499,-0.247C0.457,-0.226 0.409,-0.216 0.354,-0.216L0.166,-0.216L0.166,-0.369L0.313,-0.369C0.337,-0.369 0.357,-0.373 0.374,-0.382C0.39,-0.39 0.403,-0.402 0.412,-0.417C0.42,-0.431 0.425,-0.449 0.425,-0.47C0.425,-0.491 0.42,-0.509 0.412,-0.524C0.403,-0.538 0.39,-0.55 0.374,-0.558C0.357,-0.565 0.337,-0.569 0.313,-0.569L0.244,-0.569L0.244,-0L0.047,-0Z" style="fill-rule:nonzero;"/>
@@ -70,7 +70,7 @@
             </g>
         </g>
     </g>
-    <g transform="matrix(1.62854,0,0,1.62854,-290.742,-307.824)">
+    <g id="Painting" transform="matrix(1.62854,0,0,1.62854,-362.476,-405.238)">
         <g id="Sky">
             <g transform="matrix(6.93233e-17,1.13213,-1.13213,6.93233e-17,1176.89,-501.999)">
                 <rect x="672.618" y="725.861" width="47.603" height="47.603" style="fill:rgb(2,102,154);"/>
@@ -193,7 +193,12 @@
                 <rect x="672.618" y="725.861" width="47.603" height="47.603" style="fill:rgb(190,36,0);"/>
             </g>
             <g transform="matrix(6.93233e-17,1.13213,-1.13213,6.93233e-17,1801.32,-501.999)">
-                <rect x="672.618" y="725.861" width="47.603" height="47.603" style="fill:rgb(190,36,0);"/>
+                <clipPath id="_clip1">
+                    <path d="M652.153,763.071L714.045,701.179L775.937,763.071L714.045,824.964L652.153,763.071Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <rect x="672.618" y="725.861" width="47.603" height="47.603" style="fill:rgb(190,36,0);"/>
+                </g>
             </g>
             <g transform="matrix(6.93233e-17,1.13213,-1.13213,6.93233e-17,1801.32,-423.945)">
                 <rect x="672.618" y="725.861" width="47.603" height="47.603" style="fill:rgb(190,36,0);"/>

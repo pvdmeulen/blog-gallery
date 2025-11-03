@@ -2,7 +2,7 @@
 title = 'Post 2'
 date = 2025-02-21
 draft = false
-tags = ['landscape', 'street']
+tags = ['travel', 'street']
 featuredImageType = "Photo"
 featuredImageUrl = 'featured.jpg'
 thumbnailUrl = '/images/post-thumbnails/thumbnail2.jpg'

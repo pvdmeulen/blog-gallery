@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test4 on Peter van der Meulen</title>
-    <link>http://localhost:1313/tags/test4/</link>
+    <link>//localhost:1313/tags/test4/</link>
     <description>Recent content in Test4 on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/test4/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/test4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Post 4</title>
-      <link>http://localhost:1313/posts/post-4/</link>
+      <link>//localhost:1313/posts/post-4/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/post-4/</guid>
+      <guid>//localhost:1313/posts/post-4/</guid>
       <description></description>
     </item>
   </channel>

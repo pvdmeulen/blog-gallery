@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Peter van der Meulen</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Animals</title>
-      <link>http://localhost:1313/categories/animals/</link>
+      <link>//localhost:1313/categories/animals/</link>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/animals/</guid>
+      <guid>//localhost:1313/categories/animals/</guid>
       <description></description>
     </item>
     <item>
       <title>Landscape</title>
-      <link>http://localhost:1313/categories/landscape/</link>
+      <link>//localhost:1313/categories/landscape/</link>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/landscape/</guid>
+      <guid>//localhost:1313/categories/landscape/</guid>
       <description></description>
     </item>
     <item>
       <title>Nature</title>
-      <link>http://localhost:1313/categories/nature/</link>
+      <link>//localhost:1313/categories/nature/</link>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/nature/</guid>
+      <guid>//localhost:1313/categories/nature/</guid>
       <description></description>
     </item>
     <item>
       <title>Edinburgh</title>
-      <link>http://localhost:1313/categories/edinburgh/</link>
+      <link>//localhost:1313/categories/edinburgh/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/edinburgh/</guid>
+      <guid>//localhost:1313/categories/edinburgh/</guid>
       <description></description>
     </item>
     <item>
       <title>Street</title>
-      <link>http://localhost:1313/categories/street/</link>
+      <link>//localhost:1313/categories/street/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/street/</guid>
+      <guid>//localhost:1313/categories/street/</guid>
       <description></description>
     </item>
     <item>
       <title>Travel</title>
-      <link>http://localhost:1313/categories/travel/</link>
+      <link>//localhost:1313/categories/travel/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/travel/</guid>
+      <guid>//localhost:1313/categories/travel/</guid>
       <description></description>
     </item>
   </channel>

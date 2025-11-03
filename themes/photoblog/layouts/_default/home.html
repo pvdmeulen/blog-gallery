@@ -2,68 +2,150 @@
     
     {{ .Content }}
     
-    <!-- Recent posts showcase -->
+    <!-- Recent posts showcase IN MOBILE-->
     
-    <div class="container is-centered is-halfheight is-widescreen">
-        <div class="fixed-grid has-3-cols-desktop has-2-cols-touch pr-3 pl-3 pt-3 pb-3">
-        <!-- TITLE -->
-            <div class="content">
-                <h2 class="mt-5">Recent posts</h2>
-            </div>
-            <div class="grid">
-            <!-- Spotlight posts -->
-                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 2}}
-                {{ range $post }}
-                <div class="cell is-row-span-4-desktop is-row-span-3-touch">
-                    {{ partial "widgets/showcase.html" . }}
-                </div>
-                {{ end }}
-            <!-- REST -->
-                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 2 | first 3}}
-                {{ range $post }}
-                <div class="cell is-row-span-1">
-                    {{ partial "widgets/showcase-small.html" . }}
-                </div>
-                {{ end }}
-            <!-- SEE MORE POSTS -->
-                <div class="cell is-row-span-1 is-col-span-1-desktop is-col-start-1-touch is-col-end-2-touch">
-                    <a href="/Posts">
-                        <div class="card has-background-primary-soft pt-5 pb-5">
-                            <div class="card-content is-centered">
-                                <p class="has-text-primary-bold title is-5">See all posts <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
+    <div class="container is-centered is-hidden-tablet">
+        <div class="columns mx-2">
+            <!-- RECENT POSTS -->
+            <div class="column is-full">
+                <div class="fixed-grid">
+                    <div class="grid">
+                        <div class="cell">
+                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold">Recent posts</h3>
                         </div>
-                    </a>
+                        <div class="cell has-text-right">
+                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-full">  
+                <div class="grid is-col-min-8">     
+                    {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 4}}
+                    {{ range $post }}
+                    <div class="cell">
+                        {{ partial "widgets/showcase-no-desc.html" . }}
+                    </div>
+                    {{ end }} 
+                </div>
+            </div>
+            <hr class="has-background-light">
+            <!-- RECENT GALLERIES -->
+            <div class="column is-full">
+                <div class="fixed-grid">
+                    <div class="grid">
+                        <div class="cell">
+                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold">Recent galleries</h3>
+                        </div>
+                        <div class="cell has-text-right">
+                            <h3 class="title is-size-5 mt-3 has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-full mb-5">  
+                <div class="grid is-col-min-8">     
+                    {{ $galleries := where .Site.Pages "Type" "galleries" | first 4}}
+                    {{ range $galleries }}
+                        <div class="cell">
+                            {{ partial "widgets/showcase-galleries.html" . }}
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Recent galleries showcase -->
+    <!-- Recent posts showcase IN TABLET AND ABOVE -->
     
-    <div class="container is-centered is-halfheight is-widescreen mb-5">
-        <div class="fixed-grid has-4-cols-desktop has-2-cols-touch pr-3 pl-3 pt-3 pb-3">
-        <!-- TITLE -->
-            <div class="content">
-                <h2 class="mt-5">Recent galleries</h2>
-            </div>
-            <div class="grid">
-            <!-- FIRST THREE GALLERIES -->
-                {{ $galleries := where .Site.Pages "Type" "galleries" | first 3}}
-                {{ range $galleries }}
-                <div class="cell">
-                    {{ partial "widgets/showcase-galleries.html" . }}
+    <div class="container is-centered is-hidden-mobile">
+        <!-- LOGO -->
+        <div class="columns mx-2">
+            <div class="column is-three-fifths">
+                <!-- LOGO -->
+                <h1 class="title mt-2 mb-5 has-text-primary-light">
+            		<a href="{{ `` | absURL }}">
+            			<picture width="200px">
+            				<!-- User prefers light mode: -->
+            				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
+            				<!-- User prefers dark mode: -->
+            				<source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
+            	        	<!-- User has no color preference: -->
+            				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px"></img>
+            			</picture>
+                        <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
+            			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
+            		</a>
+        	    </h1>
+        	    <!-- MOST RECENT POST SHOWCASE BIG -->         
+                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 1}}
+                {{ range $post }}
+                <div class="container mx-0 mt-5 pt-5">
+                    {{ partial "widgets/showcase-big.html" . }}
                 </div>
                 {{ end }}
-            <!-- SEE MORE GALLERIES -->
-                <div class="cell is-row-span-1">
-                    <a href="/Galleries">
-                        <div class="card has-background-primary-soft pt-5 pb-5">
-                            <div class="card-content is-centered">
-                                <p class="has-text-primary-bold title is-5">See all galleries <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            
+            <!-- OTHER SIDE - TAGS AND RECENT POSTS -->
+            <div class="column is-two-fifths">
+                <!-- TAGS -->
+                <div class="content">
+                    <h3 class="is-size-6 my-3 has-text-weight-semibold">EXPLORE</h3>
+                    {{ partial "widgets/site-tags.html" . }}
+                </div>
+                <!-- OTHER POSTS SHOWCASE SMALL -->
+                <h3 class="is-size-6 my-3 has-text-weight-semibold">RECENT POSTS</h3>
+                <div class="fixed-grid has-1-cols-desktop has-2-cols-widescreen mx-0">
+                    <div class="grid">
+                        {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 1 | first 6}}
+                        {{ range $post }}
+                        <div class="cell">
+                            {{ partial "widgets/showcase-no-desc.html" . }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="container is-centered mt-auto has-text-centered">
+                    <h3 class="is-size-5 my-2"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                </div>                     
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent galleries showcase IN TABLET AND ABOVE -->
+    
+    <div class="container is-centered is-hidden-mobile pb-5">
+    <!-- TITLE -->
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <hr class="has-background-light">
+                <h3 class="is-size-6 my-3 has-text-weight-semibold mb-2">GALLERIES</h3>
+                <div class="columns">
+                    <div class="column is-one-fifth">
+                        <p>Description here</p>
+                        <h3 class="is-size-5 my-3"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                    </div>
+                    <div class="column is-four-fifths">
+                        <div class="grid">
+                            <!-- FIRST THREE GALLERIES -->
+                            {{ $galleries := where .Site.Pages "Type" "galleries" | first 2}}
+                            {{ range $galleries }}
+                            <div class="cell">
+                                {{ partial "widgets/showcase-galleries.html" . }}
+                            </div>
+                            {{ end }}
+                            <!-- SEE MORE GALLERIES -->
+                            <div class="cell is-row-span-1">
+                                <a href="/Galleries">
+                                    <div class="card has-background-primary-soft pt-5 pb-5">
+                                        <div class="card-content is-centered">
+                                            <p class="has-text-primary-bold title is-5">See all galleries <i class="fa-solid fa-arrow-right"></i></p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </a>
+                    </div>        
                 </div>
             </div>
         </div>

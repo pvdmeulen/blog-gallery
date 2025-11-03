@@ -2,45 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Peter van der Meulen</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>//localhost:1313/posts/</link>
     <description>Recent content in Posts on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 3B</title>
+      <link>//localhost:1313/posts/post-3b/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/post-3b/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 3C</title>
+      <link>//localhost:1313/posts/post-3c/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/post-3c/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Post 4</title>
-      <link>http://localhost:1313/posts/post-4/</link>
+      <link>//localhost:1313/posts/post-4/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/post-4/</guid>
+      <guid>//localhost:1313/posts/post-4/</guid>
       <description></description>
     </item>
     <item>
       <title>Post 3</title>
-      <link>http://localhost:1313/posts/post-3/</link>
+      <link>//localhost:1313/posts/post-3/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/post-3/</guid>
+      <guid>//localhost:1313/posts/post-3/</guid>
       <description></description>
     </item>
     <item>
       <title>Post 2</title>
-      <link>http://localhost:1313/posts/post-2/</link>
+      <link>//localhost:1313/posts/post-2/</link>
       <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/post-2/</guid>
+      <guid>//localhost:1313/posts/post-2/</guid>
       <description>&lt;p&gt;This is my second post. I might share some photo from around Edinburgh.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 1</title>
-      <link>http://localhost:1313/posts/post-1/</link>
+      <link>//localhost:1313/posts/post-1/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/post-1/</guid>
+      <guid>//localhost:1313/posts/post-1/</guid>
       <description>&lt;p&gt;This is my first post. Here, I will explain what this blog is about. I might include some photo of North Berwick and talk about learning photography.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why I&#39;ve decided to try my hand at photography again</title>
-      <link>http://localhost:1313/posts/xxjuly2025/</link>
+      <link>//localhost:1313/posts/xxjuly2025/</link>
       <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/xxjuly2025/</guid>
+      <guid>//localhost:1313/posts/xxjuly2025/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,46 +1,50 @@
 {{ define "main" }}
 
-    <div class="container pt-1 mt-3 pl-2 pr-2 pb-3 is-centered is-widescreen">
+    <!-- PARTIAL FOR LOGO WHEN IN TABLET-WIDESCREEN -->
+    {{ partial "header-wide.html" . }}
+
+    <div class="container is-centered">
     
     <!-- Breadcrumbs -->
-    
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-                <li>
-                    <a href="{{ `` | absURL }}" class="has-text-link">Home</a>
-                </li>
-                <li class="is-active">
-                    <a href="#" aria-current="page" class="has-text-link">
-                        {{ .LinkTitle }}
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    
-    {{ $subtitle := .Params.subtitle }}
-    
-        <div class="container">
-            <h1 class="title mt-5 mb-0 is-size-3">{{ .Title }}</h1>
-            <h2 class="subtitle mt-2">{{ .Params.subtitle }}</h2>
-            <!-- <div class="columns is-multiline mt-2"> -->
-            <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
-                <div class="grid">
-                    {{ range .Paginator.Pages.ByPublishDate.Reverse }}
-                        <div class="cell">
-                            {{ partial "widgets/showcase.html" . }}
+        <div class="columns mx-2">
+            <div class="column is-full">
+                 <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="{{ `` | absURL }}" class="has-text-link"><span>Home</span></a>
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="has-text-link">
+                                <span>{{ .LinkTitle }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- LIST -->
+                {{ $subtitle := .Params.subtitle }}
+                <div class="container">
+                    <h2 class="title is-size-4 mt-3 mb-1 has-text-weight-semibold">{{ .Title }}</h2>
+                    <h3 class="subtitle mt-2">{{ .Params.subtitle }}</h3>
+                    <!-- <div class="columns is-multiline mt-2"> -->
+                    <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
+                        <div class="grid">
+                            {{ range .Paginator.Pages.ByPublishDate.Reverse }}
+                                <div class="cell">
+                                    {{ partial "widgets/showcase-desc.html" . }}
+                                </div>
+                            <!-- <div class="column"></div> -->
+                            {{ end }}
                         </div>
-                    <!-- <div class="column"></div> -->
-                    {{ end }}
-                </div>
-            </div>
-            
-            <div class="columns is-centered mt-2">
-                <div class="column is-narrow">
-                    {{ partial "widgets/pagination.html" . }}
+                    </div>
+                    
+                    <div class="columns is-centered mt-2 mb-5">
+                        <div class="column is-narrow">
+                            {{ partial "widgets/pagination.html" . }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </div>
         
 {{ end }}
