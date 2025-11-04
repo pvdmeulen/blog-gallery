@@ -1,6 +1,6 @@
 +++
 title = 'Post 1'
-date = 2025-02-20
+date = 2025-02-09
 draft = false
 tags = ['landscape']
 featuredImageType = "Photo"

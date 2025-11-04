@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="column is-full">  
-                <div class="grid is-col-min-8">     
+                <div class="grid is-col-min-6">     
                     {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 4}}
                     {{ range $post }}
                     <div class="cell">
