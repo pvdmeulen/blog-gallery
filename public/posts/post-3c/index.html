@@ -44,7 +44,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 30, bottom: 30, left: 70, right: 70
+      top: 20, bottom: 20, left: 20, right: 20
     }
   },
   });
@@ -84,38 +84,12 @@ $(function(){
 </script>
 
 
-<script type="module">
 
-    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
-        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
+
     
 
-    const getInitialState = () => {
-      const initialValue = localStorage.getItem("darkMode");
-    
-      if(initialValue === null){
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-    
-      return initialValue == "true";
-    }
-    
-    let darkMode = getInitialState();
-    document.getElementById("darkmode").checked = darkMode;
-    
-    if(darkMode){
-      toggleDarkMode(); 
-    }
-    
-    
-    const updateDarkMode = () => {
-      darkMode = !darkMode; 
-      localStorage.setItem("darkMode", darkMode); 
-      toggleDarkMode(); 
-    }
 
-</script>
+<script></script>
 </head>
 
 <header>
@@ -478,12 +452,7 @@ $(function(){
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            
+                                                        
                             
                         </ul>
                     
@@ -521,12 +490,7 @@ $(function(){
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            
+                                                        
                             
                         </ul>
                     
@@ -543,18 +507,27 @@ $(function(){
                     <hr>
                     
                 
-  <div class="container is-max-desktop mt-5 mb-2">
-    <div class="mb-2 has-text-weight-bold">Tags:</div>
-    <ul>
-        <button class="button is-light">
-             <a href="/tags/landscape/" class="is-size-7 has-text-grey-dark">Landscape</a>
-        </button>
-        <button class="button is-light">
-             <a href="/tags/street/" class="is-size-7 has-text-grey-dark">Street</a>
-        </button>
-    </ul>
-  </div>
-
+    <div class="container is-max-desktop my-3">
+        <div class="mb-2 has-text-weight-normal">Tags:</div>
+        <ul>
+            
+                <a href="/tags/landscape/">
+                    <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        <p class="is-size-7 is-capitalized has-text-link-bold">Landscape</p>
+                    </button>
+                </a>
+            
+            
+                <a href="/tags/street/">
+                    <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-building-user mr-2"></i>
+                        <p class="is-size-7 is-capitalized has-text-link-bold">Street</p>
+                    </button>
+                </a>
+            
+        </ul>
+    </div>
                 </div>
             </div>
         </div>

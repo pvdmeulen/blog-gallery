@@ -44,7 +44,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 30, bottom: 30, left: 70, right: 70
+      top: 20, bottom: 20, left: 20, right: 20
     }
   },
   });
@@ -84,38 +84,12 @@ $(function(){
 </script>
 
 
-<script type="module">
 
-    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
-        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
+
     
 
-    const getInitialState = () => {
-      const initialValue = localStorage.getItem("darkMode");
-    
-      if(initialValue === null){
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-    
-      return initialValue == "true";
-    }
-    
-    let darkMode = getInitialState();
-    document.getElementById("darkmode").checked = darkMode;
-    
-    if(darkMode){
-      toggleDarkMode(); 
-    }
-    
-    
-    const updateDarkMode = () => {
-      darkMode = !darkMode; 
-      localStorage.setItem("darkMode", darkMode); 
-      toggleDarkMode(); 
-    }
 
-</script>
+<script></script>
 </head>
 
 <header>
@@ -558,12 +532,12 @@ $(function(){
     <div class="container">
         <figure class="is-align-items-center is-justify-content-center image is-5by4 my-1">
             
-            <a href="/posts/xxjuly2025/"><img src="/images/post-thumbnails/thumbnail0.jpg" alt="Alt text here" loading="lazy"></a>
+            <a href="/posts/08feb2025/"><img src="/images/post-thumbnails/thumbnail0.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/xxjuly2025/"><span>Why I&#39;ve decided to try my hand at photography again</span></a></h3>
+        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/08feb2025/"><span>Why I&#39;ve decided to try my hand at photography again</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 8, 2025</p>
         
         <div class="content is-size-6 mb-3 has-text-weight-normal is-hidden-mobile">More than a decade after getting my first DSLR, and a few years after losing my dad, I&#39;ve picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories.</div>

@@ -45,7 +45,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 30, bottom: 30, left: 70, right: 70
+      top: 20, bottom: 20, left: 20, right: 20
     }
   },
   });
@@ -85,38 +85,12 @@ $(function(){
 </script>
 
 
-<script type="module">
 
-    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
-        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
+
     
 
-    const getInitialState = () => {
-      const initialValue = localStorage.getItem("darkMode");
-    
-      if(initialValue === null){
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-    
-      return initialValue == "true";
-    }
-    
-    let darkMode = getInitialState();
-    document.getElementById("darkmode").checked = darkMode;
-    
-    if(darkMode){
-      toggleDarkMode(); 
-    }
-    
-    
-    const updateDarkMode = () => {
-      darkMode = !darkMode; 
-      localStorage.setItem("darkMode", darkMode); 
-      toggleDarkMode(); 
-    }
 
-</script>
+<script></script>
 </head>
 
 <header>
@@ -281,7 +255,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-4/"><span>Post 4</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-4/"><span>Post 4</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 23, 2025</p>
         
         
@@ -308,7 +282,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-3c/"><span>Post 3C</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-3c/"><span>Post 3C</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 23, 2025</p>
         
         
@@ -335,7 +309,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-3b/"><span>Post 3B</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-3b/"><span>Post 3B</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 23, 2025</p>
         
         
@@ -362,7 +336,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-3/"><span>Post 3</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-3/"><span>Post 3</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 22, 2025</p>
         
         
@@ -420,7 +394,7 @@ $(function(){
     <div class="card-image">
         <figure class="image is-4by3">
             
-            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.jpg" alt="Alt text here" loading="lazy"></a>
+            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.gif" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
@@ -502,7 +476,7 @@ $(function(){
             <div class="column is-two-fifths">
                 
                 <div class="content my-1">
-                    <h3 class="is-size-6 mt-3 mb-2 has-text-weight-extrabold">EXPLORE</h3>
+                    <h3 class="is-size-6 my-3 has-text-weight-extrabold">EXPLORE</h3>
                     
     
         
@@ -593,7 +567,7 @@ $(function(){
                 <hr>
                 
                 <div class="content">
-                    <h3 class="is-size-6 mt-2 mb-1 has-text-weight-extrabold">RECENT POSTS</h3>
+                    <h3 class="is-size-6 my-0 has-text-weight-extrabold">RECENT POSTS</h3>
                 </div>
                 <div class="fixed-grid has-1-cols-desktop has-2-cols-widescreen mx-0">
                     <div class="grid">
@@ -614,7 +588,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-3c/"><span>Post 3C</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-3c/"><span>Post 3C</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 23, 2025</p>
         
         
@@ -641,7 +615,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-3b/"><span>Post 3B</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-3b/"><span>Post 3B</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 23, 2025</p>
         
         
@@ -668,7 +642,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-3/"><span>Post 3</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-3/"><span>Post 3</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 22, 2025</p>
         
         
@@ -695,7 +669,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-2/"><span>Post 2</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-2/"><span>Post 2</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 9, 2025</p>
         
         
@@ -722,7 +696,7 @@ $(function(){
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-1/"><span>Post 1</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/post-1/"><span>Post 1</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 9, 2025</p>
         
         
@@ -744,12 +718,12 @@ $(function(){
     <div class="container">
         <figure class="is-align-items-center is-justify-content-center image is-5by4 my-1">
             
-            <a href="/posts/xxjuly2025/"><img src="/images/post-thumbnails/thumbnail0.jpg" alt="Alt text here" loading="lazy"></a>
+            <a href="/posts/08feb2025/"><img src="/images/post-thumbnails/thumbnail0.jpg" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>
     <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/xxjuly2025/"><span>Why I&#39;ve decided to try my hand at photography again</span></a></h3>
+        <h3><a class="title is-size-6 my-2 has-text-weight-semibold" href="/posts/08feb2025/"><span>Why I&#39;ve decided to try my hand at photography again</span></a></h3>
         <p class="is-size-7 has-text-primary has-text-weight-medium"> Feb 8, 2025</p>
         
         
@@ -816,7 +790,7 @@ $(function(){
     <div class="card-image">
         <figure class="image is-4by3">
             
-            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.jpg" alt="Alt text here" loading="lazy"></a>
+            <a href="/galleries/street/"><img src="/images/gallery-thumbnails/streetcard.gif" alt="Alt text here" loading="lazy"></a>
             
         </figure>
     </div>

@@ -44,7 +44,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 30, bottom: 30, left: 70, right: 70
+      top: 20, bottom: 20, left: 20, right: 20
     }
   },
   });
@@ -84,38 +84,12 @@ $(function(){
 </script>
 
 
-<script type="module">
 
-    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
-        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
+
     
 
-    const getInitialState = () => {
-      const initialValue = localStorage.getItem("darkMode");
-    
-      if(initialValue === null){
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-    
-      return initialValue == "true";
-    }
-    
-    let darkMode = getInitialState();
-    document.getElementById("darkmode").checked = darkMode;
-    
-    if(darkMode){
-      toggleDarkMode(); 
-    }
-    
-    
-    const updateDarkMode = () => {
-      darkMode = !darkMode; 
-      localStorage.setItem("darkMode", darkMode); 
-      toggleDarkMode(); 
-    }
 
-</script>
+<script></script>
 </head>
 
 <header>
@@ -380,7 +354,7 @@ $(function(){
                         </li>
                         <li class="is-active">
                             <a href="#" aria-current="page" class="has-text-link">
-                                X July 2025
+                                9 Nov 2025
                             </a>
                         </li>
                     </ul>
@@ -391,9 +365,9 @@ $(function(){
                 <p class="is-size-6 my-1 has-text-primary has-text-weight-medium">
                     
                     
-                    <time datetime="2025-02-08T00:00:00&#43;00:00">February 8, 2025</time>  |
+                    <time datetime="2025-11-09T00:00:00&#43;00:00">November 9, 2025</time>  |
                     
-                    Reading time: 2  minutes 
+                    Reading time: 3  minutes 
                 </p>
                 
                 <div class="columns mt-3">
@@ -455,8 +429,9 @@ $(function(){
             
                 <div class="container is-centered is-max-desktop mb-5">
                     <div class="content is-size-6">
-                        <h4 id="june-2021-dalby-sweden">June 2021, Dalby, Sweden</h4>
-<p>My mum walked into the living room, a few days after <em>that day</em>, holding stacks of old photos. You probably know the kind - paper packs filled with photos developed at a local shop. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. I’d heard some stories, of course, and we still have some family friends from my parents&rsquo; time in university, but I hadn’t seen many photos. There, on the living room table, were dozens (if not hundreds) of photos sprawled out.</p>
+                        <p>Four years ago, I lost my dad.</p>
+<p>It was, obviously, the hardest thing I’ve gone through. It still is—<a href="https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/">grief comes in waves</a>. It was particularly hard on my mum: living alone, in a house now too big for her, in a largely foreign country.</p>
+<p>A few days after that day, my mum walked into the living room, holding stacks of old photos. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. There, on the living room table, were dozens of photos sprawled out.</p>
 
 <div class="container mt-1 mb-3">
     <div id="psgallery--justified" class="psgallery-class">
@@ -558,7 +533,7 @@ $(function(){
     
 </div>
 
-<p>The majority were photos from their many holidays around Europe. They had a real passion for cycling and camping, something which continued into my childhood, and my brother&rsquo;s childhood, as well.</p>
+<p>The majority were photos from their many holidays around Europe. They had a real passion for cycling and camping, something which continued into me and my brother’s childhoods as well.</p>
 
 <div class="container mt-1 mb-3">
     <div id="psgallery--justified" class="psgallery-class">
@@ -660,7 +635,7 @@ $(function(){
     
 </div>
 
-<p>When me and my brother arrived, my mum kept taking photos. As a kid growing up, I probably found it very annoying (sorry mum), but now I realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events - but also photos of the everyday, the mundane. It&rsquo;s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday, or playing chess together (and him beating me every time).</p>
+<p>That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family - but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.</p>
 
 <div class="container mt-1 mb-3">
     <div id="psgallery--justified" class="psgallery-class">
@@ -792,20 +767,27 @@ $(function(){
     
 </div>
 
-<p>The photos I&rsquo;m taking won&rsquo;t be nearly as nostalgic (not for a long time, anyway), and probably not as good, but it&rsquo;s all for a good cause: being able to look back at memories with my wife, my brother, mum, and friends.</p>
+<p>I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games (mostly <a href="https://oldschool.runescape.com">RuneScape</a>!). Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.</p>
+<p>Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.</p>
+<p>more photos?</p>
+<p>The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on.</p>
                     </div>
                     <hr>
                     
                 
-  <div class="container is-max-desktop mt-5 mb-2">
-    <div class="mb-2 has-text-weight-bold">Tags:</div>
-    <ul>
-        <button class="button is-light">
-             <a href="/tags/landscape/" class="is-size-7 has-text-grey-dark">Landscape</a>
-        </button>
-    </ul>
-  </div>
-
+    <div class="container is-max-desktop my-3">
+        <div class="mb-2 has-text-weight-normal">Tags:</div>
+        <ul>
+            
+                <a href="/tags/landscape/">
+                    <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        <p class="is-size-7 is-capitalized has-text-link-bold">Landscape</p>
+                    </button>
+                </a>
+            
+        </ul>
+    </div>
                 </div>
             </div>
         </div>

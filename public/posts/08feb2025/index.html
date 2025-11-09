@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<head>
+ 	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Why I&#39;ve decided to try my hand at photography again | Peter van der Meulen</title>
+
+
+
+    <link rel="stylesheet" href="/css/custom-bulma-theme.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+
+
+
+<script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
+
+
+<script type="module">
+
+  console.log("photoswipe init");
+  import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "[id^='psgallery']", 
+	children: "a",
+	initialZoomLevel: "fit",     
+	secondaryZoomLevel: "fit",   
+	imageClickAction: "close",   
+	wheelToZoom: false,
+	pswpModule: PhotoSwipe,
+	paddingFn: (viewportSize) => {
+    return {
+      top: 20, bottom: 20, left: 20, right: 20
+    }
+  },
+  });
+    
+  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    type: 'auto',
+  });
+  
+  lightbox.init();
+  
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+
+<script src='//localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+
+<script type = "module">
+	
+$(function(){
+  $(".psgallery-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 400,
+      lastRow : 'nojustify',
+      margins : 5,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
+
+</script>
+
+
+
+
+    
+
+
+<script></script>
+</head>
+
+<header>
+	
+<div class="container is-hidden-tablet">
+    <div class="columns">
+        <div class="column is-full has-text-centered mx-2">
+	        
+            <h1 class="title my-2 has-text-primary-light">
+        		<a href="//localhost:1313/">
+        			<picture width="200px">
+        				
+        				<source srcset="/images/logo-light-mobile.svg" media="(prefers-color-scheme: light)">
+        				
+        				<source srcset="/images/logo-dark-mobile.svg" media="(prefers-color-scheme: dark)">
+        	        	
+        				<img src="/images/logo-light.svg" width="200px"></img>
+        			</picture>
+                    
+        		</a>
+        	</h1>
+            
+            <div class="content mx-2">
+                <h3 class="is-size-6 my-3 has-text-weight-semibold">EXPLORE</h3>
+                <div class="content">
+                    
+    
+        
+        
+            <a href="//localhost:1313/tags/landscape/">
+                <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-mountain-sun mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">landscape</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/street/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-building-user mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">street</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test1/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test1</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test2/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test2</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test3/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test3</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test4/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test4</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/travel/">
+                <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-suitcase mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">travel</p>
+                </button>
+            </a>
+        
+    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		
+        
+
+</header>
+
+<body class="">
+	<div class="container is-max-fullhd">
+	
+
+    
+    
+    
+    
+<div class="container is-centered is-hidden-mobile">
+        
+        <div class="columns mx-2">
+            <div class="column is-three-fifths">
+                
+                <h1 class="title mt-2 mb-5 has-text-primary-light">
+            		<a href="//localhost:1313/">
+            			<picture width="200px">
+            				
+            				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+            				
+            				<source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+            	        	
+            				<img src="/images/logo-light.svg" width="200px"></img>
+            			</picture>
+                        
+            		</a>
+        	    </h1>
+            </div>
+            
+            
+            <div class="column is-two-fifths">
+                
+                <div class="content my-1">
+                    <h3 class="is-size-6 mt-3 mb-2 has-text-weight-extrabold">EXPLORE</h3>
+                    
+    
+        
+        
+            <a href="//localhost:1313/tags/landscape/">
+                <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-mountain-sun mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">landscape</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/street/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-building-user mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">street</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test1/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test1</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test2/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test2</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test3/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test3</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/test4/">
+                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-tag mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">test4</p>
+                </button>
+            </a>
+        
+    
+
+    
+        
+        
+            <a href="//localhost:1313/tags/travel/">
+                <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
+                    <i class="fa-solid fa-suitcase mr-2"></i>
+                    <p class="is-size-7 is-capitalized has-text-link-bold">travel</p>
+                </button>
+            </a>
+        
+    
+
+
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    <div class="container is-centered">
+        
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="//localhost:1313/" class="has-text-link">Home</a>
+                        </li>
+                        <li>
+                        
+                            <a href="/posts/" class="has-text-link">Posts</a>
+                        
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="has-text-link">
+                                8 February 2025
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                
+                <h2 class="title is-size-4 mt-3 mb-1 has-text-weight-semibold">Why I&#39;ve decided to try my hand at photography again</h2>
+                <p class="is-size-6 my-1 has-text-primary has-text-weight-medium">
+                    
+                    
+                    <time datetime="2025-02-08T00:00:00&#43;00:00">February 8, 2025</time>  |
+                    
+                    Reading time: 3  minutes 
+                </p>
+                
+                <div class="columns mt-3">
+                    <div class="column is-two-thirds">
+                        
+
+
+
+
+
+
+
+
+<div class="container mb-3">
+    <div class="pswp-gallery" id="psgallery--featuredimage">
+    
+        
+            
+            
+            
+            <a
+                href="featured.jpg"
+                data-pswp-width="2335.5"
+                data-pswp-height="1564.5"
+                target="_blank"
+            >
+                <img src="featured.jpg" alt="" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                            
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+        
+        <p class="is-size-7-mobile is-size-6-tablet mb-3">Photo -  - featured.jpg</p>
+        
+    </div>
+</div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="content has-text-weight-semibold has-text-primary-bold is-size-5">
+                            More than a decade after getting my first DSLR, and a few years after losing my dad, I&#39;ve picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories.
+                        </div>
+                    </div>
+                </div>
+                  
+                
+            
+                <div class="container is-centered is-max-desktop mb-5">
+                    <div class="content is-size-6">
+                        <p>Four years ago, I lost my dad.</p>
+<p>It was, obviously, the hardest thing I’ve gone through. It still is—<a href="https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/">grief comes in waves</a>. It was particularly hard on my mum: living alone, in a house now too big for her, in a largely foreign country.</p>
+<p>A few days after that day, my mum walked into the living room, holding stacks of old photos. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. There, on the living room table, were dozens of photos sprawled out.</p>
+
+<div class="container mt-1 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/08feb2025/papa/1.jpg"
+                data-pswp-width="3128"
+                data-pswp-height="4623"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa/thumbnails/1.jpg' alt="papa/1.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa/2.jpg"
+                data-pswp-width="4623"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa/thumbnails/2.jpg' alt="papa/2.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa/3.jpg"
+                data-pswp-width="4690"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa/thumbnails/3.jpg' alt="papa/3.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>The majority were photos from their many holidays around Europe. They had a real passion for cycling and camping, something which continued into me and my brother’s childhoods as well.</p>
+
+<div class="container mt-1 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/08feb2025/papa2/5.jpg"
+                data-pswp-width="4681"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa2/thumbnails/5.jpg' alt="papa2/5.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa2/6.jpg"
+                data-pswp-width="4671"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa2/thumbnails/6.jpg' alt="papa2/6.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa2/7.jpg"
+                data-pswp-width="4652"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa2/thumbnails/7.jpg' alt="papa2/7.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family - but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.</p>
+
+<div class="container mt-1 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/08feb2025/papa3/1.jpg"
+                data-pswp-width="4032"
+                data-pswp-height="3024"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa3/thumbnails/1.jpg' alt="papa3/1.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa3/2.jpg"
+                data-pswp-width="2160"
+                data-pswp-height="1449"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa3/thumbnails/2.jpg' alt="papa3/2.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa3/4.jpg"
+                data-pswp-width="3024"
+                data-pswp-height="4032"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa3/thumbnails/4.jpg' alt="papa3/4.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/papa3/7.jpg"
+                data-pswp-width="4603"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/papa3/thumbnails/7.jpg' alt="papa3/7.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games (mostly <a href="https://oldschool.runescape.com">RuneScape</a>!). Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.</p>
+<p>Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.</p>
+
+<div class="container mt-1 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/08feb2025/own/A6700064.jpg"
+                data-pswp-width="4845"
+                data-pswp-height="3230"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/A6700064.jpg' alt="own/A6700064.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>March 20, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 28mm</li>
+                            <li>F-stop: 9</li>
+                            <li>Shutter speed: 1/125</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/A6700276.jpg"
+                data-pswp-width="2802"
+                data-pswp-height="4203"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/A6700276.jpg' alt="own/A6700276.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>March 21, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 50mm</li>
+                            <li>F-stop: 71/10</li>
+                            <li>Shutter speed: 1/320</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/A6700939.jpg"
+                data-pswp-width="5041"
+                data-pswp-height="3361"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/A6700939.jpg' alt="own/A6700939.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>March 30, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 36mm</li>
+                            <li>F-stop: 9</li>
+                            <li>Shutter speed: 1/200</li>                            
+                            <li>ISO: 160</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/A6701068.jpg"
+                data-pswp-width="6094"
+                data-pswp-height="4062"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/A6701068.jpg' alt="own/A6701068.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>March 30, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 75mm</li>
+                            <li>F-stop: 71/10</li>
+                            <li>Shutter speed: 1/320</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/IMG01951.jpg"
+                data-pswp-width="4573"
+                data-pswp-height="3048"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/IMG01951.jpg' alt="own/IMG01951.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>April 18, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 75mm</li>
+                            <li>F-stop: 9</li>
+                            <li>Shutter speed: 1/125</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/IMG_2080.jpg"
+                data-pswp-width="4290"
+                data-pswp-height="2856"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/IMG_2080.jpg' alt="own/IMG_2080.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul>
+                            <li><b>February 08, 2025</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 5</li>
+                            <li>Shutter speed: 1/1250</li>                            
+                            <li>ISO: 800</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on.</p>
+                    </div>
+                    <hr>
+                    
+                
+    <div class="container is-max-desktop my-3">
+        <div class="mb-2 has-text-weight-normal">Tags:</div>
+        <ul>
+            
+                <a href="/tags/landscape/">
+                    <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        <p class="is-size-7 is-capitalized has-text-link-bold">Landscape</p>
+                    </button>
+                </a>
+            
+        </ul>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+	</div>
+</body>
+
+<footer class="footer">
+	<div class="container is-centered is-max-fullhd">
+    <div class="columns mx-2">
+        <div class="column is-full">
+            <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+                
+                <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
+                    <div class="level-item">
+                        <a>
+                            
+                                <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                </a>
+                            
+                                <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                                </a>
+                            
+                                <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-brands fa-flickr"></i></span>
+                                </a>
+                            
+                                <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                    <span class="icon"><i class="fa-brands fa-github"></i></span>
+                                </a>
+                            
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
+                    <div class="level-item mr-3-desktop">
+                        <p>Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
+                        Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const body = document.querySelector('body');
+    const toggle = document.getElementById('toggle');
+
+    toggle.addEventListener("click", () => {
+        const bodyCheck = body.classList.contains('dark');
+        if (bodyCheck) {
+            body.className = ''
+        } else {
+            body.className = "dark"
+      }
+    })
+</script>
+
+</footer>
+
+
+</html>

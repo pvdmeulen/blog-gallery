@@ -43,8 +43,8 @@ $house: #EAAA02; // tertiary light mode
   @include cv.generate-color-palette("info", $house);
   @include cv.generate-on-scheme-colors("info", $house, light.$scheme-main);
   // Fonts:
-  $family-primary: '"Inter", sans-serif';
-  $family-secondary: '"Cardo", serif';
+  $family-primary: '"Lato", sans-serif';
+  $family-secondary: '"Alegreya", serif';
   $family-code: '"Fira Code", monospace';
   }
 
@@ -61,8 +61,8 @@ $house: #EAAA02; // tertiary light mode
   @include cv.generate-color-palette("info", $house);
   @include cv.generate-on-scheme-colors("info", $house, dark.$scheme-main);
   // Fonts:
-  $family-primary: '"Inter", sans-serif';
-  $family-secondary: '"Cardo", serif';
+  $family-primary: '"Lato", sans-serif';
+  $family-secondary: '"Alegreya", serif';
   $family-code: '"Fira Code", monospace';
   }
 
@@ -95,4 +95,7 @@ $house: #EAAA02; // tertiary light mode
 }
 
 // Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+//https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');

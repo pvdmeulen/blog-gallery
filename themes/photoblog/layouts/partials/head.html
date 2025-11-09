@@ -33,7 +33,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 30, bottom: 30, left: 70, right: 70
+      top: 20, bottom: 20, left: 20, right: 20
     }
   },
   });
@@ -73,11 +73,13 @@ $(function(){
 </script>
 
 <!-- Light/dark theme button -->
-<script type="module">
+
+<!-- <script type="module">
 
     document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
         document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     });
+    -->
     
 <!--    // Check user dark mode pref
     const getInitialState = () => {
@@ -104,4 +106,4 @@ $(function(){
       toggleDarkMode(); //now update our styles!
     }-->
 
-</script>
+<script></script>

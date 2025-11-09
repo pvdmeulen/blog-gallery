@@ -1,0 +1,36 @@
++++
+title = "Why I've decided to try my hand at photography again"
+subtitle = "More than a decade after getting my first DSLR, and a few years after losing my dad, I've picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories."
+linkTitle = '8 February 2025'
+date = 2025-02-08
+draft = false
+tags = ['landscape']
+thumbnailUrl = '/images/post-thumbnails/thumbnail0.jpg'
+thumbnailAltText = 'Alt text here'
+featuredImageType = "Photo"
+featuredImageUrl = 'featured.jpg'
++++
+<!--more-->
+Four years ago, I lost my dad.
+
+It was, obviously, the hardest thing I’ve gone through. It still is&mdash;[grief comes in waves](https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/). It was particularly hard on my mum: living alone, in a house now too big for her, in a largely foreign country.
+
+A few days after that day, my mum walked into the living room, holding stacks of old photos. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. There, on the living room table, were dozens of photos sprawled out.
+
+{{< ps-gallery folder="/papa/" >}}
+
+The majority were photos from their many holidays around Europe. They had a real passion for cycling and camping, something which continued into me and my brother’s childhoods as well.
+
+{{< ps-gallery folder="/papa2/" >}}
+
+That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family - but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.
+
+{{< ps-gallery folder="/papa3/" >}}
+
+I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games (mostly [RuneScape](https://oldschool.runescape.com)!). Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.
+
+Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.
+
+{{< ps-gallery folder="/own/" >}}
+
+The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on.
