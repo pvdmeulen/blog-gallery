@@ -23,8 +23,12 @@
                 <!-- LIST -->
                 {{ $subtitle := .Params.subtitle }}
                 <div class="container">
-                    <h2 class="title is-size-4 mt-3 mb-1 has-text-weight-semibold">{{ .Title }}</h2>
-                    <h3 class="subtitle mt-2">{{ .Params.subtitle }}</h3>
+                    <h1 class="title mt-3 mb-1 is-size-3">
+                        {{ .Title }}
+                    </h1>
+                    <h2 class="subtitle my-3 is-size-5">
+                        {{ .Params.subtitle }}
+                    </h2>
                     <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
                         <div class="grid">
                             {{ range .Paginator.Pages.ByPublishDate.Reverse }}

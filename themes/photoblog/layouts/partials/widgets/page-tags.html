@@ -11,28 +11,28 @@
                 <a href="{{ .RelPermalink }}">
                     <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
                         <i class="fa-solid fa-mountain-sun mr-2"></i>
-                        <p class="is-size-7 is-capitalized has-text-link-bold">{{ .LinkTitle }}</p>
+                        <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ .LinkTitle }}</p>
                     </button>
                 </a>
             {{ else if eq .LinkTitle "Street" }}
                 <a href="{{ .RelPermalink }}">
                     <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
                         <i class="fa-solid fa-building-user mr-2"></i>
-                        <p class="is-size-7 is-capitalized has-text-link-bold">{{ .LinkTitle }}</p>
+                        <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ .LinkTitle }}</p>
                     </button>
                 </a>
             {{ else if eq .LinkTitle "Travel"}}
                 <a href="{{ .RelPermalink }}">
                     <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
                         <i class="fa-solid fa-suitcase mr-2"></i>
-                        <p class="is-size-7 is-capitalized has-text-link-bold">{{ .LinkTitle }}</p>
+                        <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ .LinkTitle }}</p>
                     </button>
                 </a>
             {{ else }}
                 <a href="{{ .RelPermalink }}">
                     <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
                         <i class="fa-solid fa-tag mr-2"></i>
-                        <p class="is-size-7 is-capitalized has-text-link-bold">{{ .LinkTitle }}</p>
+                        <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ .LinkTitle }}</p>
                     </button>
                 </a>
             {{ end }}

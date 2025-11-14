@@ -7,7 +7,30 @@
 .button {
   border-radius: 0;
   }
+  
+h1 {
+  font-family: var(--bulma-family-primary);
+  }
 
+h2 {
+  font-family: var(--bulma-family-primary);
+  }
+
+h3 {
+  font-family: var(--bulma-family-primary);
+  }
+
+h4 {
+  font-family: var(--bulma-family-primary);
+  }
+
+p {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+      font-family: var(--bulma-family-primary);
+  }
+  
 /* Header (landing) image */
 .header-image {
     background-image: url(../images/website_header2.jpg);

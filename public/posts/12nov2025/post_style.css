@@ -1,0 +1,42 @@
+/* Further custom formatting for post */
+  
+h1 {
+  font-family: var(--bulma-family-primary);
+}
+
+h2 {
+  font-family: var(--bulma-family-primary);
+  font-size: var(--bulma-size-5);
+  }
+
+h3 {
+  font-family: var(--bulma-family-primary);
+  color: #2596be;
+  }
+
+h4 {
+  font-family: var(--bulma-family-primary);
+  color: #2596be;
+  }
+  
+h5 {
+  font-family: var(--bulma-family-primary);
+  color: #2596be;
+  }
+
+p {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+      font-family: var(--bulma-family-primary);
+  }
+  
+/* Header (landing) image */
+.header-image {
+    background-image: url(../images/website_header2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}

@@ -99,7 +99,7 @@
                     <h3 class="is-size-6 my-0 has-text-weight-extrabold">RECENT POSTS</h3>
                 </div>
                 <div class="fixed-grid has-1-cols-desktop has-2-cols-widescreen mx-0">
-                    <div class="grid">
+                    <div class="grid is-gap-3">
                         {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 1 | first 6}}
                         {{ range $post }}
                         <div class="cell">
@@ -127,7 +127,7 @@
                 </div>
                 <div class="columns">
                     <div class="column is-one-fifth">
-                        <p>A selection of photos I'm extra proud of, grouped under a common theme.</p>
+                        <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p>
                         <h3 class="is-size-5 my-3"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                     </div>
                     <div class="column is-four-fifths">

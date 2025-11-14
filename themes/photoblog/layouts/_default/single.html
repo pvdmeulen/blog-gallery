@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+    <!-- Custom blog post styling -->
+    {{ with .Resources.GetMatch "*.css" }}
+        <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
+
     {{ $subtitle := .Params.subtitle }}
     
     <!-- PARTIAL FOR LOGO WHEN IN TABLET-WIDESCREEN -->
@@ -21,7 +26,7 @@
                         {{ end }}
                         </li>
                         <li class="is-active">
-                            <a href="#" aria-current="page" class="has-text-link">
+                            <a href="#" aria-current="page" class="">
                                 {{ .LinkTitle }}
                             </a>
                         </li>
@@ -29,10 +34,12 @@
                 </nav>
                 <!-- POST CONTENT -->
                 <!-- Post title, image, and tags -->
-                <h2 class="title is-size-4 mt-3 mb-1 has-text-weight-semibold">{{ .Title }}</h2>
-                <p class="is-size-6 my-1 has-text-primary has-text-weight-medium">
+                <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
+                    {{ .Title }}
+                </h1>
+                <p class="is-subtitle is-size-6 my-1 has-text-primary has-text-weight-medium">
                     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-                    {{ $dateHuman := .Date | time.Format ":date_long" }}
+                    {{ $dateHuman := .Date | time.Format "2 Jan 2006" }}
                     <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>  |
                     <!--
                         | {{ with .Params.tags }}
@@ -51,20 +58,20 @@
                         {{ partial "widgets/featuredimage.html" . }}
                     </div>
                     <div class="column is-one-third">
-                        <div class="content has-text-weight-semibold has-text-primary-bold is-size-5">
+                        <p class="content has-text-weight-bold has-text-primary is-size-5">
                             {{ .Params.subtitle }}
-                        </div>
+                        </p>
                     </div>
                 </div>
                   
                 <!-- Content -->
             
                 <div class="container is-centered is-max-desktop mb-5">
-                    <div class="content is-size-6">
+                    <div class="content is-size-5 has-text-weight-medium">
                         {{ .Content }}
                     </div>
                     <hr>
-                    <!-- Replace below with prev/next post -->
+                <!-- Maybe add option for prev/next post -->
                 {{ partial "widgets/page-tags.html" (dict "taxonomy" "tags" "page" .) }}
                 </div>
             </div>

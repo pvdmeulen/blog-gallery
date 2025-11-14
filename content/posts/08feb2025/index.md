@@ -29,8 +29,8 @@ That little peek into their life together made me realise the value in taking ph
 
 {{< ps-gallery folder="/papa3/" >}}
 
-I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games (mostly [RuneScape](https://oldschool.runescape.com)!). Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.
+I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games. Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.
 
 Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.
 
-The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on.
+The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on&mdash;just like I did.

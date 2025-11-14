@@ -6,14 +6,6 @@
     <description>Recent content in Travel on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/travel/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Post 2</title>
-      <link>//localhost:1313/posts/post-2/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/post-2/</guid>
-      <description>&lt;p&gt;This is my second post. I might share some photo from around Edinburgh.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

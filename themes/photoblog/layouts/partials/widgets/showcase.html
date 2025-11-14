@@ -13,7 +13,7 @@
     </div>
     <div class="card-content">
         <a class="title is-5" href="{{ $permalink }}">{{ .Title }}</a>
-        <h3 class="subtitle is-6 my-1"> {{ .Params.date.Format "Jan 2, 2006" }}</h3>
+        <h3 class="subtitle is-6 my-1"> {{ .Params.date.Format "2 Jan 2006" }}</h3>
         <!-- need to choose either subtitle (front matter) or summary (first bit of text in post) 
         choose subtitle given it needs to be separate from other text in post -->
         <div class="content mb-3 has-text-weight-normal">{{ .Params.subtitle }}</div>

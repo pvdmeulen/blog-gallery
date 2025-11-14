@@ -44,7 +44,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 30, bottom: 30, left: 70, right: 70
+      top: 20, bottom: 20, left: 20, right: 20
     }
   },
   });
@@ -72,7 +72,7 @@
 $(function(){
   $(".psgallery-class").each(function(){
     $(this).justifiedGallery({
-      rowHeight : 400,
+      rowHeight : 310,
       lastRow : 'nojustify',
       margins : 5,
       selector: 'a, figure:not(.spinner)',
@@ -84,38 +84,12 @@ $(function(){
 </script>
 
 
-<script type="module">
 
-    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
-        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
+
     
 
-    const getInitialState = () => {
-      const initialValue = localStorage.getItem("darkMode");
-    
-      if(initialValue === null){
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-    
-      return initialValue == "true";
-    }
-    
-    let darkMode = getInitialState();
-    document.getElementById("darkmode").checked = darkMode;
-    
-    if(darkMode){
-      toggleDarkMode(); 
-    }
-    
-    
-    const updateDarkMode = () => {
-      darkMode = !darkMode; 
-      localStorage.setItem("darkMode", darkMode); 
-      toggleDarkMode(); 
-    }
 
-</script>
+<script></script>
 </head>
 
 <header>
@@ -157,70 +131,10 @@ $(function(){
     
         
         
-            <a href="//localhost:1313/tags/red/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">red</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
             <a href="//localhost:1313/tags/street/">
                 <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
                     <i class="fa-solid fa-building-user mr-2"></i>
                     <p class="is-size-7 is-capitalized has-text-link-bold">street</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test1/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test1</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test2/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test2</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test3/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test3</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test4/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test4</p>
                 </button>
             </a>
         
@@ -297,70 +211,10 @@ $(function(){
     
         
         
-            <a href="//localhost:1313/tags/red/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">red</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
             <a href="//localhost:1313/tags/street/">
                 <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
                     <i class="fa-solid fa-building-user mr-2"></i>
                     <p class="is-size-7 is-capitalized has-text-link-bold">street</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test1/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test1</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test2/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test2</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test3/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test3</p>
-                </button>
-            </a>
-        
-    
-
-    
-        
-        
-            <a href="//localhost:1313/tags/test4/">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold">test4</p>
                 </button>
             </a>
         
@@ -409,31 +263,6 @@ $(function(){
                     <h3 class="subtitle mt-2"></h3>
                     <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
                         <div class="grid">
-                            
-                                <div class="cell">
-                                    
-
-
-
-
-<div class="container has-background-main">
-    <div class="container">
-        <figure class="is-align-items-center is-justify-content-center image is-5by4 my-1">
-            
-        </figure>
-    </div>
-    <div class="container">
-        <h3><a class="title is-size-6 mt-3 mb-2 has-text-weight-semibold" href="/posts/post-1/"><span>Post 1</span></a></h3>
-        <p class="is-size-7 has-text-primary has-text-weight-medium"> Jan 15, 2023</p>
-        
-        <div class="content is-size-6 mb-3 has-text-weight-normal is-hidden-mobile"></div>
-        
-        
-        
-        
-    </div>
-</div>
-                                </div>
                             
                         </div>
                     </div>
@@ -509,6 +338,5 @@ $(function(){
 </script>
 
 </footer>
-
 
 </html>

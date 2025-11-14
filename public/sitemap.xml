@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/posts/12nov2025/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/street/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/categories/animals/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -20,16 +29,10 @@
     <loc>//localhost:1313/categories/nature/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/categories/edinburgh/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/street/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/street/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/galleries/street/</loc>
@@ -41,20 +44,8 @@
     <loc>//localhost:1313/galleries/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/post-3b/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/post-3c/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/post-4/</loc>
-    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/posts/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/post-3/</loc>
-    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/about/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
@@ -62,27 +53,10 @@
     <loc>//localhost:1313/contact/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/post-1/</loc>
-    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/post-2/</loc>
-    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/travel/</loc>
-    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/posts/08feb2025/</loc>
     <lastmod>2025-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2023-01-01T08:00:00-07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/test1/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/test2/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/test3/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/test4/</loc>
+    <lastmod>2025-02-08T00:00:00+00:00</lastmod>
   </url>
 </urlset>

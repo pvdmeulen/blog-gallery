@@ -1,0 +1,165 @@
+/* Further custom Bulma formatting */
+.card {
+    height: 100%;
+    object-fit: cover;
+}
+
+.button {
+  border-radius: 0;
+  }
+  
+h1 {
+  font-family: var(--bulma-family-primary);
+}
+
+h2 {
+  font-family: var(--bulma-family-primary);
+  }
+
+h3 {
+  font-family: var(--bulma-family-primary);
+  }
+
+h4 {
+  font-family: var(--bulma-family-primary);
+  }
+
+p {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+      font-family: var(--bulma-family-primary);
+  }
+  
+/* Header (landing) image */
+.header-image {
+    background-image: url(../images/website_header2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+
+/* Sidebar styling */
+.menu {
+  position: sticky;
+  display: inline-block;
+  vertical-align: top;
+  max-height: 100vh;
+  overflow-y: auto;
+  width: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.menu-foot {
+  position: sticky;
+  display: inline-block;
+  vertical-align: bottom;
+  max-height: 100vh;
+  overflow-y: auto;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+.content {
+  display: inline-block;
+  }
+
+/* a hover states */
+
+a span:hover {
+  filter: brightness(200%);
+}
+
+/* Dark/light mode custom elements */
+hr.dark {
+    color: $dark
+    border-color: $dark
+}
+
+hr.light {
+    color: $light
+    border-color: $light
+}
+  
+/* Dark/light mode toggle */
+
+body {
+    background-color: $light;
+    height: 100vh;
+    transition: all 0.4s ease;
+}
+
+body .subtitle,
+body .title {
+    color: $dark;
+}
+
+body.dark {
+    background-color: $dark;
+    color: $light;
+}
+
+body.dark .subtitle,
+body.dark .title {
+    color: $light;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    color: $light;
+    padding: .8rem;
+    background: $dark;
+    border-radius: 6px;
+}
+
+body.dark button {
+    background: $light;
+    color: $dark;
+}
+
+/* Contact form */
+
+@import url("contactform.css")
+
+/* Justified gallery */
+
+.jg {
+  --min-width: 33%;
+  --row-height: 20vh;
+  --max-row-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.25rem;
+}
+
+.jg > a {
+  --ratio: calc(var(--w) / var(--h));
+  flex-grow: calc(var(--ratio) * 100);
+  flex-basis: calc(var(--ratio) * var(--row-height));
+  margin: 0.25rem;
+  min-width: var(--min-width);
+}
+
+.jg > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: var(--max-row-height);
+  object-fit: cover;
+}
