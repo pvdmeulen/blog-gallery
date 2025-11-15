@@ -1,8 +1,8 @@
 +++
 title = "Why I've decided to try my hand at photography again"
 subtitle = "More than a decade after getting my first DSLR, and a few years after losing my dad, I've picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories."
-linkTitle = '8 February 2025'
-date = 2025-02-08
+linkTitle = '25 September 2025'
+date = 2025-09-25
 draft = false
 tags = ['landscape']
 thumbnailUrl = '/images/post-thumbnails/thumbnail0.jpg'
