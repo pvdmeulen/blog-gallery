@@ -1,5 +1,5 @@
 +++
-title = 'A recap of 2025 and the start of my photography journey'
+title = 'My plan for 2026'
 subtitle = "In late 2024, I started taking more photos. In 2025, a lot more. First with my old DSLR, and later with my new camera. The more I use my camera, the more I realise I still have a lot to learn. Here are five main things I'm going to practice in 2026."
 date = 2025-11-12
 linkTitle = '12 Nov 2025'
@@ -14,6 +14,8 @@ featuredImageAttribute = 'Peter van der Meulen'
 +++
 
 (post is WIP)
+
+{{< spotify-embed src="https://open.spotify.com/embed/track/5W9YtUsoXA547TTPJUXvns?utm_source=generator" title="What I'm listening to" desc="Description here.">}}
 
 #### Light
 It’s in the name, really. Photography&mdash;creating images through light. I've heard that a good photographer should approach light the same way a painter would. I take this to mean, broadly, being intentional about where your light is, what it draws focus on, what it draws your eye to. Even outside, in natural light, you’ll need to give _some_ thought to the placements of shadows, the harshness of the light, and so on.
@@ -36,13 +38,21 @@ Again, I feel like I should be thinking more like a painter or perhaps a cinemat
 - Examples of good photos?
 
 #### Experiment
-For me, to learn, it doesn’t _really_ matter whether you shoot in manual, aperture priority, or shutter priority mode, as long as you try changing at least _one_ setting to get different results. Get to know your camera, and get a feel for the way ISO, aperture, and shutter speed affect the final result. Experiment with different focal lengths if you have them (for example with a zoom lens, or multiple prime lenses).
+For me, to learn, it doesn’t _really_ matter whether you shoot in manual, aperture priority, or shutter priority mode, as long as you try changing at least _one_ setting to get different results. Get to know your camera, and get a feel for the way ISO, aperture, and shutter speed affect the final result. Experiment with different focal lengths if you have them (for example with a zoom lens, or multiple prime lenses). I've done a fair bit of this already:
 
 - Examples of different settings
 
+In 2026, I'd like to get better at visualising the photo I want _before_ I dial in my settings. Another thing I'd love to practice is flash photography and portraits.
+
 #### Editing
+
+So far, I've mostly been using [Photomator](https://www.pixelmator.com/photomator/) for my editing.[^PM] I sometimes use [Affinity Photo](https://www.affinity.studio) as well. I've used a variety of other apps over the last decade or so (not least, [Adobe Photoshop](https://photoshop.adobe.com/discover))! 
+
+- Screenshot of Photomator
+
+In 2026, I'd like to create a set of saved presets in Photomator that suit my needs. Currently, I start editing each photo from scratch, and I don't usually have a plan right from the start. Creating a set of presets will teach me some of the finer adjustments which I currently don't often use (e.g. tone curves, selective clarity and texture, masking).
 
 #### Printing
 
-
+[^PM]: Photomator is a relatively lightweight alternative to [Adobe Lightroom](https://lightroom.adobe.com) and [Capture One](https://www.captureone.com/en), for example. It is built specifically for the Apple ecosystem. It integrates nicely with Apple Photos, and is much cheaper than Lightroom. A few months after I paid the yearly license, Photomator and Pixelmator were bought by Apple. I'm cautiously optimistic about what this means for the future of the app, and hopefully new features and updates get added over time.
 

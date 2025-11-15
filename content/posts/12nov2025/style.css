@@ -12,6 +12,20 @@ p {
       font-family: var(--bulma-family-primary);
   }
   
+ul {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+
+ol {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+  
 /* Header (landing) image */
 .header-image {
     background-image: url(../images/website_header2.jpg);

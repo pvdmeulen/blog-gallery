@@ -16,17 +16,17 @@
         <div class="columns mx-2">
             <div class="column is-full">
                 <nav class="breadcrumb" aria-label="breadcrumbs">
-                    <ul>
+                    <ul id="bc">
                         <li>
-                            <a href="{{ `` | absURL }}" class="has-text-link">Home</a>
+                            <a href="{{ `` | absURL }}" class="has-text-link is-subtitle">Home</a>
                         </li>
                         <li>
                         {{ with .Parent }}
-                            <a href="{{ .RelPermalink }}" class="has-text-link">{{ .LinkTitle }}</a>
+                            <a href="{{ .RelPermalink }}" class="has-text-link is-subtitle">{{ .LinkTitle }}</a>
                         {{ end }}
                         </li>
                         <li class="is-active">
-                            <a href="#" aria-current="page" class="">
+                            <a href="#" aria-current="page" class="is-subtitle">
                                 {{ .LinkTitle }}
                             </a>
                         </li>
@@ -73,9 +73,9 @@
                     <hr>
                 <!-- Maybe add option for prev/next post -->
                 {{ partial "widgets/page-tags.html" (dict "taxonomy" "tags" "page" .) }}
-                </div>
+                </div>  
             </div>
         </div>
     </div>
-  
+    
 {{ end }}

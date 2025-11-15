@@ -13,7 +13,7 @@
                 <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
                 <span class="pswp-caption-content">
                     {{ with .Exif }}
-                        <ul>
+                        <ul class="is-subtitle">
                             {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
                             {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
                             <br>
