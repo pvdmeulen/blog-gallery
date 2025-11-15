@@ -15,7 +15,7 @@ featuredImageAttribute = 'Peter van der Meulen'
 
 (post is WIP)
 
-{{< spotify-embed src="https://open.spotify.com/embed/track/5W9YtUsoXA547TTPJUXvns?utm_source=generator" title="What I'm listening to" desc="Description here.">}}
+{{< spotify-embed src="https://open.spotify.com/embed/track/73B5gHeG8HQkWBNrEGTA7a?utm_source=generator" title="What I'm listening to right now" desc="Annabelle Dinda's emotional lyrics and haunting melodies are perfect for autumn walks around Edinburgh (with or without camera).">}}
 
 #### Light
 It’s in the name, really. Photography&mdash;creating images through light. I've heard that a good photographer should approach light the same way a painter would. I take this to mean, broadly, being intentional about where your light is, what it draws focus on, what it draws your eye to. Even outside, in natural light, you’ll need to give _some_ thought to the placements of shadows, the harshness of the light, and so on.

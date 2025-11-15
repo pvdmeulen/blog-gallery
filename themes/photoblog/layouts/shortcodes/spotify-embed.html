@@ -1,23 +1,27 @@
 <!-- block begin -->
-<div class="container my-1">
-    <div class="columns">
-        <div class="column is-one-third">
-            {{ with .Get "title" }}
-                <h4 class="is-subtitle is-size-5 has-text-primary">
-                    {{ . }}
-                </h4>
-            {{ end }}
-            {{ with .Get "desc" }}
-                <p class="is-subtitle is-size-5 has-text-bold">
-                    {{ . }}
-                </p>
-            {{ end }}
-        </div>
-        <div class="column is-two-thirds">
-            <div class="spotify-embed-class">
-                {{ with .Get "src" }}
-                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="{{ . }}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                {{ end }}
+<div class="container mt-1 mb-5">
+    <div class="card has-background-main-bis">
+        <div class="card-content">
+            <div class="columns is-vcentered">
+                <div class="column is-one-third">  
+                    {{ with .Get "title" }}
+                        <h4 class="is-subtitle is-size-5 has-text-primary">
+                            {{ . }}
+                        </h4>
+                    {{ end }}
+                    {{ with .Get "desc" }}
+                        <p class="is-subtitle is-size-6 has-text-bold">
+                            {{ . }}
+                        </p>
+                    {{ end }}
+                </div>
+                <div class="column is-two-thirds">
+                    <div class="spotify-embed-class">
+                        {{ with .Get "src" }}
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="{{ . }}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        {{ end }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

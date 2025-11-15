@@ -39,7 +39,7 @@
 	initialZoomLevel: "fit",     
 	secondaryZoomLevel: "fit",   
 	imageClickAction: "close",   
-	wheelToZoom: false,
+	wheelToZoom: true,
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
@@ -156,6 +156,44 @@ $(function(){
 	
 
     
+    
+        <style>/* Further custom formatting for post */
+
+h4 {
+  font-family: var(--bulma-family-primary);
+  color: var(--bulma-color-primary);
+  }
+
+p {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+      font-family: var(--bulma-family-primary);
+  }
+  
+ul {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+
+ol {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+  
+/* Header (landing) image */
+.header-image {
+    background-image: url(../images/website_header2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}</style>
     
 
     
@@ -313,11 +351,38 @@ $(function(){
             
                 <div class="container is-centered is-max-desktop mb-5">
                     <div class="content is-size-5 has-text-weight-medium">
-                        <p>Four years ago, I lost my dad.</p>
-<p>It was, obviously, the hardest thing I’ve gone through. It still is—<a href="https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/">grief comes in waves</a>. It was particularly hard on my mum: living alone, in a house now too big for her, in a largely foreign country.</p>
+                        <div class="container mt-1 mb-5">
+    <div class="card has-background-main-bis">
+        <div class="card-content">
+            <div class="columns is-vcentered">
+                <div class="column is-one-third">  
+                    
+                        <h4 class="is-subtitle is-size-5 has-text-primary">
+                            My dad&#39;s favourite band
+                        </h4>
+                    
+                    
+                        <p class="is-subtitle is-size-6 has-text-bold">
+                            Dire Straits was one of my dad&#39;s favourite bands. Hopefully everyone knows the hits—I encourage others to listen to some of their less popular tracks as well.
+                        </p>
+                    
+                </div>
+                <div class="column is-two-thirds">
+                    <div class="spotify-embed-class">
+                        
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5SXemxLERs0imkLpe4Aq8v?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>Four years ago, I lost my dad.</p>
+<p>It was, obviously, the hardest thing I’ve gone through. It still is—<a href="https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/">grief comes in waves</a>. It was particularly hard on my mum: living alone, in a house now too big for her, in a strangely foreign country<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>A few days after that day, my mum walked into the living room, holding stacks of old photos. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. There, on the living room table, were dozens of photos sprawled out.</p>
 
-<div class="container mt-1 mb-3">
+<div class="container my-2">
     <div id="psgallery--justified" class="psgallery-class">
         
         
@@ -379,7 +444,7 @@ $(function(){
 
 <p>The majority were photos from their many holidays around Europe. They had a real passion for cycling and camping, something which continued into me and my brother’s childhoods as well.</p>
 
-<div class="container mt-1 mb-3">
+<div class="container my-2">
     <div id="psgallery--justified" class="psgallery-class">
         
         
@@ -491,7 +556,7 @@ $(function(){
 
 <p>That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family - but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.</p>
 
-<div class="container mt-1 mb-3">
+<div class="container my-2">
     <div id="psgallery--justified" class="psgallery-class">
         
         
@@ -601,9 +666,130 @@ $(function(){
     
 </div>
 
-<p>I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games. Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.</p>
+<p>I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games. Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree. As a result, I didn&rsquo;t get a whole lot of practice in.</p>
+
+<div class="container my-2">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/08feb2025/own/IMG_1045.jpg"
+                data-pswp-width="3270"
+                data-pswp-height="2453"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/IMG_1045.jpg' alt="own/IMG_1045.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 71/10</li>
+                            <li>Shutter speed: 1/100</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/IMG_1083.jpg"
+                data-pswp-width="3795"
+                data-pswp-height="2847"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/IMG_1083.jpg' alt="own/IMG_1083.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 9</li>
+                            <li>Shutter speed: 1/200</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/IMG_1092.jpg"
+                data-pswp-width="3795"
+                data-pswp-height="2847"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/IMG_1092.jpg' alt="own/IMG_1092.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 8</li>
+                            <li>Shutter speed: 1/125</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/08feb2025/own/IMG_1116.jpg"
+                data-pswp-width="3793"
+                data-pswp-height="2845"
+                target="_blank"
+            >
+                <img src='/posts/08feb2025/own/thumbnails/IMG_1116.jpg' alt="own/IMG_1116.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 10</li>
+                            <li>Shutter speed: 1/250</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+    <p class="is-subtitle is-size-6 mb-5 mx-1">Photos taken in Scotland, April 2014. No lens hood, no understanding of aperture, and virtually no experience with editing!</p>
+    
+</div>
+
 <p>Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.</p>
 <p>The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on—just like I did.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>We moved from the Netherlands to Sweden in 2006, mostly because of my dad&rsquo;s work.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
                     </div>
                     <hr>
                 
@@ -640,19 +826,19 @@ $(function(){
                     <div class="level-item">
                         <a>
                             
-                                <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                <a href="/contact/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link">
                                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
                                 </a>
                             
-                                <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link">
                                     <span class="icon"><i class="fa-brands fa-instagram"></i></span>
                                 </a>
                             
-                                <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link">
                                     <span class="icon"><i class="fa-brands fa-flickr"></i></span>
                                 </a>
                             
-                                <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-info">
+                                <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-link">
                                     <span class="icon"><i class="fa-brands fa-github"></i></span>
                                 </a>
                             
@@ -663,7 +849,7 @@ $(function(){
                 <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
                     <div class="level-item mr-3-desktop">
                         <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright"></i> 2025 Peter van der Meulen<br>
-                        Built with <i class="fa-solid fa-heart has-text-primary"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+                        Built with <i class="fa-solid fa-heart has-text-danger"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
                     </div>
                 </div>
             </nav>

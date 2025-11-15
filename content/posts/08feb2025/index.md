@@ -13,9 +13,13 @@ featuredImageCaption = 'My dad walking through a Scottish village with his bike,
 featuredImageAttribute = 'Janet van der Meulen'
 +++
 <!--more-->
+
+
+{{< spotify-embed src="https://open.spotify.com/embed/track/5SXemxLERs0imkLpe4Aq8v?utm_source=generator" title="My dad's favourite band" desc="Dire Straits was one of my dad's favourite bands. Hopefully everyone knows the hits—I encourage others to listen to some of their less popular tracks as well.">}}
+
 Four years ago, I lost my dad.
 
-It was, obviously, the hardest thing I’ve gone through. It still is&mdash;[grief comes in waves](https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/). It was particularly hard on my mum: living alone, in a house now too big for her, in a largely foreign country.
+It was, obviously, the hardest thing I’ve gone through. It still is&mdash;[grief comes in waves](https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/). It was particularly hard on my mum: living alone, in a house now too big for her, in a strangely foreign country[^explain].
 
 A few days after that day, my mum walked into the living room, holding stacks of old photos. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. There, on the living room table, were dozens of photos sprawled out.
 
@@ -29,8 +33,12 @@ That little peek into their life together made me realise the value in taking ph
 
 {{< ps-gallery folder="/papa3/" >}}
 
-I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games. Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree.
+I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games. Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree. As a result, I didn't get a whole lot of practice in.
+
+{{< ps-gallery folder="/own/" title="Photos taken in Scotland, April 2014. No lens hood, no understanding of aperture, and virtually no experience with editing!">}}
 
 Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.
 
 The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on&mdash;just like I did.
+
+[^explain]: We moved from the Netherlands to Sweden in 2006, mostly because of my dad's work.

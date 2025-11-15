@@ -19637,9 +19637,9 @@ has-background-danger.is-hoverable:active {
 
 .card {
   --bulma-card-color: var(--bulma-text);
-  --bulma-card-background-color: var(--bulma-scheme-main);
+  --bulma-card-background-color: var(--bulma-scheme-main-ter);
   --bulma-card-shadow: none;
-  --bulma-card-radius: 0rem;
+  --bulma-card-radius: 0.75rem;
   --bulma-card-header-background-color: transparent;
   --bulma-card-header-color: var(--bulma-text-strong);
   --bulma-card-header-padding: 0.75rem 1rem;

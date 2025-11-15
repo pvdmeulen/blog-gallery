@@ -23,10 +23,12 @@ $house: #EAAA02; // tertiary light mode
 @forward "bulma/sass/base/skeleton";
 @forward "bulma/sass/helpers";
 
-@use "bulma/sass/components" with (
-    $card-radius: 0rem,
-    $card-shadow: none
+ @use "bulma/sass/components" with (
+    $card-shadow: none,
+    $card-background-color: var(--bulma-scheme-main-ter)
     );
+
+// $card-radius: 0rem,
 
 // Use our custom theme:
 

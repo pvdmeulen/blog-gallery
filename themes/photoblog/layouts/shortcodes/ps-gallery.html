@@ -1,5 +1,5 @@
 <!-- block begin -->
-<div class="container mt-1 mb-3">
+<div class="container my-2">
     <div id="psgallery--justified" class="psgallery-class">
         {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
         {{ range  $images }}
@@ -37,6 +37,6 @@
     <!-- end of block -->
     <!-- caption code -->
     {{ with .Get "title" }}
-    <h4>{{ . }}</h4>
+    <p class="is-subtitle is-size-6 mb-5 mx-1">{{ . }}</p>
     {{ end }}
 </div>
