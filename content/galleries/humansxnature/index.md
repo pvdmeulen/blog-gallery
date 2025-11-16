@@ -1,6 +1,6 @@
 +++
 title = 'Humans & Nature'
-subtitle = 'A gallery with a mixture of landscapes, buildings, people, and ideally, the human-nature interaction.'
+subtitle = 'A gallery with a mixture of landscapes, people, and ideally, the interaction between them.'
 categories = ['landscape', 'nature', 'animals']
 date = 2025-11-12
 layout = 'gallery'
