@@ -6,14 +6,13 @@ date = 2025-09-25
 draft = false
 tags = ['landscape']
 thumbnailUrl = '/images/post-thumbnails/thumbnail0.jpg'
-thumbnailAltText = 'An old film photo showing a young man, my dad, walking through a Scottish village with his bike, circa 1980'
+thumbnailAltText = 'An old film photo showing a young man, my dad, walking through a Scottish village with his bike.'
 featuredImageType = "Photo"
 featuredImageUrl = 'featured.jpg'
-featuredImageCaption = 'My dad walking through a Scottish village with his bike, circa 1980.'
+featuredImageCaption = 'My dad walking through a Scottish village with his bike, late 1980s.'
 featuredImageAttribute = 'Janet van der Meulen'
 +++
 <!--more-->
-
 
 {{< spotify-embed src="https://open.spotify.com/embed/track/5SXemxLERs0imkLpe4Aq8v?utm_source=generator" title="My dad's favourite band" desc="Dire Straits was one of my dad's favourite bands. Hopefully everyone knows the hits—I encourage others to listen to some of their less popular tracks as well.">}}
 

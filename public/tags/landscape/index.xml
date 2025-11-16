@@ -6,20 +6,20 @@
     <description>Recent content in Landscape on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/landscape/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Humans &amp; Nature</title>
+      <link>//localhost:1313/galleries/humansxnature/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/galleries/humansxnature/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Why I&#39;ve decided to try my hand at photography again</title>
       <link>//localhost:1313/posts/08feb2025/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/08feb2025/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Landscape photography</title>
-      <link>//localhost:1313/galleries/landscape/</link>
-      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/galleries/landscape/</guid>
       <description></description>
     </item>
   </channel>

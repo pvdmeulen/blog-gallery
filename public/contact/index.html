@@ -87,8 +87,6 @@ $(function(){
 
     
 
-
-<script></script>
 </head>
 
 <header>
@@ -215,36 +213,94 @@ $(function(){
 </div>
 
     
-    <div class="container pt-5 pl-3 pr-3 pb-1 is-max-desktop">
-        <div>
-            <h1 class="title mt-2">Contact me</h1>
-<p class="subtitle mt-1 contactform">Please contact me using the form below</p>
-
-<form
+    <div class="container is-centered">
+        
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul id="bc">
+                        <li>
+                            <a href="//localhost:1313/" class="has-text-link is-subtitle">Home</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="is-subtitle">Contact me</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="columns">
+                    <div class="column is-one-third">
+                        <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            Contact me
+                        </h1>
+                        <h2 class="subtitle my-3 is-size-5 mb-5">
+                            Please contact me using the form on this page. I'll aim to respond as soon as I can.
+                        </h2>
+                        <p class="is-subtitle is-size-6">
+                            Although I'm a hobbyist photographer, I'm keen to gain experience wherever possible. If you need photos of you, your business, or your event, do get in touch.
+                        </p>
+                    </div>
+                    <div class="column is-two-thirds">
+                        <div class="container mb-5">
+                            <div class="card my-2 has-background-main-bis">
+                                <div class="card-content">
+                                    <div>
+                                        <form
   action="https://formspree.io/f/xanqklbq"
   class="fs-form"
   target="_top"
   method="POST"
 >
 
-<link rel="stylesheet" type="text/css" href="/css/contactform.css">
-
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
-    <textarea class="fs-textarea" id="message" name="message"></textarea>
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
-</form>
+    
+    
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="hello@example.com" name="email" required>
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
         </div>
     </div>
     
+    <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+            <div class="select">
+                <select name="subject" required>
+                    <option value="Business">Business</option>
+                    <option value="Event">Event</option>
+                    <option value="Model">Model</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+    </div>
     
+    <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+            <textarea class="textarea" placeholder="Write your message here" name="message" required></textarea>
+        </div>
+    </div>
+    
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary">Submit</button>
+        </div>
+    </div>
+    
+</form>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>    
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
 
 
 	</div>

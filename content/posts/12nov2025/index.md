@@ -9,7 +9,7 @@ thumbnailUrl = '/images/post-thumbnails/thumbnail1.jpg'
 thumbnailAltText = 'A photo of two small motorboats taken from above. The men inside are partying and drinking.'
 featuredImageType = "Photo"
 featuredImageUrl = 'featured.jpg'
-featuredImageCaption = 'Two boats cruising through Copenhagen.'
+featuredImageCaption = 'Cruising through Copenhagen.'
 featuredImageAttribute = 'Peter van der Meulen'
 +++
 

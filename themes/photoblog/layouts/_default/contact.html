@@ -4,12 +4,47 @@
     {{ partial "header-wide.html" . }}
 
     <!-- Content for contact form -->
-    <div class="container pt-5 pl-3 pr-3 pb-1 is-max-desktop">
-        <div>
-            {{ partial "widgets/contactform.html" . }}
+    <div class="container is-centered">
+        <!-- Breadcrumbs -->
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul id="bc">
+                        <li>
+                            <a href="{{ `` | absURL }}" class="has-text-link is-subtitle">Home</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="is-subtitle">{{ .LinkTitle }}</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- FORMSPREE CONTACT FORM -->
+                <div class="columns">
+                    <div class="column is-one-third">
+                        <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            {{ .Title }}
+                        </h1>
+                        <h2 class="subtitle my-3 is-size-5 mb-5">
+                            Please contact me using the form on this page. I'll aim to respond as soon as I can.
+                        </h2>
+                        <p class="is-subtitle is-size-6">
+                            Although I'm a hobbyist photographer, I'm keen to gain experience wherever possible. If you need photos of you, your business, or your event, do get in touch.
+                        </p>
+                    </div>
+                    <div class="column is-two-thirds">
+                        <div class="container mb-5">
+                            <div class="card my-2 has-background-main-bis">
+                                <div class="card-content">
+                                    <div>
+                                        {{ partial "widgets/contactform.html" . }}
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>    
+                    </div>
+                </div>        
+            </div>
         </div>
     </div>
-    
-    <!-- Formspree -->
 
 {{ end }}

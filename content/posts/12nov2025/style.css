@@ -26,6 +26,10 @@ ol {
     font-family: var(--bulma-family-primary);
   }
   
+li::marker {
+  color: var(--bulma-color-primary);
+  }
+  
 /* Header (landing) image */
 .header-image {
     background-image: url(../images/website_header2.jpg);

@@ -1,6 +1,3 @@
-<h1 class="title mt-2">{{ .Title }}</h1>
-<p class="subtitle mt-1 contactform">Please contact me using the form below</p>
-
 <form
   action="https://formspree.io/f/xanqklbq"
   class="fs-form"
@@ -8,17 +5,43 @@
   method="POST"
 >
 
-<link rel="stylesheet" type="text/css" href="/css/contactform.css">
-
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
-    <textarea class="fs-textarea" id="message" name="message"></textarea>
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
+    <!-- <link rel="stylesheet" type="text/css" href="/css/contactform.css"> -->
+    
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="hello@example.com" name="email" required>
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+            <div class="select">
+                <select name="subject" required>
+                    <option value="Business">Business</option>
+                    <option value="Event">Event</option>
+                    <option value="Model">Model</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+            <textarea class="textarea" placeholder="Write your message here" name="message" required></textarea>
+        </div>
+    </div>
+    
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary">Submit</button>
+        </div>
+    </div>
+    
 </form>

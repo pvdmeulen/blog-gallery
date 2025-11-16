@@ -16,17 +16,17 @@
       <description>&lt;p&gt;(post is WIP)&lt;/p&gt;&#xA;&#xA;&lt;div class=&#34;container mt-1 mb-5&#34;&gt;&#xA;    &lt;div class=&#34;card has-background-main-bis&#34;&gt;&#xA;        &lt;div class=&#34;card-content&#34;&gt;&#xA;            &lt;div class=&#34;columns is-vcentered&#34;&gt;&#xA;                &lt;div class=&#34;column is-one-third&#34;&gt;  &#xA;                    &#xA;                        &lt;h4 class=&#34;is-subtitle is-size-5 has-text-primary&#34;&gt;&#xA;                            What I&amp;#39;m listening to right now&#xA;                        &lt;/h4&gt;&#xA;                    &#xA;                    &#xA;                        &lt;p class=&#34;is-subtitle is-size-6 has-text-bold&#34;&gt;&#xA;                            Annabelle Dinda&amp;#39;s emotional lyrics and haunting melodies are perfect for autumn walks around Edinburgh (with or without camera).&#xA;                        &lt;/p&gt;&#xA;                    &#xA;                &lt;/div&gt;&#xA;                &lt;div class=&#34;column is-two-thirds&#34;&gt;&#xA;                    &lt;div class=&#34;spotify-embed-class&#34;&gt;&#xA;                        &#xA;                            &lt;iframe data-testid=&#34;embed-iframe&#34; style=&#34;border-radius:12px&#34; src=&#34;https://open.spotify.com/embed/track/73B5gHeG8HQkWBNrEGTA7a?utm_source=generator&#34; width=&#34;100%&#34; height=&#34;152&#34; frameBorder=&#34;0&#34; allowfullscreen=&#34;&#34; allow=&#34;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;&#xA;                        &#xA;                    &lt;/div&gt;&#xA;                &lt;/div&gt;&#xA;            &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h4 id=&#34;light&#34;&gt;Light&lt;/h4&gt;&#xA;&lt;p&gt;It’s in the name, really. Photography—creating images through light. I&amp;rsquo;ve heard that a good photographer should approach light the same way a painter would. I take this to mean, broadly, being intentional about where your light is, what it draws focus on, what it draws your eye to. Even outside, in natural light, you’ll need to give &lt;em&gt;some&lt;/em&gt; thought to the placements of shadows, the harshness of the light, and so on.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Humans &amp; Nature</title>
+      <link>//localhost:1313/galleries/humansxnature/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/galleries/humansxnature/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Why I&#39;ve decided to try my hand at photography again</title>
       <link>//localhost:1313/posts/08feb2025/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/08feb2025/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Landscape photography</title>
-      <link>//localhost:1313/galleries/landscape/</link>
-      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/galleries/landscape/</guid>
       <description></description>
     </item>
     <item>
