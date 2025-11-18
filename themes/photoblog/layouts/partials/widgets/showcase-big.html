@@ -4,8 +4,9 @@
 {{ $subtitle := .Params.subtitle }}
 
 <div class="container">
-    <p class="is-size-7 mb-1 has-text-weight-semibold has-text-link is-subtitle">FEATURED POST</p>
-    <h2><a class="title is-size-4 mt-3 mb-1 has-text-weight-bold" href="{{ $permalink }}"><span>{{ .Title }}</span></a></h2>
+    <p class="is-size-6 my-0 has-text-weight-bold is-title">FEATURED POST</p>
+    <!--<p class="is-size-7 mb-1 has-text-weight-semibold has-text-link is-subtitle">FEATURED POST</p>-->
+    <a class="is-title is-size-3 mb-1 has-text-weight-bold" id="menu" href="{{ $permalink }}">{{ .Title }}</a>
     <p class="is-size-6 my-1 has-text-primary has-text-weight-medium is-subtitle">{{ .Params.date.Format "2 Jan 2006" }}</p>
         <figure class="is-align-items-center is-justify-content-center image is-5by4 my-3">
             {{ with .Params.thumbnailUrl }}

@@ -1,0 +1,33 @@
+<!-- PARTIAL FOR LOGO WHEN IN TABLET-WIDESCREEN -->
+<div class="container is-centered is-hidden-mobile">
+        <!-- LOGO -->
+        <div class="columns mx-2">
+            <div class="column is-three-fifths">
+                <!-- LOGO -->
+                <h1 class="title mt-2 mb-5 has-text-primary-light">
+            		<a href="{{ `` | absURL }}">
+            			<picture width="200px">
+            				<!-- User prefers light mode: -->
+            				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
+            				<!-- User prefers dark mode: -->
+            				<source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
+            	        	<!-- User has no color preference: -->
+            				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px"></img>
+            			</picture>
+                        <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
+            			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
+            		</a>
+        	    </h1>
+            </div>
+            
+            <!-- OTHER SIDE - TAGS ONLY-->
+            <div class="column is-two-fifths">
+                <!-- TAGS -->
+                <div class="content my-1">
+                    <h3 class="is-size-6 my-3 has-text-weight-extrabold">EXPLORE</h3>
+                    {{ partial "widgets/site-tags.html" . }}
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>

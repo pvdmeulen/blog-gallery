@@ -5,20 +5,18 @@
                 <!-- Socials -->
                 <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
                     <div class="level-item">
-                        <a>
-                            {{ range .Site.Menus.contact }}
-                                <a href="{{ .URL }}" target="_blank" class="is-size-3 px-3 mx-4 has-text-link">
-                                    <span class="icon"><i class="{{ .Pre }}"></i></span>
+                            {{ range .Site.Menus.social }}
+                                <a href="{{ .URL }}" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="{{ .Name }}" title="{{ .Name }}">
+                                    <span class="icon"><i class="{{ .Pre }}" aria-hidden="true"></i></span>
                                 </a>
                             {{ end }}
-                        </a>
                     </div>
                 </div>
                 <!-- Copyright -->
                 <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
                     <div class="level-item mr-3-desktop">
-                        <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
-                        Built with <i class="fa-solid fa-heart has-text-danger"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+                        <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright" aria-hidden="true"></i> {{ now.Format "2006"}} Peter van der Meulen<br>
+                        Built with <i class="fa-solid fa-heart has-text-danger" aria-hidden="true" title="love"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
                     </div>
                 </div>
             </nav>

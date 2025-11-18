@@ -28,7 +28,7 @@ The majority were photos from their many holidays around Europe. They had a real
 
 {{< ps-gallery folder="/papa2/" >}}
 
-That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family - but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.
+That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family&mdash;but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.
 
 {{< ps-gallery folder="/papa3/" >}}
 
@@ -36,8 +36,8 @@ I’ve always had an interest in photography and videography. I got my first pro
 
 {{< ps-gallery folder="/own/" title="Photos taken in Scotland, April 2014. No lens hood, no understanding of aperture, and virtually no experience with editing!">}}
 
-Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments: a walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.
+Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments. A walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.
 
-The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on&mdash;just like I did.
+The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good as the ones mum took on her film camera. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on&mdash;just like I did.
 
 [^explain]: We moved from the Netherlands to Sweden in 2006, mostly because of my dad's work.

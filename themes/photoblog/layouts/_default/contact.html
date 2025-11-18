@@ -1,13 +1,10 @@
 {{ define "main" }}
 
-    <!-- LOGO HEADER IN TABLET+ -->
-    {{ partial "header-wide.html" . }}
-
     <!-- Content for contact form -->
     <div class="container is-centered">
-        <!-- Breadcrumbs -->
         <div class="columns mx-2">
             <div class="column is-full">
+                <!-- Breadcrumbs -->
                 <nav class="breadcrumb" aria-label="breadcrumbs">
                     <ul id="bc">
                         <li>
@@ -19,12 +16,12 @@
                     </ul>
                 </nav>
                 <!-- FORMSPREE CONTACT FORM -->
-                <div class="columns">
+                <div class="columns mb-5">
                     <div class="column is-one-third">
                         <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
                             {{ .Title }}
                         </h1>
-                        <h2 class="subtitle my-3 is-size-5 mb-5">
+                        <h2 class="is-subtitle my-3 is-size-5 mb-5">
                             Please contact me using the form on this page. I'll aim to respond as soon as I can.
                         </h2>
                         <p class="is-subtitle is-size-6">
@@ -32,7 +29,7 @@
                         </p>
                     </div>
                     <div class="column is-two-thirds">
-                        <div class="container mb-5">
+                        <div class="container">
                             <div class="card my-2 has-background-main-bis">
                                 <div class="card-content">
                                     <div>

@@ -2,6 +2,7 @@
 .card {
     height: 100%;
     object-fit: cover;
+    card-radius: 0.25rem;
     }
 
 .button {
@@ -31,6 +32,57 @@ p {
       font-family: var(--bulma-family-primary);
   }
   
+#menu {
+  font-family: var(--bulma-family-primary); 
+  color: var(--bulma-text-bold);
+  }
+
+#menu:hover {
+  color: var(--bulma-primary);
+  transition: color 0.2s;
+  }
+
+#posts {
+  font-family: var(--bulma-family-primary); 
+  color: var(--bulma-text-bold);
+  }
+  
+#posts:hover {
+  color: var(--bulma-primary);
+  transition: color 0.2s;
+  }
+  
+#galleries {
+  font-family: var(--bulma-family-primary); 
+  color: var(--bulma-text-bold);
+  }
+  
+#galleries:hover {
+  color: var(--bulma-secondary);
+  transition: color 0.2s;
+  }
+  
+#about {
+  font-family: var(--bulma-family-primary); 
+  color: var(--bulma-text-bold);
+  }
+
+#about:hover {
+  color: var(--bulma-warning);
+  transition: color 0.2s;
+  }
+  
+#contact {
+  font-family: var(--bulma-family-primary); 
+  color: var(--bulma-text-bold);
+  }
+  
+#contact:hover {
+  color: var(--bulma-danger);
+  transition: color 0.2s;
+  }
+  
+
 /* Header (landing) image */
 .header-image {
     background-image: url(../images/website_header2.jpg);
@@ -73,7 +125,7 @@ p {
 
 a span:hover {
   filter: brightness(200%);
-}
+  } 
 
 /* Dark/light mode custom elements */
 hr.dark {

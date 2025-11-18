@@ -6,10 +6,7 @@
     {{ end }}
 
     {{ $subtitle := .Params.subtitle }}
-    
-    <!-- PARTIAL FOR LOGO WHEN IN TABLET-WIDESCREEN -->
-    {{ partial "header-wide.html" . }}
-    
+        
     <!-- POST CONTENT -->
     <div class="container is-centered">
         <!-- Breadcrumbs -->
@@ -33,47 +30,51 @@
                     </ul>
                 </nav>
                 <!-- POST CONTENT -->
-                <!-- Post title, image, and tags -->
-                <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
-                    {{ .Title }}
-                </h1>
-                <p class="is-subtitle is-size-6 my-1 has-text-primary has-text-weight-medium">
-                    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-                    {{ $dateHuman := .Date | time.Format "2 Jan 2006" }}
-                    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>  |
-                    <!--
-                        | {{ with .Params.tags }}
-                            {{ range . }}
-                            <i class="fas fa-tag has-text-link-bold ml-2"></i>
-                                {{ $href := print (absURL "tags/") (urlize .) }}
-                                    <a href="{{ $href }}" class="has-text-link-bold mr-2">{{ . }}</a> |
-                                {{ end }}
-                            {{ end }}
-                            -->
-                    Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}
-                </p>
-                
-                <div class="columns mt-3">
-                    <div class="column is-two-thirds">
-                        {{ partial "widgets/featuredimage.html" . }}
-                    </div>
-                    <div class="column is-one-third">
-                        <p class="content has-text-weight-bold has-text-primary is-size-5">
-                            {{ .Params.subtitle }}
+                <div class="columns mb-5">
+                    <div class="column is-full">
+                        <!-- Post title, image, and tags -->
+                        <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            {{ .Title }}
+                        </h1>
+                        <p class="is-subtitle is-size-6 my-1 has-text-primary has-text-weight-medium">
+                            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                            {{ $dateHuman := .Date | time.Format "2 Jan 2006" }}
+                            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>  |
+                            <!--
+                                | {{ with .Params.tags }}
+                                    {{ range . }}
+                                    <i class="fas fa-tag has-text-link-bold ml-2"></i>
+                                        {{ $href := print (absURL "tags/") (urlize .) }}
+                                            <a href="{{ $href }}" class="has-text-link-bold mr-2">{{ . }}</a> |
+                                        {{ end }}
+                                    {{ end }}
+                                    -->
+                            Reading time: {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}
                         </p>
+                        
+                        <div class="columns mt-3">
+                            <div class="column is-two-thirds">
+                                {{ partial "widgets/featuredimage.html" . }}
+                            </div>
+                            <div class="column is-one-third">
+                                <p class="content has-text-weight-bold has-text-primary is-size-5">
+                                    {{ .Params.subtitle }}
+                                </p>
+                            </div>
+                        </div>
+                          
+                        <!-- Content -->
+                    
+                        <div class="container is-centered is-max-desktop mb-5">
+                            <div class="content is-size-5 has-text-weight-medium">
+                                {{ .Content }}
+                            </div>
+                            <hr>
+                        <!-- Maybe add option for prev/next post -->
+                        {{ partial "widgets/page-tags.html" (dict "taxonomy" "tags" "page" .) }}
+                        </div>
                     </div>
                 </div>
-                  
-                <!-- Content -->
-            
-                <div class="container is-centered is-max-desktop mb-5">
-                    <div class="content is-size-5 has-text-weight-medium">
-                        {{ .Content }}
-                    </div>
-                    <hr>
-                <!-- Maybe add option for prev/next post -->
-                {{ partial "widgets/page-tags.html" (dict "taxonomy" "tags" "page" .) }}
-                </div>  
             </div>
         </div>
     </div>

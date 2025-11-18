@@ -8,7 +8,12 @@
 </head>
 
 <header>
-	{{ partial "header-mobile.html" . }}
+	<div class="is-hidden-tablet">
+		{{ partial "header-mobile.html" . }}
+	</div>
+	<div class="is-hidden-mobile">
+		{{ partial "header-wide.html" . }}
+	</div>
 </header>
 
 <body class="">

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<head>
+ 	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>People | Peter van der Meulen</title>
+
+
+
+    <link rel="stylesheet" href="/css/custom-bulma-theme.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+      <script src="/js/main.js"></script>
+
+
+
+<script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
+
+
+<script type="module">
+
+  console.log("photoswipe init");
+  import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "[id^='psgallery']", 
+	children: "a",
+	initialZoomLevel: "fit",     
+	secondaryZoomLevel: "fit",   
+	imageClickAction: "close",   
+	wheelToZoom: false,
+	pswpModule: PhotoSwipe,
+	paddingFn: (viewportSize) => {
+    return {
+      top: 20, bottom: 20, left: 20, right: 20
+    }
+  },
+  });
+    
+  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    type: 'auto',
+  });
+  
+  lightbox.init();
+  
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+
+<script src='//localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+
+<script type = "module">
+	
+$(function(){
+  $(".psgallery-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 310,
+      lastRow : 'nojustify',
+      margins : 5,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
+
+</script>
+
+
+
+
+    
+
+</head>
+
+<header>
+	<div class="is-hidden-tablet">
+		
+
+
+<div class="container is-centered is-hidden-tablet">
+        <div class="columns mx-2 is-multiline">
+            <div class="column is-full has-text-centered">
+                
+                <h1 class="title mt-2 mb-0 has-text-primary-light">
+            		<a href="//localhost:1313/">
+            			<picture width="200px">
+            				
+            				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+            				
+            				<source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+            	        	
+            				<img src="/images/logo-light.svg" width="200px"></img>
+            			</picture>
+                        
+            		</a>
+        	    </h1>
+            </div>
+              
+            
+            <div class="column is-full mb-1 has-text-centered">
+                    
+                <div class="container has-text-centered is-align-content-flex-end">
+                    <div class="card">
+                        <div class="card-content">      
+                            <div class="buttons is-centered">
+    
+        <a href="/posts/" aria-label="Posts">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="posts">Posts</button>
+        </a>
+    
+        <a href="/galleries/" aria-label="Galleries">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="galleries">Galleries</button>
+        </a>
+    
+        <a href="/about/" aria-label="About">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="about">About</button>
+        </a>
+    
+        <a href="/contact/" aria-label="Contact">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="contact">Contact</button>
+        </a>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+	</div>
+	<div class="is-hidden-mobile">
+		
+
+
+<div class="container is-centered is-hidden-mobile">
+        <div class="columns mx-2">
+            <div class="column is-three-fifths">
+                
+                <h1 class="title mt-2 mb-5 has-text-primary-light">
+            		<a href="//localhost:1313/">
+            			<picture width="200px">
+            				
+            				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+            				
+            				<source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+            	        	
+            				<img src="/images/logo-light.svg" width="200px"></img>
+            			</picture>
+                        
+            		</a>
+        	    </h1>
+            </div>
+              
+            
+            <div class="column is-two-fifths mt-5 mb-1">
+                    
+                <div class="container mt-1 has-text-centered is-align-content-flex-end">
+                    <div class="card">
+                        <div class="card-content">      
+                            <div class="buttons is-centered">
+    
+        <a href="/posts/" aria-label="Posts">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="posts">Posts</button>
+        </a>
+    
+        <a href="/galleries/" aria-label="Galleries">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="galleries">Galleries</button>
+        </a>
+    
+        <a href="/about/" aria-label="About">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="about">About</button>
+        </a>
+    
+        <a href="/contact/" aria-label="Contact">
+            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="contact">Contact</button>
+        </a>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+	</div>
+</header>
+
+<body class="">
+	<div class="container is-max-fullhd">
+	
+
+    <div class="container is-centered">
+        <div class="columns mx-2">
+            <div class="column is-full">
+                
+                 <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="//localhost:1313/" class="has-text-link is-subtitle"><span>Home</span></a>
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="is-subtitle">
+                                <span>People</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                
+                <div class="columns mb-5">
+                    <div class="column is-full">
+                        <h1 class="is-title mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            People
+                        </h1>
+                        <h2 class="is-subtitle my-3 is-size-5">
+                            
+                        </h2>
+                        <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
+                            <div class="grid">
+                                
+                                    <div class="cell">
+                                        
+
+
+
+
+<div class="container has-background-main">
+    <div class="container">
+        <figure class="is-align-items-center is-justify-content-center image is-5by4 my-1">
+            
+            <a href="/galleries/foodxfriends/"><img src="/images/gallery-thumbnails/foodxfriends.jpg" alt="Alt text here" loading="lazy"></a>
+            
+        </figure>
+    </div>
+    <div class="container">
+        <h3><a class="title is-size-6 my-3 has-text-weight-semibold" href="/galleries/foodxfriends/"><span>Food &amp; Friends</span></a></h3>
+        <p class="is-size-7 has-text-primary has-text-weight-medium my-1 is-subtitle"> 12 Nov 2025</p>
+        
+        <p class="is-size-6 mb-3 has-text-weight-normal is-hidden-mobile">Good food. Nice drinks. And best of all, great friends.</p>
+        
+        
+        
+        
+    </div>
+</div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="columns is-centered mt-2 mb-5">
+                            <div class="column is-narrow">
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+	</div>
+</body>
+
+<footer class="footer">
+	<div class="container is-centered is-max-fullhd">
+    <div class="columns mx-2">
+        <div class="column is-full">
+            <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+                
+                <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
+                    <div class="level-item">
+                            
+                                <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Intagram" title="Intagram">
+                                    <span class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                                </a>
+                            
+                                <a href="https://flickr.com/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Flickr" title="Flickr">
+                                    <span class="icon"><i class="fa-brands fa-flickr" aria-hidden="true"></i></span>
+                                </a>
+                            
+                                <a href="https://github.com/pvdmeulen" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="GitHub" title="GitHub">
+                                    <span class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                                </a>
+                            
+                    </div>
+                </div>
+                
+                <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
+                    <div class="level-item mr-3-desktop">
+                        <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright" aria-hidden="true"></i> 2025 Peter van der Meulen<br>
+                        Built with <i class="fa-solid fa-heart has-text-danger" aria-hidden="true" title="love"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const body = document.querySelector('body');
+    const toggle = document.getElementById('toggle');
+
+    toggle.addEventListener("click", () => {
+        const bodyCheck = body.classList.contains('dark');
+        if (bodyCheck) {
+            body.className = ''
+        } else {
+            body.className = "dark"
+      }
+    })
+</script>
+
+</footer>
+
+</html>

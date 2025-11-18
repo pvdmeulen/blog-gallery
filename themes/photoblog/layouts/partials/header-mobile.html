@@ -1,39 +1,43 @@
-<!-- FOR MOBILE, SHOW A HEADER WITH A LOGO AND A 
-<!-- Header -->
-<div class="container is-hidden-tablet">
-    <div class="columns">
-        <div class="column is-full has-text-centered mx-2">
-	        <!-- HOME BUTTON / LOGO -->
-            <h1 class="title my-2 has-text-primary-light">
-        		<a href="{{ `` | absURL }}">
-        			<picture width="200px">
-        				<!-- User prefers light mode: -->
-        				<source srcset="{{ `images/logo-light-mobile.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
-        				<!-- User prefers dark mode: -->
-        				<source srcset="{{ `images/logo-dark-mobile.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
-        	        	<!-- User has no color preference: -->
-        				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px"></img>
-        			</picture>
-                    <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
-        			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
-        		</a>
-        	</h1>
-            <!-- TAGS -->
-            <div class="content mx-2">
-                <h3 class="is-size-6 my-3 has-text-weight-semibold">EXPLORE</h3>
-                <div class="content">
+<!-- PARTIAL FOR HEADER WHEN IN MOBILE -->
+
+<!-- LOGO -->
+<div class="container is-centered is-hidden-tablet">
+        <div class="columns mx-2 is-multiline">
+            <div class="column is-full has-text-centered">
+                <!-- LOGO -->
+                <h1 class="title mt-2 mb-0 has-text-primary-light">
+            		<a href="{{ `` | absURL }}">
+            			<picture width="200px">
+            				<!-- User prefers light mode: -->
+            				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
+            				<!-- User prefers dark mode: -->
+            				<source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
+            	        	<!-- User has no color preference: -->
+            				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px"></img>
+            			</picture>
+                        <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
+            			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
+            		</a>
+        	    </h1>
+            </div>
+              
+            <!-- OTHER SIDE - SITE MENU-->
+            <div class="column is-full mb-1 has-text-centered">
+                <!-- MENU -->    
+                <div class="container has-text-centered is-align-content-flex-end">
+                    <div class="card">
+                        <div class="card-content">      
+                            {{ partial "widgets/site-menu.html" . }}
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr class="mt-0 mb-3 py-0"> -->
+                <!-- TAGS -->    
+                <!-- <div class="content">
                     {{ partial "widgets/site-tags.html" . }}
                 </div>
+                <hr class="mt-3 py-0"> -->    
             </div>
         </div>
     </div>
 </div>
-
-		<!-- LIGHT/DARK MODE TOGGLE -->
-        <!-- <div class="container is-centered">
-				<button id="btn-toggle-theme" class="button is-primary is-large" aria-label="Toggle light or dark mode">
-					<span class="icon is-large">
-						<i class="fa-solid fa-moon"></i>
-					</span>
-				</button>
-			</div>-->

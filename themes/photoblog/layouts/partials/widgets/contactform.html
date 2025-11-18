@@ -4,13 +4,11 @@
   target="_top"
   method="POST"
 >
-
-    <!-- <link rel="stylesheet" type="text/css" href="/css/contactform.css"> -->
     
     <div class="field">
-        <label class="label">Email</label>
+        <label class="label" for="email">Email</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="hello@example.com" name="email" required>
+            <input class="input" type="email" placeholder="hello@example.com" name="email" id="email" required>
             <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
             </span>
@@ -18,13 +16,13 @@
     </div>
     
     <div class="field">
-        <label class="label">Subject</label>
+        <label class="label" for="subject">Subject</label>
         <div class="control">
             <div class="select">
-                <select name="subject" required>
+                <select name="subject" id="subject" class="input">
                     <option value="Business">Business</option>
                     <option value="Event">Event</option>
-                    <option value="Model">Model</option>
+                    <option value="Portraits">Portraits</option>
                     <option value="Other">Other</option>
                 </select>
             </div>
@@ -32,15 +30,15 @@
     </div>
     
     <div class="field">
-        <label class="label">Message</label>
+        <label class="label" for="message">Message</label>
         <div class="control">
-            <textarea class="textarea" placeholder="Write your message here" name="message" required></textarea>
+            <textarea class="textarea" placeholder="Write your message here" name="message" id="message"required></textarea>
         </div>
     </div>
     
     <div class="field is-grouped">
         <div class="control">
-            <button class="button is-primary">Submit</button>
+            <button class="button is-primary" type="submit">Submit</button>
         </div>
     </div>
     

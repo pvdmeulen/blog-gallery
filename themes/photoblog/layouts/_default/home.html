@@ -11,7 +11,7 @@
                 <div class="fixed-grid">
                     <div class="grid">
                         <div class="cell">
-                            <h3 class="title is-size-6 mt-3 has-text-weight-extrabold">RECENT POSTS</h3>
+                            <h3 class="title is-size-6 mt-3 has-text-weight-bold">RECENT POSTS</h3>
                         </div>
                         <div class="cell has-text-right">
                             <h3 class="title is-size-6 mt-3 has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
@@ -29,13 +29,12 @@
                     {{ end }} 
                 </div>
             </div>
-            <hr>
             <!-- RECENT GALLERIES -->
             <div class="column is-full">
                 <div class="fixed-grid">
                     <div class="grid">
                         <div class="cell">
-                            <h3 class="title is-size-6 mt-3 has-text-weight-extrabold">FEATURED GALLERIES</h3>
+                            <h3 class="title is-size-6 mt-3 has-text-weight-bold">FEATURED GALLERIES</h3>
                         </div>
                         <div class="cell has-text-right">
                             <h3 class="title is-size-6 mt-3 has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
@@ -58,46 +57,25 @@
     
     <!-- Recent posts showcase IN TABLET AND ABOVE -->
     
+    <!-- PARTIAL FOR LOGO WHEN IN TABLET-WIDESCREEN -->
+    <!-- {{ partial "header-new.html" . }} -->
+    
     <div class="container is-centered is-hidden-mobile">
         <!-- LOGO -->
         <div class="columns mx-2">
             <div class="column is-three-fifths">
-                <!-- LOGO -->
-                <h1 class="title mt-2 mb-5 has-text-primary-light">
-            		<a href="{{ `` | absURL }}">
-            			<picture width="200px">
-            				<!-- User prefers light mode: -->
-            				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
-            				<!-- User prefers dark mode: -->
-            				<source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
-            	        	<!-- User has no color preference: -->
-            				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px"></img>
-            			</picture>
-                        <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
-            			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
-            		</a>
-        	    </h1>
         	    <!-- MOST RECENT POST SHOWCASE BIG -->         
                 {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | first 1}}
                 {{ range $post }}
-                <div class="container mx-0 mt-5 pt-5">
+                <div class="container mx-0">
                     {{ partial "widgets/showcase-big.html" . }}
                 </div>
                 {{ end }}
             </div>
-            
-            <!-- OTHER SIDE - TAGS AND RECENT POSTS -->
+            <!-- OTHER SIDE - RECENT POSTS -->
             <div class="column is-two-fifths">
-                <!-- TAGS -->
-                <div class="content my-1">
-                    <h3 class="is-size-6 my-3 has-text-weight-extrabold">EXPLORE</h3>
-                    {{ partial "widgets/site-tags.html" . }}
-                </div>
-                <hr>
                 <!-- OTHER POSTS SHOWCASE SMALL -->
-                <div class="content">
-                    <h3 class="is-size-6 my-0 has-text-weight-extrabold">RECENT POSTS</h3>
-                </div>
+                <p class="is-size-6 my-0 has-text-weight-bold is-title mb-3">RECENT POSTS</p>
                 <div class="fixed-grid has-1-cols-desktop has-2-cols-widescreen mx-0">
                     <div class="grid is-gap-3">
                         {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 1 | first 6}}
@@ -108,7 +86,7 @@
                         {{ end }}
                     </div>
                 </div>
-                <div class="container is-centered mt-auto has-text-centered">
+                <div class="container is-centered has-text-centered mt-auto pt-auto">
                     <h3 class="is-size-5 my-2"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                 </div>                     
             </div>
@@ -117,13 +95,13 @@
     
     <!-- Recent galleries showcase IN TABLET AND ABOVE -->
     
-    <div class="container is-centered is-hidden-mobile pb-5">
+    <div class="container is-centered is-hidden-mobile pb-5 mb-5">
     <!-- TITLE -->
         <div class="columns mx-2">
             <div class="column is-full">
                 <hr>
                 <div class="content">
-                    <h3 class="is-size-6 mt-2 mb-1 has-text-weight-extrabold">FEATURED GALLERIES</h3>
+                    <p class="is-size-6 mt-2 mb-1 has-text-weight-bold is-title">FEATURED GALLERIES</p>
                 </div>
                 <div class="columns">
                     <div class="column is-one-fifth">
@@ -142,6 +120,23 @@
                         </div>
                     </div>        
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Site content by tag -->
+    
+    <div class="container is-centered pb-5 mb-5">
+        <div class="columns mx-2 is-multiline">
+            <div class="column is-full">
+                <hr>
+                <div class="content">
+                    <p class="is-size-6 mt-2 mb-1 has-text-weight-bold is-title">BROWSE CONTENT BY TAG</p>
+                </div>
+            </div>
+            <!-- TAGS -->
+            <div class="column is-full">   
+                {{ partial "widgets/site-tags.html" . }}
             </div>
         </div>
     </div>

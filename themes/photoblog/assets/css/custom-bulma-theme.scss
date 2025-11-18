@@ -41,29 +41,43 @@ $house: #EAAA02; // tertiary light mode
 @mixin light-theme-config {
   @include light.light-theme;
   // Reconfigure the light colors:
+  // PRIMARY
   @include cv.register-hsl("primary", $hedge);
   @include cv.generate-color-palette("primary", $hedge);
   @include cv.generate-on-scheme-colors("primary", $hedge, light.$scheme-main);
+  // LINK
   @include cv.register-hsl("link", $sky);
   @include cv.generate-color-palette("link", $sky);
   @include cv.generate-on-scheme-colors("link", $sky, light.$scheme-main);
-  @include cv.register-hsl("info", $house);
-  @include cv.generate-color-palette("info", $house);
-  @include cv.generate-on-scheme-colors("info", $house, light.$scheme-main);
+  // WARNING
+  @include cv.register-hsl("warning", $house);
+  @include cv.generate-color-palette("warning", $house);
+  @include cv.generate-on-scheme-colors("warning", $house, light.$scheme-main);
+  // DANGER
+  @include cv.register-hsl("danger", $roof);
+  @include cv.generate-color-palette("danger", $roof);
+  @include cv.generate-on-scheme-colors("danger", $roof, light.$scheme-main);
   }
 
 @mixin dark-theme-config {
   @include dark.dark-theme;
   // Reconfigure the dark colors:
+  // PRIMARY
   @include cv.register-hsl("primary", $grass);
   @include cv.generate-color-palette("primary", $grass);
   @include cv.generate-on-scheme-colors("primary", $grass, dark.$scheme-main);
+  // LINK
   @include cv.register-hsl("link", $patio);
   @include cv.generate-color-palette("link", $patio);
   @include cv.generate-on-scheme-colors("link", $patio, dark.$scheme-main);
-  @include cv.register-hsl("info", $house);
-  @include cv.generate-color-palette("info", $house);
-  @include cv.generate-on-scheme-colors("info", $house, dark.$scheme-main);
+  // WARNING
+  @include cv.register-hsl("warning", $house);
+  @include cv.generate-color-palette("warning", $house);
+  @include cv.generate-on-scheme-colors("warning", $house, dark.$scheme-main);
+  // DANGER
+  @include cv.register-hsl("danger", $roof);
+  @include cv.generate-color-palette("danger", $roof);
+  @include cv.generate-on-scheme-colors("danger", $roof, dark.$scheme-main);
   }
 
 // Setup the light theme as the default theme

@@ -11,6 +11,18 @@
     <loc>//localhost:1313/categories/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/categories/drink/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/food/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/food/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/galleries/foodxfriends/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/galleries/humansxnature/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -21,6 +33,9 @@
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/nature/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/people/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/street/</loc>

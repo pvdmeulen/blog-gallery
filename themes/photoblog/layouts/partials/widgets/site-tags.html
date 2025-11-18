@@ -1,36 +1,43 @@
-{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-        <!-- <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-            <i class="fa-solid fa-tag mr-2"></i><a href="{{ .Permalink }}" class="is-size-7 is-capitalized has-text-link-bold">{{ $name }}</a>
-        </button> -->
-        {{ if eq $name "landscape"}}
-            <a href="{{ .Permalink }}">
-                <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-mountain-sun mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
-                </button>
-            </a>
-        {{ else if eq $name "street" }}
-            <a href="{{ .Permalink }}">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-building-user mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
-                </button>
-            </a>
-        {{ else if eq $name "travel"}}
-            <a href="{{ .Permalink }}">
-                <button class="button is-info is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-suitcase mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
-                </button>
-            </a>
-        {{ else }}
-            <a href="{{ .Permalink }}">
-                <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
-                    <i class="fa-solid fa-tag mr-2"></i>
-                    <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
-                </button>
-            </a>
-        {{ end }}
-    {{ end }}
-{{ end }}
+<div class="card">
+    <div class="card-content">
+    <!--<p class="is-size-6 mt-0 mb-3 has-text-weight-normal is-title">EXPLORE</p>-->
+        <div class="buttons">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                    <!-- <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-tag mr-2"></i><a href="{{ .Permalink }}" class="is-size-7 is-capitalized has-text-link-bold">{{ $name }}</a>
+                    </button> -->
+                    {{ if eq $name "landscape" }}
+                        <a href="{{ .Permalink }}">
+                            <button class="button is-primary is-responsive is-outlined my-0 mx-0">
+                                <i class="fa-solid fa-mountain-sun mr-2"></i>
+                                <p class="is-size-6 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
+                            </button>
+                        </a>
+                    {{ else if eq $name "street" }}
+                        <a href="{{ .Permalink }}">
+                            <button class="button is-link is-responsive is-outlined my-0 mx-0">
+                                <i class="fa-solid fa-building-user mr-2"></i>
+                                <p class="is-size-6 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
+                            </button>
+                        </a>
+                    {{ else if eq $name "travel" }}
+                        <a href="{{ .Permalink }}">
+                            <button class="button is-info is-responsive is-outlined my-0 mx-0">
+                                <i class="fa-solid fa-suitcase mr-2"></i>
+                                <p class="is-size-6 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
+                            </button>
+                        </a>
+                    {{ else }}
+                        <a href="{{ .Permalink }}">
+                            <button class="button is-link is-responsive is-outlined my-0 mx-0">
+                                <i class="fa-solid fa-tag mr-2"></i>
+                                <p class="is-size-6 is-capitalized has-text-link-bold is-subtitle">{{ $name }}</p>
+                            </button>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>

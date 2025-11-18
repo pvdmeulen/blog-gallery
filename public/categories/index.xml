@@ -16,6 +16,20 @@
       <description></description>
     </item>
     <item>
+      <title>Drink</title>
+      <link>//localhost:1313/categories/drink/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/drink/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Food</title>
+      <link>//localhost:1313/categories/food/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/food/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Landscape</title>
       <link>//localhost:1313/categories/landscape/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
@@ -27,6 +41,13 @@
       <link>//localhost:1313/categories/nature/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/categories/nature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>People</title>
+      <link>//localhost:1313/categories/people/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/people/</guid>
       <description></description>
     </item>
     <item>
