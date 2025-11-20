@@ -38,11 +38,11 @@ pagination.pagerSize = 8
   [[menu.social]]
     name = "Flickr"
     pre = "fa-brands fa-flickr"
-    url = "https://flickr.com/"
+    url = "https://flic.kr/ps/45NqPV"
     weight = 20
   [[menu.social]]
     name = "GitHub"
     pre = "fa-brands fa-github"
-    url = "https://github.com/pvdmeulen"
+    url = "https://github.com/pvdmeulen/blog-gallery"
     weight = 30
     
