@@ -1,7 +1,7 @@
 <div class="buttons is-centered">
     {{ range .Site.Menus.main }}
         <a href="{{ .URL }}" aria-label="{{ .Name }}">
-            <button class="is-size-5 is-uppercase is-subtitle has-text-weight-bold mx-2 px-0 is-ghost" id="{{ lower .Name }}">{{ .Name }}</button>
+            <button class="is-size-5 is-size-6-mobile is-uppercase is-subtitle has-text-weight-bold mx-2 mx-1-mobile px-0 is-ghost" id="{{ lower .Name }}">{{ .Name }}</button>
         </a>
     {{ end }}
 </div>

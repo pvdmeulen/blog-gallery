@@ -1,16 +1,4 @@
 /* Further custom formatting for post */
-
-h4 {
-  font-family: var(--bulma-family-primary);
-  color: var(--bulma-color-primary);
-  }
-
-p {
-  font-family: var(--bulma-family-secondary);
-  }
-  .is-title, .is-subtitle {
-      font-family: var(--bulma-family-primary);
-  }
   
 ul {
   font-family: var(--bulma-family-secondary);

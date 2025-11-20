@@ -1,4 +1,5 @@
 /* Further custom Bulma formatting */
+
 .card {
     height: 100%;
     object-fit: cover;
@@ -9,19 +10,7 @@
   border-radius: 0.25rem;
   }
   
-h1 {
-  font-family: var(--bulma-family-primary);
-  }
-
-h2 {
-  font-family: var(--bulma-family-primary);
-  }
-
-h3 {
-  font-family: var(--bulma-family-primary);
-  }
-
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--bulma-family-primary);
   }
 
@@ -31,7 +20,9 @@ p {
   .is-title, .is-subtitle {
       font-family: var(--bulma-family-primary);
   }
-  
+
+/* Hover colors for main links and social tags */
+
 #menu {
   font-family: var(--bulma-family-primary); 
   color: var(--bulma-text-bold);
@@ -41,6 +32,8 @@ p {
   color: var(--bulma-primary);
   transition: color 0.2s;
   }
+  
+/* Different hover colors for main site menu with IDs being posts, galleries, about, contact */
 
 #posts {
   font-family: var(--bulma-family-primary); 
@@ -124,7 +117,9 @@ p {
 /* a hover states */
 
 a span:hover {
-  filter: brightness(200%);
+  filter: brightness(150%);
+  color: var(--bulma-link);
+  transition: color 0.2s;
   } 
 
 /* Dark/light mode custom elements */
