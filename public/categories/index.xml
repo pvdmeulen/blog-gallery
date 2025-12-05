@@ -2,73 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Peter van der Meulen</title>
-    <link>//localhost:1313/categories/</link>
+    <link>//localhost:50856/categories/</link>
     <description>Recent content in Categories on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:50856/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Animals</title>
-      <link>//localhost:1313/categories/animals/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/animals/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Drink</title>
-      <link>//localhost:1313/categories/drink/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/drink/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Food</title>
-      <link>//localhost:1313/categories/food/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/food/</guid>
+      <title>Edinburgh</title>
+      <link>//localhost:50856/categories/edinburgh/</link>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/edinburgh/</guid>
       <description></description>
     </item>
     <item>
       <title>Landscape</title>
-      <link>//localhost:1313/categories/landscape/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/landscape/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nature</title>
-      <link>//localhost:1313/categories/nature/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/nature/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>People</title>
-      <link>//localhost:1313/categories/people/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/people/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Edinburgh</title>
-      <link>//localhost:1313/categories/edinburgh/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/edinburgh/</guid>
+      <link>//localhost:50856/categories/landscape/</link>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/landscape/</guid>
       <description></description>
     </item>
     <item>
       <title>Street</title>
-      <link>//localhost:1313/categories/street/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/street/</guid>
+      <link>//localhost:50856/categories/street/</link>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/street/</guid>
       <description></description>
     </item>
     <item>
-      <title>Travel</title>
-      <link>//localhost:1313/categories/travel/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/travel/</guid>
+      <title>Animals</title>
+      <link>//localhost:50856/categories/animals/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/animals/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drink</title>
+      <link>//localhost:50856/categories/drink/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/drink/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Food</title>
+      <link>//localhost:50856/categories/food/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/food/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nature</title>
+      <link>//localhost:50856/categories/nature/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/nature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>People</title>
+      <link>//localhost:50856/categories/people/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:50856/categories/people/</guid>
       <description></description>
     </item>
   </channel>

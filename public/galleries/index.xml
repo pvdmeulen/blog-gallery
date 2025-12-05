@@ -6,27 +6,27 @@
     <description>Recent content in Galleries on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/galleries/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Food &amp; Friends</title>
-      <link>//localhost:1313/galleries/foodxfriends/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/galleries/foodxfriends/</guid>
+      <title>Scotland</title>
+      <link>//localhost:1313/galleries/edinburgh/</link>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/galleries/edinburgh/</guid>
       <description></description>
     </item>
     <item>
-      <title>Humans &amp; Nature</title>
-      <link>//localhost:1313/galleries/humansxnature/</link>
+      <title>Food &amp; Fun</title>
+      <link>//localhost:1313/galleries/foodxfun/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/galleries/humansxnature/</guid>
+      <guid>//localhost:1313/galleries/foodxfun/</guid>
       <description></description>
     </item>
     <item>
-      <title>Street photography</title>
-      <link>//localhost:1313/galleries/street/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/galleries/street/</guid>
+      <title>Human Nature</title>
+      <link>//localhost:1313/galleries/humannature/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/galleries/humannature/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,0 +1,12 @@
++++
+title = 'Food & Fun'
+subtitle = 'Good food. Fun events.'
+categories = ['food', 'drink', 'people']
+date = 2025-11-12
+layout = 'gallery'
+tags = ['food']
+thumbnailUrl = '/images/gallery-thumbnails/foodxfun.jpg'
+thumbnailAltText = 'Alt text here'
++++
+<!--more-->
+{{< ps-gallery folder="" >}}

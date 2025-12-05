@@ -1,6 +1,6 @@
 +++
 title = 'My plan for 2026'
-subtitle = "In late 2024, I started taking more photos. In 2025, a lot more. First with my old DSLR, and later with my new camera. The more I use my camera, the more I realise I still have a lot to learn. Here are five main things I'm going to practice in 2026."
+subtitle = "In late 2024, I started taking more photos. In 2025, a lot more. First with my old DSLR, and later with my new camera. The more I use my camera, the more I realise I still have a lot to learn. Here are five main things I'm hoping to practice in 2026."
 date = 2025-11-12
 linkTitle = '12 Nov 2025'
 draft = false
@@ -18,11 +18,11 @@ featuredImageAttribute = 'Peter van der Meulen'
 {{< spotify-embed src="https://open.spotify.com/embed/track/73B5gHeG8HQkWBNrEGTA7a?utm_source=generator" title="What I'm listening to right now" desc="Annabelle Dinda's lyrics are beautiful, and this song about grief is perfect for an autumn walk around Edinburgh (with or without camera).">}}
 
 #### Light
-It’s in the name, really. Photography&mdash;creating images through light. I've heard that a good photographer should approach light the same way a painter would. I take this to mean, broadly, being intentional about where your light is, what it draws focus on, what it draws your eye to. Even outside, in natural light, you’ll need to give _some_ thought to the placements of shadows, the harshness of the light, and so on.
+It should be obvious that understanding light is really important. It's in the name: photography&mdash;drawing with light. I read somewhere that a good photographer should approach light the same way a painter would. I take this to mean, broadly, being intentional about where your light is, what it draws focus on, what it draws your eye to. Even outside, in natural light, you’ll need to give a bit of thought to the placements of shadows, the harshness of the light, etc. At the moment, this doesn't come naturally to me. With any luck, this becomes more instinctive the more I practice. 
 
-Hopefully it goes without saying that not all photography has to be _artistic_, and very little of mine is (if any). Most of the time you really are just taking a photo in the moment without thinking too much. Probably even more so nowadays, when most people are within arm's reach of a camera at any given moment in time. Case in point: I have hundreds of photos of my cats, none of which will ever make it into an album, much less a gallery.
+Hopefully it goes without saying that not all photography has to be _artistic_. Most of the time you really are just taking a photo in the moment without thinking too much. And sometimes you just get lucky with the light. Probably even more so nowadays, when most people are within arm's reach of a camera at any given moment in time. Case in point: I have hundreds of photos of my cats, none of which will ever make it into an album, much less a gallery.
 
-- Add cat photos here
+{{< ps-gallery folder="/cats/" >}}
 
 However, a good photographer needs to understand light. To me, right now, this is the hardest part of photography. Most of my experience has been in fairly forgiving natural light, requiring little thought on my part about the lighting conditions. So&mdash;I need practice!
 
@@ -31,7 +31,7 @@ However, a good photographer needs to understand light. To me, right now, this i
 #### Composition
 This is a close second (or maybe a joint first with lighting) in terms of difficulty to me. It is a reflection of what I see, what I find interesting about the scene, and my ‘photographer’s eye’ needs developed. When I’m travelling, I quite easily fall into the trap of taking photos of monuments or places the same way many other tourists do: straight on, no frills, just a way to document that ‘yes, I was here.’ 
 
-- Examples of bad photos
+- Examples of bad photos?
 
 Again, I feel like I should be thinking more like a painter or perhaps a cinematographer. For example, is there a natural background, focus point, and foreground to the scene? Can I make it more interesting by changing my angle, height, or focal length? Is my subject actually interesting in the first place? Does the photo ask questions of the viewer? Sometimes it’s better to leave certain details out of the frame!
 
@@ -40,7 +40,7 @@ Again, I feel like I should be thinking more like a painter or perhaps a cinemat
 #### Experiment
 For me, to learn, it doesn’t _really_ matter whether you shoot in manual, aperture priority, or shutter priority mode, as long as you try changing at least _one_ setting to get different results. Get to know your camera, and get a feel for the way ISO, aperture, and shutter speed affect the final result. Experiment with different focal lengths if you have them (for example with a zoom lens, or multiple prime lenses). I've done a fair bit of this already:
 
-- Examples of different settings
+- Examples of different settings?
 
 In 2026, I'd like to get better at visualising the photo I want _before_ I dial in my settings. Another thing I'd love to practice is flash photography and portraits.
 
@@ -48,7 +48,7 @@ In 2026, I'd like to get better at visualising the photo I want _before_ I dial 
 
 So far, I've mostly been using [Photomator](https://www.pixelmator.com/photomator/) for my editing.[^PM] I sometimes use [Affinity Photo](https://www.affinity.studio) as well. I've used a variety of other apps over the last decade or so (not least, [Adobe Photoshop](https://photoshop.adobe.com/discover))! 
 
-- Screenshot of Photomator
+{{< ps-gallery folder="/photomator/" >}}
 
 In 2026, I'd like to create a set of saved presets in Photomator that suit my needs. Currently, I start editing each photo from scratch, and I don't usually have a plan right from the start. Creating a set of presets will teach me some of the finer adjustments which I currently don't often use (e.g. tone curves, selective clarity and texture, masking).
 
