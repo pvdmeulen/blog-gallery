@@ -26,23 +26,19 @@ Hopefully it goes without saying that not all photography has to be _artistic_. 
 
 However, a good photographer needs to understand light. To me, right now, this is the hardest part of photography. Most of my experience has been in fairly forgiving natural light, requiring little thought on my part about the lighting conditions. So&mdash;I need practice!
 
-- Photos with better light?
-
 #### Composition
-This is a close second (or maybe a joint first with lighting) in terms of difficulty to me. It is a reflection of what I see, what I find interesting about the scene, and my ‘photographer’s eye’ needs developed. When I’m travelling, I quite easily fall into the trap of taking photos of monuments or places the same way many other tourists do: straight on, no frills, just a way to document that ‘yes, I was here.’ 
+This is a close second (or maybe a joint first with lighting) in terms of difficulty to me. It is a reflection of what I see, what I find interesting about the scene, and my ‘photographer’s eye’ needs developed. When I’m travelling, I quite easily fall into the trap of taking photos the same way many other tourists do: straight on, no frills, just a way to document that ‘yes, I was here.’ 
 
-- Examples of bad photos?
+{{< ps-gallery folder="/bad/" >}}
 
 Again, I feel like I should be thinking more like a painter or perhaps a cinematographer. For example, is there a natural background, focus point, and foreground to the scene? Can I make it more interesting by changing my angle, height, or focal length? Is my subject actually interesting in the first place? Does the photo ask questions of the viewer? Sometimes it’s better to leave certain details out of the frame!
 
-- Examples of good photos?
+{{< ps-gallery folder="/good/" >}}
+
+I recently bought Michael Freeman's _The Photographer's Eye (Definitive Edition)_ (the 2025 edition) which has been a great resource so far.
 
 #### Experiment
-For me, to learn, it doesn’t _really_ matter whether you shoot in manual, aperture priority, or shutter priority mode, as long as you try changing at least _one_ setting to get different results. Get to know your camera, and get a feel for the way ISO, aperture, and shutter speed affect the final result. Experiment with different focal lengths if you have them (for example with a zoom lens, or multiple prime lenses). I've done a fair bit of this already:
-
-- Examples of different settings?
-
-In 2026, I'd like to get better at visualising the photo I want _before_ I dial in my settings. Another thing I'd love to practice is flash photography and portraits.
+For me, to learn, it doesn’t _really_ matter whether you shoot in manual, aperture priority, or shutter priority mode, as long as you try changing at least _one_ setting to get different results. Get to know your camera, and get a feel for the way ISO, aperture, and shutter speed affect the final result. Experiment with different focal lengths if you have them (for example with a zoom lens, or multiple prime lenses). In 2026, I'd like to get better at visualising the photo I want _before_ I dial in my settings. Another thing I'd love to practice is flash photography and portraits.
 
 #### Editing
 
@@ -52,7 +48,9 @@ So far, I've mostly been using [Photomator](https://www.pixelmator.com/photomato
 
 In 2026, I'd like to create a set of saved presets in Photomator that suit my needs. Currently, I start editing each photo from scratch, and I don't usually have a plan right from the start. Creating a set of presets will teach me some of the finer adjustments which I currently don't often use (e.g. tone curves, selective clarity and texture, masking).
 
-#### Printing
+#### Film Photography
+
+I recently bought a Minolta Hi-Matic GF, a fairly beginner-friendly point-and-shoot film camera from 1984. I'm halfway through my first roll of Kodak Gold 200, and have a few more rolls (including Kodak ColorPlus 200 and Portra 400) to experiment with. Using film requires me to rely on my knowledge of the exposure triangle and really forces me to think about each shot. In 2026, I'd love to use more film and develop more of my photos.
 
 [^PM]: Photomator is a relatively lightweight alternative to [Adobe Lightroom](https://lightroom.adobe.com) and [Capture One](https://www.captureone.com/en), for example. It is built specifically for the Apple ecosystem. It integrates nicely with Apple Photos, and is much cheaper than Lightroom. A few months after I paid the yearly license, Photomator and Pixelmator were bought by Apple. I'm cautiously optimistic about what this means for the future of the app, and hopefully new features and updates get added over time.
 
