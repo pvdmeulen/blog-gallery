@@ -1,0 +1,44 @@
+<!-- PARTIAL FOR HEADER WHEN IN TABLET-WIDESCREEN -->
+
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    <!-- LOGO -->
+    <div class="navbar-brand">
+        <h1 class="title mx-3 has-text-primary-light">
+    		<a href="{{ `` | absURL }}">
+    			<picture width="1800px">
+    				<!-- User prefers light mode: -->
+    				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
+    				<!-- User prefers dark mode: -->
+    				<source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
+    	        	<!-- User has no color preference: -->
+    				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="180px"></img>
+    			</picture>
+                <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
+    			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
+    		</a>
+    	</h1>
+    	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="buttons">
+                {{ range .Site.Menus.main }}
+                    <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="{{ lower .Name }}">{{ .Name }}</button>
+                    </a>
+                {{ end }}
+                <!-- Contact button / page -->
+                {{ range .Site.Menus.contact }}
+                    <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold is-primary" id="{{ lower .Name }}">{{ .Name }}</button>
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</nav>

@@ -24,7 +24,7 @@ pagination.pagerSize = 8
     url = "/about/"
     weight = 30
     colorid = "warninghover"
-  [[menu.main]]
+  [[menu.contact]]
     name = "Contact"
     pre = "fa-solid fa-envelope"
     url = "/contact/"

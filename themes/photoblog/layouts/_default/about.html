@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+     {{ $subtitle := .Params.subtitle }}
+
     <!-- Content for About Me -->
     <div class="container is-centered">
         <div class="columns mx-2">
@@ -17,26 +19,19 @@
                 </nav>
                 <!-- ABOUT ME -->
                 <div class="columns mb-5">
-                    <div class="column is-two-fifths">
+                    <div class="column is-three-fifths">
                         <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
                             {{ .Title }}
                         </h1>
                         <h2 class="is-subtitle my-3 is-size-5 mb-5">
-                            I am a hobbyist photographer with an interest in street photography.
+                            {{ .Params.subtitle }}
                         </h2>
-                        <p class="is-subtitle is-size-6">
-                            More information about me here.
-                        </p>
                     </div>
-                    <div class="column is-three-fifths">
+                    <div class="column is-two-fifths">
                         <div class="container">
-                            <div class="card my-2 has-background-main-bis">
-                                <div class="card-content">
-                                    <div>
-                                        <!-- PhotoSwipe gallery start -->
-                                        {{ .Content }}
-                                    </div>
-                                </div>
+                            <div>
+                                <!-- PhotoSwipe gallery start (single image) -->
+                                {{ .Content }}
                             </div> 
                         </div>    
                     </div>

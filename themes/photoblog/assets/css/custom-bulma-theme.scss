@@ -25,7 +25,8 @@ $house: #EAAA02; // tertiary light mode
 
  @use "bulma/sass/components" with (
     $card-shadow: none,
-    $card-background-color: var(--bulma-scheme-main-ter)
+    $card-background-color: var(--bulma-scheme-main-ter),
+    $navbar-padding-horizontal: 5rem
     );
 
 // $card-radius: 0rem,

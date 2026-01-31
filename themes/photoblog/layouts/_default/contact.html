@@ -1,4 +1,6 @@
 {{ define "main" }}
+    
+    {{ $subtitle := .Params.subtitle }}
 
     <!-- Content for contact form -->
     <div class="container is-centered">
@@ -22,11 +24,11 @@
                             {{ .Title }}
                         </h1>
                         <h2 class="is-subtitle my-3 is-size-5 mb-5">
-                            Please contact me using the form on this page. I'll aim to respond as soon as I can.
+                            {{ .Params.subtitle }}
                         </h2>
-                        <p class="is-subtitle is-size-6">
-                            Although I'm a hobbyist photographer, I'm keen to gain experience wherever possible. If you need photos of you, your business, or your event, do get in touch.
-                        </p>
+                        <h3 class="is-subtitle is-size-5 is-family-primary">
+                            {{ .Content }}
+                        </h3>
                     </div>
                     <div class="column is-two-thirds">
                         <div class="container">

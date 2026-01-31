@@ -33,7 +33,7 @@
 	pswpModule: PhotoSwipe,
 	paddingFn: (viewportSize) => {
     return {
-      top: 20, bottom: 20, left: 20, right: 20
+      top: 40, bottom: 40, left: 50, right: 50
     }
   },
   });
@@ -53,9 +53,9 @@
 <!-- For use in my-gallery divs -->
 
 <link rel="stylesheet" href='{{ "/css/justifiedgallery/justifiedGallery.min.css" | absLangURL }}'/>
-
 <script src='{{ "/js/justifiedgallery/jquery.justifiedGallery.min.js" | absLangURL }}'/></script>
 
+<!-- Implement justified gallery in tighter way for in-post and gallery photos, wider way for showcase -->
 <script type = "module">
 	
 $(function(){
@@ -63,12 +63,26 @@ $(function(){
     $(this).justifiedGallery({
       rowHeight : 310,
       lastRow : 'nojustify',
+      border : 0,
       margins : 5,
       selector: 'a, figure:not(.spinner)',
       captions: false
     });
   });
 });
+
+$(function(){
+  $(".psshowcase-class").each(function(){
+    $(this).justifiedGallery({
+      rowHeight : 250,
+      border: 0,
+      margins : 20,
+      selector: 'a, figure:not(.spinner)',
+      captions: false
+    });
+  });
+});
+
 
 </script>
 
