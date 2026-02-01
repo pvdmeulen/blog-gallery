@@ -16,15 +16,19 @@
 	</div>
 </header>-->
 
-<header>
-	{{ partial "header.html" . }}
-</header>
+<div class="container is-max-fullhd">
 
-<body class="">
-	<div class="container is-max-fullhd">
-	{{ block "main" . }}{{ end }}
-	</div>
-</body>
+	<header>
+		{{ partial "header.html" . }}
+	</header>
+	
+	<body class="">
+		<div class="container is-max-fullhd">
+		{{ block "main" . }}{{ end }}
+		</div>
+	</body>
+
+</div>
 
 <footer class="footer">
 	{{ partial "footer.html" . }}

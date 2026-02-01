@@ -5,7 +5,7 @@
     <div class="navbar-brand">
         <h1 class="title mx-3 has-text-primary-light">
     		<a href="{{ `` | absURL }}">
-    			<picture width="1800px">
+    			<picture width="180px">
     				<!-- User prefers light mode: -->
     				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
     				<!-- User prefers dark mode: -->
@@ -35,7 +35,7 @@
                 <!-- Contact button / page -->
                 {{ range .Site.Menus.contact }}
                     <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
-                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold is-primary" id="{{ lower .Name }}">{{ .Name }}</button>
+                        <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="{{ lower .Name }}">{{ .Name }}</button>
                     </a>
                 {{ end }}
             </div>

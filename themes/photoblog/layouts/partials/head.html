@@ -50,7 +50,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <!-- Justified Gallery -->
-<!-- For use in my-gallery divs -->
+<!-- For use in psgallery and psshowcase divs -->
 
 <link rel="stylesheet" href='{{ "/css/justifiedgallery/justifiedGallery.min.css" | absLangURL }}'/>
 <script src='{{ "/js/justifiedgallery/jquery.justifiedGallery.min.js" | absLangURL }}'/></script>
@@ -58,31 +58,30 @@
 <!-- Implement justified gallery in tighter way for in-post and gallery photos, wider way for showcase -->
 <script type = "module">
 	
-$(function(){
-  $(".psgallery-class").each(function(){
-    $(this).justifiedGallery({
-      rowHeight : 310,
-      lastRow : 'nojustify',
-      border : 0,
-      margins : 5,
-      selector: 'a, figure:not(.spinner)',
-      captions: false
+    $(function(){
+      $(".psgallery-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 310,
+          lastRow : 'nojustify',
+          border : 0,
+          margins : 5,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
     });
-  });
-});
-
-$(function(){
-  $(".psshowcase-class").each(function(){
-    $(this).justifiedGallery({
-      rowHeight : 250,
-      border: 0,
-      margins : 20,
-      selector: 'a, figure:not(.spinner)',
-      captions: false
+    
+    $(function(){
+      $(".psshowcase-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 250,
+          border: 0,
+          margins : 30,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
     });
-  });
-});
-
 
 </script>
 

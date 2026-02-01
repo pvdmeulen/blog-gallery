@@ -118,9 +118,9 @@ p {
 
 a span:hover {
   filter: brightness(150%);
-  color: var(--bulma-link);
+  /* color: var(--bulma-link); */
   transition: color 0.2s;
-  } 
+  }
 
 /* Dark/light mode custom elements */
 hr.dark {
@@ -168,6 +168,15 @@ button{
     cursor: pointer;
     border: none;
     color: $light;
+    padding: .8rem;
+    background: $dark;
+    border-radius: 6px;
+}
+
+#contact .button {
+    cursor: pointer;
+    border: none;
+    color: $link;
     padding: .8rem;
     background: $dark;
     border-radius: 6px;

@@ -6,13 +6,13 @@ theme = ['photoblog']
 pagination.pagerSize = 8
 
 [menu]
-[[menu.main]]
+  [[menu.main]]
     name = "Posts"
     pre = "pen-tool"
     url = "/posts/"
     weight = 10
     colorid = "primaryhover"
-[[menu.main]]
+  [[menu.main]]
     name = "Galleries"
     pre = "image"
     url = "/galleries/"
@@ -44,5 +44,4 @@ pagination.pagerSize = 8
     name = "GitHub"
     pre = "fa-brands fa-github"
     url = "https://github.com/pvdmeulen/blog-gallery"
-    weight = 30
-    
+    weight = 30    

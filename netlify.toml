@@ -4,3 +4,7 @@
 
 [build.environment]
   HUGO_VERSION = "0.147.9"
+  
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

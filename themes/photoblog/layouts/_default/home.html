@@ -5,24 +5,48 @@
     <!-- PHOTO SHOWCASE IN TABLET AND ABOVE -->
     
     <div class="container is-centered mx-2 pb-5 mb-5">
-        <!-- PHOTO SHOWCASE -->         
-        <div class="container">
-            <!-- <p class="is-size-6 my-0 has-text-weight-bold is-title mb-3">SHOWCASE</p> -->
-            {{ partial "widgets/showcase-gallery-home.html" . }}
-        </div> 
         
-        <!-- Recent galleries and blog showcase IN TABLET AND ABOVE -->
+        <!-- PHOTO SHOWCASE -->         
+        <div class="container mt-2 mb-5 pb-5 mx-1">
+            <div id="psgallery--justified" class="psshowcase-class">
+                {{ with .Site.GetPage "/showcase" }}
+                    {{ .Content }}
+                    {{ range .Resources.Match "*.jpg" }}
+                        {{ $link := .RelPermalink }}
+                        <a
+                            href="{{ .RelPermalink }}"
+                            data-pswp-width="{{ .Width }}"
+                            data-pswp-height="{{ .Height }}"
+                            target="_blank"
+                        >
+                            <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" .RelPermalink }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
+                            <span class="pswp-caption-content">
+                                {{ with .Exif }}
+                                    <!--<ul class="is-subtitle">
+                                        {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
+                                        {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                                    </ul>-->
+                                {{ end }}
+                            </span>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        
         <hr>
-        <!-- TITLE -->
-        <div class="columns">
+        
+        <!-- FEATURED GALLERIES AND BLOG -->
+        <div class="columns pt-3 pb-3">
             <div class="column is-three-fifths">
+            <!-- Featured Galleries -->
                 <div class="content">
-                    <p class="is-size-6 mt-2 mb-1 has-text-weight-bold is-title">FEATURED GALLERIES</p>
-                    <h3 class="is-size-5 my-3 has-text-right"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                    <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Featured Galleries</p>
+                    <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                     <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
                 </div>
                 <div class="grid is-col-min-12">
-                    <!-- FIRST THREE GALLERIES -->
+                    <!-- Use first four galleries -->
                     {{ $galleries := where .Site.Pages "Type" "galleries" | first 4}}
                     {{ range $galleries }}
                     <div class="cell">
@@ -31,16 +55,16 @@
                     {{ end }}
                 </div>
             </div>
-            <!-- OTHER SIDE - RECENT POSTS -->
+            <!-- Blog -- Other side -->
             <div class="column is-two-fifths">
                 <div class="content">
-                    <p class="is-size-6 mt-2 mb-1 has-text-weight-bold is-title">BLOG</p>
+                    <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Blog</p>
                     <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
-                    <h3 class="is-size-5 my-3 has-text-right"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                    <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                 </div>
                 <div class="card mb-3">
                     <div class="card-content">   
-                        <div class="fixed-grid has-1-cols mx-0">
+                        <div class="fixed-grid has-1-cols">
                             <div class="grid is-gap-3">
                                 {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 0 | first 6}}
                                 {{ range $post }}
@@ -55,10 +79,11 @@
             </div>
         </div>
         
+        <hr>
+        
         <!-- Site content by tag -->
-        <div class="columns is-multiline">
+        <div class="columns is-multiline pt-3">
             <div class="column is-full">
-                <hr>
                 <div class="content">
                     <p class="is-size-6 mt-2 mb-1 has-text-weight-bold is-title">BROWSE CONTENT BY TAG</p>
                 </div>

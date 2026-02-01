@@ -1,6 +1,6 @@
 <!-- standalone ps gallery for showcase on home page -->
 
-<div class="container mt-2 mb-3">
+<div class="container mt-2 mb-5">
     <div id="psgallery--justified" class="psshowcase-class">
         {{ range resources.Match "showcase-images/*.jpg" }}
             {{ $link := .RelPermalink }}
@@ -20,10 +20,8 @@
                     {{ end }}
                 </span>
             </a>
-            
-            <!-- <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }} </h4>
-            <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }} </h4> -->
-            
+            <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }} </h4>
+            <!-- <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }} </h4> -->
         {{ end }}
     </div>
 </div>

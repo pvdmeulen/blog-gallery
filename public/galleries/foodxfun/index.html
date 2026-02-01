@@ -68,31 +68,30 @@
 
 <script type = "module">
 	
-$(function(){
-  $(".psgallery-class").each(function(){
-    $(this).justifiedGallery({
-      rowHeight : 310,
-      lastRow : 'nojustify',
-      border : 0,
-      margins : 5,
-      selector: 'a, figure:not(.spinner)',
-      captions: false
+    $(function(){
+      $(".psgallery-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 310,
+          lastRow : 'nojustify',
+          border : 0,
+          margins : 5,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
     });
-  });
-});
-
-$(function(){
-  $(".psshowcase-class").each(function(){
-    $(this).justifiedGallery({
-      rowHeight : 250,
-      border: 0,
-      margins : 20,
-      selector: 'a, figure:not(.spinner)',
-      captions: false
+    
+    $(function(){
+      $(".psshowcase-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 250,
+          border: 0,
+          margins : 30,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
     });
-  });
-});
-
 
 </script>
 
@@ -105,15 +104,17 @@ $(function(){
 
 
 
-<header>
-	
+<div class="container is-max-fullhd">
+
+	<header>
+		
 
 <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
     
     <div class="navbar-brand">
         <h1 class="title mx-3 has-text-primary-light">
     		<a href="//localhost:1313/">
-    			<picture width="1800px">
+    			<picture width="180px">
     				
     				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
     				
@@ -150,18 +151,18 @@ $(function(){
                 
                 
                     <a class="navbar-item" href="/contact/" aria-label="Contact">
-                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold is-primary" id="contact">Contact</button>
+                        <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="contact">Contact</button>
                     </a>
                 
             </div>
         </div>
     </div>
 </nav>
-</header>
-
-<body class="">
-	<div class="container is-max-fullhd">
+	</header>
 	
+	<body class="">
+		<div class="container is-max-fullhd">
+		
 
     
     
@@ -739,58 +740,45 @@ $(function(){
     </div>
   
 
-	</div>
-</body>
+		</div>
+	</body>
+
+</div>
 
 <footer class="footer">
-	<div class="container is-centered is-max-fullhd">
-    <div class="columns mx-2">
-        <div class="column is-full">
-            <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
-                
-                <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
-                    <div class="level-item">
-                            
-                                <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Intagram" title="Intagram">
-                                    <span class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
-                                </a>
-                            
-                                <a href="https://flic.kr/ps/45NqPV" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Flickr" title="Flickr">
-                                    <span class="icon"><i class="fa-brands fa-flickr" aria-hidden="true"></i></span>
-                                </a>
-                            
-                                <a href="https://github.com/pvdmeulen/blog-gallery" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="GitHub" title="GitHub">
-                                    <span class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
-                                </a>
-                            
-                    </div>
-                </div>
-                
-                <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
-                    <div class="level-item mr-3-desktop">
-                        <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright" aria-hidden="true"></i> 2026 Peter van der Meulen<br>
-                        Built with <i class="fa-solid fa-heart has-text-danger" aria-hidden="true" title="love"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
-                    </div>
-                </div>
-            </nav>
+	
+<div class="container is-max-fullhd">
+    <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+        
+        <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
+            <div class="level-item">
+                    
+                        <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Intagram" title="Intagram">
+                            <span class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                        </a>
+                    
+                        <a href="https://flic.kr/ps/45NqPV" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Flickr" title="Flickr">
+                            <span class="icon"><i class="fa-brands fa-flickr" aria-hidden="true"></i></span>
+                        </a>
+                    
+                        <a href="https://github.com/pvdmeulen/blog-gallery" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="GitHub" title="GitHub">
+                            <span class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                        </a>
+                    
+            </div>
         </div>
-    </div>
+        
+        <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
+            <div class="level-item mr-3-desktop">
+                <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright" aria-hidden="true"></i> 2026 Peter van der Meulen<br>
+                Built with <i class="fa-solid fa-heart has-text-danger" aria-hidden="true" title="love"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+            </div>
+        </div>
+    </nav>
 </div>
 
 
-<script>
-    const body = document.querySelector('body');
-    const toggle = document.getElementById('toggle');
 
-    toggle.addEventListener("click", () => {
-        const bodyCheck = body.classList.contains('dark');
-        if (bodyCheck) {
-            body.className = ''
-        } else {
-            body.className = "dark"
-      }
-    })
-</script>
 
 </footer>
 
