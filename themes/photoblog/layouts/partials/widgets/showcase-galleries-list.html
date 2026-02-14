@@ -1,0 +1,20 @@
+{{ $thumbnailUrl := .Params.thumbnailUrl }}
+{{ $thumbnailAltText := .Params.thumbnailAltText }}
+{{ $permalink := .RelPermalink }}
+
+<div class="card mb-2">
+    <div class="card-image">
+        <figure class="image is-4by3 is-rounded">
+            {{ with .Params.thumbnailUrl }}
+            <a href="{{ $permalink }}"><img src="{{ $thumbnailUrl }}" alt="{{ $thumbnailAltText }}" loading="lazy"></a>
+            {{ end }}
+        </figure>
+    </div>
+</div>
+<div class="container">
+        <h3><a class="title is-size-6 mb-3 has-text-weight-semibold" href="{{ $permalink }}"><span>{{ .Title }}</span></a></h3>
+        <p class="is-size-7 has-text-primary has-text-weight-medium my-1 is-subtitle"> {{ .Params.date.Format "2 Jan 2006" }}</p>
+        <!-- need to choose either subtitle (front matter) or summary (first bit of text in post) 
+        choose subtitle given it needs to be separate from other text in post -->
+        <p class="is-size-6 mb-3 has-text-weight-normal is-hidden-mobile is-subtitle">{{ .Params.subtitle }}</p>
+    </div>

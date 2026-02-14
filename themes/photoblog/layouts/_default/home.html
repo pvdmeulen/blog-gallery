@@ -37,45 +37,47 @@
         <hr>
         
         <!-- FEATURED GALLERIES AND BLOG -->
-        <div class="columns pt-3 pb-3">
-            <div class="column is-three-fifths">
-            <!-- Featured Galleries -->
-                <div class="content">
-                    <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Featured Galleries</p>
-                    <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
-                    <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
-                </div>
-                <div class="grid is-col-min-12">
-                    <!-- Use first four galleries -->
-                    {{ $galleries := where .Site.Pages "Type" "galleries" | first 4}}
-                    {{ range $galleries }}
-                    <div class="cell">
-                        {{ partial "widgets/showcase-galleries.html" . }}
+        <div class="container">
+            <div class="columns pt-3 pb-3">
+                <div class="column is-three-fifths">
+                <!-- Featured Galleries -->
+                    <div class="content">
+                        <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Featured Galleries</p>
+                        <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Galleries"><span>See all galleries <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                        <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
                     </div>
-                    {{ end }}
-                </div>
-            </div>
-            <!-- Blog -- Other side -->
-            <div class="column is-two-fifths">
-                <div class="content">
-                    <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Blog</p>
-                    <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
-                    <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-content">   
-                        <div class="fixed-grid has-1-cols">
-                            <div class="grid is-gap-3">
-                                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 0 | first 6}}
-                                {{ range $post }}
-                                <div class="cell">
-                                    {{ partial "widgets/showcase-no-desc-small.html" . }}
-                                </div>
-                                {{ end }}
-                            </div>
+                    <div class="grid is-col-min-12">
+                        <!-- Use first four galleries -->
+                        {{ $galleries := where .Site.Pages "Type" "galleries" | first 4}}
+                        {{ range $galleries }}
+                        <div class="cell">
+                            {{ partial "widgets/showcase-galleries-home.html" . }}
                         </div>
-                    </div>  
-                </div>                
+                        {{ end }}
+                    </div>
+                </div>
+                <!-- Blog -- Other side -->
+                <div class="column is-two-fifths">
+                    <div class="content" id="sticky">
+                        <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Blog</p>
+                        <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
+                        <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                    </div>
+                    <div class="card mb-3" id="sticky">
+                        <div class="card-content">   
+                            <div class="fixed-grid has-1-cols">
+                                <div class="grid is-gap-1">
+                                    {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 0 | first 4}}
+                                    {{ range $post }}
+                                    <div class="cell">
+                                        {{ partial "widgets/showcase-no-desc-small.html" . }}
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>  
+                    </div>                
+                </div>
             </div>
         </div>
         

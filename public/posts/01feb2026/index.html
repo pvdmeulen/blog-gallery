@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<head>
+ 	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>My plan for 2026 | Peter van der Meulen</title>
+
+
+
+    <link rel="stylesheet" href="/css/custom-bulma-theme.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+      <script src="/js/main.js"></script>
+
+
+
+<script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
+
+
+<script type="module">
+
+  console.log("photoswipe init");
+  import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "[id^='psgallery']", 
+	children: "a",
+	initialZoomLevel: "fit",     
+	secondaryZoomLevel: "fit",   
+	imageClickAction: "close",   
+	wheelToZoom: false,
+	pswpModule: PhotoSwipe,
+	paddingFn: (viewportSize) => {
+    return {
+      top: 40, bottom: 40, left: 50, right: 50
+    }
+  },
+  });
+    
+  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    type: 'auto',
+  });
+  
+  lightbox.init();
+  
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+<script src='//localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+
+
+<script type = "module">
+	
+    $(function(){
+      $(".psgallery-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 310,
+          lastRow : 'nojustify',
+          border : 0,
+          margins : 5,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
+    });
+    
+    $(function(){
+      $(".psshowcase-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 250,
+          border: 0,
+          margins : 30,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
+    });
+
+</script>
+
+
+
+
+    
+
+</head>
+
+
+
+<div class="container is-max-fullhd">
+
+	<header>
+		
+
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    
+    <div class="navbar-brand">
+        <h1 class="title mx-3 has-text-primary-light">
+    		<a href="//localhost:1313/">
+    			<picture width="180px">
+    				
+    				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+    				
+    				<source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+    	        	
+    				<img src="/images/logo-light.svg" width="180px"></img>
+    			</picture>
+                
+    		</a>
+    	</h1>
+    	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="buttons">
+                
+                    <a class="navbar-item" href="/posts/" aria-label="Posts">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="posts">Posts</button>
+                    </a>
+                
+                    <a class="navbar-item" href="/galleries/" aria-label="Galleries">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="galleries">Galleries</button>
+                    </a>
+                
+                    <a class="navbar-item" href="/about/" aria-label="About">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="about">About</button>
+                    </a>
+                
+                
+                
+                    <a class="navbar-item" href="/contact/" aria-label="Contact">
+                        <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="contact">Contact</button>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+	</header>
+	
+	<body class="">
+		<div class="container is-max-fullhd">
+		
+
+    
+    
+        <style>/* Further custom formatting for post */
+  
+ul {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+
+ol {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+  
+li::marker {
+  color: var(--bulma-color-primary);
+  }
+  
+/* Header (landing) image */
+.header-image {
+    background-image: url(../images/website_header2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}</style>
+    
+
+    
+        
+    
+    <div class="container is-centered">
+        
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul id="bc">
+                        <li>
+                            <a href="//localhost:1313/" class="has-text-link is-subtitle">Home</a>
+                        </li>
+                        <li>
+                        
+                            <a href="/posts/" class="has-text-link is-subtitle">Posts</a>
+                        
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="is-subtitle">
+                                1 Feb 2026
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="columns mb-5">
+                    <div class="column is-full">
+                        
+                        <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            My plan for 2026
+                        </h1>
+                        <p class="is-subtitle is-size-6 my-1 has-text-primary has-text-weight-medium">
+                            
+                            
+                            <time datetime="2026-02-01T00:00:00&#43;00:00">1 Feb 2026</time>  |
+                            
+                            Reading time: 4  minutes 
+                        </p>
+                        
+                        <div class="columns mt-3">
+                            <div class="column is-two-thirds">
+                                
+
+
+
+
+
+
+
+
+<div class="container mb-3">
+    <div class="pswp-gallery" id="psgallery--featuredimage">
+    
+        
+            
+            
+            
+            <a
+                href="featured.jpg"
+                data-pswp-width="2580"
+                data-pswp-height="2064"
+                target="_blank"
+            >
+                <img src="featured.jpg" alt="" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>June 20, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 18mm</li>
+                            <li>F-stop: 28/5</li>
+                            <li>Shutter speed: 1/320</li>
+                            <li>ISO: 160</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+        
+        <p class="is-subtitle">Cruising through Copenhagen. Image: Peter van der Meulen</p>
+        
+    </div>
+</div>
+                            </div>
+                            <div class="column is-one-third">
+                                <p class="content has-text-weight-semibold has-text-primary is-size-4 is-subtitle">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                          
+                        
+                    
+                        <div class="container is-centered is-max-desktop mb-5">
+                            <div class="content is-size-4 has-text-weight-normal">
+                                <p>(post is WIP)</p>
+
+<div class="container mt-1 mb-5">
+    <div class="card has-background-main-bis">
+        <div class="card-content">
+            <div class="columns is-vcentered">
+                <div class="column is-one-third">  
+                    
+                        <h4 class="is-subtitle is-size-5 has-text-primary">
+                            What I&#39;m listening to right now
+                        </h4>
+                    
+                    
+                        <p class="is-subtitle is-size-6 has-text-bold">
+                            Annabelle Dinda&#39;s lyrics are beautiful, and this song about grief is perfect for an autumn walk around Edinburgh (with or without camera).
+                        </p>
+                    
+                </div>
+                <div class="column is-two-thirds">
+                    <div class="spotify-embed-class">
+                        
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/73B5gHeG8HQkWBNrEGTA7a?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h4 id="light">Light</h4>
+<p>It should be obvious that understanding light is really important. It&rsquo;s in the name: photography—drawing with light. I read somewhere that a good photographer should approach light the same way a painter would. I take this to mean, broadly, being intentional about where your light is, what it draws focus on, what it draws your eye to. Even outside, in natural light, you’ll need to give a bit of thought to the placements of shadows, the harshness of the light, etc. At the moment, this doesn&rsquo;t come naturally to me. With any luck, this becomes more instinctive the more I practice.</p>
+<p>Hopefully it goes without saying that not all photography has to be <em>artistic</em>. Most of the time you really are just taking a photo in the moment without thinking too much. And sometimes you just get lucky with the light. Probably even more so nowadays, when most people are within arm&rsquo;s reach of a camera at any given moment in time. Case in point: I have hundreds of photos of my cats, none of which will ever make it into an album, much less a gallery.</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/01feb2026/cats/IMG04231.jpg"
+                data-pswp-width="4947"
+                data-pswp-height="3298"
+                target="_blank"
+            >
+                <img src='/posts/01feb2026/cats/thumbnails/IMG04231.jpg' alt="cats/IMG04231.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>July 07, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 63mm</li>
+                            <li>F-stop: 28/5</li>
+                            <li>Shutter speed: 1/125</li>                            
+                            <li>ISO: 4000</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/01feb2026/cats/IMG04294.jpg"
+                data-pswp-width="4128"
+                data-pswp-height="6192"
+                target="_blank"
+            >
+                <img src='/posts/01feb2026/cats/thumbnails/IMG04294.jpg' alt="cats/IMG04294.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>July 07, 2025</b></li>
+                            
+                            <br>
+                            
+                            <li>Focal length: 45mm</li>
+                            <li>F-stop: 28/5</li>
+                            <li>Shutter speed: 1/30</li>                            
+                            <li>ISO: 1250</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/01feb2026/cats/IMG_1879.jpg"
+                data-pswp-width="4272"
+                data-pswp-height="2848"
+                target="_blank"
+            >
+                <img src='/posts/01feb2026/cats/thumbnails/IMG_1879.jpg' alt="cats/IMG_1879.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>January 31, 2025</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 4</li>
+                            <li>Shutter speed: 1/25</li>                            
+                            <li>ISO: 800</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>However, a good photographer needs to understand light. To me, right now, this is the hardest part of photography. Most of my experience has been in fairly forgiving natural light, requiring little thought on my part about the lighting conditions. So—I need practice!</p>
+<h4 id="composition">Composition</h4>
+<p>This is a close second (or maybe a joint first with lighting) in terms of difficulty to me. It is a reflection of what I see, what I find interesting about the scene, and my ‘photographer’s eye’ needs developed. When I’m travelling, I quite easily fall into the trap of taking photos the same way many other tourists do: straight on, no frills, just a way to document that ‘yes, I was here.’</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>Again, I feel like I should be thinking more like a painter or perhaps a cinematographer. For example, is there a natural background, focus point, and foreground to the scene? Can I make it more interesting by changing my angle, height, or focal length? Is my subject actually interesting in the first place? Does the photo ask questions of the viewer? Sometimes it’s better to leave certain details out of the frame!</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>I recently bought Michael Freeman&rsquo;s <em>The Photographer&rsquo;s Eye (Definitive Edition)</em> (the 2025 edition) which has been a great resource so far.</p>
+<h4 id="experiment">Experiment</h4>
+<p>For me, to learn, it doesn’t <em>really</em> matter whether you shoot in manual, aperture priority, or shutter priority mode, as long as you try changing at least <em>one</em> setting to get different results. Get to know your camera, and get a feel for the way ISO, aperture, and shutter speed affect the final result. Experiment with different focal lengths if you have them (for example with a zoom lens, or multiple prime lenses). In 2026, I&rsquo;d like to get better at visualising the photo I want <em>before</em> I dial in my settings. Another thing I&rsquo;d love to practice is flash photography and portraits.</p>
+<h4 id="editing">Editing</h4>
+<p>So far, I&rsquo;ve mostly been using <a href="https://www.pixelmator.com/photomator/">Photomator</a> for my editing.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> I sometimes use <a href="https://www.affinity.studio">Affinity Photo</a> as well. I&rsquo;ve used a variety of other apps over the last decade or so (not least, <a href="https://photoshop.adobe.com/discover">Adobe Photoshop</a>)!</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/posts/01feb2026/photomator/SCR-20251130-oqyr.png"
+                data-pswp-width="3248"
+                data-pswp-height="2120"
+                target="_blank"
+            >
+                <img src='/posts/01feb2026/photomator/thumbnails/SCR-20251130-oqyr.png' alt="photomator/SCR-20251130-oqyr.png" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/posts/01feb2026/photomator/SCR-20251130-osts.png"
+                data-pswp-width="3248"
+                data-pswp-height="2120"
+                target="_blank"
+            >
+                <img src='/posts/01feb2026/photomator/thumbnails/SCR-20251130-osts.png' alt="photomator/SCR-20251130-osts.png" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>In 2026, I&rsquo;d like to create a set of saved presets in Photomator that suit my needs. Currently, I start editing each photo from scratch, and I don&rsquo;t usually have a plan right from the start. Creating a set of presets will teach me some of the finer adjustments which I currently don&rsquo;t often use (e.g. tone curves, selective clarity and texture, masking).</p>
+<h4 id="film-photography">Film Photography</h4>
+<p>I recently bought a Minolta Hi-Matic GF, a fairly beginner-friendly point-and-shoot film camera from 1984. I&rsquo;m halfway through my first roll of Kodak Gold 200, and have a few more rolls (including Kodak ColorPlus 200 and Portra 400) to experiment with. Using film requires me to rely on my knowledge of the exposure triangle and really forces me to think about each shot. In 2026, I&rsquo;d love to use more film and develop more of my photos.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Photomator is a relatively lightweight alternative to <a href="https://lightroom.adobe.com">Adobe Lightroom</a> and <a href="https://www.captureone.com/en">Capture One</a>, for example. It is built specifically for the Apple ecosystem. It integrates nicely with Apple Photos, and is much cheaper than Lightroom. A few months after I paid the yearly license, Photomator and Pixelmator were bought by Apple. I&rsquo;m cautiously optimistic about what this means for the future of the app, and hopefully new features and updates get added over time.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+                            </div>
+                            <hr>
+                        
+                        
+    <div class="container is-max-desktop my-3">
+        <div class="mb-2 has-text-weight-normal">Tags:</div>
+        <ul>
+            
+                <a href="/tags/street/">
+                    <button class="button is-link is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-building-user mr-2"></i>
+                        <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">Street</p>
+                    </button>
+                </a>
+            
+        </ul>
+    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+		</div>
+	</body>
+
+</div>
+
+<footer class="footer">
+	
+<div class="container is-max-fullhd">
+    <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+        
+        <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
+            <div class="level-item">
+                    
+                        <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Intagram" title="Intagram">
+                            <span class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                        </a>
+                    
+                        <a href="https://flic.kr/ps/45NqPV" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Flickr" title="Flickr">
+                            <span class="icon"><i class="fa-brands fa-flickr" aria-hidden="true"></i></span>
+                        </a>
+                    
+                        <a href="https://github.com/pvdmeulen/blog-gallery" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="GitHub" title="GitHub">
+                            <span class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                        </a>
+                    
+            </div>
+        </div>
+        
+        <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
+            <div class="level-item mr-3-desktop">
+                <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright" aria-hidden="true"></i> 2026 Peter van der Meulen<br>
+                Built with <i class="fa-solid fa-heart has-text-danger" aria-hidden="true" title="love"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+</footer>
+
+</html>

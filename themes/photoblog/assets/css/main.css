@@ -1,10 +1,9 @@
 /* Further custom Bulma formatting */
 
 .card {
-    height: 100%;
+    /*height: 100%;*/
     object-fit: cover;
-    card-radius: 0.25rem;
-    }
+    card-radius: 0.25rem;    }
 
 .button {
   border-radius: 0.25rem;
@@ -19,6 +18,10 @@ p {
   }
   .is-title, .is-subtitle {
       font-family: var(--bulma-family-primary);
+  }
+
+.div #sticky {
+  position: sticky;
   }
 
 /* Hover colors for main links and social tags */
@@ -51,7 +54,7 @@ p {
   }
   
 #galleries:hover {
-  color: var(--bulma-secondary);
+  color: var(--bulma-link);
   transition: color 0.2s;
   }
   
@@ -189,7 +192,7 @@ body.dark button {
 
 /* Contact form */
 
-@import url("contactform.css")
+/* @import url("contactform.css") */
 
 /* Justified gallery */
 
