@@ -2,27 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/posts/05feb2026/</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/street/</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/04feb2026/</loc>
-    <lastmod>2026-02-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/03feb2026/</loc>
-    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/02feb2026/</loc>
-    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/01feb2026/</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/categories/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -39,6 +18,12 @@
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/street/</loc>
+    <lastmod>2025-11-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/street/</loc>
+    <lastmod>2025-11-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/12nov2025/</loc>
