@@ -56,7 +56,7 @@
                                 {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 0 | first 4}}
                                 {{ range $post }}
                                 <div class="cell my-2">
-                                    {{ partial "widgets/showcase-no-desc-small.html" . }}
+                                    {{ partial "widgets/showcase-blog-home.html" . }}
                                 </div>
                                 {{ end }}
                             </div>
