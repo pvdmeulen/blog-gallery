@@ -41,12 +41,12 @@ p {
   
 /* Different hover colors for main site menu with IDs being posts, galleries, about, contact */
 
-#posts {
+#blog {
   font-family: var(--bulma-family-primary); 
   color: var(--bulma-text-bold);
   }
   
-#posts:hover {
+#blog:hover {
   color: var(--bulma-primary);
   transition: color 0.2s;
   }

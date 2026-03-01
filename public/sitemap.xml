@@ -26,7 +26,7 @@
     <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/12nov2025/</loc>
+    <loc>//localhost:1313/blog/12nov2025/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/drink/</loc>
@@ -53,13 +53,13 @@
     <loc>//localhost:1313/categories/nature/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/25sep2025/</loc>
+    <loc>//localhost:1313/blog/25sep2025/</loc>
     <lastmod>2025-09-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/</loc>
+    <loc>//localhost:1313/blog/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>//localhost:1313/galleries/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/about/</loc>

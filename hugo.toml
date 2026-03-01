@@ -7,9 +7,9 @@ pagination.pagerSize = 8
 
 [menu]
   [[menu.main]]
-    name = "Posts"
+    name = "Blog"
     pre = "pen-tool"
-    url = "/posts/"
+    url = "/blog/"
     weight = 10
     colorid = "primaryhover"
   [[menu.main]]

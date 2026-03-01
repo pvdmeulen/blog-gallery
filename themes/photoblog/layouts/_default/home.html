@@ -37,7 +37,7 @@
         <hr>
         
         <!-- BLOG -->
-        <div class="container pt-2 pb-5">
+        <div class="container pt-5 pb-5">
             <div class="columns">
                 <div class="column is-one-fifth">
                     <!-- Title -->
@@ -45,7 +45,7 @@
                         <p class="has-text-weight-bold is-title is-uppercase is-size-5 mt-1 mb-0">Blog</p>
                         <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
                         Writing about some of my excursions around Scotland, Sweden, and elsewhere.
-                        <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Posts"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                        <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="/Blog"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
                     </div>
                 </div>
                 <div class="column">
@@ -53,7 +53,7 @@
                     <div class="card">
                         <div class="card-content">   
                             <div class="grid is-col-min-6 is-column-gap-5">
-                                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts" | after 0 | first 4}}
+                                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "blog" | after 0 | first 4}}
                                 {{ range $post }}
                                 <div class="cell my-2">
                                     {{ partial "widgets/showcase-blog-home.html" . }}
@@ -70,7 +70,7 @@
         
         <!-- FEATURED GALLERIES -->
         
-        <div class="container py-2">
+        <div class="container pt-2 pb-5">
             <!-- Title -->
             <div class="content">
                 <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title is-uppercase">Featured Galleries</p>
@@ -78,7 +78,7 @@
                 <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
             </div>
             <!-- Row grid with galleries -->
-            <div class="grid is-gap-3">
+            <div class="grid is-gap-2 is-col-min-8">
                 <!-- Use first four galleries -->
                 {{ $galleries := where .Site.Pages "Type" "galleries" | first 4}}
                 {{ range $galleries }}
@@ -92,17 +92,13 @@
         <hr>
                 
         <!-- Site content by tag -->
-        <div class="columns is-multiline pt-3">
-            <div class="column is-full">
-                <div class="content">
-                    <p class="is-size-6 mt-2 mb-1 has-text-weight-bold is-title">BROWSE CONTENT BY TAG</p>
-                </div>
+        
+        <div class="container pt-2 pb-5">
+            <div class="content">
+                <p class="is-size-6 mb-1 has-text-weight-bold is-title">BROWSE CONTENT BY TAG</p>
             </div>
-            <!-- TAGS -->
-            <div class="column is-full">   
-                {{ partial "widgets/site-tags.html" . }}
-            </div>
-        </div>   
+            {{ partial "widgets/site-tags.html" . }}
+        </div>
     </div>
   
 {{ end }}

@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<head>
+ 	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Why I&#39;ve decided to try my hand at photography again | Peter van der Meulen</title>
+
+
+
+    <link rel="stylesheet" href="/css/custom-bulma-theme.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+      <script src="/js/main.js"></script>
+
+
+
+<script src="https://kit.fontawesome.com/db26e23b9e.js" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe.css'/>
+<link rel="stylesheet" href='//localhost:1313/css/photoswipe/photoswipe-dynamic-caption-plugin.css'/>
+
+
+<script type="module">
+
+  console.log("photoswipe init");
+  import PhotoSwipe from "/js/photoswipe/photoswipe.esm.js";
+  import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.js";
+  import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.js";
+  
+  
+  const lightbox = new PhotoSwipeLightbox({
+	gallery: "[id^='psgallery']", 
+	children: "a",
+	initialZoomLevel: "fit",     
+	secondaryZoomLevel: "fit",   
+	imageClickAction: "close",   
+	wheelToZoom: false,
+	pswpModule: PhotoSwipe,
+	paddingFn: (viewportSize) => {
+    return {
+      top: 40, bottom: 40, left: 50, right: 50
+    }
+  },
+  });
+    
+  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    type: 'auto',
+  });
+  
+  lightbox.init();
+  
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href='//localhost:1313/css/justifiedgallery/justifiedGallery.min.css'/>
+<script src='//localhost:1313/js/justifiedgallery/jquery.justifiedGallery.min.js'/></script>
+
+
+<script type = "module">
+	
+    $(function(){
+      $(".psgallery-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 310,
+          lastRow : 'nojustify',
+          border : 0,
+          margins : 5,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
+    });
+    
+    $(function(){
+      $(".psshowcase-class").each(function(){
+        $(this).justifiedGallery({
+          rowHeight : 250,
+          border: 0,
+          margins : 30,
+          selector: 'a, figure:not(.spinner)',
+          captions: false
+        });
+      });
+    });
+
+</script>
+
+
+
+
+    
+
+</head>
+
+<div class="container is-max-fullhd">
+
+	<header>
+		
+
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    
+    <div class="navbar-brand">
+        <h1 class="title mx-2 has-text-primary-light">
+    		<a href="//localhost:1313/">
+    			<picture width="180px">
+    				
+    				<source srcset="/images/logo-light.svg" media="(prefers-color-scheme: light)">
+    				
+    				<source srcset="/images/logo-dark.svg" media="(prefers-color-scheme: dark)">
+    	        	
+    				<img src="/images/logo-light.svg" width="180px"></img>
+    			</picture>
+                
+    		</a>
+    	</h1>
+    	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="buttons">
+                
+                    <a class="navbar-item" href="/blog/" aria-label="Blog">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="blog">Blog</button>
+                    </a>
+                
+                    <a class="navbar-item" href="/galleries/" aria-label="Galleries">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="galleries">Galleries</button>
+                    </a>
+                
+                    <a class="navbar-item" href="/about/" aria-label="About">
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="about">About</button>
+                    </a>
+                
+                
+                
+                    <a class="navbar-item" href="/contact/" aria-label="Contact">
+                        <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="contact">Contact</button>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+	</header>
+	
+	<body class="">
+		<div class="container is-max-fullhd">
+		
+
+    
+    
+        <style>/* Further custom formatting for post */
+
+h4 {
+  font-family: var(--bulma-family-primary);
+  color: var(--bulma-color-primary);
+  }
+
+p {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+      font-family: var(--bulma-family-primary);
+  }
+  
+ul {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+
+ol {
+  font-family: var(--bulma-family-secondary);
+  }
+  .is-title, .is-subtitle {
+    font-family: var(--bulma-family-primary);
+  }
+  
+/* Header (landing) image */
+.header-image {
+    background-image: url(../images/website_header2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}</style>
+    
+
+    
+        
+    
+    <div class="container is-centered">
+        
+        <div class="columns mx-2">
+            <div class="column is-full">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul id="bc">
+                        <li>
+                            <a href="//localhost:1313/" class="has-text-link is-subtitle">Home</a>
+                        </li>
+                        <li>
+                        
+                            <a href="/blog/" class="has-text-link is-subtitle">Blog</a>
+                        
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="is-subtitle">
+                                25 September 2025
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="columns mb-5">
+                    <div class="column is-full">
+                        
+                        <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            Why I&#39;ve decided to try my hand at photography again
+                        </h1>
+                        <p class="is-subtitle is-size-6 my-1 has-text-primary has-text-weight-medium">
+                            
+                            
+                            <time datetime="2025-09-25T00:00:00&#43;00:00">25 Sep 2025</time>  |
+                            
+                            Reading time: 3  minutes 
+                        </p>
+                        
+                        <div class="columns mt-3">
+                            <div class="column is-two-thirds">
+                                
+
+
+
+
+
+
+
+
+<div class="container mb-3">
+    <div class="pswp-gallery" id="psgallery--featuredimage">
+    
+        
+            
+            
+            
+            <a
+                href="featured.jpg"
+                data-pswp-width="2335.5"
+                data-pswp-height="1564.5"
+                target="_blank"
+            >
+                <img src="featured.jpg" alt="" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                            
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+        
+        <p class="is-subtitle">My dad walking through a Scottish village with his bike, late 1980s. Image: Janet van der Meulen</p>
+        
+    </div>
+</div>
+                            </div>
+                            <div class="column is-one-third">
+                                <p class="content has-text-weight-semibold has-text-primary is-size-4 is-subtitle">
+                                    More than a decade after getting my first DSLR, and a few years after losing my dad, I&#39;ve picked photography up again. Follow along as I get to grips with the exposure triangle, go on trips around Scotland and Sweden, and try to capture memories.
+                                </p>
+                            </div>
+                        </div>
+                          
+                        
+                    
+                        <div class="container is-centered is-max-desktop mb-5">
+                            <div class="content is-size-4 has-text-weight-normal">
+                                <div class="container mt-1 mb-5">
+    <div class="card has-background-main-bis">
+        <div class="card-content">
+            <div class="columns is-vcentered">
+                <div class="column is-one-third">  
+                    
+                        <h4 class="is-subtitle is-size-5 has-text-primary">
+                            My dad&#39;s favourite band
+                        </h4>
+                    
+                    
+                        <p class="is-subtitle is-size-6 has-text-bold">
+                            Dire Straits was one of my dad&#39;s favourite bands. Hopefully everyone knows the hits—I encourage others to listen to some of their less popular tracks as well.
+                        </p>
+                    
+                </div>
+                <div class="column is-two-thirds">
+                    <div class="spotify-embed-class">
+                        
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5SXemxLERs0imkLpe4Aq8v?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>Four years ago, I lost my dad.</p>
+<p>It was, obviously, the hardest thing I’ve gone through. It still is—<a href="https://www.reddit.com/r/Assistance/comments/hax0t/comment/c1u0rx2/">grief comes in waves</a>. It was particularly hard on my mum: living alone, in a house now too big for her, in a strangely foreign country<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>A few days after that day, my mum walked into the living room, holding stacks of old photos. As she sat down and went through them, it was like a small window opened up: a window into a life before me or my brother, when it was just my dad and my mum living life together. There, on the living room table, were dozens of photos sprawled out.</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/blog/25sep2025/papa/1.jpg"
+                data-pswp-width="3128"
+                data-pswp-height="4623"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa/thumbnails/1.jpg' alt="papa/1.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa/2.jpg"
+                data-pswp-width="4623"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa/thumbnails/2.jpg' alt="papa/2.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>The majority were photos from their many holidays around Europe. They had a real passion for cycling and camping, something which continued into me and my brother’s childhoods as well.</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/blog/25sep2025/papa2/3.jpg"
+                data-pswp-width="4690"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa2/thumbnails/3.jpg' alt="papa2/3.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa2/5.jpg"
+                data-pswp-width="4681"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa2/thumbnails/5.jpg' alt="papa2/5.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa2/6.jpg"
+                data-pswp-width="4671"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa2/thumbnails/6.jpg' alt="papa2/6.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa2/7.jpg"
+                data-pswp-width="4652"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa2/thumbnails/7.jpg' alt="papa2/7.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>That little peek into their life together made me realise the value in taking photos. Yes, photos of the big moments, nice holidays, important events, additions to the family—but also photos of the everyday, the mundane. It’s those days with my dad I miss the most: hearing him play guitar on a quiet Sunday morning, watching recorded episodes of Star Trek together every Wednesday evening, or playing chess together (and him beating me every time). There is something very special about capturing moments like that in a photo.</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/blog/25sep2025/papa3/1.jpg"
+                data-pswp-width="4032"
+                data-pswp-height="3024"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa3/thumbnails/1.jpg' alt="papa3/1.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa3/2.jpg"
+                data-pswp-width="2160"
+                data-pswp-height="1449"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa3/thumbnails/2.jpg' alt="papa3/2.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa3/4.jpg"
+                data-pswp-width="3024"
+                data-pswp-height="4032"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa3/thumbnails/4.jpg' alt="papa3/4.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/papa3/7.jpg"
+                data-pswp-width="4603"
+                data-pswp-height="3129"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/papa3/thumbnails/7.jpg' alt="papa3/7.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            
+                            
+                            <br>
+                            
+                            
+                            
+                                                        
+                            
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+</div>
+
+<p>I’ve always had an interest in photography and videography. I got my first proper camera at the age of 16 (a Canon EOS 1100D with kit lens). I even amassed a thousand subscribers on YouTube making silly edits of video games. Although I enjoyed using my camera at the time, there weren’t many opportunities to use it, particularly when I started my university degree. As a result, I didn&rsquo;t get a whole lot of practice in.</p>
+
+<div class="container mt-2 mb-3">
+    <div id="psgallery--justified" class="psgallery-class">
+        
+        
+            
+            <a
+                href="/blog/25sep2025/own/IMG_1045.jpg"
+                data-pswp-width="3270"
+                data-pswp-height="2453"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/own/thumbnails/IMG_1045.jpg' alt="own/IMG_1045.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 7.1</li>
+                            <li>Shutter speed: 1/100</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/own/IMG_1083.jpg"
+                data-pswp-width="3795"
+                data-pswp-height="2847"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/own/thumbnails/IMG_1083.jpg' alt="own/IMG_1083.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 9.0</li>
+                            <li>Shutter speed: 1/200</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/own/IMG_1092.jpg"
+                data-pswp-width="3795"
+                data-pswp-height="2847"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/own/thumbnails/IMG_1092.jpg' alt="own/IMG_1092.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 8.0</li>
+                            <li>Shutter speed: 1/125</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+            
+            <a
+                href="/blog/25sep2025/own/IMG_1116.jpg"
+                data-pswp-width="3793"
+                data-pswp-height="2845"
+                target="_blank"
+            >
+                <img src='/blog/25sep2025/own/thumbnails/IMG_1116.jpg' alt="own/IMG_1116.jpg" loading="lazy"/>
+                <span class="pswp-caption-content">
+                    
+                        <ul class="is-subtitle">
+                            <li><b>April 18, 2014</b></li>
+                            
+                            <br>
+                            
+                            
+                            <li>F-stop: 10.0</li>
+                            <li>Shutter speed: 1/250</li>                            
+                            <li>ISO: 100</li>
+                        </ul>
+                    
+                </span>
+            </a>
+            
+        
+    </div>
+    
+    
+    
+    <p class="is-subtitle is-size-6 mt-1">Photos taken in Scotland, April 2014. No lens hood, no understanding of aperture, and virtually no experience with editing!</p>
+    
+</div>
+
+<p>Fourteen years later, and seven years into my career, I bought myself a new camera. I take great pleasure in capturing the smaller moments. A walk in the crisp autumn air, people going about their day in town, a nice home made dinner, drinks shared with friends. I also find that photography is a great way to focus on the moment, and I have started to enjoy both the technical and artistic aspects of it in equal measures.</p>
+<p>The photos I’m taking now won’t be nearly as nostalgic (not for a long time, anyway), and probably not as good as the ones mum took on her film camera. However, it’s all for a good cause: being able to look back at memories with my wife, brother, mum, and friends. And, probably most of all, I hope my future children have lots of great photos to look back on—just like I did.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>We moved from the Netherlands to Sweden in 2006, mostly because of my dad&rsquo;s work.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+                            </div>
+                            <hr>
+                        
+                        
+    <div class="container is-max-desktop my-3">
+        <div class="mb-2 has-text-weight-normal">Tags:</div>
+        <ul>
+            
+                <a href="/tags/landscape/">
+                    <button class="button is-primary is-responsive is-outlined mb-0 mt-1 mx-0">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i>
+                        <p class="is-size-7 is-capitalized has-text-link-bold is-subtitle">Landscape</p>
+                    </button>
+                </a>
+            
+        </ul>
+    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+		</div>
+	</body>
+
+</div>
+
+<footer class="footer">
+	
+<div class="container is-max-fullhd">
+    <nav class="level pb-3" role="contact" aria-label="footer with contact and copyright">
+        
+        <div class="level-left has-text-left has-text-centered-mobile pl-5-tablet ml-3-tablet pt-5 my-3">
+            <div class="level-item">
+                    
+                        <a href="https://www.instagram.com/pvdm_photos/" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Intagram" title="Intagram">
+                            <span class="icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                        </a>
+                    
+                        <a href="https://flic.kr/ps/45NqPV" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="Flickr" title="Flickr">
+                            <span class="icon"><i class="fa-brands fa-flickr" aria-hidden="true"></i></span>
+                        </a>
+                    
+                        <a href="https://github.com/pvdmeulen/blog-gallery" target="_blank" class="is-size-3 px-3 mx-4 has-text-link" aria-label="GitHub" title="GitHub">
+                            <span class="icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                        </a>
+                    
+            </div>
+        </div>
+        
+        <div class="level-right has-text-right has-text-centered-mobile pr-5-tablet mr-3-tablet pt-5 my-3">
+            <div class="level-item mr-3-desktop">
+                <p class="is-subtitle">Copyright <i class="fa-regular fa-copyright" aria-hidden="true"></i> 2026 Peter van der Meulen<br>
+                Built with <i class="fa-solid fa-heart has-text-danger" aria-hidden="true" title="love"></i> using <a href="https://gohugo.io" target="_blank" class="has-text-link">Hugo</a> and <a href="https://bulma.io" target="_blank" class="has-text-link">Bulma</a></p>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+</footer>
+
+</html>
