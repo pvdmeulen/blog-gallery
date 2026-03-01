@@ -3,7 +3,14 @@
 .card {
     /*height: 100%;*/
     object-fit: cover;
-    card-radius: 0.25rem;    }
+    card-radius: 0.25rem;
+    }
+    
+#fullheight {
+    height: 100%;
+    object-fit: cover;
+    card-radius: 0.25rem;
+    }
 
 .button {
   border-radius: 0.25rem;
@@ -18,10 +25,6 @@ p {
   }
   .is-title, .is-subtitle {
       font-family: var(--bulma-family-primary);
-  }
-
-.div #sticky {
-  position: sticky;
   }
 
 /* Hover colors for main links and social tags */

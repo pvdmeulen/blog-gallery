@@ -1,0 +1,23 @@
+{{ $output   :=   "" }}
+ 	
+{{ if strings.Contains . "/" }}
+
+	{{ $a := index (split . "/" | first 1) 0 }}
+	{{ $b := index (split . "/" | last 1) 0 }}
+	
+	{{ $a := float $a }}
+	{{ $b := float $b }}
+	
+	{{ $r := div $a $b }}
+	
+	{{ $output = printf ($r | lang.FormatNumber 1) }}
+ 	
+{{ else }}
+	
+	{{ $r := . }}
+	
+	{{ $output = printf ($r | lang.FormatNumber 1) }}
+ 	
+{{ end }}
+
+{{ return $output }}

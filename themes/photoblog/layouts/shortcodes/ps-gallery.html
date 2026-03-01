@@ -21,7 +21,7 @@
                             {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
                             <br>-->
                             {{ with .Tags.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
-                            {{ with .Tags.FNumber }}<li>F-stop: {{ . }}</li>{{ end }}
+                            {{ with .Tags.FNumber }}<li>F-stop: {{ partial "format-fstop.html" . }}</li>{{ end }}
                             {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}                            
                             {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
                         </ul>
