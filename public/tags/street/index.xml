@@ -10,9 +10,9 @@
     <atom:link href="//localhost:1313/tags/street/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scotland</title>
-      <link>//localhost:1313/galleries/edinburgh/</link>
+      <link>//localhost:1313/galleries/scotland/</link>
       <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/galleries/edinburgh/</guid>
+      <guid>//localhost:1313/galleries/scotland/</guid>
       <description></description>
     </item>
     <item>

@@ -2,6 +2,6 @@
 title = 'Headless page'
 [build]
   list = 'never'
-  publishResources = false
+  publishResources = true
   render = 'never'
 +++
