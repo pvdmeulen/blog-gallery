@@ -14,7 +14,9 @@
                 <span class="pswp-caption-content">
                     {{ with .Exif }}
                         <ul class="is-subtitle">
-                            {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
+                            {{ with .Tags.ImageTitle }}<li><b>{{ . }}<b></li>{{ end }}
+                            {{ with .Date }}<li>{{ .Format "January 02, 2006" }}</li>{{ end }}
+                            <br>
                             {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
                             <br>
                             <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}

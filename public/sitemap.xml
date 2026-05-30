@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/categories/</loc>
-    <lastmod>2025-11-30T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/events/</loc>
+    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/galleries/events/</loc>
+    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/events/</loc>
+    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/edinburgh/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
@@ -21,9 +33,6 @@
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/street/</loc>
-    <lastmod>2025-11-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/12nov2025/</loc>
@@ -47,10 +56,10 @@
     <loc>//localhost:1313/categories/animals/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/humannature/</loc>
+    <loc>//localhost:1313/categories/nature/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/nature/</loc>
+    <loc>//localhost:1313/galleries/sweden/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/25sep2025/</loc>

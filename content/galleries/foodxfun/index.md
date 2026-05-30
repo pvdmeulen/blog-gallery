@@ -7,6 +7,8 @@ layout = 'gallery'
 tags = ['food']
 thumbnailUrl = '/images/gallery-thumbnails/foodxfun.jpg'
 thumbnailAltText = 'Alt text here'
+headerTagLightMode = '/images/gallery-headers/foodxfun_lightmode.svg'
+headerTagDarkMode = '/images/gallery-headers/foodxfun_darkmode.svg'
 +++
 <!--more-->
 {{< ps-gallery folder="" >}}

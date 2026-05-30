@@ -7,6 +7,8 @@ layout = 'gallery'
 tags = ['street', 'landscape']
 thumbnailUrl = '/images/gallery-thumbnails/scotland.jpg'
 thumbnailAltText = 'Alt text here'
+headerTagLightMode = '/images/gallery-headers/scotland_lightmode.svg'
+headerTagDarkMode = '/images/gallery-headers/scotland_darkmode.svg'
 +++
 <!--more-->
 {{< ps-gallery folder="" >}}

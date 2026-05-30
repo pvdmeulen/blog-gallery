@@ -3,7 +3,7 @@
     {{ $subtitle := .Params.subtitle }}
     
     <div class="container is-centered">
-        <div class="columns mx-2">
+        <div class="columns">
             <div class="column is-full">
                 <!-- Breadcrumbs -->
                 <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -24,14 +24,30 @@
                     </ul>
                 </nav>
                 <div class="columns mb-5">
-                    <div class="column is-full">
+                    <div class="column is-three-quarters">
                         <!-- Gallery title and subsitle -->
-                        <h1 class="is-title mt-3 mb-1 is-size-3 has-text-weight-bold">
+                        <!--<h1 class="is-title mt-3 mb-1 is-size-3 has-text-weight-bold">
                             {{ .Title }}
-                        </h1>
+                        </h1>-->
+            			<picture width="180px" alt="{{ .Params.Title }}">
+            				<!-- User prefers light mode: -->
+            				<source srcset="{{ .Params.headerTagLightMode }}" media="(prefers-color-scheme: light)">
+            				<!-- User prefers dark mode: -->
+            				<source srcset="{{ .Params.headerTagDarkMode }}" media="(prefers-color-scheme: dark)">
+            	        	<!-- User has no color preference: -->
+            				<img srcset="{{ .Params.headerTagLightMode }}" width="400px"></img>
+            			</picture>
+                            <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
+                			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
+                	</div>
+                	<div class="column is-one-quarter">
                         <h2 class="is-subtitle my-3 is-size-5">
                             {{ .Params.subtitle }}
                         </h2>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-full">
                         <!-- PhotoSwipe gallery start -->
                         <div class="container is-centered mb-5">
                             {{ .Content }}
