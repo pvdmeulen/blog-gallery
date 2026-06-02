@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Peter van der Meulen</title>
-    <link>//localhost:1313/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Peter van der Meulen</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 24 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Events</title>
-      <link>//localhost:1313/tags/events/</link>
+      <link>/tags/events/</link>
       <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/events/</guid>
+      <guid>/tags/events/</guid>
       <description></description>
     </item>
     <item>
       <title>Landscape</title>
-      <link>//localhost:1313/tags/landscape/</link>
+      <link>/tags/landscape/</link>
       <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/landscape/</guid>
+      <guid>/tags/landscape/</guid>
       <description></description>
     </item>
     <item>
       <title>Street</title>
-      <link>//localhost:1313/tags/street/</link>
+      <link>/tags/street/</link>
       <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/street/</guid>
+      <guid>/tags/street/</guid>
       <description></description>
     </item>
     <item>
       <title>Food</title>
-      <link>//localhost:1313/tags/food/</link>
+      <link>/tags/food/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/food/</guid>
+      <guid>/tags/food/</guid>
       <description></description>
     </item>
   </channel>

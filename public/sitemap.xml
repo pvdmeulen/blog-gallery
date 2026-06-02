@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/events/</loc>
+    <loc>/categories/events/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/events/</loc>
+    <loc>/galleries/events/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/events/</loc>
+    <loc>/tags/events/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/edinburgh/</loc>
+    <loc>/categories/edinburgh/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/landscape/</loc>
+    <loc>/categories/landscape/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/landscape/</loc>
+    <loc>/tags/landscape/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/scotland/</loc>
+    <loc>/galleries/scotland/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/street/</loc>
+    <loc>/categories/street/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/street/</loc>
+    <loc>/tags/street/</loc>
     <lastmod>2025-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/12nov2025/</loc>
+    <loc>/blog/12nov2025/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/drink/</loc>
+    <loc>/categories/drink/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/food/</loc>
+    <loc>/categories/food/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/food/</loc>
+    <loc>/tags/food/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/foodxfun/</loc>
+    <loc>/galleries/foodxfun/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/people/</loc>
+    <loc>/categories/people/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/animals/</loc>
+    <loc>/categories/animals/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/nature/</loc>
+    <loc>/categories/nature/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/sweden/</loc>
+    <loc>/galleries/sweden/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/25sep2025/</loc>
+    <loc>/blog/25sep2025/</loc>
     <lastmod>2025-09-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/galleries/</loc>
+    <loc>/galleries/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/contact/</loc>
+    <loc>/contact/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url>
 </urlset>
