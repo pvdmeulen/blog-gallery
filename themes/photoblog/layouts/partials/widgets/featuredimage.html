@@ -11,16 +11,19 @@
     <div class="pswp-gallery" id="psgallery--featuredimage">
     
         {{ with $image }}
-            
-            {{ $link := .RelPermalink }}
-            
+
+            {{ $full := . }}
+            {{ if gt .Width 2000 }}
+                {{ $full = .Resize "2000x q85" }}
+            {{ end }}
+
             <a
-                href="{{ $featuredImageUrl }}"
-                data-pswp-width="{{ mul .Width 0.5 }}"
-                data-pswp-height="{{ mul .Height 0.5 }}"
+                href="{{ $full.RelPermalink }}"
+                data-pswp-width="{{ $full.Width }}"
+                data-pswp-height="{{ $full.Height }}"
                 target="_blank"
             >
-                <img src="{{ $featuredImageUrl }}" alt="{{ $featuredImageAltText }}" loading="lazy"/>
+                {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" $featuredImageAltText "sizes" "(max-width: 768px) 100vw, 66vw") }}
                 <span class="pswp-caption-content">
                     {{ with .Exif }}
                         <ul class="is-subtitle">

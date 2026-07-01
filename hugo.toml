@@ -4,6 +4,7 @@ title = 'Peter van der Meulen'
 logo = 'logo.svg'
 theme = ['photoblog']
 pagination.pagerSize = 8
+timeout = '300s'
 
 [menu]
   [[menu.main]]

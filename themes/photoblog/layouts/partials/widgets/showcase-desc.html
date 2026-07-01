@@ -6,8 +6,8 @@
 <div class="container has-background-main">
     <div class="container">
         <figure class="is-align-items-center is-justify-content-center image is-5by4 my-1">
-            {{ with .Params.thumbnailUrl }}
-            <a href="{{ $permalink }}"><img src="{{ $thumbnailUrl }}" alt="{{ $thumbnailAltText }}" loading="lazy"></a>
+            {{ with resources.Get $thumbnailUrl }}
+            <a href="{{ $permalink }}">{{ partial "widgets/responsive-image.html" (dict "resource" . "alt" $thumbnailAltText "sizes" "(max-width: 768px) 100vw, 400px") }}</a>
             {{ end }}
         </figure>
     </div>

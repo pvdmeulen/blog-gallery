@@ -1,0 +1,55 @@
+{{/*
+  Renders a <picture> with WebP + original-format srcsets, explicit
+  width/height (prevents layout shift), and lazy loading.
+
+  Params (dict):
+    resource (required) - an *image.Image Resource
+    alt      (required) - alt text
+    sizes    (optional) - sizes attribute, defaults to "100vw"
+    class    (optional) - class(es) on the <img>
+    loading  (optional) - defaults to "lazy"
+    quality  (optional) - defaults to 80
+*/}}
+{{ $img := .resource }}
+{{ $alt := .alt }}
+{{ $sizes := .sizes | default "100vw" }}
+{{ $class := .class | default "" }}
+{{ $loading := .loading | default "lazy" }}
+{{ $quality := .quality | default 80 }}
+
+{{ $candidateWidths := slice 400 800 1200 1600 }}
+{{ $widths := slice }}
+{{ range $w := $candidateWidths }}
+  {{ if le $w $img.Width }}
+    {{ $widths = $widths | append $w }}
+  {{ end }}
+{{ end }}
+{{ if eq (len $widths) 0 }}
+  {{ $widths = slice $img.Width }}
+{{ end }}
+
+{{ $webpSet := slice }}
+{{ $origSet := slice }}
+{{ range $w := $widths }}
+  {{ $webp := $img.Resize (printf "%dx q%d webp" $w $quality) }}
+  {{ $orig := $img.Resize (printf "%dx q%d" $w $quality) }}
+  {{ $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $w) }}
+  {{ $origSet = $origSet | append (printf "%s %dw" $orig.RelPermalink $w) }}
+{{ end }}
+
+{{ $fallbackWidth := index $widths (sub (len $widths) 1) }}
+{{ $fallback := $img.Resize (printf "%dx q%d" $fallbackWidth $quality) }}
+
+<picture>
+  <source type="image/webp" srcset="{{ delimit $webpSet "," }}" sizes="{{ $sizes }}">
+  <img
+    src="{{ $fallback.RelPermalink }}"
+    srcset="{{ delimit $origSet "," }}"
+    sizes="{{ $sizes }}"
+    width="{{ $fallback.Width }}"
+    height="{{ $fallback.Height }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    {{ with $class }}class="{{ . }}"{{ end }}
+  >
+</picture>

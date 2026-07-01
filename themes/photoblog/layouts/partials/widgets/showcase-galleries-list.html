@@ -5,8 +5,8 @@
 <div class="card mb-2">
     <div class="card-image">
         <figure class="image is-4by3 is-rounded">
-            {{ with .Params.thumbnailUrl }}
-            <a href="{{ $permalink }}"><img src="{{ $thumbnailUrl }}" alt="{{ $thumbnailAltText }}" loading="lazy"></a>
+            {{ with resources.Get $thumbnailUrl }}
+            <a href="{{ $permalink }}">{{ partial "widgets/responsive-image.html" (dict "resource" . "alt" $thumbnailAltText "sizes" "(max-width: 768px) 100vw, 400px") }}</a>
             {{ end }}
         </figure>
     </div>

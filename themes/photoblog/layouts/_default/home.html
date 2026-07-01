@@ -12,14 +12,17 @@
                 {{ with .Site.GetPage "/showcase" }}
                     {{ .Content }}
                     {{ range .Resources.Match "*.jpg" }}
-                        {{ $link := .RelPermalink }}
+                        {{ $full := . }}
+                        {{ if gt .Width 2000 }}
+                            {{ $full = .Resize "2000x q85" }}
+                        {{ end }}
                         <a
-                            href="{{ .RelPermalink }}"
-                            data-pswp-width="{{ .Width }}"
-                            data-pswp-height="{{ .Height }}"
+                            href="{{ $full.RelPermalink }}"
+                            data-pswp-width="{{ $full.Width }}"
+                            data-pswp-height="{{ $full.Height }}"
                             target="_blank"
                         >
-                            <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" .RelPermalink }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
+                            {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" .Name "sizes" "(max-width: 768px) 100vw, 250px") }}
                             <span class="pswp-caption-content">
                                 {{ with .Exif }}
                                     <!--<ul class="is-subtitle">

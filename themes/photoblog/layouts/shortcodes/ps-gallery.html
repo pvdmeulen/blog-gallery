@@ -3,14 +3,17 @@
     <div id="psgallery--justified" class="psgallery-class">
         {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
         {{ range  $images }}
-            {{ $link := .RelPermalink }}
+            {{ $full := . }}
+            {{ if gt .Width 2000 }}
+                {{ $full = .Resize "2000x q85" }}
+            {{ end }}
             <a
-                href="{{ $link }}"
-                data-pswp-width="{{ .Width }}"
-                data-pswp-height="{{ .Height }}"
+                href="{{ $full.RelPermalink }}"
+                data-pswp-width="{{ $full.Width }}"
+                data-pswp-height="{{ $full.Height }}"
                 target="_blank"
             >
-                <img src='{{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }}' alt="{{ .Name }}" loading="lazy"/>
+                {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" .Name "sizes" "(max-width: 768px) 100vw, 310px") }}
                 <span class="pswp-caption-content">
                     {{ with .Exif }}
                         <ul class="is-subtitle">
@@ -30,10 +33,6 @@
                     {{ end }}
                 </span>
             </a>
-            <!--
-            <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ replaceRE ".*([\\/]+)" "" .Name }} </h4>
-            <h4> {{ replaceRE "([^\\/]+).$" "thumbnails/" $link }}{{ .Name }} </h4>
-            -->
         {{ end }}
     </div>
     <!-- end of block -->
