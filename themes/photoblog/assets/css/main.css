@@ -5,7 +5,7 @@
     object-fit: cover;
     card-radius: 0.25rem;
     }
-    
+
 #fullheight {
     height: 100%;
     object-fit: cover;
@@ -15,7 +15,7 @@
 .button {
   border-radius: 0.25rem;
   }
-  
+
 h1, h2, h3, h4 {
   font-family: var(--bulma-family-primary);
   }
@@ -30,7 +30,7 @@ p {
 /* Hover colors for main links and social tags */
 
 #menu {
-  font-family: var(--bulma-family-primary); 
+  font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
 
@@ -38,31 +38,31 @@ p {
   color: var(--bulma-primary);
   transition: color 0.2s;
   }
-  
+
 /* Different hover colors for main site menu with IDs being posts, galleries, about, contact */
 
 #blog {
-  font-family: var(--bulma-family-primary); 
+  font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
-  
+
 #blog:hover {
   color: var(--bulma-primary);
   transition: color 0.2s;
   }
-  
+
 #galleries {
-  font-family: var(--bulma-family-primary); 
+  font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
-  
+
 #galleries:hover {
   color: var(--bulma-link);
   transition: color 0.2s;
   }
-  
+
 #about {
-  font-family: var(--bulma-family-primary); 
+  font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
 
@@ -70,17 +70,17 @@ p {
   color: var(--bulma-warning);
   transition: color 0.2s;
   }
-  
+
 #contact {
-  font-family: var(--bulma-family-primary); 
+  font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
-  
+
 #contact:hover {
   color: var(--bulma-danger);
   transition: color 0.2s;
   }
-  
+
 
 /* Header (landing) image */
 .header-image {
@@ -128,6 +128,14 @@ a span:hover {
   transition: color 0.2s;
   }
 
+/* The logo-swap wrapper (added for the light/dark logo fix) is a <span>
+   inside an <a>, so it was picking up the "a span:hover" highlight meant
+   for text nav links. Cancel it here — a class selector beats the plain
+   element selector above regardless of order. */
+.logo-swap:hover {
+  filter: none;
+  }
+
 /* Dark/light mode custom elements */
 hr.dark {
     color: $dark
@@ -138,7 +146,7 @@ hr.light {
     color: $light
     border-color: $light
 }
-  
+
 /* Dark/light mode toggle */
 
 body {
@@ -224,4 +232,77 @@ body.dark button {
   min-height: 100%;
   max-height: var(--max-row-height);
   object-fit: cover;
+}
+
+/* Light/dark theme toggle button, in the navbar just after Contact */
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+  text-decoration: none;
+  filter: brightness(150%);
+}
+
+/* Site logo: light/dark swap.
+   <source media="prefers-color-scheme"> only ever follows the OS setting,
+   it can't be overridden from JS/CSS, which is why the logo ignored the
+   toggle button. This uses two plain <img> tags instead, shown/hidden by
+   CSS, so the same [data-theme] override that already drives the rest of
+   the theme's colours can also drive the logo. */
+.logo-swap .logo-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-swap .logo-light { display: none; }
+  .logo-swap .logo-dark { display: inline; }
+}
+
+[data-theme="light"] .logo-swap .logo-light { display: inline; }
+[data-theme="light"] .logo-swap .logo-dark { display: none; }
+
+[data-theme="dark"] .logo-swap .logo-light { display: none; }
+[data-theme="dark"] .logo-swap .logo-dark { display: inline; }
+
+/* Gallery page header image: same light/dark swap issue and same fix,
+   for the headerTagLightMode/headerTagDarkMode images on gallery pages. */
+.gallery-header-swap .gallery-header-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gallery-header-swap .gallery-header-light { display: none; }
+  .gallery-header-swap .gallery-header-dark { display: inline; }
+}
+
+[data-theme="light"] .gallery-header-swap .gallery-header-light { display: inline; }
+[data-theme="light"] .gallery-header-swap .gallery-header-dark { display: none; }
+
+[data-theme="dark"] .gallery-header-swap .gallery-header-light { display: none; }
+[data-theme="dark"] .gallery-header-swap .gallery-header-dark { display: inline; }
+
+/* Equal-height service cards on the homepage (Bulma's .grid/.cell already
+   stretch each cell to the tallest row; this makes the card itself fill
+   that stretched cell, and pins the CTA button to the bottom regardless
+   of how long the description text is) */
+
+.service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card .card-content > a {
+  margin-top: auto;
 }

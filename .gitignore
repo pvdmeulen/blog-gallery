@@ -2,3 +2,23 @@ public/
 resources/_gen/
 .hugo_build.lock
 .DS_Store
+
+# Photo binaries live in Cloudflare R2, not this repo (build.sh syncs them
+# down before `hugo build` runs). These patterns are a safety net so an
+# accidental `git add .` in a content/ or assets/images/ folder doesn't
+# re-commit a photo — text files in those same folders (index.md,
+# style.css, etc.) are unaffected.
+content/**/*.jpg
+content/**/*.jpeg
+content/**/*.JPG
+content/**/*.JPEG
+content/**/*.png
+content/**/*.PNG
+content/**/*.heic
+content/**/*.HEIC
+assets/images/gallery-thumbnails/*.jpg
+assets/images/gallery-thumbnails/*.jpeg
+assets/images/post-thumbnails/*.jpg
+assets/images/post-thumbnails/*.jpeg
+assets/images/services/*.jpg
+assets/images/services/*.jpeg

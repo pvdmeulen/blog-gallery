@@ -1,0 +1,323 @@
+HOW TO ADD OR UPDATE POSTS AND GALLERIES
+pvdmphotography.com (Hugo site, repo: blog-gallery)
+
+OVERVIEW
+
+The site is built with Hugo. Every post and every gallery is just a folder
+inside the content/ directory containing an index.md file (the text and
+settings). The photos themselves are NOT stored in this repo — they live
+in a Cloudflare R2 bucket, and Cloudflare downloads them into the matching
+content/ and assets/images/ folders automatically as the first step of
+every build, before Hugo runs. So publishing a change is two habits now
+instead of one: upload any new/changed photos to R2, and commit/push the
+text (index.md, front matter, tags) to GitHub as before. Cloudflare
+rebuilds and redeploys within a few minutes of a push to main, downloading
+whatever is currently in R2 at that time.
+
+To preview changes before pushing, install Hugo (extended version) locally
+and run "hugo server" from the repo root, then open the local address it
+prints in your browser. Your local checkout doesn't have the R2 photos in
+it either, so pull them down first — see PREVIEWING LOCALLY WITH R2 below.
+
+
+ONE-TIME SETUP: R2 (already done once this is working — reference only)
+
+  1. Cloudflare dashboard: R2 > Create bucket. Any name works; it's
+     referred to as <bucket> below.
+  2. R2 > Manage API tokens > Create API token, scoped to "Object Read &
+     Write" on just that bucket. Note the Access Key ID and Secret Access
+     Key — the secret is only shown once.
+  3. Note your Cloudflare Account ID (R2 overview page, or the sidebar on
+     most dashboard pages).
+  4. Workers & Pages > blog-gallery > Settings > Build > Environment
+     variables (NOT wrangler.toml — these are secrets and shouldn't be
+     committed to git). Add:
+       CF_R2_ACCOUNT_ID
+       CF_R2_ACCESS_KEY_ID
+       CF_R2_SECRET_ACCESS_KEY
+       CF_R2_BUCKET
+  5. Install rclone locally: "brew install rclone" on macOS.
+  6. One-time migration: upload everything currently in content/ and
+     assets/images/ to R2 at the matching path (the UPLOAD cheat sheet
+     below, run once against the whole folder rather than per-item), then
+     stop tracking those binaries in git:
+       git rm -r --cached content/**/*.jpg content/**/*.JPG assets/images/**/*.jpg
+     (repeat for whatever other extensions are actually present), commit,
+     push. The old copies remain in git history until it's rewritten, but
+     the repo stops growing from here.
+
+
+PREVIEWING LOCALLY WITH R2
+
+  Set the same four values as local environment variables (e.g. in your
+  shell profile, or export them before running the command), then before
+  "hugo server", pull the current photos down:
+
+    export RCLONE_CONFIG_R2_TYPE=s3
+    export RCLONE_CONFIG_R2_PROVIDER=Cloudflare
+    export RCLONE_CONFIG_R2_ACCESS_KEY_ID="<your access key id>"
+    export RCLONE_CONFIG_R2_SECRET_ACCESS_KEY="<your secret access key>"
+    export RCLONE_CONFIG_R2_ENDPOINT="https://<account id>.r2.cloudflarestorage.com"
+
+    rclone copy r2:<bucket>/content content --create-empty-src-dirs
+    rclone copy r2:<bucket>/assets/images assets/images --create-empty-src-dirs
+
+  Re-run those two "copy" lines any time you want your local checkout to
+  pick up photos someone else (or you, from another machine) uploaded.
+
+
+UPLOADING PHOTOS TO R2
+
+  After adding photos to a gallery/post folder locally, push just the
+  image files up (not index.md, style.css, etc. — the --include flags
+  restrict it to photos):
+
+    rclone copy content/galleries/iceland r2:<bucket>/content/galleries/iceland \
+      --include "*.jpg" --include "*.JPG" --include "*.jpeg" --include "*.JPEG" \
+      --include "*.png" --include "*.PNG" --include "*.heic" --include "*.HEIC"
+
+  Swap the local/remote path for whichever folder you're working in
+  (content/blog/<slug>, content/blog/<slug>/<subfolder>, or
+  assets/images/gallery-thumbnails, assets/images/post-thumbnails, etc.).
+  Cloudflare picks up whatever's in the bucket on the next build, so
+  upload before (or right after) you push the matching index.md.
+
+
+ADDING A NEW BLOG POST
+
+1. Create a new folder under content/blog/, named however you like (the
+   existing posts use a date-based name, e.g. 12nov2025). This folder name
+   becomes part of the post's web address.
+
+2. Inside that folder, create index.md with front matter at the top
+   between +++ marks, followed by the post text in Markdown underneath.
+   Copy an existing post (e.g. content/blog/12nov2025/index.md) as a
+   starting template. The fields are:
+
+   title               The post's headline.
+   subtitle            A longer summary shown on the blog list and
+                        homepage card.
+   date                Publish date, format YYYY-MM-DD.
+   linkTitle           Short label used for the "date" line on cards,
+                        e.g. "12 Nov 2025".
+   draft               Set to true while writing, false when ready to
+                        publish. Draft posts are left out of the build.
+   tags                A list of tags, e.g. ['street', 'events']. A few
+                        tag names (landscape, street) get their own icon
+                        and colour on the site; anything else falls back
+                        to a generic style.
+   thumbnailUrl         Path to a small thumbnail image, relative to the
+                        assets/images/post-thumbnails/ folder, e.g.
+                        'images/post-thumbnails/thumbnail5.jpg'. Upload the
+                        actual image file to R2 under
+                        assets/images/post-thumbnails/ first (see
+                        UPLOADING PHOTOS TO R2 above).
+   thumbnailAltText     Description of that thumbnail, for accessibility.
+   featuredImageType     Usually "Photo".
+   featuredImageUrl      Always 'featured.jpg' — upload a file named
+                        exactly featured.jpg to R2, at
+                        content/blog/<this post's folder name>/featured.jpg.
+   featuredImageCaption   A short caption shown under the featured image.
+   featuredImageAttribute Photo credit, usually your own name.
+
+3. Write the body of the post in Markdown below the closing +++.
+
+   To embed a group of photos inline, upload them to R2 under a subfolder
+   matching the post (e.g. content/blog/12nov2025/cats/) and reference it
+   with:
+
+       {{< ps-gallery folder="/cats/" >}}
+
+   You can have as many of these photo groups as you like, each in its
+   own subfolder with its own shortcode call.
+
+   To embed a Spotify track, use:
+
+       {{< spotify-embed src="https://open.spotify.com/embed/track/XXXX"
+           title="Track name" desc="Why you're sharing it" >}}
+
+4. Set draft = false, commit, and push. The post will appear in the blog
+   list automatically, and will show up on the homepage's "Blog" section
+   once it's one of the four most recent posts.
+
+
+ADDING A NEW GALLERY
+
+1. Create a new folder under content/galleries/, named after the gallery
+   (this becomes part of its web address, e.g. content/galleries/iceland/
+   becomes /galleries/iceland/).
+
+2. Upload the actual photo files to R2, directly under that same path
+   (not in a subfolder) — see UPLOADING PHOTOS TO R2 above. Any
+   resolution is fine — Hugo automatically resizes and converts them to
+   smaller, faster formats when the site builds.
+
+3. Create index.md in the same folder. Copy an existing gallery's
+   index.md (e.g. content/galleries/events/index.md) as a template. The
+   fields are:
+
+   title               The gallery's name, e.g. "Iceland".
+   subtitle            A one-line description shown on the gallery page.
+   categories          A list, usually matching the gallery name, e.g.
+                        ['iceland'].
+   date                Any date; used for sorting.
+   layout              Always 'gallery' — don't change this.
+   tags                Same tagging system as blog posts.
+   thumbnailUrl         Path to the small thumbnail used on the galleries
+                        list and homepage, relative to
+                        assets/images/gallery-thumbnails/, e.g.
+                        'images/gallery-thumbnails/iceland.jpg'. Upload the
+                        actual file to R2 under
+                        assets/images/gallery-thumbnails/ first.
+   thumbnailAltText     Description of that thumbnail.
+   headerTagLightMode    Path to a header image/logo shown in light mode,
+                        under static/images/gallery-headers/.
+   headerTagDarkMode     Same, for dark mode.
+
+4. The body of index.md just needs one line to display all the photos in
+   the folder:
+
+       {{< ps-gallery folder="" >}}
+
+5. Commit and push. The gallery appears automatically on /galleries/, and
+   on the homepage's "Featured Galleries" section if it's one of the
+   first four galleries.
+
+
+TAGGING INDIVIDUAL PHOTOS (for "browse photos by tag")
+
+Normally a tag applies to a whole post or gallery. To make a specific
+photo show up on its own under /tags/<name>/ — regardless of what the
+gallery/post around it is tagged — there are two ways, and you can mix
+both:
+
+METHOD 1 — Keyword the photo itself (recommended, no Hugo editing)
+
+  Hugo (0.155+; this site runs 0.161.1) can read the IPTC "Keywords"
+  field embedded in a photo's own file, the same field most photo
+  editors expose as "keywords" or "tags" in their metadata/info panel.
+  Add the word "landscape", "portrait", etc. as a keyword on the photo
+  before it's uploaded to R2, and it'll automatically appear on that
+  tag's page — no front matter, no rebuilding lists by hand.
+
+  Check whether your editor writes this field on export/save — not all
+  of them do. If yours doesn't (or for a quick one-off), exiftool
+  reliably works from the command line and is free.
+
+  Matching against tags is case-insensitive, so "Landscape" or
+  "landscape" both work against the "landscape" tag.
+
+  Before relying on this for real, it's worth a one-time sanity check:
+  cameras and editors don't all write metadata identically, and the
+  exact field name Hugo picks up can vary. Ask me to add a small debug
+  block to a page temporarily to print out everything Hugo actually
+  reads from one of your photos, so you can confirm "Keywords" (or
+  whatever the real field name turns out to be) is what's there before
+  keywording your whole library.
+
+  IMPORTANT — always include -overwrite_original. Without it, exiftool
+  leaves a backup copy behind named "<filename>_original" (e.g.
+  IMG04012.jpg_original) instead of editing in place. That backup file
+  isn't a real photo, and if it ends up inside a gallery folder, Hugo's
+  build breaks trying to treat it like one. With -overwrite_original,
+  exiftool edits the file directly and no backup is created.
+
+  EXIFTOOL KEYWORD CHEAT SHEET
+
+    View the keywords on one photo:
+        exiftool -Keywords IMG04012.jpg
+
+    View keywords on every photo in a folder:
+        exiftool -Keywords *.jpg
+
+    Add a keyword, keeping any existing ones (single photo):
+        exiftool -overwrite_original -Keywords+="landscape" IMG04012.jpg
+
+    Add a keyword to every photo in a folder at once:
+        exiftool -overwrite_original -Keywords+="events" *.jpg
+
+    Add more than one keyword at once (repeat -Keywords+=):
+        exiftool -overwrite_original -Keywords+="landscape" -Keywords+="water" IMG04012.jpg
+
+    Remove one specific keyword, leaving the rest:
+        exiftool -overwrite_original -Keywords-="landscape" IMG04012.jpg
+
+    Clear ALL keywords from one photo:
+        exiftool -overwrite_original -Keywords= IMG04012.jpg
+
+    Clear ALL keywords from every photo in a folder:
+        exiftool -overwrite_original -Keywords= *.jpg
+
+    Wipe existing keywords and replace with a fresh set (clear, then add):
+        exiftool -overwrite_original -Keywords= -Keywords+="landscape" -Keywords+="water" IMG04012.jpg
+
+  Run these from inside the gallery/post's own content folder (where the
+  photo files actually live), and double-check the result with the
+  "view" command above before rebuilding the site.
+
+METHOD 2 — List it in front matter (manual, always works)
+
+  For photos you can't or don't want to keyword at the file level, add
+  a photoTags list to that gallery/post's index.md front matter
+  instead:
+
+    [[photoTags]]
+      file = "IMG04012.jpg"
+      tags = ["landscape", "water"]
+
+    [[photoTags]]
+      file = "IMG04066.jpg"
+      tags = ["portrait"]
+
+  "file" must exactly match the photo's filename in that same folder.
+  "tags" is a list — a photo can carry more than one.
+
+Either method is independent of the gallery/post's own "tags" field — a
+photo doesn't need to repeat a tag its parent gallery already has, and
+can carry tags the gallery doesn't (e.g. one nice landscape shot inside
+the "events" gallery, tagged "landscape" so it shows up there too). Both
+methods are entirely optional — untagged photos just don't appear in the
+per-tag photo grid, everything else about them is unaffected.
+
+
+IMAGE LOCATIONS — WHICH FOLDER TO USE
+
+This trips people up, so to be clear about the three different places
+images live, and where each one actually gets uploaded:
+
+  - Photos that belong to a specific post or gallery (the actual gallery
+    photos, or a post's featured.jpg) go to R2 at the path that mirrors
+    that post/gallery's own folder in content/. Cloudflare downloads them
+    into content/ before each build, and Hugo processes them from there
+    automatically.
+
+  - Small thumbnail images used on list pages and the homepage (post
+    thumbnails, gallery thumbnails) go to R2 at the path that mirrors
+    assets/images/... — this is what lets Hugo resize and convert them
+    too. Don't put these in static/, they won't be processed and
+    referencing them will silently fail to show anything.
+
+  - Things that are never resized (logos, header background SVGs/JPEGs,
+    favicons) live under static/images/... in the git repo itself, and
+    are served exactly as-is. These are small, rarely change, and aren't
+    part of the R2 sync — commit them normally.
+
+If in doubt: if the image needs to look good at a specific small size on
+a card or thumbnail, it's an assets/ path (uploaded to R2). If it's a
+regular gallery/post photo, it's a content/ path (uploaded to R2). If
+it's already exactly the file you want served and basically never
+changes, static/ is fine (committed to git).
+
+
+QUICK CHECKLIST BEFORE PUSHING
+
+  - Photos uploaded to R2 at the matching content/ or assets/images/ path
+    (they won't appear otherwise — a git push alone doesn't put photos
+    anywhere anymore)
+  - draft = false (for anything you want visible)
+  - Front matter is between +++ marks, not --- (this site uses TOML, not
+    YAML)
+  - Any thumbnail/featured image files actually exist at the paths you
+    typed in the front matter
+  - Tags spelled consistently with existing ones if you want them to
+    share a tag page with older posts/galleries

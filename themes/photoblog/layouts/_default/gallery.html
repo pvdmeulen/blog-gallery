@@ -1,7 +1,7 @@
 {{ define "main" }}
 
     {{ $subtitle := .Params.subtitle }}
-    
+
     <div class="container is-centered mx-2">
         <div class="columns">
             <div class="column is-full">
@@ -29,14 +29,10 @@
                         <!--<h1 class="is-title mt-3 mb-1 is-size-3 has-text-weight-bold">
                             {{ .Title }}
                         </h1>-->
-            			<picture width="180px" alt="{{ .Params.Title }}">
-            				<!-- User prefers light mode: -->
-            				<source srcset="{{ .Params.headerTagLightMode }}" media="(prefers-color-scheme: light)">
-            				<!-- User prefers dark mode: -->
-            				<source srcset="{{ .Params.headerTagDarkMode }}" media="(prefers-color-scheme: dark)">
-            	        	<!-- User has no color preference: -->
-            				<img srcset="{{ .Params.headerTagLightMode }}" width="400px"></img>
-            			</picture>
+                        <span class="gallery-header-swap">
+                            <img srcset="{{ .Params.headerTagLightMode }}" width="400px" class="gallery-header-light" alt="{{ .Params.Title }}">
+                            <img srcset="{{ .Params.headerTagDarkMode }}" width="400px" class="gallery-header-dark" alt="{{ .Params.Title }}">
+                        </span>
                             <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
                 			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
                 	</div>
@@ -57,5 +53,5 @@
             </div>
         </div>
     </div>
-  
+
 {{ end }}

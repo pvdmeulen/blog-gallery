@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 
@@ -12,7 +12,7 @@
 	<header>
 		{{ partial "header.html" . }}
 	</header>
-	
+
 	<body class="">
 		<div class="container is-max-fullhd">
 		{{ block "main" . }}{{ end }}

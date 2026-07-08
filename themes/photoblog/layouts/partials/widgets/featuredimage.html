@@ -9,7 +9,7 @@
 
 <div class="container mb-3">
     <div class="pswp-gallery" id="psgallery--featuredimage">
-    
+
         {{ with $image }}
 
             {{ $full := . }}
@@ -25,26 +25,26 @@
             >
                 {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" $featuredImageAltText "sizes" "(max-width: 768px) 100vw, 66vw") }}
                 <span class="pswp-caption-content">
-                    {{ with .Exif }}
+                    {{ with .Meta }}
                         <ul class="is-subtitle">
                             {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
-                            {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                            {{ with .Exif.ImageDescription }}<li>{{ . }}</li>{{ end }}
                             <br>
-                            <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
-                            {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
+                            <!--{{ with .Exif.Model }}<li>{{ . }}</li>{{ end }}
+                            {{ with .Exif.LensModel }}<li>{{ . }}</li>{{ end }}
                             <br>-->
-                            {{ with .Tags.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
-                            {{ with .Tags.FNumber }}<li>F-stop: {{ partial "format-fstop.html" . }}</li>{{ end }}
-                            {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}                            
-                            {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                            {{ with .Exif.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                            {{ with .Exif.FNumber }}<li>F-stop: {{ partial "format-fstop.html" . }}</li>{{ end }}
+                            {{ with .Exif.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                            {{ with .Exif.ISO }}<li>ISO: {{ . }}</li>{{ end }}
                         </ul>
                     {{ end }}
                 </span>
             </a>
-            
+
         {{ end }}
-        
+
         <p class="is-subtitle">{{ $featuredImageCaption }} Image: {{ .Params.featuredImageAttribute }}</p>
-        
+
     </div>
 </div>

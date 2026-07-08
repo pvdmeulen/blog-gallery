@@ -1,0 +1,28 @@
+{{/*
+  Renders a single "service" card for the homepage Services section.
+
+  Params (dict):
+    image       (required) - path to a static image, e.g. "/images/services/sports-events.jpg"
+                             (resolved with resources.Get, same as showcase.html/showcase-galleries-home.html)
+    color       (optional) - Bulma colour modifier: primary | link | warning | danger. Defaults to "primary"
+    title       (required) - card heading
+    description (required) - short description text
+*/}}
+{{ $image := .image }}
+{{ $color := .color | default "primary" }}
+{{ $title := .title }}
+{{ $description := .description }}
+
+<div class="card has-background-main service-card">
+    <div class="card-image">
+        <figure class="image is-16by9">
+            {{ with resources.Get $image }}
+                {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" $title "sizes" "(max-width: 768px) 100vw, 400px") }}
+            {{ end }}
+        </figure>
+    </div>
+    <div class="card-content has-text-centered">
+        <h2 class="title is-5 has-text-weight-semibold mb-2">{{ $title }}</h2>
+        <div class="content has-text-weight-normal mb-3">{{ $description }}</div>
+    </div>
+</div>

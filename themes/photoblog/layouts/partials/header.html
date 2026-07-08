@@ -5,16 +5,10 @@
     <div class="navbar-brand">
         <h1 class="title mx-2 has-text-primary-light">
     		<a href="{{ `` | absURL }}">
-    			<picture width="180px">
-    				<!-- User prefers light mode: -->
-    				<source srcset="{{ `images/logo-light.svg` | relLangURL }}" media="(prefers-color-scheme: light)">
-    				<!-- User prefers dark mode: -->
-    				<source srcset="{{ `images/logo-dark.svg` | relLangURL }}" media="(prefers-color-scheme: dark)">
-    	        	<!-- User has no color preference: -->
-    				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="180px"></img>
-    			</picture>
-                <!-- <img src="{{ `images/logo-dark.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img>
-    			<img src="{{ `images/logo-light.svg` | relLangURL }}" width="200px" class="py-1 my-3" media="(prefers-color-scheme: dark)"></img> -->
+    			<span class="logo-swap">
+    				<img src="{{ `images/logo-light.svg` | relLangURL }}" width="180px" class="logo-light" alt="{{ site.Title }}">
+    				<img src="{{ `images/logo-dark.svg` | relLangURL }}" width="180px" class="logo-dark" alt="{{ site.Title }}">
+    			</span>
     		</a>
     	</h1>
     	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -23,7 +17,7 @@
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
-    </div>    
+    </div>
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
             <div class="buttons">
@@ -38,7 +32,42 @@
                         <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="{{ lower .Name }}">{{ .Name }}</button>
                     </a>
                 {{ end }}
+
+                <!-- Light/dark theme toggle: sits to the right of Contact, last item in the bar -->
+                <button id="theme-toggle" type="button" class="navbar-item theme-toggle-button" aria-label="Switch between light and dark mode">
+                    <span class="icon">
+                        <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+                    </span>
+                </button>
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    (function () {
+        var root = document.documentElement;
+        var button = document.getElementById('theme-toggle');
+        var icon = document.getElementById('theme-toggle-icon');
+
+        function currentTheme() {
+            return root.dataset.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+
+        function updateIcon() {
+            var isDark = currentTheme() === 'dark';
+            // Icon shows the mode you'll switch TO
+            icon.classList.toggle('fa-moon', !isDark);
+            icon.classList.toggle('fa-sun', isDark);
+        }
+
+        updateIcon();
+
+        button.addEventListener('click', function () {
+            var next = currentTheme() === 'dark' ? 'light' : 'dark';
+            root.dataset.theme = next;
+            localStorage.setItem('theme', next);
+            updateIcon();
+        });
+    })();
+</script>

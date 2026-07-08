@@ -1,0 +1,175 @@
+{{ define "main" }}
+
+    <div class="container is-centered mx-2">
+        <div class="columns">
+            <div class="column is-full">
+                <!-- Breadcrumbs -->
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="{{ `` | absURL }}" class="has-text-link is-subtitle"><span>Home</span></a>
+                        </li>
+                        <li class="is-active">
+                            <a href="#" aria-current="page" class="is-subtitle">
+                                <span>{{ .LinkTitle }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="columns mb-5">
+                    <div class="column is-full">
+                        <h1 class="is-title mt-3 mb-1 is-size-3 has-text-weight-bold">
+                            {{ .Title }}
+                        </h1>
+
+                        {{ $termName := .Data.Term }}
+                        {{ $termNameLower := lower $termName }}
+                        {{ $galleries := where .Pages "Type" "galleries" }}
+                        {{ $posts := where .Pages "Type" "blog" }}
+
+                        <!-- Individual PHOTOS tagged with this term, wherever they live.
+                             Two sources, combined:
+
+                             1) Automatic — the IPTC "Keywords" field embedded in the photo
+                                itself (add keywords in Lightroom/Photomator/exiftool/etc,
+                                no front matter needed). Matched case-insensitively against
+                                the tag name.
+
+                             2) Manual override — a "photoTags" front matter list on the
+                                gallery/post, for photos you can't or don't want to tag at
+                                the file level:
+                                    [[photoTags]]
+                                      file = "IMG04012.jpg"
+                                      tags = ["landscape", "water"]
+
+                             See the content guide for details on both. -->
+                        {{ $photoPages := where .Site.RegularPages "Type" "in" (slice "blog" "galleries") }}
+                        {{ $photos := slice }}
+                        {{ range $photoPages }}
+                            {{ $page := . }}
+
+                            <!-- 1) Automatic, from embedded IPTC keywords.
+                                 When a photo has only one keyword, some tools/decoders
+                                 return it as a plain string rather than a one-item list,
+                                 so normalize to a slice before ranging over it. -->
+                            {{ range $page.Resources }}
+                                {{ $resource := . }}
+                                {{ if reflect.IsImageResourceWithMeta $resource }}
+                                    {{ with $resource.Meta }}
+                                        {{ $keywords := .IPTC.Keywords }}
+                                        {{ if $keywords }}
+                                            {{ if not (reflect.IsSlice $keywords) }}
+                                                {{ $keywords = slice $keywords }}
+                                            {{ end }}
+                                            {{ range $keywords }}
+                                                {{ if eq (lower .) $termNameLower }}
+                                                    {{ $photos = $photos | append (dict "page" $page "resource" $resource) }}
+                                                {{ end }}
+                                            {{ end }}
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+
+                            <!-- 2) Manual override, from photoTags front matter -->
+                            {{ range $page.Params.photoTags }}
+                                {{ if in .tags $termName }}
+                                    {{ with $page.Resources.Get .file }}
+                                        {{ $photos = $photos | append (dict "page" $page "resource" .) }}
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+
+                        <!-- A photo could in theory match both sources above; de-duplicate by URL -->
+                        {{ $seenPhotoURLs := slice }}
+                        {{ $uniquePhotos := slice }}
+                        {{ range $photos }}
+                            {{ $url := .resource.RelPermalink }}
+                            {{ if not (in $seenPhotoURLs $url) }}
+                                {{ $seenPhotoURLs = $seenPhotoURLs | append $url }}
+                                {{ $uniquePhotos = $uniquePhotos | append . }}
+                            {{ end }}
+                        {{ end }}
+                        {{ $photos = $uniquePhotos }}
+
+                        <!-- GALLERIES tagged with this term
+                        {{ with $galleries }}
+                        <h2 class="is-subtitle mt-4 mb-2 is-size-5 has-text-weight-bold">Galleries</h2>
+                        <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
+                            <div class="grid">
+                                {{ range .ByPublishDate.Reverse }}
+                                    <div class="cell">
+                                        {{ partial "widgets/showcase-galleries-list.html" . }}
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }} -->
+
+                        <!-- BLOG POSTS tagged with this term -->
+                        {{ with $posts }}
+                        <h2 class="is-subtitle mt-5 mb-2 is-size-5 has-text-weight-bold">Blog Posts</h2>
+                        <div class="fixed-grid has-4-cols-desktop has-2-cols-touch">
+                            <div class="grid">
+                                {{ range .ByPublishDate.Reverse }}
+                                    <div class="cell">
+                                        {{ partial "widgets/showcase-desc.html" . }}
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+
+                        <!-- PHOTOS tagged with this term -->
+                        {{ with $photos }}
+                        <h2 class="is-subtitle mt-5 mb-2 is-size-5 has-text-weight-bold">Photos</h2>
+                        <div id="psgallery--tagphotos" class="psgallery-class">
+                            {{ range . }}
+                                {{ $resource := .resource }}
+                                {{ if reflect.IsImageResourceProcessable $resource }}
+                                {{ $full := $resource }}
+                                {{ if gt $resource.Width 2000 }}
+                                    {{ $full = $resource.Resize "2000x q85" }}
+                                {{ end }}
+                                <a
+                                    href="{{ $full.RelPermalink }}"
+                                    data-pswp-width="{{ $full.Width }}"
+                                    data-pswp-height="{{ $full.Height }}"
+                                    target="_blank"
+                                >
+                                    {{ partial "widgets/responsive-image.html" (dict "resource" $resource "alt" $resource.Name "sizes" "(max-width: 768px) 100vw, 310px") }}
+                                    <span class="pswp-caption-content">
+                                        {{ if reflect.IsImageResourceWithMeta $resource }}
+                                            {{ with $resource.Meta }}
+                                                <ul class="is-subtitle">
+                                                    {{ with .Exif.ImageTitle }}<li><b>{{ . }}<b></li>{{ end }}
+                                                    {{ with .Date }}<li>{{ .Format "January 02, 2006" }}</li>{{ end }}
+                                                    <br>
+                                                    {{ with .Exif.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                                                    <br>
+                                                    {{ with .Exif.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                                                    {{ with .Exif.FNumber }}<li>F-stop: {{ partial "format-fstop.html" . }}</li>{{ end }}
+                                                    {{ with .Exif.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                                                    {{ with .Exif.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                                                </ul>
+                                            {{ end }}
+                                        {{ end }}
+                                    </span>
+                                </a>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                        {{ if and (not $galleries) (not $posts) (not $photos) }}
+                        <p class="is-subtitle mt-4">Nothing tagged here yet.</p>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{ end }}

@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://pvdmphotography.com/'
 languageCode = 'en-gb'
 title = 'Peter van der Meulen'
 logo = 'logo.svg'
@@ -6,19 +6,23 @@ theme = ['photoblog']
 pagination.pagerSize = 8
 timeout = '300s'
 
+[params]
+  description = 'Photography portfolio and journal by Peter van der Meulen: portraits, events, and travel photography based in Edinburgh, Scotland.'
+  defaultImage = 'images/gallery-thumbnails/gallery_thumbnail.jpg'
+
 [menu]
-  [[menu.main]]
-    name = "Blog"
-    pre = "pen-tool"
-    url = "/blog/"
-    weight = 10
-    colorid = "primaryhover"
   [[menu.main]]
     name = "Galleries"
     pre = "image"
     url = "/galleries/"
-    weight = 20
+    weight = 10
     colorid = "secondaryhover"
+  [[menu.main]]
+    name = "Blog"
+    pre = "pen-tool"
+    url = "/blog/"
+    weight = 20
+    colorid = "primaryhover"
   [[menu.main]]
     name = "About"
     pre = "id-badge"
@@ -32,7 +36,7 @@ timeout = '300s'
     weight = 40
     colorid = "dangerhover"
   [[menu.social]]
-    name = "Intagram"
+    name = "Instagram"
     pre = "fa-brands fa-instagram"
     url = "https://www.instagram.com/pvdm_photos/"
     weight = 10
@@ -45,4 +49,4 @@ timeout = '300s'
     name = "GitHub"
     pre = "fa-brands fa-github"
     url = "https://github.com/pvdmeulen/blog-gallery"
-    weight = 30    
+    weight = 30

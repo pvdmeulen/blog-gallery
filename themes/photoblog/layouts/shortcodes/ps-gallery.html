@@ -3,6 +3,7 @@
     <div id="psgallery--justified" class="psgallery-class">
         {{ $images := .Page.Resources.Match (printf "%s*" (.Get "folder")) }}
         {{ range  $images }}
+            {{ if reflect.IsImageResourceProcessable . }}
             {{ $full := . }}
             {{ if gt .Width 2000 }}
                 {{ $full = .Resize "2000x q85" }}
@@ -15,24 +16,22 @@
             >
                 {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" .Name "sizes" "(max-width: 768px) 100vw, 310px") }}
                 <span class="pswp-caption-content">
-                    {{ with .Exif }}
+                    {{ with .Meta }}
                         <ul class="is-subtitle">
-                            {{ with .Tags.ImageTitle }}<li><b>{{ . }}<b></li>{{ end }}
+                            {{ with .Exif.ImageTitle }}<li><b>{{ . }}<b></li>{{ end }}
                             {{ with .Date }}<li>{{ .Format "January 02, 2006" }}</li>{{ end }}
                             <br>
-                            {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                            {{ with .Exif.ImageDescription }}<li>{{ . }}</li>{{ end }}
                             <br>
-                            <!--{{ with .Tags.Model }}<li>{{ . }}</li>{{ end }}
-                            {{ with .Tags.LensModel }}<li>{{ . }}</li>{{ end }}
-                            <br>-->
-                            {{ with .Tags.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
-                            {{ with .Tags.FNumber }}<li>F-stop: {{ partial "format-fstop.html" . }}</li>{{ end }}
-                            {{ with .Tags.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}                            
-                            {{ with .Tags.ISO }}<li>ISO: {{ . }}</li>{{ end }}
+                            {{ with .Exif.FocalLengthIn35mmFormat }}<li>Focal length: {{ . }}mm</li>{{ end }}
+                            {{ with .Exif.FNumber }}<li>F-stop: {{ partial "format-fstop.html" . }}</li>{{ end }}
+                            {{ with .Exif.ExposureTime }}<li>Shutter speed: {{ . }}</li>{{ end }}
+                            {{ with .Exif.ISO }}<li>ISO: {{ . }}</li>{{ end }}
                         </ul>
                     {{ end }}
                 </span>
             </a>
+            {{ end }}
         {{ end }}
     </div>
     <!-- end of block -->

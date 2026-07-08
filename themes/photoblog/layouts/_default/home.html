@@ -1,12 +1,12 @@
 {{ define "main" }}
-    
+
     {{ .Content }}
-    
+
     <!-- PHOTO SHOWCASE IN TABLET AND ABOVE -->
-    
+
     <div class="container is-centered mx-2 pb-5 mb-5">
-        
-        <!-- PHOTO SHOWCASE -->         
+
+        <!-- PHOTO SHOWCASE -->
         <div class="container mt-2 mb-5 pb-5">
             <div id="psgallery--justified" class="psshowcase-class">
                 {{ with .Site.GetPage "/showcase" }}
@@ -24,10 +24,10 @@
                         >
                             {{ partial "widgets/responsive-image.html" (dict "resource" . "alt" .Name "sizes" "(max-width: 768px) 100vw, 250px") }}
                             <span class="pswp-caption-content">
-                                {{ with .Exif }}
+                                {{ with .Meta }}
                                     <!--<ul class="is-subtitle">
                                         {{ with .Date }}<li><b>{{ .Format "January 02, 2006" }}</b></li>{{ end }}
-                                        {{ with .Tags.ImageDescription }}<li>{{ . }}</li>{{ end }}
+                                        {{ with .Exif.ImageDescription }}<li>{{ . }}</li>{{ end }}
                                     </ul>-->
                                 {{ end }}
                             </span>
@@ -39,40 +39,60 @@
         
         <hr>
         
-        <!-- BLOG -->
-        <div class="container pt-5 pb-5">
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <!-- Title -->
-                    <div class="content">
-                        <p class="has-text-weight-bold is-title is-size-4 mt-1 mb-0">Blog</p>
-                        <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
-                        Writing about some of my excursions around Scotland, Sweden, and elsewhere.
-                        <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="{{ "blog/" | relURL }}"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+        <!-- SERVICES -->
+
+        <div class="container pt-2 pb-5">
+            <!-- Title + CTA -->
+            <div class="columns is-vcentered mb-2">
+                <div class="column is-two-thirds">
+                    <div class="content mb-0">
+                        <p class="is-size-4 mt-2 mb-0 has-text-weight-bold is-title">Services</p>
+                        I'm just starting out as a part-time photographer, so my rates are low while I build my portfolio. A great way to get quality photos without the usual price tag.
                     </div>
                 </div>
-                <div class="column">
-                    <!-- Row grid with blog posts -->
-                    <div class="card">
-                        <div class="card-content">   
-                            <div class="grid is-col-min-6 is-column-gap-5">
-                                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "blog" | after 0 | first 4}}
-                                {{ range $post }}
-                                <div class="cell my-2">
-                                    {{ partial "widgets/showcase-blog-home.html" . }}
-                                </div>
-                                {{ end }}
-                            </div>
-                        </div>  
-                    </div>
+                <div class="column is-one-third has-text-right">
+                    <a href="{{ "contact/" | relURL }}">
+                        <button class="button is-primary is-responsive">
+                            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span>Get in touch</span>
+                        </button>
+                    </a>
                 </div>
             </div>
+            <!-- Row grid with services -->
+            <div class="grid is-gap-2 is-col-min-8">
+                {{ $services := slice
+                    (dict
+                        "image" "/images/services/sports-events.jpg"
+                        "color" "primary"
+                        "title" "Sports & Events Photography"
+                        "description" "Covering sports fixtures, festivals, and events around Edinburgh. Candid, in-the-moment shots at an affordable rate."
+                    )
+                    (dict
+                        "image" "/images/services/second-shooter-weddings.jpg"
+                        "color" "link"
+                        "title" "Second Shooter at Weddings"
+                        "description" "Available as a second shooter to capture candid guest moments and details alongside your main photographer."
+                    )
+                    (dict
+                        "image" "/images/services/portraits-edinburgh.jpg"
+                        "color" "warning"
+                        "title" "Portraits Around Edinburgh"
+                        "description" "Outdoor portrait sessions around Edinburgh's best spots, on location or somewhere of your choosing."
+                    )
+                }}
+                {{ range $services }}
+                <div class="cell">
+                    {{ partial "widgets/service-card.html" . }}
+                </div>
+                {{ end }}
+            </div>
         </div>
-                
+
         <hr>
-        
+
         <!-- FEATURED GALLERIES -->
-        
+
         <div class="container pt-2 pb-5">
             <!-- Title -->
             <div class="content">
@@ -91,17 +111,49 @@
                 {{ end }}
             </div>
         </div>
-        
+
         <hr>
-                
+
+        <!-- BLOG -->
+        <div class="container pt-5 pb-5">
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <!-- Title -->
+                    <div class="content">
+                        <p class="has-text-weight-bold is-title is-size-4 mt-1 mb-0">Blog</p>
+                        <!-- <p class="is-subtitle">A selection of photos I'm extra proud of, grouped under a common theme.</p> -->
+                        Writing about some of my excursions around Scotland, Sweden, and elsewhere.
+                        <h3 class="is-size-6 mb-2 mt-1 has-text-left has-text-weight-semibold"><a href="{{ "blog/" | relURL }}"><span>See all posts <i class="fa-solid fa-arrow-right"></i></span></a></h3>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Row grid with blog posts -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="grid is-col-min-6 is-column-gap-5">
+                                {{ $post := where .Site.RegularPages.ByPublishDate.Reverse "Type" "blog" | after 0 | first 4}}
+                                {{ range $post }}
+                                <div class="cell my-2">
+                                    {{ partial "widgets/showcase-blog-home.html" . }}
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
         <!-- Site content by tag -->
-        
+
         <div class="container pt-2 pb-5">
             <div class="content">
-                <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title">Browse content by tag</p>
+                <p class="is-size-5 mt-2 mb-0 has-text-weight-bold is-title">Browse photos and blog posts by tag</p>
             </div>
             {{ partial "widgets/site-tags.html" . }}
         </div>
     </div>
-  
+
 {{ end }}

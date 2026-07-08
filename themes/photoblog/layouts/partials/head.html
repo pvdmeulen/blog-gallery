@@ -1,6 +1,53 @@
+<script>
+  /* Restore saved theme choice before first paint, so there's no flash of
+     the wrong theme. Runs blocking, on purpose, and must stay first in
+     <head> — before any stylesheet — for that to work. */
+  (function () {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark' || saved === 'light') {
+      document.documentElement.dataset.theme = saved;
+    }
+  })();
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<!-- Description: page subtitle if it has one, otherwise the site default -->
+{{ $description := .Params.subtitle | default site.Params.description }}
+<meta name="description" content="{{ $description }}">
+
+<!-- Social preview image: featured.jpg (blog posts) > thumbnailUrl (galleries) > site default -->
+{{ $ogImage := resources.Get site.Params.defaultImage }}
+{{ with .Params.thumbnailUrl }}
+    {{ with resources.Get . }}
+        {{ $ogImage = . }}
+    {{ end }}
+{{ end }}
+{{ with .Resources.Get "featured.jpg" }}
+    {{ $ogImage = . }}
+{{ end }}
+{{ with $ogImage }}
+    {{ $ogImageFinal := . }}
+    {{ if reflect.IsImageResourceProcessable . }}
+        {{ $ogImageFinal = .Fill "1200x630" }}
+    {{ end }}
+    <meta property="og:image" content="{{ $ogImageFinal.Permalink }}">
+    <meta name="twitter:image" content="{{ $ogImageFinal.Permalink }}">
+{{ end }}
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $description }}">
 
 <!-- Cached stylesheet, js -->
 {{ partialCached "head/css.html" . }}
@@ -21,7 +68,7 @@
   import PhotoSwipe from "/js/photoswipe/photoswipe.esm.min.js";
   import PhotoSwipeLightbox from "/js/photoswipe/photoswipe-lightbox.esm.min.js";
   import PhotoSwipeDynamicCaption from "/js/photoswipe/photoswipe-dynamic-caption-plugin.esm.min.js";
-  
+
   <!-- FOR BOTH COMPLETE GALLERIES (W/ JUSTIFIED GALLERY) & INDIVIDUAL/FEATURED IMAGES -->
   const lightbox = new PhotoSwipeLightbox({
 	gallery: "[id^='psgallery']", // select any divs with id starting with psgallery
@@ -37,13 +84,13 @@
     }
   },
   });
-    
+
   const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
     type: 'auto',
   });
-  
+
   lightbox.init();
-  
+
 </script>
 
 <!-- JQuery -->
@@ -57,7 +104,7 @@
 
 <!-- Implement justified gallery in tighter way for in-post and gallery photos, wider way for showcase -->
 <script type = "module">
-	
+
     $(function(){
       $(".psgallery-class").each(function(){
         $(this).justifiedGallery({
@@ -70,7 +117,7 @@
         });
       });
     });
-    
+
     $(function(){
       $(".psshowcase-class").each(function(){
         $(this).justifiedGallery({
@@ -84,37 +131,3 @@
     });
 
 </script>
-
-<!-- Light/dark theme button -->
-
-<!-- <script type="module">
-
-    document.querySelector("#btn-toggle-theme").addEventListener("click", (e) => {
-        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
-    -->
-    
-<!--    // Check user dark mode pref
-    const getInitialState = () => {
-      const initialValue = localStorage.getItem("darkMode");
-    
-      if(initialValue === null){
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-    
-      return initialValue == "true";
-    }
-    
-    let darkMode = getInitialState();
-    document.getElementById("darkmode").checked = darkMode;
-    
-    if(darkMode){
-      toggleDarkMode(); //I'm assuming your page starts in light mode, so a call to toggle should switch everything over!
-    }
-    
-    //new wrapper function
-    const updateDarkMode = () => {
-      darkMode = !darkMode; //invert our variable
-      localStorage.setItem("darkMode", darkMode); //save it in local storage
-      toggleDarkMode(); //now update our styles!
-    }-->

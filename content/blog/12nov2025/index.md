@@ -1,5 +1,5 @@
 +++
-title = 'My plan for 2026'
+title = 'Practice, practice, practice'
 subtitle = "In late 2024, I started taking more photos. In 2025, a lot more. First with my old DSLR, and later with my new camera. The more I use my camera, the more I realise I still have a lot to learn. Here are five main things I'm hoping to practice in 2026."
 date = 2025-11-12
 linkTitle = '12 Nov 2025'
@@ -12,8 +12,6 @@ featuredImageUrl = 'featured.jpg'
 featuredImageCaption = 'Cruising through Copenhagen.'
 featuredImageAttribute = 'Peter van der Meulen'
 +++
-
-(post is WIP)
 
 {{< spotify-embed src="https://open.spotify.com/embed/track/73B5gHeG8HQkWBNrEGTA7a?utm_source=generator" title="What I'm listening to right now" desc="Annabelle Dinda's lyrics are beautiful, and this song about grief is perfect for an autumn walk around Edinburgh (with or without camera).">}}
 
