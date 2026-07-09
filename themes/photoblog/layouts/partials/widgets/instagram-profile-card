@@ -1,0 +1,41 @@
+<!-- Static Instagram "profile card" — Instagram doesn't offer a free way
+     to embed a live profile widget (only single posts, see oEmbed docs),
+     so this is a normal card built from front matter, styled to match
+     the site, linking out to the real profile. Not live — if the profile
+     picture/bio changes on Instagram, update it here too.
+
+     Params (pass as a dict):
+       url        - the profile URL to link out to, e.g.
+                     https://www.instagram.com/pvdm_photos/ (required)
+       handle     - the @handle to display, e.g. "pvdm_photos" (required)
+       name       - display name shown above the handle (optional)
+       bio        - a short bio line (optional)
+       pictureUrl - path to a profile picture, resolved via resources.Get
+                     (relative to assets/), e.g.
+                     "images/about/instagram-profile.jpg" (optional)
+-->
+{{ $url := .url }}
+{{ $handle := .handle }}
+{{ $name := .name }}
+{{ $bio := .bio }}
+{{ $pictureUrl := .pictureUrl }}
+
+{{ with $url }}
+<a href="{{ . }}" target="_blank" rel="noopener" class="instagram-profile-card">
+    {{ with $pictureUrl }}
+        {{ with resources.Get . }}
+            {{ $avatar := . }}
+            {{ if reflect.IsImageResourceProcessable . }}
+                {{ $avatar = .Fill "96x96 q85" }}
+            {{ end }}
+            <img class="instagram-profile-avatar" src="{{ $avatar.RelPermalink }}" alt="{{ $handle }}" width="48" height="48">
+        {{ end }}
+    {{ end }}
+    <span class="instagram-profile-info">
+        {{ with $name }}<span class="instagram-profile-name">{{ . }}</span>{{ end }}
+        <span class="instagram-profile-handle">@{{ $handle }}</span>
+        {{ with $bio }}<span class="instagram-profile-bio">{{ . }}</span>{{ end }}
+    </span>
+    <span class="icon instagram-profile-icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+</a>
+{{ end }}

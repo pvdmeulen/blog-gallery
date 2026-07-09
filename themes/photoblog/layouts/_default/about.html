@@ -1,7 +1,5 @@
 {{ define "main" }}
 
-     {{ $subtitle := .Params.subtitle }}
-
     <!-- Content for About Me -->
     <div class="container is-centered mx-2">
         <div class="columns">
@@ -17,25 +15,52 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- ABOUT ME -->
-                <div class="columns mb-5">
-                    <div class="column is-three-fifths">
-                        <h1 class="is-title is-size-3 mt-3 mb-1 is-size-3 has-text-weight-bold">
-                            {{ .Title }}
-                        </h1>
-                        <h2 class="is-subtitle my-3 is-size-5 mb-5">
-                            {{ .Params.subtitle }}
-                        </h2>
+
+                <!-- ABOUT ME: narrower centered wrapper. Standalone rounded
+                     photo on the left; bio card on the right, forced to the
+                     same height as the photo (see .about-hero-row in
+                     main.css — a stretched flex row, with the card
+                     vertically centering its own text). The Instagram
+                     profile card sits in its own row underneath, same
+                     width as the bio card, sized naturally rather than
+                     matched to anything. -->
+                <div class="about-content">
+                    <div class="columns about-hero-row">
+                        <div class="column is-two-fifths">
+                            {{ partial "widgets/photo-slideshow.html" (dict "page" . "interval" 4500) }}
+                        </div>
+                        <div class="column is-three-fifths">
+                            <div class="about-card">
+                                <h1 class="is-title is-size-3 mt-1 has-text-weight-bold">
+                                    {{ .Title }}
+                                </h1>
+                                <h2 class="is-subtitle is-size-5">
+                                    {{ .Params.subtitle }}
+                                </h2>
+                            </div>
+                        </div>
                     </div>
-                    <div class="column">
-                        <div class="container">
-                            <div>
-                                <!-- PhotoSwipe gallery start (single image) -->
-                                {{ .Content }}
-                            </div> 
-                        </div>    
+
+                    <div class="columns my-4">
+                        <div class="column is-two-fifths"></div>
+                        <div class="column is-three-fifths">
+                            {{ range .Site.Menus.social }}
+                                {{ if eq .Name "Instagram" }}
+                                {{ partial "widgets/instagram-profile-card.html" (dict
+                                    "url" .URL
+                                    "handle" $.Params.instagramHandle
+                                    "name" $.Params.instagramName
+                                    "bio" $.Params.instagramBio
+                                    "pictureUrl" $.Params.instagramProfilePicture
+                                ) }}
+                                {{ end }}
+                            {{ end }}
+                        </div>
                     </div>
-                </div>        
+                </div>
+
+                <!-- Anything written in the page body below the front matter -->
+                {{ .Content }}
             </div>
         </div>
     </div>

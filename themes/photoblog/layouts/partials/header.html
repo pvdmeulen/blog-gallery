@@ -23,22 +23,82 @@
             <div class="buttons">
                 {{ range .Site.Menus.main }}
                     <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
-                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="{{ lower .Name }}">{{ .Name }}</button>
+                        <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold nav-{{ lower .Name }}">{{ .Name }}</button>
                     </a>
                 {{ end }}
                 <!-- Contact button / page -->
                 {{ range .Site.Menus.contact }}
                     <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
-                        <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold" id="{{ lower .Name }}">{{ .Name }}</button>
+                        <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold nav-{{ lower .Name }}">{{ .Name }}</button>
                     </a>
                 {{ end }}
 
                 <!-- Light/dark theme toggle: sits to the right of Contact, last item in the bar -->
-                <button id="theme-toggle" type="button" class="navbar-item theme-toggle-button" aria-label="Switch between light and dark mode">
+                <button type="button" class="navbar-item theme-toggle-button" aria-label="Switch between light and dark mode">
                     <span class="icon">
-                        <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+                        <i class="fa-solid fa-moon theme-toggle-icon"></i>
                     </span>
                 </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- THIN STICKY NAVBAR: hidden until the page is scrolled past the main
+     navbar above, then fades/slides in fixed to the top so navigation
+     stays reachable. Same menu items and theme toggle, smaller logo.
+     Shares the .nav-<name> hover-colour classes and .theme-toggle-button/
+     .theme-toggle-icon classes with the main navbar above, so both stay
+     in sync with zero duplicate IDs. -->
+<!-- Two layers: the outer <nav> is fixed + full width, so its background
+     spans edge to edge. The inner div is exactly "navbar is-spaced" —
+     identical classes to the main navbar above, so its own padding/flex
+     layout is computed exactly the same way, no guesswork. Getting its
+     WIDTH and POSITION to match the main navbar (which sits inside
+     baseof.html's #page-container) can't be done reliably in pure CSS,
+     since position:fixed measures against the viewport regardless of
+     where this sits in the DOM — so a small script below measures
+     #page-container's actual rendered box and mirrors it onto this div,
+     recalculated on load/resize. That's guaranteed correct regardless of
+     Bulma's breakpoints/padding values, rather than us trying to
+     reproduce them by hand. -->
+<nav class="navbar scroll-navbar" id="scroll-navbar" role="navigation" aria-label="secondary navigation">
+    <div class="navbar is-spaced scroll-navbar-inner" id="scroll-navbar-inner">
+        <div class="navbar-brand">
+            <h1 class="title mx-2 has-text-primary-light">
+                <a href="{{ `` | absURL }}">
+                    <span class="logo-swap">
+                        <img src="{{ `images/logo-light-mobile.svg` | relLangURL }}" width="150px" class="logo-light" alt="{{ site.Title }}">
+                        <img src="{{ `images/logo-dark-mobile.svg` | relLangURL }}" width="150px" class="logo-dark" alt="{{ site.Title }}">
+                    </span>
+                </a>
+            </h1>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="scrollNavbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="scrollNavbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="buttons">
+                    {{ range .Site.Menus.main }}
+                        <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
+                            <button class="is-size-5 is-capitalized is-subtitle has-text-weight-bold nav-{{ lower .Name }}">{{ .Name }}</button>
+                        </a>
+                    {{ end }}
+                    {{ range .Site.Menus.contact }}
+                        <a class="navbar-item" href="{{ .URL }}" aria-label="{{ .Name }}">
+                            <button class="is-link is-size-5 is-capitalized is-subtitle has-text-weight-bold nav-{{ lower .Name }}">{{ .Name }}</button>
+                        </a>
+                    {{ end }}
+                    <button type="button" class="navbar-item theme-toggle-button" aria-label="Switch between light and dark mode">
+                        <span class="icon">
+                            <i class="fa-solid fa-moon theme-toggle-icon"></i>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -47,27 +107,90 @@
 <script>
     (function () {
         var root = document.documentElement;
-        var button = document.getElementById('theme-toggle');
-        var icon = document.getElementById('theme-toggle-icon');
+        var buttons = document.querySelectorAll('.theme-toggle-button');
+        var icons = document.querySelectorAll('.theme-toggle-icon');
 
         function currentTheme() {
             return root.dataset.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         }
 
-        function updateIcon() {
+        function updateIcons() {
             var isDark = currentTheme() === 'dark';
-            // Icon shows the mode you'll switch TO
-            icon.classList.toggle('fa-moon', !isDark);
-            icon.classList.toggle('fa-sun', isDark);
+            // Icons show the mode you'll switch TO
+            icons.forEach(function (icon) {
+                icon.classList.toggle('fa-moon', !isDark);
+                icon.classList.toggle('fa-sun', isDark);
+            });
         }
 
-        updateIcon();
+        updateIcons();
 
-        button.addEventListener('click', function () {
-            var next = currentTheme() === 'dark' ? 'light' : 'dark';
-            root.dataset.theme = next;
-            localStorage.setItem('theme', next);
-            updateIcon();
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var next = currentTheme() === 'dark' ? 'light' : 'dark';
+                root.dataset.theme = next;
+                localStorage.setItem('theme', next);
+                updateIcons();
+            });
         });
+    })();
+</script>
+
+<script>
+    (function () {
+        var scrollNav = document.getElementById('scroll-navbar');
+        var threshold = 150; // px scrolled before the thin navbar appears
+        var ticking = false;
+
+        // Close any open mobile burger dropdown (main navbar or scroll
+        // navbar) as soon as the page scrolls. Without this, an open
+        // dropdown stays expanded while its <nav> scrolls out of view or
+        // the two navbars swap visibility, which is what caused it to
+        // reappear on top of the wrong navbar's burger button.
+        function closeOpenMenus() {
+            document.querySelectorAll('.navbar-burger.is-active').forEach(function (burger) {
+                var target = document.getElementById(burger.dataset.target);
+                burger.classList.remove('is-active');
+                if (target) target.classList.remove('is-active');
+            });
+        }
+
+        function update() {
+            scrollNav.classList.toggle('is-visible', window.scrollY > threshold);
+            closeOpenMenus();
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(update);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        update();
+    })();
+</script>
+
+<script>
+    (function () {
+        var pageContainer = document.getElementById('page-container');
+        var scrollNavInner = document.getElementById('scroll-navbar-inner');
+        if (!pageContainer || !scrollNavInner) return;
+
+        // Mirror #page-container's real rendered width/position onto the
+        // thin navbar's inner wrapper, so its logo/menu items land at the
+        // exact same horizontal spot as the main navbar above — measured
+        // at runtime rather than guessed from Bulma's CSS, so it can't
+        // drift out of sync with however wide/centered the page container
+        // actually renders at any given viewport size.
+        function sync() {
+            var rect = pageContainer.getBoundingClientRect();
+            scrollNavInner.style.width = rect.width + 'px';
+            scrollNavInner.style.marginLeft = rect.left + 'px';
+        }
+
+        sync();
+        window.addEventListener('resize', sync);
     })();
 </script>

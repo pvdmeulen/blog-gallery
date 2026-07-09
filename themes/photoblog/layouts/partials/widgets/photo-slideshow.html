@@ -1,0 +1,62 @@
+<!-- Rolling/auto-crossfading photo slideshow. Reusable anywhere a page has
+     photo resources to show off in a compact rotating frame — used on the
+     About page for photos of Peter, but not specific to it.
+
+     Params (pass as a dict):
+       page     - the Page whose Resources to pull images from (required)
+       folder   - glob prefix passed to Resources.Match, e.g. "" or "team/"
+                  (default: "", meaning every image directly in the page bundle)
+       interval - milliseconds between slides (default: 4000)
+
+     Call it via the "partial" function, name widgets/photo-slideshow.html,
+     passing a dict of page (the current page) and optionally interval (e.g.
+     5000). Deliberately written in prose, with no template action syntax
+     in this comment block — Hugo/Go templates parse actions inside HTML
+     comments too, so a literal example call here would actually execute,
+     and since it would be this same partial calling itself, would recurse
+     forever (which is exactly what happened before this comment was fixed). -->
+{{ $page := .page }}
+{{ $folder := .folder | default "" }}
+{{ $interval := .interval | default 4000 }}
+
+{{ $images := $page.Resources.Match (printf "%s*" $folder) }}
+{{ $slides := slice }}
+{{ range $images }}
+    {{ if reflect.IsImageResourceProcessable . }}
+        {{ $slides = $slides | append . }}
+    {{ end }}
+{{ end }}
+
+{{ with $slides }}
+<div class="photo-slideshow" data-interval="{{ $interval }}">
+    {{ range $i, $img := . }}
+        <div class="photo-slideshow-slide{{ if eq $i 0 }} is-active{{ end }}">
+            {{ partial "widgets/responsive-image.html" (dict "resource" $img "alt" $img.Name "sizes" "(max-width: 768px) 100vw, 420px") }}
+        </div>
+    {{ end }}
+</div>
+
+<script>
+    (function () {
+        // Every .photo-slideshow on the page runs independently, cycling
+        // through its own .photo-slideshow-slide children by toggling
+        // .is-active (opacity crossfade is handled in CSS). Skips the
+        // auto-advance for anyone with prefers-reduced-motion set — the
+        // first photo still shows, it just doesn't keep changing on its own.
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        document.querySelectorAll('.photo-slideshow').forEach(function (el) {
+            var slides = el.querySelectorAll('.photo-slideshow-slide');
+            if (slides.length < 2) return;
+            var current = 0;
+            var interval = parseInt(el.dataset.interval, 10) || 4000;
+
+            setInterval(function () {
+                slides[current].classList.remove('is-active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('is-active');
+            }, interval);
+        });
+    })();
+</script>
+{{ end }}

@@ -1,0 +1,58 @@
+<!-- Official Instagram post embed (Meta's oEmbed/embed.js, no API token or
+     app review needed as of mid-2026 for public posts). This is a single
+     specific post, not a live feed — there's no free way to embed an
+     auto-updating grid of your latest posts, only individual permalinks.
+
+     Params (pass as a dict):
+       url - the post's permalink, e.g. https://www.instagram.com/p/XXXXXXXXXXX/
+             (required; renders nothing if empty)
+
+     The blockquote below includes Instagram's own fallback markup (the
+     grey placeholder skeleton + "View this post on Instagram" link) —
+     without it, an unprocessed blockquote has no content and border:0,
+     so it collapses to almost nothing visually. embed.js replaces this
+     fallback with the real rendered post once it runs; if embed.js is
+     blocked (ad blockers and tracking-protection features commonly block
+     instagram.com/embed.js specifically, since it's tied to Meta's
+     tracking), this fallback is what visitors see instead — a clickable
+     link to the real post on instagram.com, rather than nothing. -->
+{{ $url := .url }}
+{{ with $url }}
+<blockquote
+    class="instagram-media"
+    data-instgrm-captioned
+    data-instgrm-permalink="{{ . }}?utm_source=ig_embed&amp;utm_campaign=loading"
+    data-instgrm-version="14"
+    style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px);"
+>
+    <div style="padding:16px;">
+        <a href="{{ . }}?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener">
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                    <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                    <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                </div>
+            </div>
+            <div style="padding: 19% 0;"></div>
+            <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                            <g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,64.101 C565.244,67.264 564.756,69.349 564.017,71.032 C563.078,73.202 562.038,74.601 560.541,76.098 C559.048,77.592 557.649,78.641 555.478,79.577 C553.802,80.317 551.712,80.804 548.55,80.938 C542.55,80.938 542.55,80.938 542.55,80.938 L542.55,80.938 C536.55,80.938 536.55,80.938 536.55,80.938 C536.386,80.938 536.386,80.938 536.386,80.938 C533.223,80.804 531.133,80.317 529.457,79.577 C527.287,78.641 525.887,77.592 524.394,76.098 C522.898,74.601 521.857,73.202 520.919,71.032 C520.179,69.349 519.692,67.264 519.558,64.101 C519.558,58.101 519.558,58.101 519.558,58.101 L519.558,42 C519.558,35.9 519.558,35.9 519.558,35.9 C519.692,32.735 520.179,30.647 520.919,28.968 C521.857,26.797 522.898,25.398 524.394,23.904 C525.887,22.408 527.287,21.368 529.457,20.428 C531.133,19.688 533.223,19.201 536.386,19.067 C536.386,19.067 536.386,19.067 536.386,19.067 C536.386,19.067 542.55,19.067 542.55,19.067 C542.55,19.067 548.55,19.067 548.55,19.067 C551.712,19.201 553.802,19.688 555.478,20.428 C557.649,21.368 559.048,22.408 560.541,23.904 C562.038,25.398 563.078,26.797 564.017,28.968 C564.756,30.647 565.244,32.735 565.378,35.9 C565.378,42 565.378,42 565.378,42 C565.378,58.101 565.378,58.101 565.378,58.101 C565.378,64.101 565.378,64.101 565.378,64.101"></path></g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div style="padding-top: 8px;">
+                <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
+            </div>
+            <div style="padding: 12.5% 0;"></div>
+        </a>
+        <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+            <a href="{{ . }}?utm_source=ig_embed&amp;utm_campaign=loading" style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank" rel="noopener">View this post on Instagram</a>
+        </p>
+    </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+{{ end }}

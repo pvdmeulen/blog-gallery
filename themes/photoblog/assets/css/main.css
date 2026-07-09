@@ -39,46 +39,60 @@ p {
   transition: color 0.2s;
   }
 
-/* Different hover colors for main site menu with IDs being posts, galleries, about, contact */
+/* Different hover colors for main site menu items: blog, galleries, about,
+   contact. Classes rather than IDs, since both the main navbar and the
+   thin scroll navbar render their own copy of these buttons and IDs must
+   be unique per page. */
 
-#blog {
+.nav-blog {
   font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
 
-#blog:hover {
+.nav-blog:hover {
   color: var(--bulma-primary);
   transition: color 0.2s;
   }
 
-#galleries {
+.nav-galleries {
   font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
 
-#galleries:hover {
+.nav-galleries:hover {
   color: var(--bulma-link);
   transition: color 0.2s;
   }
 
-#about {
+.nav-about {
   font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
 
-#about:hover {
+.nav-about:hover {
   color: var(--bulma-warning);
   transition: color 0.2s;
   }
 
-#contact {
+.nav-contact {
   font-family: var(--bulma-family-primary);
   color: var(--bulma-text-bold);
   }
 
-#contact:hover {
+.nav-contact:hover {
   color: var(--bulma-danger);
   transition: color 0.2s;
+  }
+
+/* Bulma's own a.navbar-item:hover fills in a fully solid (opaque)
+   background, which looked harsh/ugly against the new glass navbar
+   backgrounds. Give it some transparency instead — same hover, softer
+   fill. Text-color hovers above (.nav-blog:hover etc.) are unaffected. */
+a.navbar-item:hover,
+a.navbar-item:focus,
+a.navbar-item:focus-within {
+  --bulma-navbar-item-background-a: 0.15;
+  transition: background-color 0.2s;
   }
 
 
@@ -288,13 +302,27 @@ body.dark button {
 
 /* Equal-height service cards on the homepage (Bulma's .grid/.cell already
    stretch each cell to the tallest row; this makes the card itself fill
-   that stretched cell, and pins the CTA button to the bottom regardless
-   of how long the description text is) */
+   that stretched cell) */
 
+/* Frosted-glass look added below: a diagonal gradient between two of
+   Bulma's own background lightness steps (scheme-main and scheme-main-ter
+   — the same tonal scale Bulma itself uses, so it still adapts with the
+   light/dark toggle), each mixed with transparency, plus a blur of
+   whatever's showing through underneath. The gradient (rather than one
+   flat translucent tone) is what makes the frostiness actually read as
+   glass rather than just a dimmed rectangle. -webkit-backdrop-filter is
+   needed for Safari. */
 .service-card {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--bulma-scheme-main, #fff) 75%, transparent) 0%,
+    color-mix(in srgb, var(--bulma-scheme-main-ter, #eee) 55%, transparent) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .service-card .card-content {
@@ -303,6 +331,263 @@ body.dark button {
   flex-grow: 1;
 }
 
-.service-card .card-content > a {
-  margin-top: auto;
+/* Thin sticky navbar: fixed to the top, hidden until the page has been
+   scrolled past the main navbar above (see the scroll listener in
+   header.html), then slides down. The outer <nav> stays unconstrained
+   (left:0/right:0, no max-width) so its background spans the full page
+   width. The inner .scroll-navbar-inner div is plain "navbar is-spaced" —
+   the same classes as the main navbar, so its padding/flex layout match
+   without any guesswork — and a small script in header.html sets its
+   width/margin-left inline at runtime to mirror the page's actual
+   #page-container box, which is what makes its logo/menu items land at
+   exactly the same horizontal position as the main navbar (position:fixed
+   can't be made to track that via CSS alone, since it measures against
+   the viewport regardless of DOM nesting). Same text/button sizes as the
+   main navbar; only the vertical padding is trimmed (see the rule below)
+   to keep the bar thin. The logo image itself is smaller (set in
+   header.html), which is what actually reads as "thinner". Frosted-glass
+   background/blur added the same way as .service-card above. */
+nav.scroll-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: color-mix(in srgb, var(--bulma-scheme-main, #fff) 65%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.scroll-navbar.is-visible {
+  transform: translateY(0);
+}
+
+/* Three-class selector so this reliably beats Bulma's own .navbar.is-spaced
+   padding shorthand regardless of stylesheet order; only top/bottom are
+   overridden, left/right are left alone so they match the main navbar.
+   min-height is also overridden here — Bulma's base .navbar rule sets a
+   fixed min-height regardless of padding, which was the main reason the
+   bar still looked tall after trimming the padding alone. */
+.navbar.is-spaced.scroll-navbar-inner {
+  min-height: 1.75rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  /* Otherwise Bulma's own opaque navbar background paints over this
+     wrapper's area, hiding the glass effect on the outer <nav> behind it
+     (this inner div is where the logo/menu actually render). */
+  background-color: transparent;
+}
+
+.scroll-navbar-inner .navbar-brand,
+.scroll-navbar-inner .navbar-item {
+  min-height: unset;
+}
+
+/* Vertically center the logo in the navbar-brand, in both navbars (this
+   also fixes the main navbar's logo on mobile, where the burger-collapsed
+   layout made the same misalignment visible). Bulma's .title class
+   carries its own bottom margin (meant for heading spacing in normal
+   content), which was pushing the logo down instead of centering it;
+   scoped to ".navbar-brand .title" rather than ".title" globally so
+   other headings on the site (card titles, etc.) aren't affected. The
+   logo <img>s default to inline vertical-align, which leaves a small
+   baseline gap below them — display:block removes that. */
+.navbar-brand {
+  align-items: center;
+}
+
+.navbar-brand .title {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-swap img {
+  display: block;
+}
+
+/* On mobile/tablet, Bulma's navbar-menu becomes its own dropdown-style
+   panel below the brand row when the burger is toggled open, with its
+   own solid background — give it the same frosted-glass treatment as
+   the navbar bars themselves rather than Bulma's default opaque one.
+   Matches Bulma's own desktop breakpoint (1024px), below which the
+   burger/dropdown behaviour kicks in.
+
+   By default Bulma's mobile menu sits in normal document flow and pushes
+   the rest of the page down when opened, which left it with nothing
+   colourful directly behind it to blur (unlike the scroll navbar, which
+   is fixed and always has scrolled photos underneath it) — that's why
+   the glass effect looked much weaker here. Making it float over the
+   page instead (like a dropdown) — position:absolute, anchored to the
+   navbar's own position:relative (set by Bulma already) — gives it the
+   same kind of content behind it to blur, and matches the scroll
+   navbar's look. The page no longer shifts down when this menu opens. */
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    /* Less see-through than the navbar bars (85% vs 65%) per feedback
+       that it read as too transparent once floating over photos. */
+    background-color: color-mix(in srgb, var(--bulma-scheme-main, #fff) 85%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .navbar-menu.is-active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: var(--bulma-navbar-z, 30);
+    /* Bulma's own soft box-shadow/box-shadow custom properties (meant for
+       a solid dropdown background) were still showing as a thin white
+       seam along the top edge against the blurred glass background —
+       force them off with !important, since box-shadow:none alone wasn't
+       enough, and close the 1px gap where that seam was rendering. */
+    box-shadow: none !important;
+    border: none !important;
+    --bulma-navbar-box-shadow-size: 0 0 0 0;
+    margin-top: -1px;
+  }
+}
+
+/* About page: a narrower, centered wrapper (not full site width). The
+   photo and bio card sit in a stretched flex row (.about-hero-row) so
+   they always share the same height — the photo's height comes from its
+   own 4:5 aspect-ratio, and the bio card is stretched to match and then
+   centers its text vertically inside that height. The Instagram card sits
+   in a separate row underneath, same width as the bio card, sized
+   naturally with no height matching applied to it. */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Bulma's .columns default to align-items:stretch already, but we set it
+   explicitly here (rather than relying on the default, or using
+   is-vcentered which would override it to center) since the height-match
+   depends on it. */
+.about-hero-row {
+  align-items: stretch;
+}
+
+.about-card {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  /* Same diagonal gradient between Bulma's own scheme-main/scheme-main-ter
+     lightness steps as .service-card above — see the fuller explanation
+     there. */
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--bulma-scheme-main, #fff) 75%, transparent) 0%,
+    color-mix(in srgb, var(--bulma-scheme-main-ter, #eee) 55%, transparent) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Rolling photo slideshow (widgets/photo-slideshow.html): a fixed-aspect
+   frame with each slide absolutely stacked on top of the others, crossfading
+   via opacity. JS in the partial itself toggles .is-active on a timer. */
+.photo-slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.photo-slideshow-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.photo-slideshow-slide.is-active {
+  opacity: 1;
+}
+
+.photo-slideshow-slide img,
+.photo-slideshow-slide picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Static Instagram profile card (widgets/instagram-profile-card.html) on
+   the About page: avatar, name/handle/bio stack, and a trailing icon,
+   all as one link. Same frosted-gradient treatment as .service-card and
+   .about-card, but built from the secondary blue (--bulma-link) lightness
+   scale instead of the neutral scheme-main scale, so it reads as a
+   distinct "blue" card. Text/icon are white for contrast against the
+   blue background. Unified hover (per the earlier lesson with the CTA
+   button) — hovering anywhere on the card brightens everything together
+   rather than the icon/text lighting up separately, and cancels the
+   site-wide "a span:hover" brightness filter that would otherwise fire
+   per-element based on exact cursor position. */
+.instagram-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--bulma-link-40, var(--bulma-link)) 85%, transparent) 0%, color-mix(in srgb, var(--bulma-link-60, var(--bulma-link)) 85%, transparent) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: filter 0.2s;
+}
+
+.instagram-profile-avatar {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.instagram-profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.instagram-profile-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.instagram-profile-handle {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  color: #fff;
+}
+
+.instagram-profile-bio {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  color: #fff;
+}
+
+.instagram-profile-icon {
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.instagram-profile-card:hover,
+.instagram-profile-card:hover * {
+  color: #fff;
+  filter: brightness(112%);
+  transition: filter 0.2s;
 }
